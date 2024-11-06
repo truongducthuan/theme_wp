@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.curtain, .curtain_header {
+  flex: none;
+  height: 25px;
+  margin: -36px 0px 0px 0px;
+  width: 100%;
+  z-index: 4;
+  max-width: 100%;
+}
+.curtain {
+  position: absolute;
+  bottom: 0;
+}
+.curtain_header {
+  position: fixed;
+}
+.curtain:after, .curtain_header:after {
+  /* background-image: url(<?php echo get_template_directory_uri(); ?>/assets/svg/rhinestone.svg); */
+  background-position: center bottom;
+  background-size: 300px;
+  bottom: 0;
+  /* background-position: 50%; */
+  /* background-size: cover; */
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: inherit;
+  width: 100%;
+  z-index: -2;
+}
+
+.curtain_header:after {
+  top: 0;
+}
+
+.curtain:after {
+  top: 20px;
+}

@@ -1,0 +1,5 @@
+/*
+Theme Name: My Theme
+Author: Thuan Truong
+Version: 0.0.1 
+*/

@@ -29,22 +29,22 @@ main {
   object-fit: cover;
 }
 
-.curtain, .curtain_header {
+.curtain, .curtain_header, .curtain_gray {
   flex: none;
   height: 25px;
-  margin: -36px 0px 0px 0px;
+  margin: -120px 0px 0px 0px;
   width: 100%;
   z-index: 4;
   max-width: 100%;
 }
-.curtain {
+.curtain, .curtain_gray {
   position: absolute;
   bottom: 0;
 }
 .curtain_header {
   position: fixed;
 }
-.curtain:after, .curtain_header:after {
+.curtain:after, .curtain_header:after, .curtain_gray:after {
   /* background-image: url(<?php echo get_template_directory_uri(); ?>/assets/svg/rhinestone.svg); */
   background-position: center bottom;
   background-size: 300px;
@@ -67,6 +67,6 @@ main {
   top: 0;
 }
 
-.curtain:after {
+.curtain:after, .curtain_gray:after {
   top: 20px;
 }

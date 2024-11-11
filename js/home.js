@@ -52,7 +52,7 @@ function renderNews () {
   news.map(function(item) {
     const type = item.type == 1 ? 'event' : item.type == 2 ? 'holiday' : 'discount day';
     let className = ` bg-[${item.type == 1 ? '#ccfff5' : item.type == 2 ? '#eeff9b' : '#ead0ff'}]`;
-    className += ' px-1.5 rounded'
+    className += ' px-1.5 rounded-xl text-sm '
     html = html + `
       <div class="flex justify-start items-center gap-5 p-5 md:max-w-[70%] mx-auto bg-white first:rounded-t-xl border-b border-[#7cb7ff] border-dashed hover:opacity-75 transition">
         <img src=${item.image} alt=${item.description} class="w-10 h-8 rounded"/>
@@ -67,14 +67,16 @@ function renderNews () {
 
 function renderClass () {
   let html = '';
-  classes.map(function(item) {
+  classes.map(function(item, index) {
+    let className = index % 2 == 0 ? 'bg-[#ffcfaf]' : 'bg-[#dceeb8]'
+    className += ' font-bold text-lg rounded-md w-full py-0.5 mb-4 text-center'
     html = html + `
-      <div class="flex justify-center items-center">
-        <h2>${item.title}</h2>
-        <div>${item.slogan}</div>
-        <div>${item.apply_to}</div>
+      <div class="bg-secondary rounded-xl p-10">
+        <h2 class="${className}">${item.title}</h2>
+        <div class="font-semibold text-lg text-primary mb-2">${item.slogan}</div>
+        <div class="font-bold mb-4">${item.apply_to}</div>
         <div>${item.description}</div>
-        <a href="#">Click here for class details</a>
+        <a href="#"><button class="bg-primary text-white px-8 uppercase mt-6 py-2 rounded-3xl hover:scale-105 hover:animate-pulse cursor-pointer transition-all duration-300">Click here for class details</button></a>
       </div>
     `
   })

@@ -2,6 +2,7 @@
 get_header();
 
 $categories = get_the_category();
+$url = get_field('blog_image', $post->ID);
 // foreach ($categories as $term) {
   // echo '<pre>';
   // print_r($categories[0]->category_description);
@@ -12,7 +13,6 @@ $categories = get_the_category();
 // };
 
 ?>
-
 
 <section class="mt-[120px] max-w-[1200px] mx-auto bg-[#e1ebf4] flex flex-col p-16 items-center justify-center rounded-lg">
   <h1 class="capitalize text-primary text-3xl font-bold">News</h1>
@@ -32,6 +32,7 @@ $categories = get_the_category();
     </div>
     <h2 class="font-bold text-xl my-4"><?php the_title(); ?></h2>
     <div class="border-t border-dotted border-blue-500/100 w-full mb-4"></div>
+      <?php echo '<img class="mb-7" src="'. $url .'" >' ?>
     <div>
       <?php echo apply_filters('the_content', $post->post_content); ?>
     </div>

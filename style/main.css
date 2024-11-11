@@ -4,6 +4,7 @@
 }
 
 main {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -32,7 +33,7 @@ main {
 .curtain, .curtain_header, .curtain_gray {
   flex: none;
   height: 25px;
-  margin: -120px 0px 0px 0px;
+  margin: -0 0px 0px 0px;
   width: 100%;
   z-index: 4;
   max-width: 100%;
@@ -70,3 +71,9 @@ main {
 .curtain:after, .curtain_gray:after {
   top: 20px;
 }
+/* 
+@media (max-width: 640px) {
+  main {
+    padding: 0 20px;
+  }
+} */

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <title><?php echo get_the_title(); ?></title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,19 +24,42 @@
       }
     }
   </script>
+
+  <script>
+    // Get the screen width
+    var screenWidth = window.screen.width;
+
+    // Send the screen width to PHP
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "home.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send("screenWidth=" + screenWidth);
+  </script>
+
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/main.css">
+  <style>
+    .curtain:after, .curtain_header:after {
+      background-image: url('<?php echo get_template_directory_uri(); ?>/asset/svg/rhinestone.svg');
+    }
+
+    .curtain_gray:after {
+      background-image: url('<?php echo get_template_directory_uri(); ?>/asset/svg/rhinestoneGray.svg');
+    }
+  </style>
+
   <?php wp_head(); ?>
 </head>
 <body>
 <main>
   <!-- Start header -->
-  <header class="max-w-[1200px] h-[120px] fixed top-0 right-0 left-0 mx-auto my-0 z-10">
+  <header class="max-w-[1200px] h-[100px] md:h-[120px] fixed top-0 right-0 left-0 mx-auto my-0 z-10">
     <div class="w-full flex items-center justify-between p-5 bg-white">
       <a href="<?php echo esc_url(home_url()); ?>" class="text-center hover:scale-110 hover:animate-pulse cursor-pointer transition-all duration-300">
-        <div class="text-3xl font-bold text-primary">Kids Art Class</div>
-        <div class="text-xl font-bold">Art Audio</div>
+        <div class="text-2xl md:text-3xl font-bold text-primary">Kids Art Class</div>
+        <div class="text-base md:text-xl font-bold">Art Audio</div>
       </a>
       <div class="flex items-center gap-4">
-        <div>
+        <div class="hidden">
           <div>
             <a href="tel:0000000" class="flex gap-2 items-center hover:scale-105 hover:animate-pulse cursor-pointer transition-all duration-300">
               <span class="bg-primary p-[7px] flex items-center justify-center text-center rounded-full text-white">
@@ -53,6 +76,6 @@
         </div>
       </div>
     </div>
+    <div class="curtain_header"></div>
   </header>
-  <div class="curtain_header"></div>
   <!-- End header -->

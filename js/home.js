@@ -45,14 +45,42 @@ $(document).ready(function() {
   renderNews()
   renderClass()
 
-  calcWithScreenMap()
-
   // scroll top
   $('#scroll_top').click(function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 'slow');
+      $('#navbar').addClass('hidden')
   })
 
+  // $('#scroll-news').click((e) => {
+  //   e.preventDefault();
+  //   $('html, body').animate({ scrollTop: 587 }, 'slow');
+  //     $('#navbar').addClass('hidden')
+  // })
+
+  // $('#scroll-class').click((e) => {
+  //   e.preventDefault();
+  //   $('html, body').animate({ scrollTop: 1586 }, 'slow');
+  //     $('#navbar').addClass('hidden')
+  // })
+  
+  // $('#scroll-schedule').click((e) => {
+  //   e.preventDefault();
+  //   $('html, body').animate({ scrollTop: 2120 }, 'slow');
+  //     $('#navbar').addClass('hidden')
+  // })
+
+  // $('#scroll-faq').click((e) => {
+  //   e.preventDefault();
+  //   $('html, body').animate({ scrollTop: 2920 }, 'slow');
+  //     $('#navbar').addClass('hidden')
+  // })
+
+  // $('#scroll-access').click((e) => {
+  //   e.preventDefault();
+  //   $('html, body').animate({ scrollTop: 3786 }, 'slow');
+  //     $('#navbar').addClass('hidden')
+  // })
 })
 
 function renderNews () {
@@ -102,3 +130,12 @@ function calcWithScreenMap () {
   const map = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7507.158933463328!2d105.77631799470784!3d19.815419869794116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136f7fdfeaf48ad%3A0x19762f422dc24e3c!2zVHLGsOG7nW5nIFRoaSwgVGhhbmggSMOzYSwgVGhhbmggSG9hLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1731319582024!5m2!1sen!2s" width="${width}" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
   $('#map').html(map)
 }
+
+function logHeightFromTop() {
+  var scrollTop = window.scrollY;
+  var screenHeight = window.innerHeight;
+  console.log("Chiều cao từ top đến vị trí cuộn: " + scrollTop + "px");
+  return scrollTop + screenHeight;
+}
+
+window.addEventListener('scroll', logHeightFromTop);

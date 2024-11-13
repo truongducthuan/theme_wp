@@ -79,6 +79,14 @@ $sliceImgs = get_field('home_slice');
     <!-- End News -->
 
     <!-- Start Class -->
+    <?php
+      $the_class = new WP_Query(array(
+        'post_status' => 'publish',
+        'post_type' => 'classroom',
+        'posts_per_page' => 2,
+      ));
+    ?>
+    
     <section class="flex flex-col justify-center items-center px-5 md:px-0 py-20 relative">
       <h2 class="capitalize text-primary text-2xl md:text-3xl font-bold">Concept</h2>
       <span class="font-semibold text-sm md:text-base mb-8">lớp học</span>
@@ -97,7 +105,35 @@ $sliceImgs = get_field('home_slice');
         <p class="capitalize text-xl md:text-3xl font-bold">Information Class</p>
         <span class="border-[1px] border-primary w-6 md:w-10 text-center"></span>
       </h2>
-      <div id="content_class" class="flex flex-col md:flex-row items-start justify-center gap-8 w-full md:w-2/3"></div>
+      <div class="flex flex-col md:flex-row items-start justify-center gap-8 w-full md:w-2/3">
+      <?php 
+      if ( $the_class->have_posts() ) :
+        $index = 0;
+        while ($the_class->have_posts() ) : $the_class->the_post();
+        $className = ($index % 2 == 0) ? 'bg-[#ffcfaf]' : 'bg-[#dceeb8]';
+        $className .= ' font-bold text-lg rounded-md w-full py-0.5 mb-4 text-center';
+      ?>
+        <div class="bg-secondary rounded-xl p-8 md:p-10">
+          <h2 class="<?php echo $className; ?>"><?php the_title(); ?></h2>
+          <?php $slogan = get_field('slogan', $post->ID); ?>
+          <?php if (!empty($slogan)): ?>
+            <h2 class="font-semibold text-lg text-primary mb-2"><?php echo $slogan; ?></h2>
+          <?php endif; ?>
+          <?php $ages = get_field('ages', $post->ID); ?>
+          <?php if (!empty($ages)): ?>
+            <div class="font-bold mb-4"><?php echo "Tuổi từ " . $ages['from'] . " đến " . $ages['to']; ?></div>
+          <?php endif; ?>
+          <div class="text-sm md:text-base">
+            <?php 
+            $content = apply_filters('the_content', $post->post_content);
+            $trimmed_content = substr($content, 0, 100);
+            echo $trimmed_content;
+            ?>
+          </div>
+          <a href="<?php the_permalink(); ?>"><button class="bg-primary text-white px-8 uppercase mt-6 py-1 md:py-2 rounded-3xl hover:scale-105 hover:animate-pulse cursor-pointer transition-all duration-300">Click here for class details</button></a>
+        </div>
+      <?php $index++; endwhile; endif; ?>
+      </div>
       <div class="curtain"></div>
     </section>
     <!-- End Class -->
@@ -196,4 +232,48 @@ get_footer();
       disableOnInteraction: false,
     },
   });
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+// scroll top
+$('#scroll_top').click(function (e) {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, 'slow');
+    $('#navbar').addClass('hidden')
+})
+
+$('#scroll-news').click((e) => {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 587 }, 'slow');
+    $('#navbar').addClass('hidden')
+})
+
+$('#scroll-class').click((e) => {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 1586 }, 'slow');
+    $('#navbar').addClass('hidden')
+})
+
+$('#scroll-schedule').click((e) => {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 2120 }, 'slow');
+    $('#navbar').addClass('hidden')
+})
+
+$('#scroll-faq').click((e) => {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 2920 }, 'slow');
+    $('#navbar').addClass('hidden')
+})
+
+$('#scroll-access').click((e) => {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 3786 }, 'slow');
+    $('#navbar').addClass('hidden')
+})
+})
+
 </script>

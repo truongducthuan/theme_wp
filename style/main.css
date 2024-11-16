@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+#wpadminbar {
+  display: none !important;
+}
+
 body {
   position: relative;
 }
@@ -123,6 +127,9 @@ main {
 
 @media (max-width: 640px) {
   .curtain, .curtain_header, .curtain_gray {
-    height: 18px;
+    height: 16px;
+  }
+  .curtain:after, .curtain_gray:after {
+    top: 12px;
   }
 }

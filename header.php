@@ -11,12 +11,13 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/animation.css">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#f20c5d',
+            primary: '#38B6FF',
             secondary: '#e1ebf4',
             thirdary: '#f94886'
           }
@@ -26,24 +27,21 @@
   </script>
 
   <script>
-    // Get the screen width
-
-    // Send the screen width to PHP
-    // var xhr = new XMLHttpRequest();
-    // xhr.open("POST", "home.php", true);
-    // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    // xhr.send("screenWidth=" + screenWidth);
 
     $(document).ready(function() {
       $('#open-nav').click(function(e) {
-        $('#navbar').removeClass('hidden')
+        $('#navbar').show()
       })
 
-      $('#close-nav').click(() => {
-        $('#navbar').addClass('hidden')
+      $('.close-nav').each(function() {
+        $(this).click(() => {
+          $('#navbar').hide()
+        })
       })
     })
   </script>
+
+<script src="<?php echo get_template_directory_uri(); ?>/js/animation.js"></script>
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/main.css">
   <style>
@@ -74,25 +72,43 @@
 </head>
 <body>
 
+<!-- Loader animation -->
+<!-- const text1 = 'Global Innovators Hub' -->
+<div id="loader" class="flex flex-col justify-center items-center tracking-wide px-5 md:px-0 text-2xl md:text-6xl gap-2 md:gap-5 font-mono">
+  <div id="fadeInText1" class="text-center"></div>
+  <div id="fadeInText2" class="text-center"></div>
+  <div id="fadeInText3" class="text-center"></div>
+</div>
+
+<!-- Open drama -->
+<div id="open">
+    <div id="open1" class='slide-br'></div>
+    <div id="border1" class='slide-rotate-br'></div>
+    <div id="open2" class="slide-tl"></div>
+    <div id="border2" class='slide-rotate-tl'></div>
+</div>
+
 <!-- Start Navbar -->
 <div class="absolute hidden top-[-120px] right-0 bottom-0 left-0 bg-grba z-50" id="navbar">
     <div class="p-8 bg-white flex justify-start fixed top-1 right-1 bottom-1 md:top-8 md:right-8 md:bottom-8 w-[300px] md:w-[400px] md:h-buttom rounded-2xl gap-5 overflow-y-auto scrollbar-custom">
       <ul class="w-full divide-y">
         <li class="flex justify-between items-center py-5">
           <a href="<?php echo esc_url(home_url()); ?>" class="text-center hover:scale-110 hover:animate-pulse cursor-pointer transition-all duration-300">
-            <div class="text-2xl md:text-3xl font-bold text-primary">Kids Art Class</div>
-            <div class="text-base md:text-xl font-bold">Art Audio</div>
+            <div class="text-xl md:text-3xl font-bold text-primary">Global Innovators Hub</div>
+			      <div class="text-base md:text-xl font-bold">Sáng tạo - Đam mê</div>
           </a>
 
-          <div class="p-1 cursor-pointer hover:bg-secondary" id="close-nav"><i class="fa-solid fa-xmark text-2xl"></i></div>
+          <div class="p-1 cursor-pointer hover:bg-secondary close-nav"><i class="fa-solid fa-xmark text-2xl"></i></div>
         </li>
-        <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-news">
-          <p class="capitalize font-semibold">Tin tức</p>
-          <i class="fa-solid fa-angle-right text-primary"></i>
+        <li class="hover:bg-[#f20c5d08] hover:translate-x-3 cursor-pointer transition-all duration-300">
+          <a href="<?php echo esc_url(home_url('/tin-tuc')) ?>" class="flex justify-between items-center py-4">
+            <p class="capitalize font-semibold">Tin tức</p>
+            <i class="fa-solid fa-angle-right text-primary"></i>
+          </a>
         </li>
         <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-class">
-          <p class="capitalize font-semibold">Thông tin lớp học</p>
-          <i class="fa-solid fa-angle-right text-primary"></i>
+            <p class="capitalize font-semibold">Thông tin lớp học</p>
+            <i class="fa-solid fa-angle-right text-primary"></i>
         </li>
         <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-schedule">
           <p class="capitalize font-semibold">Lịch học</p>
@@ -110,10 +126,10 @@
           <span class="text-xl font-bold text-center w-full">+00.0000.0000</span>
         </li>
         <li class="py-5 border-none">
-          <div><a href="<?php echo esc_url(home_url('/application-form')); ?>"><div class="px-1.5 py-2 font-semibold border border-primary hover:translate-y-1 text-center rounded-3xl border-b-4 hover:border-b-2 transition-all">Application for free trial lesson</div></a></div>
+          <div><a href="<?php echo esc_url(home_url('/application-form')); ?>"><div class="px-1.5 py-2 font-semibold border border-primary hover:translate-y-1 text-center rounded-3xl border-b-4 hover:border-b-2 transition-all">Liên hệ chúng tôi</div></a></div>
         </li>
         <li class="py-10 border-none">
-          <button class="bg-secondary w-full py-2 rounded-lg hover:bg-gray-300">Đóng Menu</button>
+          <button class="bg-secondary w-full py-2 rounded-lg hover:bg-gray-300 close-nav">Đóng Menu</button>
         </li>
       </ul>
     </div>
@@ -124,8 +140,8 @@
   <header class="h-[100px] max-w-[1200px] md:h-[120px] w-full fixed top-0 right-0 left-0 mx-auto my-0 z-10">
     <div class="w-full flex items-center justify-between p-5 bg-white">
       <a href="<?php echo esc_url(home_url()); ?>" class="text-center hover:scale-110 hover:animate-pulse cursor-pointer transition-all duration-300">
-        <div class="text-2xl md:text-3xl font-bold text-primary">Kids Art Class</div>
-        <div class="text-base md:text-xl font-bold">Art Audio</div>
+        <div class="text-xl md:text-3xl font-bold text-primary">Global Innovators Hub</div>
+		  <div class="text-base md:text-xl font-bold">Sáng tạo - Đam mê</div>
       </a>
       <div class="flex items-center gap-4">
         <div class="hidden md:block">
@@ -137,7 +153,7 @@
               <span class="text-2xl font-bold text-center">+00.0000.0000</span>
             </a>
           </div>
-          <div class="h-10 mt-2"><a href="<?php echo esc_url(home_url('/application-form')); ?>"><div class="px-1.5 py-0.5 font-semibold border border-primary hover:translate-y-1 rounded-3xl border-b-4 hover:border-b-2 transition-all">Application for free trial lesson</div></a></div>
+          <div class="h-10 mt-2"><a href="<?php echo esc_url(home_url('/application-form')); ?>"><div class="px-1.5 py-0.5 font-semibold border text-center border-primary hover:translate-y-1 rounded-3xl border-b-4 hover:border-b-2 transition-all">Liên hệ chúng tôi</div></a></div>
         </div>
         <label id="open-nav">
           <button class="bg-primary px-[15px] py-[10px] flex justify-center items-center text-white rounded-full hover:scale-110 hover:animate-pulse cursor-pointer transition-all duration-300"><i class="fa-solid fa-bars text-xl"></i></button>

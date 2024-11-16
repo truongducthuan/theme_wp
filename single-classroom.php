@@ -19,8 +19,8 @@ get_header();
 
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
-  <section class="mt-[120px] max-w-[1200px] bg-[#fdeadc] mx-auto bg-[#e1ebf4] flex flex-col p-5 md:p-16 items-center justify-center rounded-lg">
-    <h1 class="capitalize text-primary text-2xl md:text-3xl font-bold">Lớp học</h1>
+  <section class="mt-[60px] py-28 max-w-[1200px] bg-[#fdeadc] mx-auto bg-[#e1ebf4] flex flex-col px-5 md:px-16 items-center justify-center rounded-lg">
+    <h1 class="capitalize text-primary text-2xl md:text-3xl font-bold">Classroom</h1>
     <p class="font-semibold text-sm md:text-base mb-8">Thông tin lớp học</p>
     <div class="flex items-center justify-center gap-4 bg-white px-8 py-1 rounded-xl">
       <a href="<?php echo esc_url(home_url()); ?>"><i class="fa-solid fa-house-chimney text-primary hover:text-secondary transition"></i></a>
@@ -122,18 +122,6 @@ get_header();
 <script>
 
 $(document).ready(function() {
-
-// scroll top
-$('#scroll_top').click(function (e) {
-  e.preventDefault();
-  $('html, body').animate({ scrollTop: 0 }, 'slow');
-    $('#navbar').addClass('hidden')
-})
-
-$('#scroll-news').click((e) => {
-  e.preventDefault();
-  window.location.href = getHomepageLink()
-})
 
 $('#scroll-class').click((e) => {
   e.preventDefault();

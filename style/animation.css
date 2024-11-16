@@ -1,0 +1,212 @@
+
+#loader, #open {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  }
+  #loader {
+    display: flex;
+    background: rgb(255, 255, 255);
+  }
+  #open {
+    display: none;
+    background: transparent;
+  }
+
+  .char {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: inline-block;
+    /* animation: .9s both bounce-bottom; */
+  }
+  .bounce-bottom {
+    animation: .2s both bounce-bottom;
+  }
+
+  .space {
+    margin-right: 20px;
+  }
+
+  .slide-br {
+    animation: slide-br 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  .slide-tl {
+    animation: slide-tl 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  .slide-rotate-br {
+    animation: slide-rotate-br 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  .slide-rotate-tl {
+    animation: slide-rotate-tl 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  #open1 {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 99vw solid transparent;
+  border-bottom: 99vh solid black;
+  z-index:10;
+}
+#border1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 300vh;
+  background: yellow;
+  transform: translate(-50%, -50%) rotate(65deg);
+}
+#border2 {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  width: 5px;
+  height: 300vh;
+  background: yellow;
+  transform: translate(-50%, -50%) rotate(65deg);
+}
+
+#open2 {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-right: 99.8vw solid transparent;
+  border-top: 99.8vh solid black;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .space {
+    margin-right: 10px;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation bounce-bottom
+ * ----------------------------------------
+ */
+
+ @keyframes bounce-bottom {
+  0% {
+    transform: translateY(45px);
+    animation-timing-function: ease-in;
+    opacity: 0.2;
+  }
+  24% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.8;
+    transform: translateY(24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(12px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(6px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(4px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation slide-tl
+ * ----------------------------------------
+ */
+ @keyframes slide-tl {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(-100vw);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-br
+ * ----------------------------------------
+ */
+ @keyframes slide-br {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100vh) translateX(100vw);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-tl
+ * ----------------------------------------
+ */
+ @keyframes slide-rotate-tl {
+  0% {
+    transform: translate(-50%, -50%) rotate(65deg) scaleX(5);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(65deg) scaleX(80);
+  }
+  35% {
+    transform: translate(-70%, -70%) rotate(65deg) scaleX(100);
+  }
+  100% {
+    /* width: 80px; */
+    transform: translateY(-100%) translateX(-100%) rotate(65deg);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-br
+ * ----------------------------------------
+ */
+ @keyframes slide-rotate-br {
+  0% {
+    transform: translate(-50%, -50%) rotate(65deg) scaleX(5);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(65deg) scaleX(80);
+  }
+  35% {
+    transform: translate(-30%, -30%) rotate(65deg) scaleX(100);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(65deg);
+  }
+}

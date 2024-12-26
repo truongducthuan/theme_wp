@@ -8,6 +8,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/tailwindcss/output.css'; ?>">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/style.css'; ?>">
   <?php // wp_head(); ?>
@@ -16,15 +17,60 @@
     .hero-pattern {
       background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/bg.png');
     }
+
+    #menus_top {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 7rem;
+      height: 6rem;
+      z-index: 1100;
+    }
+    #menus_top a {
+      overflow: hidden;
+    position: relative;
+    display: block;
+    height: 100%;
+    color: rgba(255,255,255,0);
+    font-size: 1rem;
+    text-decoration: none;
+    }
+    #menus_top a::where(a[href]) {
+      text-underline-offset: .3em;
+      outline: none;
+      cursor: pointer;
+    }
+    #menus_top a::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 3rem;
+      margin-top: -.1rem;
+      margin-left: -1.5rem;
+      border-top: .2rem solid var(--color-base);
+      pointer-events: none;
+    }
+    #menus_top a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 3rem;
+      margin-top: -.1rem;
+      margin-left: -1.5rem;
+      border-top: .2rem solid var(--color-base);
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
   <main class="w-full h-full hero-pattern bg-[#222222]">
               <div class="w-full">
-                <div class="flex justify-between items-center fixed top-10 left-0 right-0 z-20 max-w-[1200px] mx-auto flex-wrap bg-white min-h-[80px] rounded-[100px] max-md:max-w-full">
+                <div class="flex justify-between items-center fixed top-5 md:top-10 left-5 md:left-0 right-5 md:right-0 z-20 max-w-[1200px] mx-auto flex-wrap bg-white min-h-[60px] md:min-h-[80px] rounded-[100px] max-md:max-w-full">
                   <a
                     href="/"
-                    class="flex overflow-hidden gap-2 items-start pl-12 my-auto"
+                    class="flex overflow-hidden gap-2 items-start ml-5 md:pl-12 my-auto"
                   >
                     <img
                       loading="lazy"
@@ -67,7 +113,7 @@
                   </a>
 
                   <!-- Right -->
-                  <div class="flex gap-10 items-center">
+                  <div class="hidden md:flex gap-10 items-center">
                     <div class="flex justify-between items-center gap-10" id="menus-top">
                       <a
                         href="#"
@@ -122,6 +168,10 @@
                         </a>
                       </div>
                     </div>
+                  </div>
+
+                  <div class="flex md:hidden gap-5 items-center" id="menus_top">
+                    <a href="#">MENU</a>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-<div class="flex flex-col my-[100px] w-2/5 max-md:ml-0 max-md:w-full">
+<div class="flex absolute left-0 top-[30%] flex-col mt-[100px] mb-[80px] w-2/5 max-md:ml-0 max-md:w-full">
   <img
     loading="lazy"
     src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"

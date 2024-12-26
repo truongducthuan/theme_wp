@@ -3,28 +3,9 @@ $(document).ready(function () {
   handleSlideBanner()
 });
 
-// HANDLE SLIDE BANNER
-function handleSlideBanner () {
-  const slideBnEl = $('#slide_banner');
-
-  // bannerSlide && bannerSlide.forEach((slide, index) => {
-  //   setTimeout(() => {
-  //     console.log({ bannerSlide });
-
-  //     const html = ` <img
-  //                   loading="lazy"
-  //                   srcset="${slide.background}"
-  //                   class="object-cover size-full"
-  //                 />`
-
-  //     slideBnEl.html(html)
-  //   }, 1000);
-  // })
-}
-
 setTimeout(() => {
   console.log({ newsLists });
-}, 1000);
+}, 2000);
 
 
 // HANDLE NEWS LIST

@@ -3,43 +3,72 @@ get_header();
 
 $categories = get_the_category();
 $url = get_field('blog_image', $post->ID);
-echo '<div class="mt-[200px]">HI</div>';
-foreach ($categories as $term) {
-  echo '<pre>';
-  print_r($term);
-  echo '</pre>';
-};
+// foreach ($categories as $term) {
+//   echo '<div class="text-white">';
+//   print_r($post);
+//   echo '</div>';
+// };
 
+$author_id = $post->post_author; // Get author ID
+$author_name = get_the_author_meta('display_name', $author_id);
 ?>
 
+<style>
+  .news_post .wp-block-heading {
+    margin: 40px 0;
+  }
+  .news_post .wp-block-heading {}
+</style>
 
-<section class="mt-[60px] py-28 max-w-[1200px] mx-auto flex flex-col px-5 md:px-16 items-center justify-center rounded-lg">
-  <h1 class="capitalize text-primary text-2xl md:text-3xl font-bold">News</h1>
-  <p class="font-semibold text-sm md:text-base mb-8">tin tức</p>
-  <div class="flex items-center justify-center gap-4 bg-white px-8 py-1 rounded-xl">
-    <a href="<?php echo esc_url(home_url()); ?>"><i class="fa-solid fa-house-chimney text-primary hover:text-secondary transition"></i></a>
-    <div class="border-r-[1px] border-solid border-primary h-4"></div>
-    <span class="text-secondary text-sm text-[#797979] font-bold">Tin tức</span>
+<div class="relative">
+  <div class="flex absolute left-0 top-0 flex-col mt-[60px] mb-[80px] w-[36%] max-md:ml-0 max-md:w-full">
+  <img
+    loading="lazy"
+    src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"
+    class="object-contain self-stretch my-auto mr-0 w-full aspect-[1.03] max-md:mt-10 max-md:max-w-full"
+  />
+</div>
+</div>
+<section class="relative z-10 pb-28 pt-60 max-w-[1200px] mx-auto flex flex-col items-center justify-center rounded-lg news_post">
+  <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
+    <div class=""><?php echo $categories[0]->name; ?></div>
+    <div><a class="font-bold text-6xl" href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></div>
+    <div class="flex items-center gap-6">
+      <div><?php echo get_the_date('d/m/y'); ?></div>
+      <div><?php echo $author_name; ?></div>
+    </div>
   </div>
 
-  <div class="border border-dotted border-blue-500/100 p-5 md:p-12 bg-white rounded-xl mt-16 mb-2 md:mb-8 w-full md:w-3/4">
-    <div class="flex justify-between items-center">
-      <div class="font-bold text-sm md:text-base"><?php echo get_the_date('d/m/y'); ?></div>
-      <div class="<?php echo ($categories[0]->category_description == 1) ? 'bg-[#ccfff5]' : 'bg-[#eeff9b]'; ?> px-4 rounded-3xl text-sm md:text-base">
-        <?php echo $categories[0]->name; ?>
-      </div>
-    </div>
-    <h2 class="font-bold text-xl my-4"><?php the_title(); ?></h2>
-    <div class="border-t border-dotted border-blue-500/100 w-full mb-4"></div>
-      <?php echo '<img class="mb-7" src="'. $url .'" >' ?>
-    <div>
+  <div class="flex justify-end items-end gap-4 my-10 w-full text-white"><span>Top  実績 </span><p>ニュースタイトルが入ります。ニュースタイトルが入ります。</p></div>
+
+  <div class="bg-[#353333] p-5 md:p-16 text-white rounded-xl mt-16 mb-2 md:mb-8 w-full">
       <?php echo apply_filters('the_content', $post->post_content); ?>
     </div>
+    <div class="w-full h-[1px] bg-[#D9D9D9] my-16"></div>
+    <div class="flex text-white items-center justify-between w-full gap-4">
+      <div class="flex items-center gap-4">
+        <div
+          class="flex shrink-0 bg-blue-900 rounded-full h-[35px] w-[35px] p-2"
+        >
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-white.svg" alt="arrow" srcset="">
+        </div>
+        <p>タイトルが入ります。タイトルが入ります。</p>
+      </div>
+      <div class="bg-white rounded-full py-[14px] px-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/svg/menu.svg ?>" ></div>
+      <div class="flex items-center gap-4">
+        <p>タイトルが入ります。タイトルが入ります。</p>
+        <div
+          class="flex shrink-0 bg-blue-900 rounded-full h-[35px] w-[35px] p-2"
+        >
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-white.svg" alt="arrow" srcset="">
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- <div class="mb-16 w-full md:w-3/4">
-    <?php //include(locate_template('template-parts/banner-btn.php')); ?>
-  </div> -->
 </section>
+<div class="mb-16 w-full">
+  <?php include(locate_template('template-parts/recruit-contact.php')); ?>
+</div>
 
 <?php
 get_footer();

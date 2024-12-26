@@ -6,7 +6,7 @@ $args = array(
   'post_status' => 'publish',
   'posts_per_page' => -1, // retrieve all posts
 );
-$newsList = array();
+
 $posts = new WP_Query( $args );
 
 ?>
@@ -19,103 +19,8 @@ $posts = new WP_Query( $args );
     <div class="flex relative flex-col w-full max-md:max-w-full">
       <div class="flex relative z-10 flex-col w-full max-md:max-w-full">
         <!-- Start Banner -->
-        <div class="w-full max-md:max-w-full">
-          <div class="flex gap-5 max-md:flex-col relative">
-            <!-- Text & -->
-            <?php include(locate_template('template-parts/banner-left.php')); ?>
-
-            <div class="flex flex-col w-3/5 max-md:ml-0 max-md:w-full">
-              <div
-                class="flex relative overflow-hidden flex-col items-start w-full h-full"
-              >
-              <?php 
-                $banner_slides = get_field('banner_background');
-                if(!empty($banner_slides)){
-                  for ($i = 0; $i < count($banner_slides); $i++) {
-                    $slide = $banner_slides[$i];
-                    ?>
-                    <div class="absolute -right-0 top-0 left-0 -bottom-0 w-full flex flex-col banner-slide__el">
-                  <img
-                    loading="lazy"
-                    srcset="
-                    <?php echo $slide['background'];?>"
-                    class="object-cover size-full"
-                  />
-                  </div>
-                  <?php
-                  }
-                }
-                ?>
-                <script> 
-                  var slideIndex = 0;
-                  showSlides();
-
-                  var isActive = false;
-                  function showSlides() {
-                    var i;
-                    var slides = document.getElementsByClassName("banner-slide__el");
-                    for (i = 0; i < slides.length; i++) {
-                      slides[i].style.zIndex = -2;
-                      slides[i].classList.remove('banner-slide');
-                    }
-                    console.log('run  ', i, slideIndex)
-        
-                    slides[slideIndex].style.zIndex = -1;
-                    slides[slideIndex].classList.add('banner-slide');
-
-                    slideIndex++
-                    if (slideIndex >= slides.length) {
-                      slideIndex = 0;
-                    }
-                    setTimeout(showSlides, 10000); // Change image every 5 seconds
-                  }
-    
-                </script>
-                   
-              </div>
-            </div>
-
-            <div class="absolute inset-0 max-w-[1200px] mx-auto w-full">
-              <div class="absolute flex flex-col justify-center items-center left-0 top-[30%]">
-                <div class="text-center text-white rotate-90">Join Us</div>
-                <div class="shrink-0 mt-16 w-px border border-white border-solid h-[75px]"></div>
-              </div>
-                  <div class="relative mt-60 ml-[200px] max-md:mt-10 max-md:max-w-full">
-                    <div class="flex gap-5 max-md:flex-col">
-                      <div
-                        class="flex flex-col w-[83%] max-md:ml-0 max-md:w-full"
-                      >
-                        <div
-                          class="relative text-8xl font-black text-white uppercase max-md:mt-10 max-md:max-w-full max-md:text-4xl"
-                        >
-                          Driving Age
-                        </div>
-                      </div>
-                      <div
-                        class="flex flex-col ml-5 w-[17%] max-md:ml-0 max-md:w-full"
-                      >
-                        <div
-                          class="relative self-stretch my-auto text-xs text-white max-md:mt-10"
-                        >
-                          Bringing Happiness
-                          <br />
-                          Enterprises by
-                          <br />
-                          Harnessing the Potential
-                          <br />
-                          of Technology
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                  class="relative text-right text-8xl font-black text-white uppercase max-md:max-w-full max-md:text-4xl"
-                  >
-                    with Technology
-                  </div>
-                </div>  
-          </div>
-        </div>
+        <?php // get_template_part('template-parts/banner-slider'); ?>
+        <?php get_template_part('template-parts/banner-slide'); ?>
         <!-- End Banner -->
 
       <!-- Start slice -->
@@ -125,7 +30,7 @@ $posts = new WP_Query( $args );
       // print_r($get_slices);
       // echo '</pre>';
       ?>
-      <div class="flex flex-col mt-36 w-full lg:h-[450px] 2xl:h-[550px]">
+      <div class="flex flex-col mt-36 w-full lg:h-[450px] 2xl:h-[550px]" id="slide_phone">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <?php 
@@ -137,8 +42,8 @@ $posts = new WP_Query( $args );
                 $bg = $slice['background'];
 
                 $parts = explode('/n', $slice['description']);
-                $desc1 = $parts[0];
-                $desc2 = $parts[1];
+                $desc1 = $parts[0] ?? '';
+                $desc2 = $parts[1] ?? '';
                 ?>
                 <div class="swiper-slide">
                   <div class="w-full h-full flex flex-col bg-transparent relative">
@@ -516,79 +421,9 @@ $posts = new WP_Query( $args );
         <!-- End News -->
 
         <!-- Start Recruit and Contact -->
-        <div class="mt-40 w-full max-md:mt-10 max-md:max-w-full">
-          <div class="flex max-md:flex-col">
-            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full relative">
-              <div class="w-full absolute inset-0 top-0 right-0 left-0 bottom-0">
-                    <img
-                      loading="lazy"
-                      srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/9a1deabca10a6dbd35216a72b570918403a05fc42a6c163c3160b5105be996c1?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9a1deabca10a6dbd35216a72b570918403a05fc42a6c163c3160b5105be996c1?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9a1deabca10a6dbd35216a72b570918403a05fc42a6c163c3160b5105be996c1?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9a1deabca10a6dbd35216a72b570918403a05fc42a6c163c3160b5105be996c1?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9a1deabca10a6dbd35216a72b570918403a05fc42a6c163c3160b5105be996c1?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9a1deabca10a6dbd35216a72b570918403a05fc42a6c163c3160b5105be996c1?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9a1deabca10a6dbd35216a72b570918403a05fc42a6c163c3160b5105be996c1?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9a1deabca10a6dbd35216a72b570918403a05fc42a6c163c3160b5105be996c1?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                      class="object-cover size-full"
-                    />
-              </div>
-              <div class="absolute flex flex-col justify-center items-center right-[40px] top-[50px]">
-                <div class="text-center text-white rotate-90">Join Us</div>
-                <div class="shrink-0 mt-16 w-px border border-white border-solid h-[75px]"></div>
-              </div>
-              <div class="flex flex-col grow text-white max-md:max-w-full">
-                <div
-                  class="flex relative flex-col px-20 pt-36 pb-16 w-full min-h-[622px] max-md:px-5 max-md:pt-24 max-md:max-w-full"
-                >
-                  <div
-                    class="flex relative flex-wrap gap-5 justify-between items-start text-5xl font-black leading-none whitespace-nowrap max-md:max-w-full max-md:text-4xl"
-                  >
-                    <div class="self-start max-md:text-4xl">recruit</div>
-                  </div>
-                  <div
-                    class="relative mt-20 mr-9 text-base leading-6 max-md:mt-10 max-md:mr-2.5 max-md:max-w-full"
-                  >
-                    エイジラボは、一緒に「挑戦」する仲間を求めています。ビジネス・プロダクト・コーポレートの様々な職種で採用を強化中です。募集要項をぜひご覧ください。
-                  </div>
-                  <div class="w-full">
-                    <a href="#">
-                      <?php get_template_part('template-parts/view_more'); ?>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-              <div
-                class="flex relative flex-col flex-wrap grow gap-8 items-start px-20 pt-36 pb-16 text-white min-h-[622px] max-md:px-5 max-md:pt-24"
-              >
-                <div class="w-full absolute inset-0">
-                  <img
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/5710c57f30a9c5b10c36c539e7b5fc94d91fb9c2f748b1dfc7814099c2692c85?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/5710c57f30a9c5b10c36c539e7b5fc94d91fb9c2f748b1dfc7814099c2692c85?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5710c57f30a9c5b10c36c539e7b5fc94d91fb9c2f748b1dfc7814099c2692c85?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/5710c57f30a9c5b10c36c539e7b5fc94d91fb9c2f748b1dfc7814099c2692c85?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/5710c57f30a9c5b10c36c539e7b5fc94d91fb9c2f748b1dfc7814099c2692c85?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5710c57f30a9c5b10c36c539e7b5fc94d91fb9c2f748b1dfc7814099c2692c85?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/5710c57f30a9c5b10c36c539e7b5fc94d91fb9c2f748b1dfc7814099c2692c85?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/5710c57f30a9c5b10c36c539e7b5fc94d91fb9c2f748b1dfc7814099c2692c85?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                    class="object-cover size-full"
-                  />
-                </div>
-                <div class="absolute flex flex-col justify-center items-center right-[40px] top-[50px]">
-                  <div class="text-center text-white rotate-90">Inquiry</div>
-                  <div class="shrink-0 mt-16 w-px border border-white border-solid h-[75px]"></div>
-                </div>
-                <div
-                  class="flex relative flex-col grow shrink-0 items-start basis-0 w-fit max-md:max-w-full"
-                >
-                  <div class="text-5xl font-black leading-none max-md:text-4xl">
-                    Contact Us
-                  </div>
-                  <div
-                    class="self-stretch mt-20 text-base leading-6 max-md:mt-10 max-md:max-w-full"
-                  >
-                    WEB・アプリ開発、デザイン、プロモーション、ブランディングなど、案件のご相談・その他ご質問などございましたら、どんなことでもお気軽にお問い合わせください。
-                  </div>
-                  <div class="w-full">
-                    <a href="#">
-                      <?php get_template_part('template-parts/view_more'); ?>
-                    </a>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
+         <div class="pt-40">
+           <?php get_template_part('template-parts/recruit-contact'); ?>
+         </div>
         <!-- End Recruit and Contact -->
       </div>
     </div>
@@ -596,6 +431,7 @@ $posts = new WP_Query( $args );
 </div>
 
 <?php get_footer();
+$newsList = array();
 if(is_array($posts->posts)){
   foreach ($posts->posts as $post) {
     $post->category = get_the_category($post->ID);
@@ -608,6 +444,7 @@ if(is_array($posts->posts)){
 
 <script>
   var newsLists = <?php echo json_encode($newsList); ?>;
-  var bannerSlide = <?php echo json_encode($banner_slides); ?>;
+  console.log('list news index' ,newsLists);
+  //var bannerSlide = <?php //echo json_encode($banner_slides); ?>;
 
 </script>

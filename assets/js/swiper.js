@@ -1,5 +1,4 @@
 
-
 // LIST PHONES
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 4,
@@ -8,9 +7,10 @@ var swiper = new Swiper(".mySwiper", {
   // slidesPerView: "auto",
   freeMode: true,
   autoplay: {
-    delay: 2000,
+    delay: 0,
     disableOnInteraction: false,
   },
+  speed:2000,
 });
 
 // OUR PROJECT

@@ -16,6 +16,12 @@
   <style>
     .hero-pattern {
       background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/bg.png');
+
+    }
+
+    .header {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      transition: top .5s ease-in-out;
     }
 
     #menus_top {
@@ -62,14 +68,20 @@
       border-top: .2rem solid var(--color-base);
       pointer-events: none;
     }
+    @keyframes scrollBottom {
+      100% {
+        top: 10;
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
   <main class="w-full h-full hero-pattern bg-[#222222]">
-              <div class="w-full">
-                <div class="flex justify-between items-center fixed top-5 md:top-10 left-5 md:left-0 right-5 md:right-0 z-20 max-w-[1200px] mx-auto flex-wrap bg-white min-h-[60px] md:min-h-[80px] rounded-[100px] max-md:max-w-full">
+              <div class="w-full relative">
+                <div class="flex justify-between items-center header fixed -top-[20] md:-top-24 left-5 md:left-0 right-5 md:right-0 z-20 max-w-[1200px] mx-auto flex-wrap bg-white min-h-[60px] md:min-h-[80px] rounded-[100px] max-md:max-w-full">
                   <a
-                    href="/"
+                    href="#"
                     class="flex overflow-hidden gap-2 items-start ml-5 md:pl-12 my-auto"
                   >
                     <img
@@ -116,31 +128,31 @@
                   <div class="hidden md:flex gap-10 items-center">
                     <div class="flex justify-between items-center gap-10" id="menus-top">
                       <a
-                        href="#"
+                        href="#business"
                         class="self-stretch hover:text-[#1e3a8a] h-full text-base font-bold tracking-wider relative menu-top transition duration-300 overflow-hidden text-black whitespace-nowrap"
                       >
                         事業内容
                       </a>
                       <a
-                        href="#"
+                        href="#achievement"
                         class="self-stretch hover:text-[#1e3a8a] h-full text-base font-bold tracking-wider relative menu-top transition duration-300 overflow-hidden text-black whitespace-nowrap"
                       >
                         実績
                       </a>
                       <a
-                        href="#"
+                        href="#project"
                         class="self-stretch hover:text-[#1e3a8a] h-full text-base font-bold tracking-wider relative menu-top transition duration-300 overflow-hidden text-black whitespace-nowrap"
                       >
                         企業案内
                       </a>
                       <a
-                        href="#"
+                        href="#info"
                         class="self-stretch hover:text-[#1e3a8a] h-full text-base font-bold tracking-wider relative menu-top transition duration-300 overflow-hidden text-black whitespace-nowrap"
                       >
                         採用情報
                       </a>
                       <a
-                        href="#"
+                        href="#news"
                         class="self-stretch hover:text-[#1e3a8a] h-full text-base font-bold tracking-wider relative menu-top transition duration-300 overflow-hidden text-black whitespace-nowrap"
                       >
                         お知らせ
@@ -151,7 +163,7 @@
                         class="flex gap-2 items-center text-center py-3 my-auto text-sm text-white whitespace-nowrap w-[126px]"
                       >
                         <a
-                          href="#"
+                          href="#info"
                           class="gap-2.5 self-stretch px-5 py-3.5 my-auto hover:border-[1px] hover:border-solid hover:border-neutral-900 hover:bg-neutral-300 hover:text-neutral-900 bg-neutral-900 min-h-[45px] rounded-[100px] w-full max-md:px-5 transition-all"
                         >
                           お問い合わせ
@@ -161,7 +173,7 @@
                         class="flex gap-2 items-center text-center pr-4 py-3 my-auto text-sm text-white whitespace-nowrap w-[140px]"
                       >
                         <a
-                          href="#"
+                          href="#info"
                           class="gap-2.5 self-stretch px-5 py-3.5 my-auto hover:border-[1px] hover:border-solid hover:border-blue-900 hover:bg-blue-300 hover:text-blue-900 bg-blue-900 min-h-[45px] rounded-[100px] w-full max-md:px-5 transition-all"
                         >
                           資料請求
@@ -175,4 +187,13 @@
                   </div>
                 </div>
               </div>
+
+<script>
+  window.onload = function() {
+    const header = document.querySelector('.header');
+    console.log({header})
+    header.classList.remove('md:-top-24');
+    header.classList.add('md:top-10');
+  };
+</script>
   

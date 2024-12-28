@@ -41,6 +41,14 @@ $banner_slides = get_field('banner_background');
   /* clip-path: polygon(55% 0, 100% 0%, 45% 100%, 0% 100%); */
 }
 
+#banner_slider_text--01::after {
+  position: absolute;
+  content: "DRIVING";
+  left: 0;
+  color: #fff;
+  font-size: 6rem;
+}
+
 /* @keyframes text-up {
   10% {
     transform: translateY(0px);
@@ -112,13 +120,14 @@ $banner_slides = get_field('banner_background');
             </div>
    
             <div class="flex flex-col absolute z-10 top-0 right-0 bottom-0 w-3/5 max-md:ml-0 max-md:w-full mix-blend-exclusion" id="banner_slider">
-                  <div
-                          class="absolute text-white z-20 mt-[40%] -left-[30%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        <div
+                        id="banner_slider_text--01"
+                          class="absolute text-white z-20 xl:mt-[37%] 2xl:mt-[30%] xl:-left-[34%] 2xl:-left-[16%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
                           Driving Age
                         </div>
                         <div
-                          class="absolute text-white z-20 mt-[55%] -left-[18%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="absolute text-white z-20 xl:mt-[55%] 2xl:mt-[44%] xl:-left-[20%] 2xl:-left-[10%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
                         with Technology
                         </div>
@@ -134,7 +143,7 @@ $banner_slides = get_field('banner_background');
               </div>
             </div>
             <div class="absolute inset-0 max-w-[1200px] z-10 mx-auto w-full">
-              <div class="absolute flex flex-col justify-center items-center text-sm -ml-[30px] left-0 top-[40%]">
+              <div class="absolute flex flex-col justify-center items-center text-sm -ml-[30px] left-0 top-[30%]">
                 <div class="text-center text-white rotate-90">Our Mission</div>
               </div>
                  
@@ -160,3 +169,6 @@ $banner_slides = get_field('banner_background');
 
         </div> 
 </div>
+
+
+

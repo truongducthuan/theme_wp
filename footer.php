@@ -16,11 +16,11 @@
             <div
               class="flex gap-7 items-center self-stretch my-auto text-sm font-bold text-black whitespace-nowrap min-w-[240px]"
             >
-              <div class="self-stretch my-auto">事業内容</div>
-              <div class="self-stretch my-auto">実績</div>
-              <div class="self-stretch my-auto">企業案内</div>
-              <div class="self-stretch my-auto">採用情報</div>
-              <div class="self-stretch my-auto">お知らせ</div>
+              <div class="self-stretch my-auto"><a href="#business">事業内容</a></div>
+              <div class="self-stretch my-auto"><a href="#achievement">実績</a></div>
+              <div class="self-stretch my-auto"><a href="#project">企業案内</a></div>
+              <div class="self-stretch my-auto"><a href="#about">採用情報</a></div>
+              <div class="self-stretch my-auto"><a href="#news">お知らせ</a></div>
             </div>
           </div>
           <div
@@ -61,6 +61,7 @@
 </main>
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

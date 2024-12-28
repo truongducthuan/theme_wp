@@ -30,58 +30,46 @@ $posts = new WP_Query( $args );
       // print_r($get_slices);
       // echo '</pre>';
       ?>
-      <div class="flex flex-col mt-36 w-full lg:h-[450px] 2xl:h-[550px]" id="slide_phone">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <?php 
-            if(is_array($get_slices)): 
-              $counter = 0; // Initialize a counter
-              foreach($get_slices as $slice):
-                $counter++; // Increment the counter
-                $img = $slice['photo'];
-                $bg = $slice['background'];
-
-                $parts = explode('/n', $slice['description']);
-                $desc1 = $parts[0] ?? '';
-                $desc2 = $parts[1] ?? '';
-                ?>
-                <div class="swiper-slide">
-                  <div class="w-full h-full flex flex-col bg-transparent relative">
-                    <div class="relative w-full h-full flex items-center justify-center">
-                      <div class="w-2/3"><img src="<?php echo $img; ?>" class="rounded-tl-[50px]"></div>
-                      <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
-                        <img src="<?php echo $bg; ?>" class="" >
-                        <div class="absolute right-0 bottom-[20px] bg-[#D70C18] py-0.5 px-4 text-white"><?php echo $slice['tag'];?></div>
-                      </div>
-                    </div>
-                    <div class="text-white mt-4 leading-9"><?php echo '<span class="font-bold">'. $desc1 .'</span>' . '<br>' . '<span class="font-light">'. $desc2 .'</span>'; ?></div>
-                    <div class="absolute top-[-60px] left-[20px] text-8xl font-bold text-white">0<?php echo $counter; ?></div>
-                  </div>
-                </div>
-                <?php 
-              endforeach;
-            endif; 
-            ?>
-          </div>
-        </div>
+    
+    <div class="flex flex-col mt-36 w-full lg:h-[450px] 2xl:h-[550px]" id="slide_phone">
+        <?php  include('template-parts/slide-autoplay.php'); ?>
       </div>
       <!-- End Slice -->
 
       <!-- Start our work-->
-      <div class="flex justify-between pt-36">
-        <div class="mt-[100px] w-1/2">
-          <img
-          loading="lazy"
-          srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a46b0129ed07032c4537637ff30a47049b6736da5b8b44b7fc60d684daa6fbed?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a46b0129ed07032c4537637ff30a47049b6736da5b8b44b7fc60d684daa6fbed?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a46b0129ed07032c4537637ff30a47049b6736da5b8b44b7fc60d684daa6fbed?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a46b0129ed07032c4537637ff30a47049b6736da5b8b44b7fc60d684daa6fbed?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a46b0129ed07032c4537637ff30a47049b6736da5b8b44b7fc60d684daa6fbed?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a46b0129ed07032c4537637ff30a47049b6736da5b8b44b7fc60d684daa6fbed?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a46b0129ed07032c4537637ff30a47049b6736da5b8b44b7fc60d684daa6fbed?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a46b0129ed07032c4537637ff30a47049b6736da5b8b44b7fc60d684daa6fbed?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-          class="object-contain mt-0 max-w-full aspect-[1.09] w-[639px] max-md:mt-0"
-          />
+      <?php 
+        $we_do = get_field('what_to_do');
+        ?>
+      <div class="flex justify-between pt-36" id="our_work">
+        <div class="mt-[100px] w-1/2 h-[620px] overflow-hidden">
+              <div class="swiper mySwiperPhone">
+                <div class="swiper-wrapper">
+                  <?php 
+                  if(!empty($we_do)):
+                    foreach($we_do as $item):
+                      $img = $item['image'];
+                      ?>
+                      <div class="swiper-slide">
+                        <div class="h-full clip-path__work"><img
+                          loading="lazy"
+                          src="<?php echo $img; ?>"
+                          class="object-contain w-full h-full"
+                        /></div>
+                      </div>
+                      <?php 
+                    endforeach;
+                  endif;
+                  ?>
+                </div>
+              </div>
         </div>
+    
         <div class="relative w-1/2">
-          <div class="absolute z-10 top-0 right-0 left-0 bottom-0">
+          <div class="absolute z-10 top-0 right-0 left-0 bg-gradient-to-t from-black to-inherit">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/WHAT-WE-DO.png" alt="our work" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/WHAT-WE-DO.png" class="opacity-[0.1] w-full">
           </div>
 
-          <div class="flex flex-col justify-start gap-9 mt-[70px]">
+          <div class="flex flex-col justify-start gap-9 mt-[70px] relative">
             <div
               class="flex relative z-10 flex-col self-start mr-36 max-w-full text-white whitespace-nowrap w-[615px] max-md:mr-2.5"
             >
@@ -93,7 +81,7 @@ $posts = new WP_Query( $args );
                 ></div>
                 <div class="self-stretch my-auto">私たちについて</div>
               </div>
-              <div class="mt-9 text-5xl max-md:max-w-full max-md:text-4xl leading-[4.5rem]">
+              <div class="mt-9 text-[45px] max-md:max-w-full max-md:text-4xl text-wrap leading-[4.5rem] opacity-0 shining-text__effect">
                 圧倒的な技術力で
                 <br />
                 日本のDX化推進の一翼を担う
@@ -105,7 +93,7 @@ $posts = new WP_Query( $args );
             <div
               class="flex relative z-10 flex-col self-start max-w-[570px] max-md:max-w-full"
             >
-              <div class="self-start text-lg text-zinc-400 max-md:max-w-full">
+              <div class="self-start text-lg text-zinc-400 max-md:max-w-full text-fade--out opacity-0">
                 私たちは、金融と技術のプロフェッショナルが共に創業したITスタートアップです。
                 <br />
                 私たちAgeLabは、テクノロジーで新しい時代を切り開き、新たな価値の創出を追求します。
@@ -131,13 +119,21 @@ $posts = new WP_Query( $args );
         class="flex relative flex-col mt-52 w-full"
       >
         <!-- Start introduction -->
+        <span
+            class="scroll-to"
+            data-label="Scroll to: #business"
+            data-bullet="false"
+            data-link="#business"
+            data-title="business"
+            ><a name="business"></a
+          ></span>
         <div class="self-end w-full relative">
-          <div class="absolute top-0 right-0 left-0 z-index-negative w-full">
+          <div class="absolute top-0 right-0 left-0 w-full">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/INTRODUCTION.svg" alt="instruction" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/INTRODUCTION.svg" class="w-full opacity-[0.1]">
           </div>
-          <div class="flex gap-5 max-md:flex-col max-w-[1200px] mx-auto">
+          <div class="flex gap-5 max-md:flex-col max-w-[1200px] mx-auto z-10">
 
-            <div class="flex flex-col w-1/2 max-md:w-full">
+            <div class="flex flex-col w-1/2 max-md:w-full z-10">
               <div class="flex flex-col max-md:w-full">
                 <div class="flex flex-col mt-11 max-md:mt-10 max-md:max-w-full">
                   <div class="flex gap-3 justify-between items-center self-start text-base">
@@ -155,64 +151,62 @@ $posts = new WP_Query( $args );
                   </div>
                 </div>
               </div>
+              <?php 
+              $businesses = get_field('our_business');
+              // echo '<pre>';
+              // echo print_r($businesses);
+              // echo '</pre>';
+              ?>
               <div
                 class="flex flex-col items-start w-full text-4xl text-white whitespace-nowrap mt-28 max-md:max-w-full"
               >
+                <?php 
+                if($businesses):
+                  foreach($businesses as $business):
+                ?>
+                <div class="cursor-pointer business_title w-full pt-6 overflow-hidden relative news-link-bg-slice" data-set="<?php echo $business['photo']['url']; ?>">
                 <div
                   class="flex justify-between w-full"
                 >
-                  <div class="">アプリ/システム開発</div>
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0e421bc33d72b78adcd217089f59719b7fb7edd857f166f7983fae18639ba1d?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                    class="object-contain shrink-0 w-10 aspect-square"
-                  />
+                  <div class=""><?php echo $business['title']; ?></div>
+                  <div
+                  class="flex shrink-0 bg-blue-900 rounded-full h-[35px] w-[35px] p-2 relative z-10"
+                  >
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-white.svg" alt="arrow" srcset="">
+                  </div>
              
                 </div>
                 <div
-                  class="shrink-0 mt-4 h-px border border-solid border-zinc-400 w-full"
+                  class="shrink-0 mt-6 h-px border border-solid border-zinc-400 w-full"
                 ></div>
-                <div
-                  class="flex justify-between mt-4 w-full"
-                >
-                  <div class="">AI/DXコンサルティング</div>
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0e421bc33d72b78adcd217089f59719b7fb7edd857f166f7983fae18639ba1d?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                    class="object-contain shrink-0 w-10 aspect-square"
-                  />
-               
                 </div>
-                <div
-                  class="shrink-0 mt-4 h-px border border-solid border-zinc-400 w-full"
-                ></div>
-                <div
-                  class="flex justify-between gap-6 mt-4 w-full"
-                >
-                  <div class="">M&A/財務支援</div>
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0e421bc33d72b78adcd217089f59719b7fb7edd857f166f7983fae18639ba1d?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                    class="object-contain shrink-0 w-10 aspect-square"
-                  />
-                </div>
-                <div
-                  class="shrink-0 mt-4 h-px border border-solid border-zinc-400 w-full"
-                ></div>
+                <?php 
+                endforeach;
+                endif;
+                ?>
+        
               </div>
             </div>
 
-            <div class="flex flex-col mt-[7.5rem] ml-5 w-1/2 max-md:ml-0 max-md:w-full">
-              <div
-                class="flex shrink-0 mx-auto max-w-full bg-zinc-300 h-[657px] w-[520px] max-md:mt-10"
-              ></div>
+            <div class="flex flex-col mt-[7.5rem] ml-5 w-1/2 max-md:ml-0 max-md:w-full" id="business_content">
+              <img src="<?php echo $businesses[0]['photo']['url']; ?>" class="z-10" >
             </div>
           </div>
         </div>
         <!-- End introduction -->
 
         <!-- Start Run Text -->
-        <div class="pt-36">
+        <div class="pt-48 relative">
+          <div class="absolute left-0 top-[15%]">
+            <img
+              loading="lazy"
+              src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"
+              class="object-contain self-stretch my-auto mr-0 w-full aspect-[1.03] max-md:mt-10 max-md:max-w-full"
+            />
+          </div>
+          <div class="absolute right-0 left-0 -top-[100%]">
+            <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/svg/Union.svg" alt="Union" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/Union.svg ?>" >
+          </div>
           <div
             class="decorative-text decorative-text--1"
             style="fill: #ffd700;"
@@ -253,14 +247,40 @@ $posts = new WP_Query( $args );
         <!-- End Run Text -->
 
         <!-- Start Achievements -->
-        <div class="w-full pt-36">
+        <span
+            class="scroll-to"
+            data-label="Scroll to: #achievement"
+            data-bullet="false"
+            data-link="#achievement"
+            data-title="achievement"
+            ><a name="achievement"></a
+          ></span>
+         <?php 
+          $achievements = get_field('our_achievement');
+         ?>
+        <div class="w-full pt-36 z-10">
           <div class="flex gap-5 max-md:flex-col">
-            <div class="flex flex-col w-1/2 max-md:ml-0 max-md:w-full">
-              <img
-                loading="lazy"
-                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/2785dcb71aadb7ffd5a2af89dc41209a88fab0de823ce7eacb45c14c5ac1c611?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2785dcb71aadb7ffd5a2af89dc41209a88fab0de823ce7eacb45c14c5ac1c611?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2785dcb71aadb7ffd5a2af89dc41209a88fab0de823ce7eacb45c14c5ac1c611?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2785dcb71aadb7ffd5a2af89dc41209a88fab0de823ce7eacb45c14c5ac1c611?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2785dcb71aadb7ffd5a2af89dc41209a88fab0de823ce7eacb45c14c5ac1c611?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2785dcb71aadb7ffd5a2af89dc41209a88fab0de823ce7eacb45c14c5ac1c611?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2785dcb71aadb7ffd5a2af89dc41209a88fab0de823ce7eacb45c14c5ac1c611?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2785dcb71aadb7ffd5a2af89dc41209a88fab0de823ce7eacb45c14c5ac1c611?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                class="object-contain grow w-full aspect-[1.12] max-md:max-w-full"
-              />
+            <div class="mt-[100px] w-1/2 h-[620px] overflow-hidden">
+              <div class="swiper mySwiperPhone">
+                <div class="swiper-wrapper">
+                  <?php 
+                  if(!empty($achievements)):
+                    foreach($achievements as $item):
+                      $img = $item['image'];
+                      ?>
+                      <div class="swiper-slide">
+                        <div class="h-full clip-path__work"><img
+                          loading="lazy"
+                          src="<?php echo $img; ?>"
+                          class="object-contain w-full h-full"
+                        /></div>
+                      </div>
+                      <?php 
+                    endforeach;
+                  endif;
+                  ?>
+                </div>
+              </div>
             </div>
             <div class="flex flex-col ml-5 w-1/2 max-md:ml-0 max-md:w-full">
               <div class="flex flex-col justify-start mt-11 gap-9 max-md:mt-10 max-md:max-w-full">
@@ -294,8 +314,19 @@ $posts = new WP_Query( $args );
         <!-- End Achievements -->
 
         <!-- Start Our Project -->
+        <span
+            class="scroll-to"
+            data-label="Scroll to: #project"
+            data-bullet="false"
+            data-link="#project"
+            data-title="project"
+            ><a name="project"></a
+          ></span>
         <div class="relative w-full mt-36">
-            <div class="absolute top-0 right-0 left-0 z-index-negative">
+          <div class="absolute right-0 -top-[100%]">
+            <img class="w-full mix-blend-luminosity" src="<?php echo get_template_directory_uri(); ?>/assets/svg/bg2.svg" alt="" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/bg2.svg" class="w-full" >
+          </div>
+            <div class="absolute top-0 right-0 left-0">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/OUR-PROJECT.svg" alt="" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/OUR-PROJECT.svg" class="w-full opacity-[0.1]">
             </div>
 
@@ -335,7 +366,7 @@ $posts = new WP_Query( $args );
                       $img = $phone['photo'];
                       ?>
                       <div class="swiper-slide">
-                        <div class="h-full"><img
+                        <div class="h-full shadow-image"><img
                           loading="lazy"
                           src="<?php echo $img; ?>"
                           class="object-contain w-full h-full"
@@ -346,13 +377,40 @@ $posts = new WP_Query( $args );
                   endif;
                   ?>
                 </div>
+                
+                  
+                <style>
+                 .shadow-image::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 14%;
+                    transform: translateX(-50%);
+                    z-index: -1;
+                    background-image: url('<?php echo get_template_directory_uri() ?>/assets/svg/mock_shadow 1.svg');
+                    /* background: #222222; */
+                    width: 100%;
+                    height: 49%;
+                    background: linear-gradient(45deg, url('http://localhost:10034/wp-content/themes/age_lab/assets/svg/mock_shadow%201.svg'), transparent);
+                    opacity: 0.1;
+                    transform: rotate(100deg);
+                 }
+                </style>
               </div>
             </div>
           </div>
         </div>
         <!-- End Our Project -->
           
-        <!-- Start News -->   
+        <!-- Start News -->
+        <span
+            class="scroll-to"
+            data-label="Scroll to: #news"
+            data-bullet="false"
+            data-link="#news"
+            data-title="news"
+            ><a name="news"></a
+          ></span>
         <?php
          $categories = get_categories();
         ?>
@@ -385,14 +443,18 @@ $posts = new WP_Query( $args );
             >
               <script>
                 var categories = <?php echo json_encode($categories); ?>;
-                categories.unshift({name: 'ALL'});
+
+                categories = Object.values(categories);
+                categories.unshift({name: 'ALL'}); // Fixed the error by removing [0]
+                console.log({categories});
                 let active = 'ALL';
+           
                 function renderCategory(active) {
                   document.getElementById('list_category').innerHTML = ""; // Clear the container before rendering
                   categories.map(category => {
                     const content = `
                     <div
-                      class="flex flex-col py-2 whitespace-nowrap rounded-none w-fit cursor-pointer hover:opacity-80 hover:translate-x-2 transition-all"
+                      class="flex flex-col py-2 whitespace-nowrap rounded-none w-fit cursor-pointer hover:opacity-80 active:translate-x-2 hover:translate-x-2 transition-all"
                       onclick="getCategory('${category.name}');getActive('${category.name}');"
                       id="news_category"
                     >
@@ -421,6 +483,14 @@ $posts = new WP_Query( $args );
         <!-- End News -->
 
         <!-- Start Recruit and Contact -->
+        <span
+            class="scroll-to"
+            data-label="Scroll to: #info"
+            data-bullet="false"
+            data-link="#info"
+            data-title="info"
+            ><a name="info"></a
+          ></span>
          <div class="pt-40">
            <?php get_template_part('template-parts/recruit-contact'); ?>
          </div>

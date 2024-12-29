@@ -107,7 +107,7 @@ $banner_slides = get_field('banner_background');
 
 </style>      
 
-<div class="w-full h-500px md:h-[700px] lg:h-[800px] xl:h-[900px]">
+<div class="w-full h-500px md:h-[700px] lg:h-[800px] xl:h-[900px] 2xl:h-[1100px]">
 
           <div class="flex gap-5 max-md:flex-col relative w-full h-full">
             <!-- Text & -->

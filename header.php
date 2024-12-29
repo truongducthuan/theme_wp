@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/tailwindcss/output.css'; ?>">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/style.css'; ?>">
-  <?php // wp_head(); ?>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/pagination.css'; ?>">
+  
+  <?php wp_head(); ?>
 
   <style>
     .hero-pattern {

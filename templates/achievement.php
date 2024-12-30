@@ -18,6 +18,7 @@ foreach ($query->posts as $post) {
   
 $post_id = $post->ID;
 
+$get_name_company = get_field('name_company', $post_id);
 $get_bg = get_field('background', $post_id);
 $get_photo_left = get_field('left', $post_id);
 $get_photo_right = get_field('right', $post_id);
@@ -30,7 +31,7 @@ $get_detail_imag = get_field('image_detail', $post_id);
 $post_type = get_post_type($post_id);
 $taxonomies = get_object_taxonomies($post_type, 'names');
 
-print_r($get_photo_left);
+$post->name_company = $get_name_company ?? '';
 $post->bg = $get_bg ?? '';
 $post->photo_left = $get_photo_left ?? '';
 $post->photo_right = $get_photo_right ?? '';
@@ -56,14 +57,14 @@ if (!empty($terms_list)) {
 }
 }
 
-echo '<pre>';
-print_r($query->posts);
-echo '</pre>';
+// echo '<pre>';
+// print_r($query->posts);
+// echo '</pre>';
 ?>
 
 <section>
   <div class="relative">
-    <div class="flex absolute hidden left-0 top-0 flex-col mt-[100px] mb-[80px] w-[50%] max-md:ml-0 max-md:w-full">
+    <div class="flex absolute left-0 top-0 flex-col mt-[100px] mb-[80px] w-[50%] max-md:ml-0 max-md:w-full">
     <img
       loading="lazy"
       src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"
@@ -103,65 +104,44 @@ if ( ! empty( $taxonomies ) ) :
                 'taxonomy' => $taxonomy,
                 'hide_empty' => false,
             ) );
-            if ( ! empty( $terms ) ) :
-              $all_term = term_exists('すべて', $taxonomy);
-              if (!$all_term) {
-                  $all_term = wp_insert_term('すべて', $taxonomy, array('slug' => 'all'));
-              }
+            // if ( ! empty( $terms ) ) :
+            //   $all_term = term_exists('すべて', $taxonomy);
+            //   if (!$all_term) {
+            //       $all_term = wp_insert_term('すべて', $taxonomy, array('slug' => 'all'));
+            //   }
 
-              $all = get_term($all_term['term_id']);
+            //   $all = get_term($all_term['term_id']);
 
-              array_unshift($terms, $all);
-
-                echo '<ul class="max-w-[1200px] mx-auto pt-10 z-10 relative flex items-center gap-3">';
-                foreach ( $terms as $term ) :
-                    echo '<li data-set="'.$term->name.'" class="menu_achievement py-1 px-4 border border-white rounded-3xl hover:bg-white group"><span class="text-white group-hover:text-black">' . $term->name . '</span></li>';
-                endforeach;
-                echo '</ul>';
-            endif;
+            //   array_unshift($terms, $all);
+            // endif;
         endif;
     endforeach;
 endif;
 ?>
+<ul class="max-w-[1200px] mx-auto pt-10 z-10 relative flex items-center gap-3" id="menu_list"></ul>
 <script>
-  var menus = document.querySelectorAll('.menu_achievement');
-  menus.forEach((menu) => {
-    menu.addEventListener('click', function(e) {
-      e.preventDefault();
-      var set = e.target.getAttribute('data-set');
-      console.log(e.target, set);
-      <?php echo '$taxonomy = "'; ?>' + set + '<?php echo '";'; ?>
-    });
-  });
+  var taxonomies = <?php echo json_encode($terms); ?>;
+  taxonomies?.unshift({name: 'すべて'});
+
+  function showMenu (active='すべて') {
+    document.getElementById('menu_list').innerHTML = '';
+    var html = '';
+    taxonomies?.map(menu => {
+      html += `
+      <li onclick="handleClick('${menu.name}'); handleActive('${menu.name}');" class="menu_achievement select-none py-1 px-4 cursor-pointer border border-white rounded-3xl ${active == menu.name ? 'bg-white' : ''} hover:bg-white group">
+        <span class="${active == menu.name ? 'text-black' : 'text-white'} group-hover:text-black">${menu.name}</span>
+      </li>`
+    })
+    document.getElementById('menu_list').innerHTML += html;
+  }
+  showMenu('すべて');
+
+  function handleActive(active) {
+    showMenu(active);
+  }
 </script>
 
-  <ul class="flex gap-5 justify-center items-center">
-            <?php
-   
-            foreach ($posts as $post) : ?>
-              <li class="py-2 border-b border-gray-200">
-                <a href="<?php echo get_permalink($post->ID); ?>" class="block w-full h-full">
-                <div class="swiper-slide <?php echo $even ? 'slide-item-even' : ""; ?>">
-                  <div class="w-full h-full flex flex-col bg-transparent relative">
-                    <div class="relative w-full h-full flex items-center justify-center">
-                      <div class="w-2/3"><img src="<?php echo $img; ?>" class="rounded-tl-[50px]"></div>
-                      <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
-                        <img src="<?php echo $bg; ?>" class="" >
-
-                        <?php if($slice['tag']): ?>
-                        <div class="absolute right-0 bottom-[20px] bg-[#D70C18] py-0.5 px-4 text-white"><?php echo $slice['tag'];?></div>
-                        <?php endif; ?>
-                      </div>
-                    </div>
-                    <div class="text-white mt-4 leading-9"><?php echo '<span class="font-bold">'. $desc1 .'</span>' . '<br>' . '<span class="font-light">'. $desc2 .'</span>'; ?></div>
-                    <div class="absolute top-[-60px] left-[20px] text-8xl font-bold text-white mix-blend-difference"><?php echo $slice['number']; ?></div>
-                  </div>
-                </div>
-                </a>
-                  <?php echo $post->post_title; ?>
-                </a>
-              </li>
-            <?php endforeach; wp_reset_postdata(); ?>
+  <ul class="grid grid-cols-3 gap-10 max-w-[1200px] mx-auto pt-10 pb-44 z-10 relative" id="list_achievement">
   </ul>
 
   <div>

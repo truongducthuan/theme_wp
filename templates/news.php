@@ -130,9 +130,6 @@ $categories = get_the_category();
           wp_reset_postdata();
         ?>
 
-  <div class="mt-32">
-    <?php get_template_part('template-parts/recruit-contact'); ?>
-  </div>
 </section>
 <?php 
 get_footer();

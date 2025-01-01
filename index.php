@@ -1,6 +1,7 @@
 <?php 
 get_header();
 
+// get news
 $args = array(
   'post_type' => 'post',
   'post_status' => 'publish',
@@ -9,8 +10,8 @@ $args = array(
 
 $posts = new WP_Query( $args );
 
+$page_id = get_the_ID();
 ?>
-
 
 <div class="flex flex-col">
   <div
@@ -23,15 +24,8 @@ $posts = new WP_Query( $args );
         <?php get_template_part('template-parts/banner-slide'); ?>
         <!-- End Banner -->
 
-      <!-- Start slice -->
-      <?php 
-      $get_slices = get_field('slider');
-      // echo '<pre>';
-      // print_r($get_slices);
-      // echo '</pre>';
-      ?>
-    
-    <div class="flex flex-col mt-36 w-full lg:h-[450px] 2xl:h-[550px]" id="slide_phone">
+      <!-- Start slice --> 
+      <div class="flex flex-col mt-36 w-full lg:h-[450px] 2xl:h-[550px]" id="slide_phone">
         <?php  include('template-parts/slide-autoplay.php'); ?>
       </div>
       <!-- End Slice -->
@@ -66,7 +60,7 @@ $posts = new WP_Query( $args );
     
         <div class="relative w-1/2">
           <div class="absolute z-10 top-0 right-0 left-0 bg-gradient-to-t from-black to-inherit">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/WHAT-WE-DO.png" alt="our work" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/WHAT-WE-DO.png" class="opacity-[0.1] w-full">
+            <div class="gradient-text">what we do</div>
           </div>
 
           <div class="flex flex-col justify-start gap-9 mt-[70px] relative">
@@ -98,7 +92,8 @@ $posts = new WP_Query( $args );
                 <br />
                 私たちAgeLabは、テクノロジーで新しい時代を切り開き、新たな価値の創出を追求します。
               </div>
-              <div
+              <a
+                href="<?php echo esc_url(home_url('/what-we-do')); ?>"
                 class="flex gap-5 btn-arrow hover:cursor-pointer justify-between self-end py-3.5 pr-3.5 pl-10 mt-20 max-w-full text-base text-black bg-white border border-black border-solid rounded-[100px] w-[295px] max-md:pl-5 max-md:mt-10"
               >
                 <div class="my-auto">ABOUT US</div>
@@ -107,7 +102,7 @@ $posts = new WP_Query( $args );
                 >
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-white.svg" alt="arrow" srcset="">
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -128,8 +123,8 @@ $posts = new WP_Query( $args );
             ><a name="business"></a
           ></span>
         <div class="self-end w-full relative">
-          <div class="absolute top-0 right-0 left-0 w-full">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/INTRODUCTION.svg" alt="instruction" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/INTRODUCTION.svg" class="w-full opacity-[0.1]">
+          <div class="absolute -top-[70px] right-0 left-0 w-full">
+            <div class="gradient-text">introduction</div>
           </div>
           <div class="flex gap-5 max-md:flex-col max-w-[1200px] mx-auto z-10">
 
@@ -326,8 +321,8 @@ $posts = new WP_Query( $args );
           <div class="absolute right-0 -top-[100%]">
             <img class="w-full mix-blend-luminosity" src="<?php echo get_template_directory_uri(); ?>/assets/svg/bg2.svg" alt="" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/bg2.svg" class="w-full" >
           </div>
-            <div class="absolute top-0 right-0 left-0">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/OUR-PROJECT.svg" alt="" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/OUR-PROJECT.svg" class="w-full opacity-[0.1]">
+            <div class="absolute -top-[100px] right-0 left-0">
+              <div class="gradient-text">our project</div>
             </div>
 
             <div class="flex flex-col md:flex-row max-w-[1200px] mx-auto">
@@ -415,7 +410,7 @@ $posts = new WP_Query( $args );
          $categories = get_categories();
         ?>
         <div
-        class="flex flex-col pt-36 items-start w-full max-w-[1200px] mx-auto"
+        class="flex flex-col py-36 items-start w-full max-w-[1200px] mx-auto"
         >
           
           <div class="flex gap-3 mt-1.5 text-base text-white whitespace-nowrap">
@@ -492,19 +487,6 @@ $posts = new WP_Query( $args );
         </div>
         <!-- End News -->
 
-        <!-- Start Recruit and Contact -->
-        <span
-            class="scroll-to"
-            data-label="Scroll to: #info"
-            data-bullet="false"
-            data-link="#info"
-            data-title="info"
-            ><a name="info"></a
-          ></span>
-         <div class="pt-40">
-           <?php get_template_part('template-parts/recruit-contact'); ?>
-         </div>
-        <!-- End Recruit and Contact -->
       </div>
     </div>
   </div>

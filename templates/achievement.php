@@ -143,10 +143,6 @@ endif;
 
   <ul class="grid grid-cols-3 gap-10 max-w-[1200px] mx-auto pt-10 pb-44 z-10 relative" id="list_achievement">
   </ul>
-
-  <div>
-    <?php include(locate_template('template-parts/recruit-contact.php')); ?>
-  </div>
 </section>
 
 <?php 

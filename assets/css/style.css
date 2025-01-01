@@ -120,6 +120,33 @@ display: -webkit-box;
   right: 0%;
 }
 
+.divide-bottom {
+  border-bottom: 1px solid #fff !important;
+}
+
+.gradient-text {
+  background: linear-gradient(to bottom, #fff 50%, #0000 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: screen;
+  opacity: 0.1;
+  text-transform: uppercase;
+  font-size: 16rem;
+  font-weight: 800;
+}
+
+@media (max-width: 1500px) {
+  .gradient-text {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .gradient-text {
+    font-size: 11rem;
+  }
+}
+
 .business_title:hover img {
   transform: rotate(-45deg);
   animation: rotateImage 0.3s ease;
@@ -131,7 +158,7 @@ display: -webkit-box;
 }
 @media (max-width: 1500px) {
   .clip-path__work {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 63%);
+    clip-path: polygon(0 0, 30% 0, 100% 100%, 35% 100%, 0 63%);
   }
 }
 

@@ -41,7 +41,7 @@ $author_name = get_the_author_meta('display_name', $author_id);
 
   <div class="flex justify-end items-end gap-4 my-10 w-full text-white"><span>Top  実績 </span><p>ニュースタイトルが入ります。ニュースタイトルが入ります。</p></div>
 
-  <div class="bg-[#353333] p-5 md:p-16 text-white rounded-xl mt-16 mb-2 md:mb-8 w-full">
+  <div class="bg-[#353333] p-5 md:p-16 text-white rounded-xl my-16 mb-2 md:mb-8 w-full">
       <?php echo apply_filters('the_content', $post->post_content); ?>
     </div>
     <div class="w-full h-[1px] bg-[#D9D9D9] my-16"></div>
@@ -66,9 +66,6 @@ $author_name = get_the_author_meta('display_name', $author_id);
     </div>
   </div>
 </section>
-<div class="mb-16 w-full">
-  <?php include(locate_template('template-parts/recruit-contact.php')); ?>
-</div>
 
 <?php
 get_footer();

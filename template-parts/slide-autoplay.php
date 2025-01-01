@@ -1,5 +1,14 @@
 <?php
-$slides = get_field('slider');
+// get achievements
+$the_query = new WP_Query(array(
+  'post_type' => 'achievement',
+  'post_status' => 'publish',
+  'posts_per_page' => -1
+));
+// echo '<pre>';
+// print_r($the_query->posts);
+// echo '</pre>';
+
 ?>
 
 <style>
@@ -44,41 +53,66 @@ $slides = get_field('slider');
   transform: translateY(100px) !important;
 }
 </style>
+<?php
 
+?>
 <div class="swiper mySwiper2">
   <div class="swiper-wrapper">
-  <?php 
-            if(is_array($get_slices)): 
+            <?php 
+            if($the_query->have_posts()): 
+              
               $counter = 0; // Initialize a counter
-              foreach($get_slices as $slice):
-                $counter++; // Increment the counter
-                $img = $slice['photo'];
-                $bg = $slice['background'];
+              foreach($the_query->posts as $post):
+                $post_id = $post->ID;
 
-                $parts = explode('/n', $slice['description']);
-                $desc1 = $parts[0] ?? '';
-                $desc2 = $parts[1] ?? '';
+                $get_name_company = get_field('name_company', $post_id);
+                $get_bg = get_field('background', $post_id);
+                $get_photo_left = get_field('left', $post_id);
+                
+                $post_type = get_post_type($post_id);
+                $taxonomies = get_object_taxonomies($post_type, 'names');
+                $terms_list = [];
+        
+                foreach ($taxonomies as $taxonomy) {
+                    $terms = get_the_terms($post_id, $taxonomy);
+                    
+                                 
+                    if ($terms && !is_wp_error($terms)) {
+                      $terms_list[$taxonomy] = $terms;
+                    }
+                    if (!empty($terms_list)) {
+                      foreach ($terms_list as $taxonomy => $terms) {
+                          $post->taxonomy = $terms;
+                      }
+                  }
+                }
+                $indexRandom = 0;
+                if (!empty($post->taxonomy)) {
+                  $indexRandom = array_rand($post->taxonomy);
+                }
                 $even = $counter % 2 == 0;
+                $counter++;
            
                 ?>
                 <div class="swiper-slide <?php echo $even ? 'slide-item-even' : ""; ?>">
-                  <div class="w-full h-full flex flex-col bg-transparent relative">
+                  <a href="<?php echo $post->guid ?>" class="w-full h-full flex flex-col bg-transparent relative">
                     <div class="relative w-full h-full flex items-center justify-center">
-                      <div class="w-2/3"><img src="<?php echo $img; ?>" class="rounded-tl-[50px]"></div>
+                      <div class="w-2/3 mb-[30px]"><img src="<?php echo $get_photo_left; ?>" class="rounded-tl-[50px]"></div>
                       <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
-                        <img src="<?php echo $bg; ?>" class="" >
+                        <img src="<?php echo $get_bg; ?>" class="" >
 
-                        <?php if($slice['tag']): ?>
-                        <div class="absolute right-0 bottom-[20px] bg-[#D70C18] py-0.5 px-4 text-white"><?php echo $slice['tag'];?></div>
+                        <?php if($post->taxonomy): ?>
+                        <div class="absolute right-0 bottom-[10px] bg-[#D70C18] z-20 py-0.5 px-4 text-white"><?php echo $post->taxonomy[$indexRandom]->name; ?></div>
                         <?php endif; ?>
                       </div>
                     </div>
-                    <div class="text-white mt-4 leading-9"><?php echo '<span class="font-bold">'. $desc1 .'</span>' . '<br>' . '<span class="font-light">'. $desc2 .'</span>'; ?></div>
-                    <div class="absolute top-[-60px] left-[20px] text-8xl font-bold text-white mix-blend-difference"><?php echo $slice['number']; ?></div>
-                  </div>
+                    <div class="text-white mt-4 leading-9"><?php echo '<span class="font-bold">'. $get_name_company .'</span>' . '<br>' . '<span class="font-light">'. $post->post_title .'</span>'; ?></div>
+                    <div class="absolute top-[-60px] left-[20px] text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter; ?></div>
+                  </a>
                 </div>
                 <?php 
               endforeach;
+              wp_reset_postdata();
             endif; 
             ?>
   </div>
@@ -96,17 +130,17 @@ var swiper2 = new Swiper(".mySwiper2", {
   //centeredSlides: true,
   loop: true,
   autoplay: {
-    delay: 0,
+    delay: -10,
     disableOnInteraction: false,
   },
-  speed:2000,
+  speed:4000,
 });
 
 
-// $('.swiper-slide').hover(function(){
-//   swiper2.autoplay.stop();
-// }, function(){
-//   swiper2.autoplay.start();
-// });
+$('.swiper-slide').hover(function(){
+  swiper2.autoplay.stop();
+}, function(){
+  swiper2.autoplay.start();
+});
 
 </script>

@@ -1,3 +1,6 @@
+<div class="relative z-10">
+    <?php include(locate_template('template-parts/recruit-and-contact.php')); ?>
+  </div>
 <div
           class="flex flex-col py-24 pr-16 pl-7 w-full bg-white max-md:px-5 max-md:max-w-full"
         >
@@ -17,10 +20,10 @@
               class="flex gap-7 items-center self-stretch my-auto text-sm font-bold text-black whitespace-nowrap min-w-[240px]"
             >
               <div class="self-stretch my-auto"><a href="#business">事業内容</a></div>
-              <div class="self-stretch my-auto"><a href="#achievement">実績</a></div>
+              <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/achievements')); ?>">実績</a></div>
               <div class="self-stretch my-auto"><a href="#project">企業案内</a></div>
-              <div class="self-stretch my-auto"><a href="#about">採用情報</a></div>
-              <div class="self-stretch my-auto"><a href="#news">お知らせ</a></div>
+              <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/what-we-do')); ?>">採用情報</a></div>
+              <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/news')); ?>">お知らせ</a></div>
             </div>
           </div>
           <div

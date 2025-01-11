@@ -72,18 +72,18 @@ if (!empty($terms_list)) {
     />
   </div>
 
-  <div class="max-w-[1200px] mx-auto pt-60 z-10 relative">
+  <div class="max-w-[1200px] mx-auto pt-32 md:pt-60 px-5 md:px-0 z-10 relative">
     <div
       class="flex gap-3 items-center self-start text-base text-white mb-10"
     >
       <div
         class="flex shrink-0 self-stretch my-auto w-2.5 h-2.5 bg-red-600 rounded-full"
       ></div>
-      <div class="self-stretch my-auto">お知らせ</div>
+      <div class="self-stretch my-auto">実績</div>
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-6xl text-white uppercase">OUR PROJECT <br /> Achievements</div>
+        <div class="font-bold text-4xl md:text-8xl text-white uppercase">OUR PROJECT <br /> Achievements</div>
       </div>
     </div>
     <div class="text-white mt-10">
@@ -91,7 +91,7 @@ if (!empty($terms_list)) {
     未来を見据えたソリューションを提供しております。<br />
     大切なのは作った数ではなく、使われるアプリを目指して開発することです。
     </div>
-    <div class="flex justify-end items-end gap-4 mt-20 mb-10 w-full text-white"><span>Top -</span><p>実績</p></div>
+    <div class="flex justify-end items-end gap-4 mt-16 md:mt-20 mb-10 w-full text-white"><span>Top -</span><p>実績</p></div>
 
   </div>
 
@@ -118,7 +118,7 @@ if ( ! empty( $taxonomies ) ) :
     endforeach;
 endif;
 ?>
-<ul class="max-w-[1200px] mx-auto pt-10 z-10 relative flex items-center gap-3" id="menu_list"></ul>
+<ul class="max-w-[1200px] mx-auto pb-5 md:pb-0 pt-5 md:pt-10 px-5 md:px-0 overflow-x-auto relative z-10 flex items-center gap-3" id="menu_list"></ul>
 <script>
   var taxonomies = <?php echo json_encode($terms); ?>;
   taxonomies?.unshift({name: 'すべて'});
@@ -128,7 +128,7 @@ endif;
     var html = '';
     taxonomies?.map(menu => {
       html += `
-      <li onclick="handleClick('${menu.name}'); handleActive('${menu.name}');" class="menu_achievement select-none py-1 px-4 cursor-pointer border border-white rounded-3xl ${active == menu.name ? 'bg-white' : ''} hover:bg-white group">
+      <li onclick="handleClick('${menu.name}'); handleActive('${menu.name}');" class="menu_achievement text-nowrap text-center select-none py-1 px-4 cursor-pointer border border-white rounded-3xl ${active == menu.name ? 'bg-white' : ''} hover:bg-white group">
         <span class="${active == menu.name ? 'text-black' : 'text-white'} group-hover:text-black">${menu.name}</span>
       </li>`
     })
@@ -141,7 +141,7 @@ endif;
   }
 </script>
 
-  <ul class="grid grid-cols-3 gap-10 max-w-[1200px] mx-auto pt-10 pb-44 z-10 relative" id="list_achievement">
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1200px] px-5 md:px-0 mx-auto pt-10 pb-20 md:pb-44 z-10 relative" id="list_achievement">
   </ul>
 </section>
 

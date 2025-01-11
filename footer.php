@@ -2,22 +2,22 @@
     <?php include(locate_template('template-parts/recruit-and-contact.php')); ?>
   </div>
 <div
-          class="flex flex-col py-24 pr-16 pl-7 w-full bg-white max-md:px-5 max-md:max-w-full"
+          class="flex flex-col py-10 md:py-24 pr-16 pl-7 w-full bg-white max-md:px-5 max-md:max-w-full"
         >
           <div
             class="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full"
           >
             <div
-              class="flex gap-10 items-center self-stretch my-auto min-w-[240px] w-[342px]"
+              class="flex items-start self-stretch w-fit md:min-w-[240px] md:w-[342px]"
             >
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c731ff294cc58d9d117ee7a30776f45010618eda6ca10f8523fcec7743a9b8dd?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                class="object-contain self-stretch my-auto aspect-[6.58] min-w-[240px] w-[342px]"
+                src="<?php get_template_directory_uri() ?>/wp-content/uploads/2025/01/logo-e1736171558410.png"
+                class="object-contain self-stretch my-auto w-full"
               />
             </div>
             <div
-              class="flex gap-7 items-center self-stretch my-auto text-sm font-bold text-black whitespace-nowrap min-w-[240px]"
+              class="flex flex-wrap gap-7 items-center self-stretch my-auto text-sm font-bold text-black whitespace-nowrap min-w-[240px]"
             >
               <div class="self-stretch my-auto"><a href="#business">事業内容</a></div>
               <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/achievements')); ?>">実績</a></div>
@@ -30,7 +30,7 @@
             class="flex flex-wrap gap-5 justify-between self-end mt-28 w-full max-w-[1202px] max-md:mt-10 max-md:max-w-full"
           >
             <div
-              class="flex gap-6 my-auto text-xs text-neutral-700 max-md:max-w-full"
+              class="hidden md:flex flex-col md:flex-row gap-6 my-auto text-xs text-neutral-700 max-md:max-w-full order-2 md:order-1"
             >
               <div class="flex-auto">
                 Copyright © 2024 エイジラボ株式会社 | AGELAB.inc. All Rights
@@ -38,7 +38,17 @@
               </div>
               <div class="basis-auto">プライバシーポリシー</div>
             </div>
-            <div class="flex gap-4">
+
+            <div
+              class="flex md:hidden flex-col md:flex-row gap-2 my-auto text-xs text-neutral-700 max-md:max-w-full order-2 md:order-1"
+            >
+              <div class="flex-auto">
+                Copyright © 2024 エイジラボ株式会社 | AGELAB.inc.
+              </div>
+              <div class="basis-auto">All Rights
+              Reserved. プライバシーポリシー</div>
+            </div>
+            <div class="flex gap-4 order-1 md:order-2">
               <div class="grow text-sm font-black text-black">FOLLOW US</div>
               <div class="flex gap-4 items-center my-auto">
                 <img
@@ -70,5 +80,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/swiper.js'; ?>"></script>
 
-<?php  wp_footer(); ?>
+<?php wp_footer(); ?>
 </html>       

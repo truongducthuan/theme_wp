@@ -29,7 +29,7 @@
           $post->taxonomy = $terms;
       }
   }
-  
+//   print_r($post->taxonomy[0]->name);
 ?>
 
 <section>
@@ -42,27 +42,30 @@
     />
   </div>
 
-  <div class="max-w-[1200px] mx-auto pt-60 z-10 relative">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-0 pt-32 md:pt-60 z-10 relative">
     <div
-      class="flex gap-3 items-center self-start text-base mb-10"
+      class="flex gap-3 items-center self-start text-base mb-5 md:mb-10"
     >
       <div class="self-stretch my-auto">実績紹介</div>
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 py-1 rounded-xl">
-        <div class="font-bold text-6xl uppercase"><?php the_title(); ?></div>
+        <div class="font-bold text-3xl md:text-6xl uppercase"><?php the_title(); ?></div>
       </div>
     </div>
-    <div class="mt-10 flex items-center gap-4">
+    <div class="mt-5 md:mt-10 flex items-center gap-4">
         <p>to-suto</p>
-        <p>#タグ1</p>
-        <p>#タグ2</p>
+		<?php 
+		foreach($post->taxonomy as $item) {
+			echo '<p>#'. $item->name .'</p>';
+		}
+		?>
     </div>
-    <div class="flex justify-end items-end gap-4 mt-40 mb-20 w-full"><span>Top -</span><p><?php the_title(); ?></p></div>
+    <div class="flex justify-end items-end gap-4  mt-10 md:mt-40 mb-10 md:mb-20 w-full"><span>Top -</span><p><?php the_title(); ?></p></div>
   </div>
 
-  <div class="relative z-10 max-w-[1200px] mx-auto">
-    <div class="relative flex w-full h-[650px] items-center justify-center gap-5 rounded">
+  <div class="relative z-10 max-w-[1200px] px-5 md:px-0 mx-auto">
+    <div class="relative flex w-full h-[400px] md:h-[650px] items-center justify-center gap-5 rounded">
         <div class="absolute inset-0 w-full">
             <img src="<?php echo $get_bg; ?>" alt="background" class="w-full rounded" style="height: -webkit-fill-available;" >
         </div>
@@ -81,8 +84,8 @@
         
     </div>
 
-    <div class="flex justify-between items-start gap-5 my-20">
-        <div class="min-w-[30%] text-3xl text-white"><?php echo $get_title_service; ?></div>
+    <div class="flex justify-between items-start gap-5 my-10 md:my-20">
+        <div class="min-w-[30%] text-xl md:text-3xl text-white"><?php echo $get_title_service; ?></div>
         <div><?php echo $get_desc_service; ?></div>
     </div>
 

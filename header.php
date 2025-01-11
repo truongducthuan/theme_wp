@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/tailwindcss/output.css'; ?>">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/style.css'; ?>">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/pagination.css'; ?>">
-  
-  <?php wp_head(); ?>
+  <?php  wp_head(); ?>
 
   <style>
     .hero-pattern {
@@ -70,6 +69,38 @@
       border-top: .2rem solid var(--color-base);
       pointer-events: none;
     }
+
+    .icon-menu {
+      display: block;
+      position: relative;
+      background: black;
+    width: 26px;
+    height: 2px;
+    }
+
+    #open-nav:hover span:first-child {
+      transform: translateY(5px) rotate(-25deg);
+    }
+    #open-nav:hover span:nth-child(2) {
+      transform: translateY(-5px) rotate(25deg);
+    }
+	  
+	  .menu-close__top {
+		  transform: translateY(5px) rotate(-33deg);
+	  }
+	  .menu-close__bottom {
+		  transform: translateY(-5px) rotate(33deg);
+	  }
+
+    .scroll-right-left {
+      right: 0;
+      transition: right 0.5s ease-in-out;
+    }
+    .scroll-left-right {
+      right: -100%;
+      transition: right 0.5s ease-in-out;
+    }
+
     @keyframes scrollBottom {
       100% {
         top: 10;
@@ -81,47 +112,17 @@
 <body>
   <main class="w-full h-full hero-pattern bg-[#222222]">
               <div class="w-full relative">
-                <div class="flex justify-between items-center header fixed -top-[20] md:-top-24 left-5 md:left-0 right-5 md:right-0 z-20 max-w-[1200px] mx-auto flex-wrap bg-white min-h-[60px] md:min-h-[80px] rounded-[100px] max-md:max-w-full">
+                <div class="flex justify-between items-center header fixed top-5 md:-top-24 left-5 md:left-0 right-5 md:right-0 z-30 max-w-[1200px] mx-auto flex-wrap bg-white min-h-[60px] md:min-h-[80px] rounded-[100px] max-md:max-w-full">
                   <a
                     href="<?php echo esc_url(home_url('')); ?>"
                     class="flex overflow-hidden gap-2 items-start ml-5 md:pl-12 my-auto"
                   >
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/010a4f8dceb2996979b22af2d117ef118321a7508a08b3912c7a86709f51f280?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                      class="object-contain shrink-0 aspect-[1.19] w-[37px]"
-                    />
                     <!-- Left -->
                     <div class="flex gap-1 items-center py-2">
                       <img
                         loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/3668739dbab36a10e93e1788a0b3eaf6457add280f4fc2efb57f2922ceb43234?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                        class="object-contain shrink-0 self-stretch my-auto w-5 aspect-[1.11]"
-                      />
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb78865e90c64651c783b3c4c149fe259308e9548212f76bb15c436111cbed26?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                        class="object-contain shrink-0 self-stretch my-auto aspect-[0.94] w-[17px]"
-                      />
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d97b4b8d2669f6948f1711c8858e034f127b354f8db80c3ed63ffb19c85ce794?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                        class="object-contain shrink-0 self-stretch my-auto w-4 aspect-[0.89]"
-                      />
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0975698bcf4575b68fc08a115bbbb92f3410fc7bd2be618daa71a31847b02d28?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                        class="object-contain shrink-0 self-stretch my-auto w-3.5 aspect-[0.78]"
-                      />
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b2c809d2db80741b432eb9a89ffaa574eb03c516bfc4334411e06e20cac7959?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                        class="object-contain shrink-0 self-stretch my-auto w-5 aspect-[1.11]"
-                      />
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/983a3e83cfa314d60cee67434a46b674ff51b25a64e7b449ae225b104d8627cc?placeholderIfAbsent=true&apiKey=8af6f5d32b5144bd9e69424ca42ab7b5"
-                        class="object-contain shrink-0 self-stretch my-auto w-4 aspect-[0.89]"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/svg/Logo.svg"
+                        class="object-contain shrink-0 self-stretch my-auto"
                       />
                     </div>
                   </a>
@@ -130,7 +131,7 @@
                   <div class="hidden md:flex gap-10 items-center">
                     <div class="flex justify-between items-center gap-10" id="menus-top">
                       <a
-                        href="#business"
+                        href="<?php echo esc_url(home_url('/our-business')); ?>"
                         class="self-stretch hover:text-[#1e3a8a] h-full text-base font-bold tracking-wider relative menu-top transition duration-300 overflow-hidden text-black whitespace-nowrap"
                       >
                         事業内容
@@ -142,7 +143,7 @@
                         実績
                       </a>
                       <a
-                        href="#project"
+                       href="<?php echo esc_url(home_url('/what-we-do')); ?>"
                         class="self-stretch hover:text-[#1e3a8a] h-full text-base font-bold tracking-wider relative menu-top transition duration-300 overflow-hidden text-black whitespace-nowrap"
                       >
                         企業案内
@@ -175,7 +176,7 @@
                         class="flex gap-2 items-center text-center pr-4 py-3 my-auto text-sm text-white whitespace-nowrap w-[140px]"
                       >
                         <a
-                          href="<?php echo esc_url(home_url('/recruitment')); ?>"
+                          href="<?php echo esc_url(home_url('/contact-form')); ?>"
                           class="gap-2.5 self-stretch px-5 py-3.5 my-auto hover:border-[1px] hover:border-solid hover:border-blue-900 hover:bg-blue-300 hover:text-blue-900 bg-blue-900 min-h-[45px] rounded-[100px] w-full max-md:px-5 transition-all"
                         >
                           資料請求
@@ -184,18 +185,111 @@
                     </div>
                   </div>
 
-                  <div class="flex md:hidden gap-5 items-center" id="menus_top">
-                    <a href="#">MENU</a>
+                  <div id="open-nav" class="flex md:hidden w-20 cursor-pointer flex-col justify-center items-center p-5">
+                    <span class="icon-menu top-0"></span>
+                    <span class="icon-menu top-2"></span>
                   </div>
                 </div>
-              </div>
+
+                <div class="block md:hidden absolute top-0 -right-[100%] bottom-0 left-0 bg-grba z-50" id="navbar">
+                  <div class="p-8 bg-white flex justify-start fixed top-1 -right-[100%] bottom-1 md:top-8 md:right-8 md:bottom-8 w-[300px] md:w-[400px] md:h-buttom rounded-2xl gap-5 overflow-y-auto scrollbar-custom">
+					  <div class="absolute right-1 top-1 cursor-pointer text-3xl p-5 close-nav">
+						 <span class="icon-menu top-0 menu-close__top"></span>
+                    	<span class="icon-menu top-2 menu-close__bottom"></span>
+					  </div>
+                    <ul class="w-full divide-y">
+                      <li class="flex justify-between items-center py-5">
+                        <a href="<?php echo esc_url(home_url()); ?>" class="text-center hover:scale-110 hover:animate-pulse cursor-pointer transition-all duration-300">
+                        <img
+                        loading="lazy"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/svg/Logo.svg"
+                        class="object-contain shrink-0 self-stretch my-auto"
+                        />
+                        </a>
+
+                        <div class="p-1 cursor-pointer hover:bg-secondary close-nav"><i class="fa-solid fa-xmark text-2xl"></i></div>
+                      </li>
+                      <li class="hover:bg-[#f20c5d08] hover:translate-x-3 cursor-pointer transition-all duration-300">
+                        <a href="<?php echo esc_url(home_url('/our-business')) ?>" class="flex justify-between items-center py-4 w-full">
+                          <p class="capitalize font-semibold">事業内容</p>
+                          <i class="fa-solid fa-angle-right text-primary"></i>
+                        </a>
+                      </li>
+                      <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-class">
+                        <a href="<?php echo esc_url(home_url('/achievements')); ?>" class="w-full">
+                          <p class="capitalize font-semibold">実績</p>
+                          <i class="fa-solid fa-angle-right text-primary"></i>
+                        </a>
+                      </li>
+                      <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-schedule">
+                        <a href="<?php echo esc_url(home_url('/what-we-do')); ?>" class="w-full">
+                          <p class="capitalize font-semibold">企業案内</p>
+                            <i class="fa-solid fa-angle-right text-primary"></i>
+                        </a>  
+                      </li>
+                      <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-faq">
+                        <a href="<?php echo esc_url(home_url('/recruitment')); ?>" class="w-full">
+                          <p class="capitalize font-semibold">採用情報</p>
+                            <i class="fa-solid fa-angle-right text-primary"></i>
+                        </a>  
+                      </li>
+                      <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-access">
+                        <a href="<?php echo esc_url(home_url('/news')); ?>" class="w-full">
+                          <p class="capitalize font-semibold">お知らせ</p>
+                            <i class="fa-solid fa-angle-right text-primary"></i>
+                        </a>  
+                      </li>
+  
+                      <li class="pt-5 pb-5 border-none">
+                        <div>
+                        <a href="<?php echo esc_url(home_url('/recruitment')); ?>">
+                        <div class="gap-2.5 self-stretch px-5 py-3.5 text-white text-center my-auto hover:border-[1px] hover:border-solid hover:border-neutral-900 hover:bg-neutral-300 hover:text-neutral-900 bg-neutral-900 min-h-[45px] rounded-[100px] w-full max-md:px-5 transition-all">お問い合わせ</div>
+                        </a>
+                        </div>
+                      </li>
+                      <li class="pb-5 border-none">
+                        <div>
+                          <a href="<?php echo esc_url(home_url('/contact-form')); ?>">
+                            <div class="gap-2.5 self-stretch px-5 py-3.5 text-white text-center my-auto hover:border-[1px] hover:border-solid hover:border-blue-900 hover:bg-blue-300 hover:text-blue-900 bg-blue-900 min-h-[45px] rounded-[100px] w-full max-md:px-5 transition-all">資料請求</div>
+                          </a>
+                        </div>
+                      </li>
+<!--                       <li class="py-10 border-none">
+                        <button class="bg-secondary w-full py-2 rounded-lg hover:bg-gray-300 close-nav">x</button>
+                      </li> -->
+                    </ul>
+                  </div>
+                </div>
+  
+  </div>
 
 <script>
   window.onload = function() {
     const header = document.querySelector('.header');
-    console.log({header})
     header.classList.remove('md:-top-24');
     header.classList.add('md:top-10');
+
+    const menu = document.getElementById('open-nav')
+    const nav = document.getElementById('navbar')
+    const content = document.querySelector('#navbar div')
+    const closes = document.querySelectorAll('.close-nav')
+    console.log({menu}, content);
+    
+    menu.addEventListener('click', function(e) {
+      nav.classList.remove('scroll-left-right')
+      content.classList.remove('scroll-left-right')
+      nav.classList.add('scroll-right-left')
+      content.classList.add('scroll-right-left')
+    })
+
+    closes.forEach(close => {
+      close.addEventListener('click', function() {
+        nav.classList.remove('scroll-right-left')
+        content.classList.remove('scroll-right-left')
+        nav.classList.add('scroll-left-right')
+        content.classList.add('scroll-left-right')
+      })
+    })
   };
 </script>
   

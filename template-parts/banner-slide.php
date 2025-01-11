@@ -41,13 +41,44 @@ $banner_slides = get_field('banner_background');
   /* clip-path: polygon(55% 0, 100% 0%, 45% 100%, 0% 100%); */
 }
 
-#banner_slider_text--01::after {
+@media (max-width: 768px) {
+  .banner-clip-path {
+    clip-path: polygon(50% 0, 140% -10%, 60% 100%, -20% 100%)
+  }
+}
+
+/* #banner_slider_text--01::after {
   position: absolute;
-  content: "DRIVING";
+  content: "MAKE";
   left: 0;
   color: #fff;
   font-size: 6rem;
-}
+} */
+	
+	.slogan-banner {
+		position: absolute;
+		right: 27%;
+		top: 32%;
+		z-index: 10;
+		color: #fff;
+		font-family: hanatotyoutyo;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 56.1px;
+    letter-spacing: -0.1em;
+    text-align: justify; /* 'justified' should be 'justify' */
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+		transform: rotate(-5deg);
+	}
+
+  @media (max-width: 760px) {
+    .slogan-banner {
+      right: 0;
+    font-size: 25px;
+    top: 35%;
+    }
+  }
 
 /* @keyframes text-up {
   10% {
@@ -58,6 +89,65 @@ $banner_slides = get_field('banner_background');
     transform: translateY(0px);
   }
 } */
+	
+	.slide-text__01 {
+		left: -16%;
+	}
+	@media (max-width: 1600px) {
+		.slide-text__01 {
+			left: -32%;
+		}
+	}
+	@media (max-width: 1300px) {
+		.slide-text__01 {
+			left: -36%;
+		}
+	}
+
+	
+	.slide-text__02 {
+		left: -10%;
+	}
+	@media (max-width: 1600px) {
+		.slide-text__02 {
+			left: -23%;
+		}
+	}
+	@media (max-width: 1300px) {
+		.slide-text__02 {
+			left: -30%;
+		}
+	}
+
+  @media (max-width: 760px) {
+    .slide-text__001,
+    .slide-text__002,
+    .slide-text__003,
+		.slide-text__004 {
+			left: 20px;
+		}
+	}
+	
+	.slide-content__h {
+		height: 1100px;
+	}
+	@media (max-width: 1600px) {
+		.slide-content__h {
+			height: 900px;
+		}
+	}
+	@media (max-width: 1300px) {
+		.slide-content__h {
+			height: 800px;
+		}
+	}
+
+  @media (max-width: 760px) {
+		.slide-content__h {
+			height: 400px;
+		}
+	}
+
 
 @keyframes zoom-out {
   0% {
@@ -107,34 +197,59 @@ $banner_slides = get_field('banner_background');
 
 </style>      
 
-<div class="w-full h-500px md:h-[700px] lg:h-[800px] xl:h-[900px] 2xl:h-[1100px]">
+<div class="w-full mt-20 md:mt-0 md:h-500px slide-content__h">
 
           <div class="flex gap-5 max-md:flex-col relative w-full h-full">
             <!-- Text & -->
-            <div class="flex absolute left-0 top-0 flex-col mt-[140px] mb-[80px] w-[45%] max-md:ml-0 max-md:w-full">
+            <div class="flex absolute left-0 top-0 flex-col mt-[-70px] md:mt-[140px] mb-[80px] max-md:ml-0 w-[70%] md:w-[45%]">
               <img
                 loading="lazy"
                 src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"
                 class="object-contain self-stretch my-auto mr-0 w-full aspect-[1.03] max-md:mt-10 max-md:max-w-full"
               />
             </div>
-   
+            <!-- make people happy -->
             <div class="flex flex-col absolute z-10 top-0 right-0 bottom-0 w-3/5 max-md:ml-0 max-md:w-full mix-blend-exclusion" id="banner_slider">
                         <div
                         id="banner_slider_text--01"
-                          class="absolute text-white z-20 xl:mt-[37%] 2xl:mt-[30%] xl:-left-[34%] 2xl:-left-[16%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="hidden md:block absolute text-white z-20 slide-text__01 xl:mt-[37%] 2xl:mt-[30%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
-                          Driving Age
+                          MAKE PEOPLE
                         </div>
                         <div
-                          class="absolute text-white z-20 xl:mt-[55%] 2xl:mt-[44%] xl:-left-[20%] 2xl:-left-[10%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="hidden md:block absolute text-white z-20 slide-text__02 xl:mt-[55%] 2xl:mt-[44%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
-                        with Technology
+                        HAPPY WITH TECH
                         </div>
+
+                        <!-- responsive -->
+                        <div
+                          class="block md:hidden absolute text-white z-20 top-[50px] slide-text__001 xl:mt-[37%] 2xl:mt-[30%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                          MAKE
+                        </div>
+                        <div
+                          class="block md:hidden absolute text-white z-20 top-[100px] slide-text__002 xl:mt-[37%] 2xl:mt-[30%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                          PEOPLE
+                        </div>
+                        <div
+                          class="block md:hidden absolute text-white z-20 top-[150px] slide-text__003 xl:mt-[55%] 2xl:mt-[44%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                        HAPPY
+                        </div>
+                        <div
+                          class="block md:hidden absolute text-white z-20 top-[200px] slide-text__004 xl:mt-[55%] 2xl:mt-[44%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                        WITH TECH
+                        </div>
+				      <div class="slogan-banner">未来はすぐそこに。</div>
+              <!-- slide one -->
               <div class="slider-one banner-clip-path">
                 <div class="slider-one-image">
                 </div>
               </div>
+              <!-- slide two -->
               <div class="slider-two banner-clip-path">
                 <div class="slider-two-image">
                   <div class="slider-text">
@@ -143,16 +258,16 @@ $banner_slides = get_field('banner_background');
               </div>
             </div>
             <div class="absolute inset-0 max-w-[1200px] z-10 mx-auto w-full">
-              <div class="absolute flex flex-col justify-center items-center text-sm -ml-[30px] left-0 top-[30%]">
+              <div class="absolute flex flex-col justify-center items-center text-[10px] md:text-sm -ml-[30px] -right-[30px] md:right-[95%] left-[90%] md:left-0 top-[40px] md:top-[30%]">
                 <div class="text-center text-white rotate-90">Our Mission</div>
               </div>
                  
                 </div>  
                 <div
-                  class="flex flex-col ml-5 w-[16.5%] max-md:ml-0 max-md:w-full absolute z-20 -right-[4%] top-[37%] self-stretch my-auto text-xs text-white max-md:mt-10"
+                  class="flex flex-col ml-5 w-[16.5%] max-md:ml-0 max-md:w-full absolute z-20 right-0 md:-right-[4%] top-[60%] md:top-[37%] self-stretch my-auto text-xs text-white max-md:mt-10"
                 >
                   <div
-                    class="self-stretch my-auto text-xs text-white max-md:mt-10"
+                    class="self-stretch flex md:block justify-end my-auto text-[10px] md:text-xs text-white max-md:mt-10"
                   >
                     <div class="">
                       <span class="ml-8">Bringing Happiness</span>

@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --window-width: tan(atan2(var(--100vw), 1px));
+  --px: calc(1px* max(1440, var(--window-width)) / 1440);
+  --rem: calc(1rem* max(1440, var(--window-width)) / 1440);
+}
+
 .z-index-negative {
   z-index: -10;
 }
@@ -41,7 +47,7 @@ html {
   fill: transparent;
   width: 4108px;
   height: 170px;
-  display: flex;
+  /* display: flex; */
   overflow: hidden;
 }
 .decorative-text--1 div:first-child {
@@ -55,7 +61,7 @@ html {
 .decorative-text--2 {
   width: 4108px;
     height: 170px;
-    display: flex;
+    /* display: flex; */
     overflow: hidden;
     margin-top: -70px;
 
@@ -67,6 +73,13 @@ html {
 .decorative-text--2 div:last-child {
   -webkit-animation: loopRight2 60s linear infinite;
   animation: loopRight2 60s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .decorative-text--1,
+  .decorative-text--2 {
+    width: 1000px;
+  }
 }
 
 .create-3dots {
@@ -147,6 +160,18 @@ display: -webkit-box;
   }
 }
 
+@media (max-width: 720px) {
+  .gradient-text {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .gradient-text {
+    font-size: 3rem;
+  }
+}
+
 .business_title:hover img {
   transform: rotate(-45deg);
   animation: rotateImage 0.3s ease;
@@ -158,7 +183,7 @@ display: -webkit-box;
 }
 @media (max-width: 1500px) {
   .clip-path__work {
-    clip-path: polygon(0 0, 30% 0, 100% 100%, 35% 100%, 0 63%);
+    clip-path: polygon(0 0, 30% 0, 100% 100%, 35% 100%, 0 50%);
   }
 }
 

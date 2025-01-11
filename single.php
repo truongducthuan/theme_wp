@@ -24,6 +24,14 @@ $next_post = get_next_post();
     margin: 40px 0;
   }
   .news_post .wp-block-heading {}
+	.new_content hr {
+		width: 200px;
+		color: red;
+		margin: 40px 0;
+	}
+	.new_content h1 {
+		font-size: 30px;
+	}
 </style>
 
 <div class="relative">
@@ -35,19 +43,19 @@ $next_post = get_next_post();
   />
 </div>
 </div>
-<section class="relative z-10 pb-28 pt-60 max-w-[1200px] mx-auto flex flex-col items-center justify-center rounded-lg news_post">
+<section class="relative z-10 pb-28 pt-32 md:pt-60 max-w-[1200px] px-5 md:px-0 mx-auto flex flex-col items-center justify-center rounded-lg news_post">
   <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
     <div class=""><?php echo $categories[0]->name; ?></div>
-    <div><a class="font-bold text-6xl" href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></div>
+    <div><a class="font-bold text-3xl md:text-6xl" href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></div>
     <div class="flex items-center gap-6">
       <div><?php echo get_the_date('d/m/y'); ?></div>
       <div><?php echo $author_name; ?></div>
     </div>
   </div>
 
-  <div class="flex justify-end items-end gap-4 my-10 w-full text-white"><span>Top  実績 </span><p>ニュースタイトルが入ります。ニュースタイトルが入ります。</p></div>
+  <div class="flex justify-end items-end gap-4 my-0 md:my-10 w-full text-white"><span>Top  実績 </span><p><?php echo the_title(); ?></p></div>
 
-  <div class="bg-[#353333] p-5 md:p-16 text-white rounded-xl my-16 mb-2 md:mb-8 w-full">
+  <div class="bg-[#353333] p-5 md:p-16 text-white rounded-xl my-10 md:my-16 mb-2 md:mb-8 w-full new_content">
       <?php echo apply_filters('the_content', $post->post_content); ?>
     </div>
     <div class="w-full h-[1px] bg-[#D9D9D9] my-16"></div>

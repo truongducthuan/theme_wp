@@ -52,6 +52,16 @@ $the_query = new WP_Query(array(
 #slide_phone .slide-item-even {
   transform: translateY(100px) !important;
 }
+
+@media (max-width: 760px) {
+  #slide_phone .swiper-slide {
+    height: 70%;
+  }
+
+  #slide_phone .slide-item-even {
+  transform: translateY(70px) !important;
+}
+}
 </style>
 <?php
 
@@ -102,12 +112,12 @@ $the_query = new WP_Query(array(
                         <img src="<?php echo $get_bg; ?>" class="" >
 
                         <?php if($post->taxonomy): ?>
-                        <div class="absolute right-0 bottom-[10px] bg-[#D70C18] z-20 py-0.5 px-4 text-white"><?php echo $post->taxonomy[$indexRandom]->name; ?></div>
+                        <div class="absolute text-sm md:text-base right-0 bottom-[10px] bg-[#D70C18] z-20 py-0.5 px-4 text-white"><?php echo $post->taxonomy[$indexRandom]->name; ?></div>
                         <?php endif; ?>
                       </div>
                     </div>
-                    <div class="text-white mt-4 leading-9"><?php echo '<span class="font-bold">'. $get_name_company .'</span>' . '<br>' . '<span class="font-light">'. $post->post_title .'</span>'; ?></div>
-                    <div class="absolute top-[-60px] left-[20px] text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter; ?></div>
+                    <div class="text-white mt-2 md:mt-4 text-sm md:text-base leading-5 md:leading-9"><?php echo '<span class="font-bold">'. $get_name_company .'</span>' . '<br>' . '<span class="font-light">'. $post->post_title .'</span>'; ?></div>
+                    <div class="absolute -top-[25px] md:top-[-60px] left-[20px] text-5xl md:text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter; ?></div>
                   </a>
                 </div>
                 <?php 
@@ -125,15 +135,29 @@ $the_query = new WP_Query(array(
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
 var swiper2 = new Swiper(".mySwiper2", {
-  spaceBetween: 30,
-  slidesPerView: 4,
+  spaceBetween: 10,
+  slidesPerView: 2,
   //centeredSlides: true,
+  breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+  },
   loop: true,
   autoplay: {
     delay: -10,
     disableOnInteraction: false,
   },
-  speed:4000,
+  speed:6000,
 });
 
 

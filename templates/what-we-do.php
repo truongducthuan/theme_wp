@@ -56,8 +56,14 @@ Template Name: What We Do
   clip-path: polygon(100% 0, 100% 60%, 70% 100%, 0 100%, 70% 0);
 }
 
+@media (max-width: 720px) {
+  .gradient-text {
+    font-size: 4rem;
+  }
+}
+
 </style>
-<section>
+<section class="">
   <div class="relative">
     <div class="flex absolute -left-1 top-0 flex-col mt-[80px] mb-[80px] w-[46%] max-md:ml-0 max-md:w-full">
     <img
@@ -67,45 +73,45 @@ Template Name: What We Do
     />
   </div>
 
-  <div class="max-w-[1200px] mx-auto pt-60 z-10 relative text-[#B2B2B2]">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-0 pt-32 md:pt-60 z-10 relative text-[#B2B2B2]">
     <div
-      class="flex gap-3 items-center self-start text-base text-white mb-10"
+      class="flex gap-3 items-center self-start text-base text-white mb-5 md:mb-10"
     >
       <div
         class="flex shrink-0 self-stretch my-auto w-2.5 h-2.5 bg-red-600 rounded-full" 
       ></div>
-      <div class="self-stretch my-auto">会社概要</div>
+      <div class="self-stretch my-auto text-sm md:text-base">会社概要</div>
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-8xl text-white uppercase">what we do</div>
+        <div class="font-bold text-4xl md:text-8xl text-white uppercase">what we do</div>
       </div>
     </div>
-    <div class="text-white mt-8 text-3xl leading-10">
+    <div class="text-white mt-8 text-lg md:text-3xl leading-6 md:leading-10">
     圧倒的な技術力で <br >
     日本のDX化推進の一翼を担うエンジニア集団
     </div>
-    <div class="mt-8">
+    <div class="text-sm md:text-base mt-8">
     私たちは、金融と技術のプロフェッショナルが共に創業したITスタートアップです。<br >
 私たちAgeLabは、テクノロジーで新しい時代を切り開き、新たな価値の創出を追求します。
     </div>
-    <div class="flex justify-end items-end gap-4 mt-20 mb-10 w-full text-white"><span>Top -</span><p>会社概要</p></div>
+    <div class="flex justify-end items-end gap-4 mt-5 md:mt-20 mb-10 w-full text-white"><span>Top -</span><p>会社概要</p></div>
   </div>
 
   <div class="relative w-full z-10 text-[#B2B2B2]">
-    <div class="absolute left-80 -top-5 flex-col w-[84%] mb-[80px] bg-gradient-to-t from-black to-inherit">
+    <div class="absolute right-0 md:left-80 top-0 md:-top-5 flex-col w-[70%] md:w-[84%] mb-[80px] bg-gradient-to-t from-black to-inherit">
       <div class="gradient-text">message</div>  
   </div>
     <div class="absolute top-80 left-0 flex-col  bg-gradient-to-t from-black to-inherit">
       <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask-bg-gray.svg" class="w-full" />
     </div>
-    <div class="max-w-[1200px] mx-auto">
-      <div class="relative z-10 w-3/5 mx-auto pt-[200px]">
-        <h3 class="text-white text-3xl mb-10 leading-10">
+    <div class="max-w-[1200px] px-5 md:px-0 mx-auto">
+      <div class="relative z-10 w-full md:w-3/5 mx-auto pt-20 md:pt-[200px]">
+        <h3 class="text-white text-xl md:text-3xl mb-10 leading-10">
           テクノロジーを活かして <br >
           関わる人・企業を幸せにする
         </h3>
-        <p class="leading-8">
+        <p class="text-sm md:text-base leading-8">
         私たちは、テクノロジーの力を活かして、お客様の課題解決やビジョンの実現をサポートすることを使命としています。急速に変化する社会において、柔軟かつ革新的なアプローチが求められる時代だからこそ、私たちは「信頼」「挑戦」「成長」という3つの価値観を大切にしています。<br >
   お客様との対話を重ね、本質的なニーズを理解し、最適なソリューションを提案することを常に心がけています。開発を通じて得られるのは、単なるシステムやプロダクトだけではありません。それは、私たちが共に築く「未来への可能性」です。
   これからも、お客様や社会の期待を超える価値を提供し続けることで、新しい未来を創造していきたいと考えています。私たちの旅は始まったばかりです。
@@ -121,18 +127,18 @@ Template Name: What We Do
     
   </div>
 
-  <div class="flex justify-between items-center text-[#B2B2B2] mt-20 mb-10 w-full relative">
+  <div class="flex flex-col md:flex-row justify-between items-center text-[#B2B2B2] mt-20 mb-10 w-full relative">
     <div class="absolute lg:-top-[350px] 2xl:-top-[500px] right-0 w-[65%]">
       <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask-bg-black.svg" class="w-full" >
     </div>
-    <div class="absolute xl:-bottom-[215px] 2xl:-bottom-[200px] w-full z-10">
+    <div class="absolute -top-[55px] md:top-[38rem] xl:-bottom-[215px] 2xl:-bottom-[200px] w-full z-10">
       <div class="gradient-text">Philosophy</div>
     </div>
-    <div class="w-1/2 relative z-20">
-      <div class="ml-28 flex flex-col gap-8 leading-7">
+    <div class="w-full md:w-1/2 order-1 md:order-1 relative z-20">
+      <div class="ml-5 md:ml-28 mr-5 md:mr-0 flex flex-col gap-4 md:gap-8 leading-7">
         <span class="text-white text-xl">ミッション/理念</span>
-        <h3 class="text-white text-5xl my-2">Driving Age with Technology</h3>
-        <p>
+        <h3 class="text-white text-2xl md:text-5xl my-1 md:my-2">Driving Age with Technology</h3>
+        <p class="text-sm md:text-base">
           説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
           説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
           説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
@@ -142,7 +148,7 @@ Template Name: What We Do
         </p>
       </div>
     </div>
-    <div class="mt-[100px] w-1/2 lg:h-[620px] 2xl:h-[750px] overflow-hidden">
+    <div class="mt-5 md:mt-[100px] order-2 md:order-2 w-full md:w-1/2 lg:h-[620px] 2xl:h-[750px] overflow-hidden">
       <?php 
         $we_do = get_field('what_to_do', 2);
         ?>
@@ -168,7 +174,7 @@ Template Name: What We Do
       </div>
     </div>
   </div>
-  <div class="text-[#B2B2B2] pt-40 max-w-[1200px] mx-auto flex justify-between relative z-20">
+  <div class="text-[#B2B2B2] pt-10 md:pt-40 max-w-[1200px] mx-auto px-5 md:px-0 flex flex-col md:flex-row justify-between gap-5 relative z-20">
     <div class="text-white text-xl">メンバー紹介</div>
     <p>説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。<br >
     説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。</p>
@@ -177,12 +183,13 @@ Template Name: What We Do
   <?php 
   $members = get_field('members');
   ?>
-  <div class="w-full h-[800px] mt-32 mb-52 relative" id="slide-member">
+  <div class="w-full h-[400px] md:h-[800px] mt-10 md:mt-32 mb-20 md:mb-52 relative" id="slide-member">
     <div class="absolute left-0 bottom-[50%]">
       <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask group (4).svg" class="w-full" >
     </div>
-    <div class="absolute -bottom-[100px] right-0">
-      <img class="w-full mix-blend-luminosity opacity-[0.1]" src="<?php echo get_template_directory_uri(); ?>/assets/svg/TOP MEMBER.svg ?>" alt="top member" >
+    <div class="absolute -bottom-[60px] mix-blend-difference md:-bottom-[145px] right-0">
+      <!-- <img class="w-full mix-blend-luminosity opacity-[0.1]" src="<?php // echo get_template_directory_uri(); ?>/assets/svg/TOP MEMBER.svg ?>" alt="top member" > -->
+      <h1 class="gradient-text">top member</h1>
     </div>
     <div class="absolute top-[250px] right-0">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/Mask group.svg" alt="mask group" class="w-full" >
@@ -198,8 +205,8 @@ Template Name: What We Do
            
                 ?>
                 <div class="swiper-slide relative">
-                  <div class="absolute top-0 z-10 left-80 text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter;?></div>
-                  <div class="w-full h-[90%] translate-y-5 flex flex-col relative">
+                  <div class="absolute top-0 z-10 left-[9rem] md:left-80 text-5xl md:text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter;?></div>
+                  <div class="w-full h-[95%] md:h-[90%] translate-y-5 flex flex-col relative">
                     <div class="relative w-full h-full photo flex items-center justify-center">
                       <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
                         <img src="<?php echo $member['photo']; ?>" class="human" >
@@ -208,7 +215,7 @@ Template Name: What We Do
                     <div class="absolute z-10 bottom-8 right-[32%] w-7/12 flex justify-between items-end text-white">
                       <div>
                         <p class="text-white"><?php echo $member['position']; ?></p>
-                        <h3 class="text-3xl font-bold text-white"><?php echo $member['name_1']; ?></h3>
+                        <h3 class="text-xl md:text-3xl font-bold text-white"><?php echo $member['name_1']; ?></h3>
                       </div>
                       <div class="text-sm"><?php echo $member['name_2']; ?></div>
                     </div>
@@ -226,9 +233,9 @@ Template Name: What We Do
   <?php 
   $table = get_field('table');
   ?>
-  <div class="max-w-[1200px] mx-auto text-[#B2B2B2] relative mb-32">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-0 text-[#B2B2B2] relative mb-20 md:mb-32">
     <h2 class="text-white text-xl">会社概要</h2>
-    <div class="flex flex-col w-4/6 mx-auto mt-10 divide-y-2 divide-[#B2B2B2]">
+    <div class="flex flex-col w-full md:w-4/6 mx-auto mt-10 divide-y-2 divide-[#B2B2B2]">
     <?php if($table): 
       $index = 0;
       $count = count($table);
@@ -238,7 +245,7 @@ Template Name: What We Do
         }
     ?>
       <div class="flex justify-start items-center gap-10 py-5 <?php echo $index == $count - 1 ? 'divide-bottom' : ''; ?>">
-        <div class="text-white ml-16 min-w-[200px]"><?php echo $item['label']; ?></div>
+        <div class="text-white ml-5 md:ml-16 min-w-16 md:min-w-[200px]"><?php echo $item['label']; ?></div>
         <div class="text-[#B2B2B2]"><?php echo $item['value']; ?></div>
       </div>
     <?php $index++; endforeach; endif; ?>
@@ -249,9 +256,19 @@ Template Name: What We Do
 <?php get_footer(); ?>
 <script>
 var swiper3 = new Swiper(".mySwiper3", {
-  spaceBetween: -220,
-  slidesPerView: 2,
+  spaceBetween: -120,
+  slidesPerView: 1,
   //centeredSlides: true,
+  breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: -120,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: -220,
+      },
+    },
   loop: true,
   autoplay: {
     delay: -10,

@@ -16,6 +16,17 @@ $categories = get_the_category();
 
 ?>
 
+<style>
+  @media (max-width: 768px) {
+    .pagination__next {
+      right: 20px !important;
+    }
+    .pagination__prev {
+      left: 20px !important;
+    }
+  }
+</style>
+
 <section>
   <div class="relative">
     <div class="flex absolute left-0 top-0 flex-col mt-[100px] mb-[80px] w-[50%] max-md:ml-0 max-md:w-full">
@@ -26,21 +37,21 @@ $categories = get_the_category();
     />
   </div>
 
-  <div class="max-w-[1200px] mx-auto pt-60 z-10 relative">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-0 pt-32 md:pt-60 z-10 relative">
     <div
-      class="flex gap-3 items-center self-start text-base text-white mb-10"
+      class="flex gap-3 items-center self-start text-base text-white mb-5 md:mb-10"
     >
       <div
         class="flex shrink-0 self-stretch my-auto w-2.5 h-2.5 bg-red-600 rounded-full"
       ></div>
       <div class="self-stretch my-auto">お知らせ</div>
     </div>
-    <div class="flex justify-between gap-4">
+    <div class="flex flex-col md:flex-row justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-6xl text-white">NEWS</div>
+        <div class="font-bold text-5xl md:text-8xl text-white">NEWS</div>
       </div>
       <div
-        class="flex gap-5 justify-between self-end py-3.5 pr-3.5 pl-10 max-w-full text-base text-black bg-white border border-black border-solid rounded-[100px] w-[295px] max-md:pl-5 hover:cursor-pointer max-md:mt-10 btn-arrow"
+        class="flex gap-5 justify-between self-end px-5 md:px-10 py-2 md:py-3.5 min-w-[100px] md:min-w-[200px] max-w-full text-base text-black bg-white border border-black border-solid rounded-[100px] hover:cursor-pointer max-md:mt-10 btn-arrow"
         >
           <div class="my-auto uppercase">すべて</div>
           <div
@@ -50,11 +61,11 @@ $categories = get_the_category();
           </div>
       </div>
     </div>
-    <div class="flex justify-end items-end gap-4 mt-20 mb-10 w-full text-white"><span>Top -</span><p>お知らせ</p></div>
+    <div class="flex justify-end items-end gap-4 mt-10 md:mt-20 mb-5 md:mb-10 w-full text-white"><span>Top -</span><p>お知らせ</p></div>
 
   </div>
   
-  <div class="max-w-[1200px] mx-auto my-32">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-0 my-20 md:my-32">
     <div class="flex flex-col max-w-full text-white">
       <?php 
       $index = 0;
@@ -67,9 +78,9 @@ $categories = get_the_category();
         <?php endif; ?>
       <a
         href="<?php the_permalink(); ?> "
-        class="flex justify-between items-center self-center mt-7 px-16 mb-7 w-full z-10 group"
+        class="flex justify-between items-center self-center my-2 md:my-7 px-5 md:px-16 w-full z-10 group"
       >
-        <div class="flex items-center gap-10 w-full">
+        <div class="flex items-center justify-between gap-2 md:gap-10 w-full">
           <div
             class="flex flex-col self-stretch pr-1.5 pb-3.5 my-auto rounded-none w-[60px]"
           >
@@ -88,7 +99,7 @@ $categories = get_the_category();
           </div>
         </div>
         <div
-          class="flex shrink-0 bg-blue-900 rounded-full h-[35px] w-[35px] p-2"
+          class="hidden md:flex shrink-0 bg-blue-900 rounded-full h-[35px] w-[35px] p-2"
           >
             <img class="group-hover:rotate-180 transition-all" src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-white.svg" alt="arrow" srcset="">
         </div>
@@ -111,7 +122,7 @@ $categories = get_the_category();
 					$big          = 999999;
 				?>
 					<div class="pagination clearfix" role="navigation">
-						<nav class="page-nav">
+						<nav class="page-nav px-5 md:px-0">
 							<?php
 							echo paginate_links(array(
 								'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
@@ -140,9 +151,14 @@ get_footer();
  
  $('ul.page-numbers li a').each(function() {
    var $this = $(this);
-   if ( $this.hasClass('prev') ) $this.removeClass('page-numbers');
+   if ( $this.hasClass('prev') ) 
+   {
+    $this.removeClass('page-numbers');
+    $this.addClass('pagination__prev');
+   }
    if ( $this.hasClass('next') ) {
     $this.removeClass('page-numbers')
+    $this.addClass('pagination__next');
    };      
  });
 

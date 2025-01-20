@@ -112,12 +112,16 @@ $the_query = new WP_Query(array(
                         <img src="<?php echo $get_bg; ?>" class="" >
 
                         <?php if($post->taxonomy): ?>
-                        <div class="absolute text-sm md:text-base right-0 bottom-[10px] bg-[#D70C18] z-20 py-0.5 px-4 text-white"><?php echo $post->taxonomy[$indexRandom]->name; ?></div>
+                        <div class="absolute text-sm md:text-base right-0 bottom-[10px] bg-[#D70C18] z-20 py-0.5 px-4 text-white">
+							<?php echo $post->taxonomy[$indexRandom]->name; ?>
+						  </div>
                         <?php endif; ?>
                       </div>
                     </div>
-                    <div class="text-white mt-2 md:mt-4 text-sm md:text-base leading-5 md:leading-9"><?php echo '<span class="font-bold">'. $get_name_company .'</span>' . '<br>' . '<span class="font-light">'. $post->post_title .'</span>'; ?></div>
-                    <div class="absolute -top-[25px] md:top-[-60px] left-[20px] text-5xl md:text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter; ?></div>
+                    <div class="text-white mt-2 md:mt-4 text-sm md:text-base leading-5 md:leading-9">
+						<?php echo '<span class="font-bold">'.$post->post_title .'</span>' . '<br>' . '<span class="font-light">'. $get_name_company .'</span>'; ?>
+					  </div>
+                    <div class="absolute -top-[25px] lg:top-[-50px] left-[20px] text-5xl lg:text-[80px] font-bold text-white mix-blend-difference">0<?php echo $counter; ?></div>
                   </a>
                 </div>
                 <?php 
@@ -149,7 +153,7 @@ var swiper2 = new Swiper(".mySwiper2", {
         },
         1024: {
           slidesPerView: 4,
-          spaceBetween: 30,
+          spaceBetween: 40,
         },
   },
   loop: true,

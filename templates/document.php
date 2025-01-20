@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Contact Form
+ * Template Name: Document request
  */
 get_header();
 
@@ -44,15 +44,15 @@ $form = get_the_content();
       <div
         class="flex shrink-0 self-stretch my-auto w-2.5 h-2.5 bg-red-600 rounded-full" 
       ></div>
-      <div class="self-stretch my-auto text-sm md:text-base">お問い合わせ</div>
+      <div class="self-stretch my-auto text-sm md:text-base">資料請求</div>
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-4xl md:text-8xl text-white uppercase">contact</div>
+        <div class="font-bold text-4xl md:text-8xl text-white uppercase">Document Request</div>
       </div>
     </div>
   
-    <div class="flex justify-end items-end gap-4 mt-5 md:mt-20 mb-10 w-full text-white"><span>Top -</span><p>お問い合わせ</p></div>
+    <div class="flex justify-end items-end gap-4 mt-5 md:mt-20 mb-10 w-full text-white"><span>Top -</span><p>資料請求</p></div>
 
     <div class="max-w-[1200px] mx-auto">
       <div class="w-full md:w-4/6 mx-auto mb-28" id="contact_form">

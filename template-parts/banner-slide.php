@@ -37,7 +37,9 @@ $banner_slides = get_field('banner_background');
   
 
 .banner-clip-path {
-  clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);
+  /* clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%); */
+  /* clip-path: polygon(63% 0, 100% 0, 41% 100%, 0 100%); */
+  clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
   /* clip-path: polygon(55% 0, 100% 0%, 45% 100%, 0% 100%); */
 }
 
@@ -57,8 +59,8 @@ $banner_slides = get_field('banner_background');
 	
 	.slogan-banner {
 		position: absolute;
-		right: 27%;
-		top: 32%;
+		right: 22%;
+		top: 36%;
 		z-index: 10;
 		color: #fff;
 		font-family: hanatotyoutyo;
@@ -110,7 +112,7 @@ $banner_slides = get_field('banner_background');
 	}
 	@media (max-width: 1600px) {
 		.slide-text__02 {
-			left: -23%;
+			left: -18%;
 		}
 	}
 	@media (max-width: 1300px) {
@@ -133,7 +135,7 @@ $banner_slides = get_field('banner_background');
 	}
 	@media (max-width: 1600px) {
 		.slide-content__h {
-			height: 900px;
+			height: 940px;
 		}
 	}
 	@media (max-width: 1300px) {
@@ -197,53 +199,61 @@ $banner_slides = get_field('banner_background');
 
 </style>      
 
-<div class="w-full mt-20 md:mt-0 md:h-500px slide-content__h">
+<div class="w-full mt-20 lg:mt-0 lg:h-500px slide-content__h">
 
-          <div class="flex gap-5 max-md:flex-col relative w-full h-full">
+          <div class="flex gap-5 max-lg:flex-col relative w-full h-full">
             <!-- Text & -->
-            <div class="flex absolute left-0 top-0 flex-col mt-[-70px] md:mt-[140px] mb-[80px] max-md:ml-0 w-[70%] md:w-[45%]">
+            <div class="flex absolute left-0 top-0 flex-col mt-[-70px] lg:mt-[90px] mb-[80px] max-lg:ml-0 w-[70%] lg:w-[55%]">
               <img
                 loading="lazy"
                 src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"
-                class="object-contain self-stretch my-auto mr-0 w-full aspect-[1.03] max-md:mt-10 max-md:max-w-full"
+                class="object-contain self-stretch my-auto mr-0 w-full aspect-[1.03] max-lg:mt-10 max-lg:max-w-full"
               />
             </div>
             <!-- make people happy -->
-            <div class="flex flex-col absolute z-10 top-0 right-0 bottom-0 w-3/5 max-md:ml-0 max-md:w-full mix-blend-exclusion" id="banner_slider">
+            <div class="flex flex-col absolute z-10 top-0 right-0 bottom-0 w-3/5 max-lg:ml-0 max-lg:w-full mix-blend-exclusion" id="banner_slider">
                         <div
                         id="banner_slider_text--01"
-                          class="hidden md:block absolute text-white z-20 slide-text__01 xl:mt-[37%] 2xl:mt-[30%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="hidden lg:block absolute tracking-wide text-white z-20 slide-text__01 xl:mt-[41%] 2xl:mt-[30%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
                           MAKE PEOPLE
                         </div>
                         <div
-                          class="hidden md:block absolute text-white z-20 slide-text__02 xl:mt-[55%] 2xl:mt-[44%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="hidden lg:block absolute tracking-wide text-white z-20 slide-text__02 xl:mt-[54%] 2xl:mt-[44%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
                         HAPPY WITH TECH
                         </div>
 
                         <!-- responsive -->
                         <div
-                          class="block md:hidden absolute text-white z-20 top-[50px] slide-text__001 xl:mt-[37%] 2xl:mt-[30%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="block lg:hidden absolute text-white z-20 top-[50px] slide-text__001 xl:mt-[37%] 2xl:mt-[30%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
                           MAKE
                         </div>
                         <div
-                          class="block md:hidden absolute text-white z-20 top-[100px] slide-text__002 xl:mt-[37%] 2xl:mt-[30%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="block lg:hidden absolute text-white z-20 top-[100px] slide-text__002 xl:mt-[37%] 2xl:mt-[30%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
                           PEOPLE
                         </div>
                         <div
-                          class="block md:hidden absolute text-white z-20 top-[150px] slide-text__003 xl:mt-[55%] 2xl:mt-[44%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="block lg:hidden absolute text-white z-20 top-[150px] slide-text__003 xl:mt-[55%] 2xl:mt-[44%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
                         HAPPY
                         </div>
                         <div
-                          class="block md:hidden absolute text-white z-20 top-[200px] slide-text__004 xl:mt-[55%] 2xl:mt-[44%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                          class="block lg:hidden absolute text-white z-20 top-[200px] slide-text__004 xl:mt-[55%] 2xl:mt-[44%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
                         >
                         WITH TECH
                         </div>
-				      <div class="slogan-banner">未来はすぐそこに。</div>
+				      <div class="slogan-banner">
+						  <img
+                loading="lazy"
+               src="<?php get_template_directory_uri() ?>/wp-content/uploads/home/未来はすぐそこに。.svg"
+                class="object-contain self-stretch my-auto w-full"
+              />
+						                  
+
+				</div>
               <!-- slide one -->
               <div class="slider-one banner-clip-path">
                 <div class="slider-one-image">
@@ -258,16 +268,16 @@ $banner_slides = get_field('banner_background');
               </div>
             </div>
             <div class="absolute inset-0 max-w-[1200px] z-10 mx-auto w-full">
-              <div class="absolute flex flex-col justify-center items-center text-[10px] md:text-sm -ml-[30px] -right-[30px] md:right-[95%] left-[90%] md:left-0 top-[40px] md:top-[30%]">
+              <div class="absolute flex flex-col justify-center items-center text-[10px] lg:text-sm -ml-[30px] -right-[30px] lg:right-[95%] left-[90%] lg:left-0 top-[40px] lg:top-[40%]">
                 <div class="text-center text-white rotate-90">Our Mission</div>
               </div>
                  
                 </div>  
                 <div
-                  class="flex flex-col ml-5 w-[16.5%] max-md:ml-0 max-md:w-full absolute z-20 right-0 md:-right-[4%] top-[60%] md:top-[37%] self-stretch my-auto text-xs text-white max-md:mt-10"
+                  class="flex flex-col ml-5 w-[16.5%] max-lg:ml-0 max-lg:w-full absolute z-20 right-0 lg:-right-[3%] top-[60%] lg:top-[42%] self-stretch my-auto text-xs text-white max-lg:mt-10"
                 >
                   <div
-                    class="self-stretch flex md:block justify-end my-auto text-[10px] md:text-xs text-white max-md:mt-10"
+                    class="self-stretch flex lg:block justify-end my-auto text-[10px] lg:text-xs text-white max-lg:mt-10"
                   >
                     <div class="">
                       <span class="ml-8">Bringing Happiness</span>

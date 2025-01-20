@@ -64,15 +64,15 @@ if (!empty($terms_list)) {
 
 <section>
   <div class="relative">
-    <div class="flex absolute left-0 top-0 flex-col mt-[100px] mb-[80px] w-[50%] max-md:ml-0 max-md:w-full">
+    <div class="flex absolute left-0 top-0 flex-col mt-[100px] mb-[80px] w-[50%] max-lg:ml-0 max-lg:w-full">
     <img
       loading="lazy"
       src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"
-      class="object-contain self-stretch my-auto mr-0 w-full aspect-[1.03] max-md:mt-10 max-md:max-w-full"
+      class="object-contain self-stretch my-auto mr-0 w-full aspect-[1.03] max-lg:mt-10 max-lg:max-w-full"
     />
   </div>
 
-  <div class="max-w-[1200px] mx-auto pt-32 md:pt-60 px-5 md:px-0 z-10 relative">
+  <div class="max-w-[1200px] mx-auto pt-32 lg:pt-60 px-5 lg:px-0 z-10 relative">
     <div
       class="flex gap-3 items-center self-start text-base text-white mb-10"
     >
@@ -83,7 +83,7 @@ if (!empty($terms_list)) {
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-4xl md:text-8xl text-white uppercase">OUR PROJECT <br /> Achievements</div>
+        <div class="font-bold text-4xl lg:text-8xl text-white uppercase">OUR PROJECT <br /> Achievements</div>
       </div>
     </div>
     <div class="text-white mt-10">
@@ -91,7 +91,7 @@ if (!empty($terms_list)) {
     未来を見据えたソリューションを提供しております。<br />
     大切なのは作った数ではなく、使われるアプリを目指して開発することです。
     </div>
-    <div class="flex justify-end items-end gap-4 mt-16 md:mt-20 mb-10 w-full text-white"><span>Top -</span><p>実績</p></div>
+    <div class="flex justify-end items-end gap-4 mt-16 lg:mt-20 mb-10 w-full text-white"><span>Top -</span><p>実績</p></div>
 
   </div>
 
@@ -118,7 +118,7 @@ if ( ! empty( $taxonomies ) ) :
     endforeach;
 endif;
 ?>
-<ul class="max-w-[1200px] mx-auto pb-5 md:pb-0 pt-5 md:pt-10 px-5 md:px-0 overflow-x-auto relative z-10 flex items-center gap-3" id="menu_list"></ul>
+<ul class="max-w-[1200px] mx-auto pb-5 lg:pb-0 pt-5 lg:pt-10 px-5 lg:px-0 overflow-x-auto relative z-10 flex items-center gap-3" id="menu_list"></ul>
 <script>
   var taxonomies = <?php echo json_encode($terms); ?>;
   taxonomies?.unshift({name: 'すべて'});
@@ -141,7 +141,7 @@ endif;
   }
 </script>
 
-  <ul class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1200px] px-5 md:px-0 mx-auto pt-10 pb-20 md:pb-44 z-10 relative" id="list_achievement">
+  <ul class="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1200px] px-5 lg:px-0 mx-auto pt-10 pb-20 lg:pb-44 z-10 relative" id="list_achievement">
   </ul>
 </section>
 

@@ -12,14 +12,21 @@ function renderNewsList(category = 'ALL') {
   let content = '';
 
   if (category === 'ALL') {
+    // Duyệt qua danh sách và loại bỏ mục có category là "Uncategorized"
     newsLists?.forEach((news, index) => {
-      content += renderNews(news, index);
+      if ( news.category[0].name.toLowerCase() === 'media' || news.category[0].name.toLowerCase() ==='press release') {
+        content += renderNews(news, index);
+      }
     });
   } else {
     let count = 0;
     newsLists?.forEach((news, index) => {
-      count++;
-      if (news.category[0].name.toLowerCase() === category.toLowerCase()) {
+      // Loại bỏ mục có category là "Uncategorized" và chỉ hiển thị danh mục đã chọn
+      if (
+        news.category[0].name.toLowerCase() !== 'uncategorized' &&
+        news.category[0].name.toLowerCase() === category.toLowerCase()
+      ) {
+        count++;
         if (count > 4) return;
         content += renderNews(news, index);
       }
@@ -28,6 +35,7 @@ function renderNewsList(category = 'ALL') {
 
   newsListEl.html(content);
 }
+
 
 function renderNews(news, index) {
 

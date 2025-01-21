@@ -83,6 +83,10 @@ html {
   .decorative-text--2 {
     width: 1000px;
   }
+
+  .decorative-text--2 {
+    margin-top: -110px;
+  }
 }
 .create-3dots {
   overflow: hidden;
@@ -158,13 +162,19 @@ html {
 
 /*start  what we do */
 .clip-path__work {
-  clip-path: polygon(0 0, 30% 0, 100% 100%, 35% 100%, 0 50%);
+  clip-path: polygon(0 0, 30% 0, 100% 100%, 30% 100%, 0 60%);
 }
 
 @media (max-width: 1500px) {
   .clip-path__work {
     /* clip-path: polygon(0 0, 30% 0, 100% 100%, 35% 100%, 0 50%); */
     clip-path: polygon(0 0, 26% 0, 100% 100%, 26% 100%, 0 64%);
+  }
+}
+
+@media (max-width: 1500px) {
+  .clip-path__work {
+    clip-path: polygon(0 0, 26% 0, 100% 100%, 38% 100%, 0 45%);
   }
 }
 .text--effect {

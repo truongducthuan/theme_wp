@@ -39,7 +39,7 @@ $form = get_the_content();
 
   <div class="max-w-[1200px] mx-auto px-5 md:px-0 pt-32 md:pt-60 z-10 relative text-[#B2B2B2]">
     <div
-      class="flex gap-3 items-center self-start text-base text-white mb-5 md:mb-10"
+      class="flex gap-3 items-center self-start text-base text-white mb-10 md:mb-24"
     >
       <div
         class="flex shrink-0 self-stretch my-auto w-2.5 h-2.5 bg-red-600 rounded-full" 
@@ -48,7 +48,7 @@ $form = get_the_content();
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-4xl md:text-8xl text-white uppercase">contact</div>
+        <div class="font-bold text-4xl md:text-[7.2rem] text-white uppercase">contact</div>
       </div>
     </div>
   

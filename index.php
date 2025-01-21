@@ -267,7 +267,7 @@ $page_id = get_the_ID();
 
         <!-- Start Run Text -->
         <div class="pt-0 lg:pt-48 relative">
-          <div class="absolute left-0 top-[15%]">
+          <div class="absolute left-0 -top-[20%]">
             <img
               loading="lazy"
               src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"
@@ -363,9 +363,9 @@ $page_id = get_the_ID();
          <?php 
           $achievements = get_field('our_achievement');
          ?>
-        <div class="w-full pt-14 z-10">
+        <div class="w-full pt-0 lg:pt-14 z-10">
           <div class="flex flex-col lg:flex-row gap-5">
-            <div class="mt-[100px] w-full lg:w-1/2 h-[300px] lg:h-[620px] overflow-hidden">
+            <div class="mt-[100px] w-full lg:w-1/2 h-[300px] lg:h-[600px] overflow-hidden">
               <div class="swiper mySwiperPhone">
                 <div class="swiper-wrapper">
                   <?php 
@@ -431,8 +431,8 @@ $page_id = get_the_ID();
           <div class="absolute right-0 -top-[100%]">
             <img class="hidden lg:block w-full mix-blend-luminosity" src="<?php echo get_template_directory_uri(); ?>/assets/svg/bg2.svg" alt="" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/bg2.svg" class="w-full" >
           </div>
-            <div class="absolute top-[32px] lg:-top-[100px] right-0 left-0">
-              <div class="gradient-text">our project</div>
+            <div class="absolute -top-[30px] lg:-top-[100px] right-0 -left-[70px] lg:left-0">
+              <div class="gradient-text text-nowrap">our project</div>
             </div>
 
             <div class="flex flex-col lg:flex-row max-w-[1200px] mx-auto px-5 lg:px-0">
@@ -485,9 +485,13 @@ $page_id = get_the_ID();
                     transform: rotate(100deg);
                  }
 
+                 #project .gradient-text {
+                  font-size: 14rem;
+                 }
+
                  @media (max-width: 768px) {
                    #project .gradient-text {
-                    font-size: 5rem;
+                    font-size: 9rem;
                    }
                  }
                 </style>
@@ -523,7 +527,7 @@ $page_id = get_the_ID();
             class="flex flex-wrap gap-5 justify-between mt-5 lg:mt-10 w-full max-w-[1202px] max-lg:max-w-full"
           >
             <div
-              class="text-9xl font-black leading-none text-white uppercase max-lg:text-4xl"
+              class="text-6xl lg:text-9xl font-black leading-none text-white uppercase lg:text-[7.25rem]"
             >
               NEWS
             </div>
@@ -676,7 +680,7 @@ if(is_array($posts->posts)){
             .join('')}
         </div>
         <div
-          class="flex gap-5 justify-between self-end py-1.5 lg:py-3.5 pr-3.5 pl-10 mt-5 lg:mt-20 max-w-full text-base text-black bg-white border border-black border-solid rounded-[100px] w-52 lg:w-[295px] hover:cursor-pointer btn-arrow"
+          class="flex gap-5 justify-between self-end py-1.5 lg:py-3.5 pr-3.5 pl-5 lg:pl-10 mt-5 lg:mt-20 max-w-full text-base text-black bg-white border border-black border-solid rounded-[100px] w-52 lg:w-[295px] hover:cursor-pointer btn-arrow"
         >
           <div class="text-sm lg:text-base my-auto uppercase">view more</div>
           <div

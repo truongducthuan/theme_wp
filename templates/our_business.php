@@ -7,6 +7,11 @@
 ?>
 
 <style>
+  @media (max-width: 1600px) {
+    .gradient-text {
+      font-size: 11rem;
+    }
+  }
   @media (max-width: 768px) {
     .gradient-text {
       /* font-size: 3rem; */
@@ -35,16 +40,16 @@
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-4xl lg:text-8xl text-white uppercase">Our Business</div>
+        <div class="font-bold text-4xl lg:text-[7.2rem] text-white uppercase">Our Business</div>
       </div>
     </div>
-    <div class="text-white mt-8 text-lg lg:text-3xl leading-6 lg:leading-10">
+    <div class="text-white mt-8 lg:mt-16 text-lg lg:text-4xl leading-6 lg:leading-[2.8rem]">
     キャッチコピーが入ります。<br >
     キャッチコピーが入ります。 
     </div>
     <div class="text-sm lg:text-base mt-8">
     お客様のニーズに合わせて、ITを中心とするご支援を行っております。<br />
-    お客様の先にいる「人」を想像して、関わる「人」全員が豊かになれるシステム作りを信条としています。
+    お客様の先にいる「人」を想像して、関わる「人」全員が豊かになれるシステム作りを <br> 信条としています。
     </div>
     <div class="flex justify-end items-end gap-4 mt-5 lg:mt-20 mb-10 w-full text-white"><span>Top -</span><p>事業内容</p></div>
   </div>
@@ -56,8 +61,8 @@
       <div class="">
         <h4 class="my-5" id="development">アプリ/システム開発</h4>
         <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-5">
-          <h1 class="text-3xl lg:text-5xl uppercase font-bold tracking-widest flex-1">development</h1>
-          <div class="flex-1">お客様のビジネスニーズを深く理解し、外部サービス導入・ノーコードツール開発・スクラッチ開発等、経験豊富なメンバーがご支援</div>
+          <h1 class="text-3xl lg:text-6xl uppercase font-bold tracking-widest flex-1">development</h1>
+          <div class="flex-1 text-[#b2b2b2]">お客様のビジネスニーズを深く理解し、外部サービス導入・ノーコードツール開発・スクラッチ開発等、経験豊富なメンバーがご支援</div>
         </div>
         <div>
           <?php 
@@ -69,7 +74,7 @@
           ?>
             <?php
             if(!empty($development['photo'])) {
-              echo '<div class="w-full my-10">
+              echo '<div class="w-full my-16">
                     <img src="' . $development['photo'] . '" alt="image" class="w-full">
                   </div>';
             }
@@ -84,7 +89,15 @@
                   <div>
                     <h2 class="text-base lg:text-xl"><?php echo $item['title']; ?></h2>
                     <p class="text-sm lg:text-base mt-3 mb-7 text-[#B2B2B2]"><?php echo $item['description']; ?></p>
-                    <div>
+
+                  </div>
+                    <?php 
+                endforeach; 
+              endif;
+              ?>
+              </div>
+            </div>
+            <div>
                       <div class="flex gap-7 justify-end items-center">
                         <div class="uppercase text-base lg:text-lg">project</div>
                         <a
@@ -95,13 +108,6 @@
                         </a>
                       </div>
                     </div>
-                  </div>
-                    <?php 
-                endforeach; 
-              endif;
-              ?>
-              </div>
-            </div>
           <?php
           endif;
           ?>
@@ -111,7 +117,7 @@
     <div class="absolute bottom-0 right-0 w-full mix-blend-exclusion z-10">
           <h1 class="gradient-text text-end">development</h1>
         </div>
-    <div class="absolute bottom-40 right-0 z-0">
+    <div class="absolute bottom-40 lg:bottom-[-25rem] right-0 z-0">
       <img src="<?php echo get_template_directory_uri() ?>/assets/svg/business/bg-development.svg" alt="bg development" >
     </div>
   </div>
@@ -148,22 +154,23 @@
                   <div>
                     <h2 class="text-base lg:text-xl"><?php echo $item['title']; ?></h2>
                     <p class="text-sm lg:text-base mt-3 mb-7 text-[#B2B2B2]"><?php echo $item['description']; ?></p>
-                    <div>
-                      <div class="flex gap-7 justify-end items-center">
-                        <div class="uppercase text-base lg:text-lg">project</div>
-                        <a
-                          href="<?php echo esc_url(home_url('/')) ?>"
-                          class="flex shrink-0 bg-white rounded-full h-[35px] w-[35px] p-2"
-                        >
-                          <img class="rotate-0" src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-blue.svg" alt="arrow" srcset="">
-                        </a>
-                      </div>
-                    </div>
+                    
                   </div>
                     <?php 
                 endforeach; 
               endif;
               ?>
+              </div>
+            </div>
+            <div>
+              <div class="flex gap-7 justify-end items-center">
+                <div class="uppercase text-base lg:text-lg">project</div>
+                <a
+                  href="<?php echo esc_url(home_url('/')) ?>"
+                  class="flex shrink-0 bg-white rounded-full h-[35px] w-[35px] p-2"
+                >
+                  <img class="rotate-0" src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-blue.svg" alt="arrow" srcset="">
+                </a>
               </div>
             </div>
           <?php
@@ -212,7 +219,15 @@
                   <div>
                     <h2 class="text-base lg:text-xl"><?php echo $item['title']; ?></h2>
                     <p class="mt-3 mb-7 text-[#B2B2B2] text-sm lg:text-base"><?php echo $item['description']; ?></p>
-                    <div>
+                    
+                  </div>
+                    <?php 
+                endforeach; 
+              endif;
+              ?>
+              </div>
+            </div>
+            <div>
                       <div class="flex gap-7 justify-end items-center">
                         <div class="uppercase text-base lg:text-lg">project</div>
                         <a
@@ -223,13 +238,6 @@
                         </a>
                       </div>
                     </div>
-                  </div>
-                    <?php 
-                endforeach; 
-              endif;
-              ?>
-              </div>
-            </div>
           <?php
           endif;
           ?>

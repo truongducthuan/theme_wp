@@ -47,13 +47,13 @@ $categories = get_the_category();
             </div>
             <div class="flex flex-col lg:flex-row justify-between gap-4">
                 <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-                    <div class="font-bold text-5xl lg:text-8xl text-white">NEWS</div>
+                    <div class="font-bold text-5xl lg:text-[7.2rem] text-white">NEWS</div>
                 </div>
                 <div
-                    class="relative js-show-list-cats list-cats--wrap flex gap-5 justify-between self-end px-5 lg:px-10 py-2 lg:py-3.5 min-w-[100px] lg:min-w-[200px] max-w-full text-base text-black bg-white border border-black border-solid rounded-[100px] hover:cursor-pointer max-lg:mt-10 btn-arrow">
+                    class="relative js-show-list-cats list-cats--wrap flex gap-5 justify-between group self-end px-5 lg:px-5 py-2 lg:py-3.5 min-w-[100px] lg:min-w-[250px] max-w-full text-base text-black bg-white border border-black border-solid rounded-[100px] hover:cursor-pointer max-lg:mt-10 btn-arrow">
                     <div class="my-auto uppercase">すべて</div>
                     <div
-                        class="_btn flex shrink-0 bg-blue-900 rounded-full h-[35px] w-[35px] p-2">
+                        class="_btn flex shrink-0 bg-blue-900 rounded-full h-[35px] group-hover:rotate-90 w-[35px] p-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-white.svg" alt="arrow" srcset="">
                     </div>
                     <div class="js-list-cats news--list-categories">

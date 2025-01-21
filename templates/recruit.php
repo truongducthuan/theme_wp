@@ -7,11 +7,21 @@ get_header();
 
 <style>
 	.recruitment-js__bottom {
-		bottom: -11rem;
+		bottom: -13rem;
 	}
 	.recruitment-mark__bg--10 {
 		bottom: 10rem;
 	}
+
+  @media (max-width: 1000px) {
+    .recruitment-js__bottom {
+      bottom: -10rem;
+    }
+
+    .gradient-text {
+      font-size: 11rem;
+    }
+  }
 
   @media (max-width: 768px) {
     .recruitment-js__bottom {
@@ -40,10 +50,10 @@ get_header();
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-6xl lg:text-8xl text-white uppercase">RECRUIT</div>
+        <div class="font-bold text-6xl lg:text-[7.2rem] text-white uppercase">RECRUIT</div>
       </div>
     </div>
-    <div class="text-white mt-8 text-xl lg:text-3xl leading-6 lg:leading-10">
+    <div class="text-white mt-8 text-xl lg:text-3xl leading-6 lg:leading-[2.7rem]">
     キャッチコピーが入ります。<br >
     キャッチコピーが入ります。
     </div>
@@ -80,7 +90,7 @@ get_header();
      
         ?>
         <div class="max-w-[1200px] mx-auto text-[#B2B2B2] px-5 lg:px-0 relative z-10">
-          <h2 class="text-white text-xl">募集要項</h2>
+          <h2 class="text-white text-2xl">募集要項</h2>
           <div class="flex flex-col w-full lg:w-4/6 mx-auto mt-10 divide-y-2 divide-[#B2B2B2]">
           <?php if($table): 
             $index = 0;
@@ -91,7 +101,7 @@ get_header();
               }
           ?>
             <div class="flex justify-start items-start gap-10 py-5 <?php echo $index == $count - 1 ? 'divide-bottom' : ''; ?>">
-              <div class="font-bold mt-2 ml-5 lg:ml-16 min-w-16 lg:min-w-[200px]"><?php echo $item['label']; ?></div>
+              <div class="font-bold mt-2 ml-5 lg:ml-16 text-base lg:text-xl min-w-16 lg:min-w-[200px]"><?php echo $item['label']; ?></div>
               <div class="text-[#B2B2B2] mr-5 lg:mr-16 leading-10"><?php echo $item['value']; ?></div>
             </div>
           <?php $index++; endforeach; endif; ?>

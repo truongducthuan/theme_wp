@@ -53,8 +53,13 @@ Template Name: What We Do
 }
 
 .clip-path--right {
-  clip-path: polygon(100% 0, 100% 60%, 70% 100%, 0 100%, 70% 0);
+  clip-path: polygon(100% 0, 100% 36%, 57% 100%, 0 100%, 70% 0);
 }
+
+.gradient-text {
+  font-size: 16rem;
+}
+
 
 @media (max-width: 720px) {
   .gradient-text {
@@ -69,58 +74,18 @@ Template Name: What We Do
       margin-right: auto;
 }
 
-.mySwiper4 .swiper-slide {
-  background-size: cover;
-  background-position: center;
+.scroll-modal {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  /* width:100%; */
+}
+.-scroll-modal {
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
 }
 
-.mySwiper4 .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-.mySwiper4 .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-}
-
-.mySwiper4 {
-      height: 20%;
-      box-sizing: border-box;
-      padding: 10px 0;
-    }
-
-    .mySwiper4 .swiper-slide {
-      width: 25%;
-      height: 100%;
-      opacity: 0.4;
-    }
-
-    .mySwiper4 .swiper-slide-thumb-active {
-      opacity: 1;
-    }
-
-    .mySwiper4 .swiper-slide {
-      background-size: cover;
-      background-position: center;
-    }
-
-    .mySwiper4 .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 </style>
-<section class="">
+<section class="relative">
   <div class="relative">
     <div class="flex absolute -left-1 top-0 flex-col mt-[80px] mb-[80px] w-[46%] max-lg:ml-0 max-lg:w-full">
     <img
@@ -141,10 +106,10 @@ Template Name: What We Do
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-4xl lg:text-8xl text-white uppercase">what we do</div>
+        <div class="font-bold text-4xl lg:text-[7.2rem] leading-[8rem] text-white uppercase">what we do</div>
       </div>
     </div>
-    <div class="text-white mt-8 text-lg lg:text-3xl leading-6 lg:leading-10">
+    <div class="text-white mt-8 text-lg lg:text-3xl leading-6 lg:leading-[3rem]">
     圧倒的な技術力で <br >
     日本のDX化推進の一翼を担うエンジニア集団
     </div>
@@ -156,7 +121,7 @@ Template Name: What We Do
   </div>
 
   <div class="relative w-full z-10 text-[#B2B2B2]">
-    <div class="absolute right-0 lg:left-80 top-0 lg:-top-5 flex-col w-[70%] lg:w-[84%] mb-[80px] bg-gradient-to-t from-black to-inherit">
+    <div class="absolute right-0 lg:left-80 xl:left-[19rem] top-0 lg:-top-5 flex-col w-[70%] lg:w-[84%] mb-[80px] bg-gradient-to-t from-black to-inherit">
       <div class="gradient-text">message</div>  
   </div>
     <div class="absolute top-80 left-0 flex-col  bg-gradient-to-t from-black to-inherit">
@@ -164,11 +129,11 @@ Template Name: What We Do
     </div>
     <div class="max-w-[1200px] px-5 lg:px-0 mx-auto">
       <div class="relative z-10 w-full lg:w-3/5 mx-auto pt-20 lg:pt-[200px]">
-        <h3 class="text-white text-xl lg:text-3xl mb-10 leading-10">
+        <h3 class="text-white text-xl lg:text-4xl mb-10 leading-10 lg:leading-[3rem]">
           テクノロジーを活かして <br >
           関わる人・企業を幸せにする
         </h3>
-        <p class="text-sm lg:text-base leading-8">
+        <p class="text-sm lg:text-base leading-8 lg:leading-[2.5rem]">
         私たちは、テクノロジーの力を活かして、お客様の課題解決やビジョンの実現をサポートすることを使命としています。急速に変化する社会において、柔軟かつ革新的なアプローチが求められる時代だからこそ、私たちは「信頼」「挑戦」「成長」という3つの価値観を大切にしています。<br >
   お客様との対話を重ね、本質的なニーズを理解し、最適なソリューションを提案することを常に心がけています。開発を通じて得られるのは、単なるシステムやプロダクトだけではありません。それは、私たちが共に築く「未来への可能性」です。
   これからも、お客様や社会の期待を超える価値を提供し続けることで、新しい未来を創造していきたいと考えています。私たちの旅は始まったばかりです。
@@ -184,28 +149,28 @@ Template Name: What We Do
     
   </div>
 
-  <div class="flex flex-col lg:flex-row justify-between items-center text-[#B2B2B2] mt-20 mb-10 w-full relative">
-    <div class="absolute lg:-top-[350px] 2xl:-top-[500px] right-0 w-[65%]">
+  <div class="flex flex-col lg:flex-row justify-between items-center text-[#B2B2B2] mt-20 lg:mt-[9rem] mb-10 w-full relative">
+    <div class="absolute lg:-top-[30rem] 2xl:-top-[500px] right-0 w-[65%]">
       <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask-bg-black.svg" class="w-full" >
     </div>
-    <div class="absolute -top-[55px] lg:top-[38rem] xl:-bottom-[215px] 2xl:-bottom-[200px] w-full z-10">
+    <div class="absolute -top-[55px] lg:top-[27rem] xl:-bottom-[215px] 2xl:-bottom-[200px] w-full z-10">
       <div class="gradient-text">Philosophy</div>
     </div>
     <div class="w-full lg:w-1/2 order-1 lg:order-1 relative z-20">
       <div class="ml-5 lg:ml-28 mr-5 lg:mr-0 flex flex-col gap-4 lg:gap-8 leading-7">
         <span class="text-white text-xl">ミッション/理念</span>
         <h3 class="text-white text-2xl lg:text-5xl my-1 lg:my-2">Driving Age with Technology</h3>
-        <p class="text-sm lg:text-base">
-          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
-          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
-          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
-          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
-          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
+        <p class="text-sm lg:text-base lg:leading-[2.4rem]">
+          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。<br>
+          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。<br>
+          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。<br>
+          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。<br>
+          説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。<br>
           説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。
         </p>
       </div>
     </div>
-    <div class="mt-5 lg:mt-[100px] order-2 lg:order-2 w-full lg:w-1/2 lg:h-[620px] 2xl:h-[750px] overflow-hidden">
+    <div class="mt-5 lg:mt-[100px] order-2 lg:order-2 w-full lg:w-1/2 lg:h-[500px] 2xl:h-[750px] overflow-hidden">
       <?php 
         $we_do = get_field('what_to_do', 2);
         ?>
@@ -231,61 +196,26 @@ Template Name: What We Do
       </div>
     </div>
   </div>
-  <div class="text-[#B2B2B2] pt-10 lg:pt-40 max-w-[1200px] mx-auto px-5 lg:px-0 flex flex-col lg:flex-row justify-between gap-5 relative z-20">
-    <div class="text-white text-xl">メンバー紹介</div>
-    <p>説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。<br >
+  <div class="text-[#B2B2B2] pt-10 lg:pt-44 max-w-[1200px] mx-auto px-5 lg:px-0 flex flex-col lg:flex-row justify-between gap-5 relative z-20">
+    <div class="text-white text-2xl">メンバー紹介</div>
+    <p class="leading-[2.3rem]">説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。<br >
     説明テキストが入ります。説明テキストが入ります。説明テキストが入ります。</p>
   </div>
 
   <?php 
   $members = get_field('members');
   ?>
-  <div class="w-full h-[400px] lg:h-[640px] mt-10 lg:mt-32 mb-20 lg:mb-52 relative" id="slide-member">
+  <div class="w-full h-[400px] lg:h-[640px] mt-10 lg:mt-32 mb-20 lg:mb-[6rem] relative" id="slide-member">
     <div class="absolute left-0 bottom-[50%]">
       <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask group (4).svg" class="w-full" >
     </div>
-    <div class="absolute -bottom-[60px] mix-blend-difference lg:-bottom-[145px] right-0">
+    <div class="absolute -bottom-[60px] mix-blend-difference lg:-bottom-[50] right-0">
       <!-- <img class="w-full mix-blend-luminosity opacity-[0.1]" src="<?php // echo get_template_directory_uri(); ?>/assets/svg/TOP MEMBER.svg ?>" alt="top member" > -->
       <h1 class="gradient-text">top member</h1>
     </div>
-    <div class="absolute top-[250px] right-0">
+    <div class="absolute top-0 right-0">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/Mask group.svg" alt="mask group" class="w-full" >
     </div>
-      <div class="mySwiper11 swiper">
-        <div class="swiper-wrapper">
-        <?php 
-            if($members): 
-              
-              $counter = 0; // Initialize a counter
-              foreach($members as $member):
-                $counter++;
-                ?>
-                <div class="swiper-slide relative">
-                  <div class="absolute top-0 z-10 left-[9rem] lg:left-80 text-5xl lg:text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter;?></div>
-                  <div class="w-full h-[95%] lg:h-[90%] translate-y-5 flex flex-col relative">
-                    <div class="relative w-full h-full photo flex items-center justify-center">
-                      <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
-                        <img src="<?php echo $member['photo']; ?>" class="human" >
-                      </div>
-                    </div>
-                    <div class="absolute z-10 bottom-8 right-[32%] w-7/12 flex justify-between items-end text-white">
-                      <div>
-                        <p class="text-white"><?php echo $member['position']; ?></p>
-                        <h3 class="text-xl lg:text-3xl font-bold text-white"><?php echo $member['name_1']; ?></h3>
-                      </div>
-                      <div class="text-sm"><?php echo $member['name_2']; ?></div>
-                    </div>
-                  </div>
-                </div>
-                <?php 
-              endforeach;
-              wp_reset_postdata();
-            endif; 
-            ?>
-        </div>
-        <div class="swiper-scrollbar"></div>
-      </div>
-
       <div class="h-[1000px] relative z-10">
         <?php get_template_part('template-parts/members-slide'); ?>
       </div>
@@ -295,7 +225,7 @@ Template Name: What We Do
   $table = get_field('table');
   ?>
   <div class="max-w-[1200px] mx-auto px-5 lg:px-0 text-[#B2B2B2] relative mb-20 lg:mb-32">
-    <h2 class="text-white text-xl">会社概要</h2>
+    <h2 class="text-white text-2xl">会社概要</h2>
     <div class="flex flex-col w-full lg:w-4/6 mx-auto mt-10 divide-y-2 divide-[#B2B2B2]">
     <?php if($table): 
       $index = 0;
@@ -312,84 +242,26 @@ Template Name: What We Do
     <?php $index++; endforeach; endif; ?>
     </div>
   </div>
+
 </section>
+<!-- MODAL -->
+<style>
+  #modal_member {
+    transition: left 0.5s ease-in-out;
+  }
+  #modal_member.open {
+    left: 0;
+    transform: translateX(0);
+  }
+  #modal_member.close {
+    left: 100%;
+    transform: translateX(100%);
+  }
+</style>
+
+<div id="modal_member" class="fixed left-[100%] right-0 bg-transparent bottom-0 top-0 z-50"></div>
+<?php  // get_template_part('template-parts/modal-member'); ?>
 
 <?php get_footer(); ?>
-<script>
 
-var swiper = new Swiper(".mySwiper3", {
-  grabCursor: true,
-  speed: 400,
-  mousewheel: {
-    invert: false,
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-  slidesPerView: 1,
-  spaceBetween: 10,
-  // Responsive breakpoints
-  breakpoints: {
-    900: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-  },
- });
-
-  var swiper4 = new Swiper(".mySwipe4", {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
-  });
-
-  var swiper3 = new Swiper(".mySwiper5", {
-    grabCursor: true,
-    mousewheel: {
-      invert: true,
-    },
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: true,
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
-    }
-
-    spaceBetween: -120,
-    slidesPerView: 3,
-    // breakpoints: {
-    //   640: {
-    //     slidesPerView: 1,
-    //     spaceBetween: -120,
-    //   },
-    //   1024: {
-    //     slidesPerView: 3,
-    //     spaceBetween: -220,
-    //   },
-    // },
-    // direction: 'horizontal',
-    //     loop: true,
-    // scrollbar: {
-    //         el: '.swiper-scrollbar',
-    //         hide: false,
-    //     },
-    // thumbs: {
-    //   swiper: swiper,
-    // },
-    // navigation: {
-    //     nextEl: ".swiper-button-next",
-    //     prevEl: ".swiper-button-prev",
-    //   },
-      //dragEl: "<input type="range" min="0" max="5" step="0.01" value="0" style="background: linear-gradient(to right, rgb(196, 3, 3) 65.4%, rgb(113, 131, 167) 65.4%);" data-listener-added_21ae992b="true">"
-  });
-
-</script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/what-we-do.js"></script>

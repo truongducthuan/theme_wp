@@ -83,10 +83,10 @@ if (!empty($terms_list)) {
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-4xl lg:text-8xl text-white uppercase">OUR PROJECT <br /> Achievements</div>
+        <div class="font-bold text-4xl lg:text-[7.2rem] leading-[8rem] text-white uppercase">OUR PROJECT <br /> Achievements</div>
       </div>
     </div>
-    <div class="text-white mt-10">
+    <div class="text-[#b2b2b2] leading-7 mt-10">
     エイジラボは、さまざまな業界や業種のお客様と協力し、使いやすさ、効率性、そして<br />
     未来を見据えたソリューションを提供しております。<br />
     大切なのは作った数ではなく、使われるアプリを目指して開発することです。

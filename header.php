@@ -148,7 +148,7 @@ $slug = basename(rtrim($path, '/')); // Get the last part of the path and remove
 ?>
 
 <body <?php body_class(); ?>>
-  <main class="w-full h-full hero-pattern bg-[#222222]">
+  <main class="w-full h-full hero-pattern bg-[#222222] relative">
               <div class="w-full relative">
                 <div class="site-header flex justify-between items-center header fixed top-5 lg:-top-24 left-5 lg:left-0 right-5 lg:right-0 z-30 max-w-[1200px] mx-auto flex-wrap bg-white min-h-[60px] lg:min-h-[80px] rounded-[100px] max-lg:max-w-full">
                   <a
@@ -292,9 +292,6 @@ $slug = basename(rtrim($path, '/')); // Get the last part of the path and remove
                           </a>
                         </div>
                       </li>
-<!--                       <li class="py-10 border-none">
-                        <button class="bg-secondary w-full py-2 rounded-lg hover:bg-gray-300 close-nav">x</button>
-                      </li> -->
                     </ul>
                   </div>
                 </div>
@@ -311,7 +308,6 @@ $slug = basename(rtrim($path, '/')); // Get the last part of the path and remove
     const nav = document.getElementById('navbar')
     const content = document.querySelector('#navbar div')
     const closes = document.querySelectorAll('.close-nav')
-    console.log({menu}, content);
     
     menu.addEventListener('click', function(e) {
       nav.classList.remove('scroll-left-right')

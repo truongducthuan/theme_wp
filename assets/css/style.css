@@ -4,8 +4,8 @@ html {
 
 :root {
   --window-width: tan(atan2(var(--100vw), 1px));
-  --px: calc(1px* max(1440, var(--window-width)) / 1440);
-  --rem: calc(1rem* max(1440, var(--window-width)) / 1440);
+  --px: calc(1px * max(1440, var(--window-width)) / 1440);
+  --rem: calc(1rem * max(1440, var(--window-width)) / 1440);
 }
 
 .z-index-negative {
@@ -118,7 +118,6 @@ html {
 .news-link-bg-slice:hover::before {
   left: 0;
 }
-
 
 .divide-bottom {
   border-bottom: 1px solid #fff !important;
@@ -375,7 +374,15 @@ html {
 }
 
 .footer-social img:hover {
-	background: azure;
+  background: azure;
 }
 
 /*# sourceMappingURL=style.css.map */
+.blur-image {
+  filter: blur(5px); /* Điều chỉnh mức độ mờ, tăng giá trị để mờ hơn */
+  -webkit-filter: blur(5px); /* Đảm bảo hỗ trợ trình duyệt Webkit */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+}
+.achievement-border-radius {
+  border-radius: 1rem;
+}

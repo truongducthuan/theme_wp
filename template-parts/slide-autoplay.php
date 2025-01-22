@@ -46,9 +46,11 @@ $the_query = new WP_Query(array(
   height: 100%;
   object-fit: cover;
 }
-#slide_phone .swiper-wrapper{
+
+#slide_phone .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
 #slide_phone .slide-item-even {
   transform: translateY(100px) !important;
 }
@@ -59,8 +61,8 @@ $the_query = new WP_Query(array(
   }
 
   #slide_phone .slide-item-even {
-  transform: translateY(70px) !important;
-}
+    transform: translateY(70px) !important;
+  }
 }
 </style>
 <?php
@@ -68,7 +70,7 @@ $the_query = new WP_Query(array(
 ?>
 <div class="swiper mySwiper2">
   <div class="swiper-wrapper">
-            <?php 
+    <?php 
             if($the_query->have_posts()): 
               
               $counter = 0; // Initialize a counter
@@ -104,27 +106,31 @@ $the_query = new WP_Query(array(
                 $counter++;
            
                 ?>
-                <div class="swiper-slide <?php echo $even ? 'slide-item-even' : ""; ?>">
-                  <a href="<?php echo $post->guid ?>" class="w-full h-full flex flex-col bg-transparent relative">
-                    <div class="relative w-full h-full flex items-center justify-center">
-                      <div class="w-2/3 mb-[30px]"><img src="<?php echo $get_photo_left; ?>" class="rounded-tl-[50px]"></div>
-                      <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
-                        <img src="<?php echo $get_bg; ?>" class="" >
+    <div class="swiper-slide <?php echo $even ? 'slide-item-even' : ""; ?>">>
+      <a href="<?php echo esc_url(home_url('/achievements/')); ?>"
+        class="w-full h-full flex flex-col bg-transparent relative">
+        <div class="relative w-full h-full flex items-center justify-center">
+          <div class="w-2/3 mb-[30px]"><img src="<?php echo $get_photo_left; ?>">
+          </div>
+          <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
+            <img src="<?php echo $get_bg; ?>" class="achievement-border-radius">
 
-                        <?php if($post->taxonomy): ?>
-                        <div class="absolute text-sm md:text-base right-0 bottom-[10px] bg-[#D70C18] z-20 py-0.5 px-4 text-white">
-							<?php echo $post->taxonomy[$indexRandom]->name; ?>
-						  </div>
-                        <?php endif; ?>
-                      </div>
-                    </div>
-                    <div class="text-white mt-2 md:mt-4 text-sm md:text-base leading-5 md:leading-9">
-						<?php echo '<span class="font-bold">'.$post->post_title .'</span>' . '<br>' . '<span class="font-light">'. $get_name_company .'</span>'; ?>
-					  </div>
-                    <div class="absolute -top-[25px] lg:top-[-50px] left-[20px] text-5xl lg:text-[80px] font-bold text-white mix-blend-difference">0<?php echo $counter; ?></div>
-                  </a>
-                </div>
-                <?php 
+            <?php if($post->taxonomy): ?>
+            <div class="absolute text-sm md:text-base right-0 bottom-[10px] bg-[#D70C18] z-20 py-0.5 px-4 text-white">
+              <?php echo $post->taxonomy[$indexRandom]->name; ?>
+            </div>
+            <?php endif; ?>
+          </div>
+        </div>
+        <div class="text-white mt-2 md:mt-4 text-sm md:text-base leading-5 md:leading-9">
+          <?php echo '<span class="font-bold">'.$post->post_title .'</span>' . '<br>' . '<span class="font-light">'. $get_name_company .'</span>'; ?>
+        </div>
+        <div
+          class="absolute -top-[25px] lg:top-[-50px] left-[20px] text-5xl lg:text-[80px] font-bold text-white mix-blend-difference">
+          0<?php echo $counter; ?></div>
+      </a>
+    </div>
+    <?php 
               endforeach;
               wp_reset_postdata();
             endif; 
@@ -143,32 +149,31 @@ var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 2,
   //centeredSlides: true,
   breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
   },
   loop: true,
   autoplay: {
     delay: -10,
     disableOnInteraction: false,
   },
-  speed:6000,
+  speed: 6000,
 });
 
 
-$('.swiper-slide').hover(function(){
+$('.swiper-slide').hover(function() {
   swiper2.autoplay.stop();
-}, function(){
+}, function() {
   swiper2.autoplay.start();
 });
-
 </script>

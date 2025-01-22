@@ -22,10 +22,10 @@
             <div
               class="flex flex-wrap gap-7 items-center self-stretch my-auto text-sm font-bold text-black whitespace-nowrap min-w-[240px]"
             >
-              <div class="self-stretch my-auto"><a href="#business">事業内容</a></div>
+              <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/our-business')); ?>">事業内容</a></div>
               <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/achievements')); ?>">実績</a></div>
-              <div class="self-stretch my-auto"><a href="#project">企業案内</a></div>
-              <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/what-we-do')); ?>">採用情報</a></div>
+              <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('//what-we-do')); ?>">企業案内</a></div>
+              <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/recruitment')); ?>">採用情報</a></div>
               <div class="self-stretch my-auto"><a href="<?php echo esc_url(home_url('/news')); ?>">お知らせ</a></div>
             </div>
           </div>

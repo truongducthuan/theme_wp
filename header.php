@@ -147,7 +147,9 @@ $slug = basename(rtrim($path, '/')); // Get the last part of the path and remove
 
 ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> class="relative">
+  <div id="modal_member" class="fixed left-[100%] right-0 bg-modal bottom-0 top-0 z-40 cursor-pointer" onclick="closeModal()"></div>
+
   <main class="w-full h-full hero-pattern bg-[#222222] relative">
               <div class="w-full relative">
                 <div class="site-header flex justify-between items-center header fixed top-5 lg:-top-24 left-5 lg:left-0 right-5 lg:right-0 z-30 max-w-[1200px] mx-auto flex-wrap bg-white min-h-[60px] lg:min-h-[80px] rounded-[100px] max-lg:max-w-full">

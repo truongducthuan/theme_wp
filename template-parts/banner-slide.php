@@ -294,13 +294,13 @@ $banner_slides = get_field('banner_background');
                     class="self-stretch flex lg:block justify-end my-auto text-[10px] lg:text-xs text-white max-lg:mt-10"
                   >
                     <div class="">
-                      <span class="ml-8">Bringing Happiness</span>
+                      <span class="ml-8">We strive to pioneer</span>
                       <br />
-                      <span class="ml-6">Enterprises by</span>
+                      <span class="ml-6">a new age through technology</span>
                       <br />
-                      <span class="ml-4">Harnessing the Potential</span>
+                      <span class="ml-4">and pursue the creation</span>
                       <br />
-                      <span>Of Technology</span>
+                      <span>of new value.</span>
                     </div>
                   </div>
                 </div>

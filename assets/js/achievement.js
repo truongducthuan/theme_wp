@@ -37,8 +37,8 @@ function renderAchievement (item) {
       <a href="${item?.guid}">
         <div class="relative w-full h-[400px] flex flex-col items-center justify-between">
           <div class="w-2/3 mt-5"><img src="${item?.photo_left}" class="rounded-tl-[50px] w-full"></div>
-          <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
-            <img src="${item?.bg}" class="w-full h-full">
+          <div class="absolute top-0 right-0 left-0 bottom-0 z-index-negative">
+            <img src="${item?.bg}" class="w-full h-full blur">
             ${item?.taxonomy ? `<div class="absolute left-0 top-[20px] bg-[#D70C18] py-0.5 px-4 text-white">${item?.taxonomy[indexRandom]?.name}</div>` : ''}
           </div>
           <div class="flex justify-center mb-4 items-center flex-col">

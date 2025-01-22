@@ -844,6 +844,14 @@ video {
   left: -70px;
 }
 
+.left-\[11rem\] {
+  left: 11rem;
+}
+
+.-bottom-\[14px\] {
+  bottom: -14px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -862,6 +870,10 @@ video {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .order-1 {
@@ -1554,6 +1566,10 @@ video {
 
 .w-px {
   width: 1px;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .min-w-16 {
@@ -2521,6 +2537,16 @@ video {
   outline-style: solid;
 }
 
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.blur-md {
+  --tw-blur: blur(12px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .invert {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2540,6 +2566,12 @@ video {
 
 .transition-all {
   transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-opacity {
+  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -2805,6 +2837,14 @@ video {
     right: 24%;
   }
 
+  .md\:left-\[11rem\] {
+    left: 11rem;
+  }
+
+  .md\:left-\[12rem\] {
+    left: 12rem;
+  }
+
   .md\:mb-10 {
     margin-bottom: 2.5rem;
   }
@@ -3001,6 +3041,14 @@ video {
 
   .lg\:top-\[27rem\] {
     top: 27rem;
+  }
+
+  .lg\:right-\[6\.5rem\] {
+    right: 6.5rem;
+  }
+
+  .lg\:top-\[2\.5rem\] {
+    top: 2.5rem;
   }
 
   .lg\:order-1 {
@@ -3290,6 +3338,10 @@ video {
     padding: 4rem;
   }
 
+  .lg\:p-24 {
+    padding: 6rem;
+  }
+
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -3521,6 +3573,14 @@ video {
 
   .xl\:left-\[19rem\] {
     left: 19rem;
+  }
+
+  .xl\:left-\[12rem\] {
+    left: 12rem;
+  }
+
+  .xl\:left-\[14rem\] {
+    left: 14rem;
   }
 
   .xl\:mt-\[37\%\] {

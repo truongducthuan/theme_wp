@@ -66,7 +66,7 @@
 
   <div class="relative z-10 max-w-[1200px] px-5 lg:px-0 mx-auto">
     <div class="relative flex w-full h-[400px] lg:h-[650px] items-center justify-center gap-5 rounded">
-        <div class="absolute inset-0 w-full">
+        <div class="absolute blur-md inset-0 w-full">
             <img src="<?php echo $get_bg; ?>" alt="background" class="w-full rounded" style="height: -webkit-fill-available;" >
         </div>
         <div class="w-1/2 z-10">

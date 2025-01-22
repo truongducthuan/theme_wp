@@ -26,7 +26,7 @@
                 $counter++;
                 ?>
                 <div class="swiper-slide relative post h-[350px] lg:h-[500px] overflow-hidden cursor-pointer group mb-12 member_detail" data-set="<?php echo htmlspecialchars(json_encode($member), ENT_QUOTES, 'UTF-8'); ?>">
-                  <div class="absolute top-0 z-10 left-[8rem] lg:left-[11rem] text-6xl lg:text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter;?></div>
+                  <div class="absolute top-0 z-10 left-[8rem] md:left-[12rem] lg:left-[11rem] xl:left-[12rem] text-6xl lg:text-8xl font-bold text-white mix-blend-difference">0<?php echo $counter;?></div>
                   <div class="w-full h-[95%] lg:h-[90%] translate-y-5 flex flex-col relative">
                     <div class="relative w-full h-full photo flex items-center justify-center">
                       <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative overflow-hidden duration-300">
@@ -69,8 +69,8 @@ var swiper = new Swiper(".mySwiper3", {
     el: ".swiper-scrollbar",
     draggable: true,
   },
-  slidesPerView: 1,
-  spaceBetween: -100,
+  slidesPerView: 2,
+  spaceBetween: -72,
   // Responsive breakpoints
   breakpoints: {
     900: {
@@ -79,6 +79,10 @@ var swiper = new Swiper(".mySwiper3", {
     },
     1200: {
       slidesPerView: 3,
+      spaceBetween: -140,
+    },
+    1600: {
+      slidesPerView: 4,
       spaceBetween: -140,
     },
   },

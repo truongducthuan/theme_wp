@@ -70,7 +70,7 @@ get_header();
       <div class="">
         <div class="relative">
           <div class="max-w-[1200px] mx-auto px-5 lg:px-0 w-full h-full flex justify-center items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/image-recruit.png" alt="image" class="w-full rounded" >
+            <img src="<?php echo get_site_url() ?>/wp-content/uploads/2025/01/agelab0059-scaled.jpg" alt="image" class="w-full rounded" >
           </div>
 			    <div class="absolute recruitment-js__bottom left-0 w-full mix-blend-exclusion">
             <h1 class="gradient-text">JOIN US</h1>

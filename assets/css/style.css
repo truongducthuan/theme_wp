@@ -184,7 +184,7 @@ html {
   opacity: 1;
   background: linear-gradient(0, #fff, #fff, #fff);
   background-repeat: no-repeat;
-  animation: animate 3s linear;
+  animation: animate 1.5s linear;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }

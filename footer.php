@@ -28,7 +28,6 @@
         </div>
         <div class="basis-auto"><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">プライバシーポリシー</a></div>
       </div>
-
       <div
         class="flex lg:hidden flex-col lg:flex-row gap-2 my-auto text-xs text-neutral-700 max-lg:max-w-full order-2 lg:order-1">
         <div class="flex-auto">

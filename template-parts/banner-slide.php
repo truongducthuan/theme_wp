@@ -270,7 +270,99 @@ $banner_slides = get_field('banner_background');
       <div class="slogan-banner">
         <img loading="lazy" src="<?php get_template_directory_uri() ?>/wp-content/uploads/home/未来はすぐそこに。.svg"
           class="object-contain self-stretch my-auto w-full" />
+          <div class="flex gap-5 max-lg:flex-col relative w-full h-full">
+            <!-- Text & -->
+            <div class="flex absolute left-0 top-0 flex-col mt-[-70px] lg:mt-[90px] mb-[80px] max-lg:ml-0 w-[70%] lg:w-[55%]">
+              <img
+                loading="lazy"
+                src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"
+                class="object-contain self-stretch my-auto mr-0 w-full aspect-[1.03] max-lg:mt-10 max-lg:max-w-full"
+              />
+            </div>
+            <!-- make people happy -->
+            <div class="flex flex-col absolute z-10 top-0 right-0 bottom-0 w-3/5 max-lg:ml-0 max-lg:w-full mix-blend-exclusion" id="banner_slider">
+                        <div
+                        id="banner_slider_text--01"
+                          class="hidden lg:block absolute tracking-wide text-white z-20 slide-text__01 xl:mt-[41%] 2xl:mt-[30%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                          MAKE PEOPLE
+                        </div>
+                        <div
+                          class="hidden lg:block absolute tracking-wide text-white z-20 slide-text__02 xl:mt-[54%] 2xl:mt-[44%] text-8xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                        HAPPY WITH TECH
+                        </div>
 
+                        <!-- responsive -->
+                        <div
+                          class="block lg:hidden absolute text-white z-20 top-[50px] md:top-[20%] md:left-[10%] slide-text__001 xl:mt-[37%] 2xl:mt-[30%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                          MAKE
+                        </div>
+                        <div
+                          class="block lg:hidden absolute text-white z-20 top-[100px] md:top-[30%] md:left-[10%] slide-text__002 xl:mt-[37%] 2xl:mt-[30%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                          PEOPLE
+                        </div>
+                        <div
+                          class="block lg:hidden absolute text-white z-20 top-[150px] md:top-[40%] md:left-[10%] slide-text__003 xl:mt-[55%] 2xl:mt-[44%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                        HAPPY
+                        </div>
+                        <div
+                          class="block lg:hidden absolute text-white z-20 top-[200px] md:top-[50%] md:left-[10%] slide-text__004 xl:mt-[55%] 2xl:mt-[44%] text-5xl mt-82 uppercase font-bold mix-blend-difference text-nowrap"
+                        >
+                        WITH TECH
+                        </div>
+				      <div class="slogan-banner">
+						  <img
+                loading="lazy"
+               src="<?php get_template_directory_uri() ?>/wp-content/uploads/home/未来はすぐそこに。.svg"
+                class="object-contain self-stretch my-auto w-full"
+              />
+						                  
+
+				</div>
+              <!-- slide one -->
+              <div class="slider-one banner-clip-path">
+                <div class="slider-one-image">
+                </div>
+              </div>
+              <!-- slide two -->
+              <div class="slider-two banner-clip-path">
+                <div class="slider-two-image">
+                  <div class="slider-text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-0 max-w-[1200px] z-10 mx-auto w-full">
+              <div class="absolute flex flex-col justify-center items-center text-[10px] lg:text-sm -ml-[30px] -right-[30px] lg:right-[95%] left-[90%] lg:left-0 top-[40px] md:top-[40%] lg:top-[40%]">
+                <div class="text-center text-white rotate-90">Our Mission</div>
+              </div>
+                 
+                </div>  
+                <div
+                  class="flex flex-col ml-5 w-[16.5%] max-lg:ml-0 max-lg:w-full absolute z-20 right-[15px] md:right-[24%] lg:-right-[3%] top-[60%] lg:top-[40%] xl:top-[42%] self-stretch my-auto text-xs text-white max-lg:mt-10"
+                >
+                  <div
+                    class="self-stretch flex lg:block justify-end my-auto text-[10px] lg:text-xs text-white max-lg:mt-10"
+                  >
+                    <div class="">
+                      <span class="ml-8">We strive to pioneer</span>
+                      <br />
+                      <span class="ml-6">a new age through technology</span>
+                      <br />
+                      <span class="ml-4">and pursue the creation</span>
+                      <br />
+                      <span>of new value.</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div> 
+</div>
 
       </div>
       <!-- slide one -->

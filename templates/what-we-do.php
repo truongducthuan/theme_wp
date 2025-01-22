@@ -60,6 +60,25 @@ Template Name: What We Do
   font-size: 16rem;
 }
 
+#modal_member {
+    transition: left 0.5s ease-in-out;
+  }
+  #modal_member.open {
+    left: 0;
+    transform: translateX(0);
+  }
+  #modal_member.close {
+    left: 100%;
+    /* transform: translateX(100%); */
+  }
+
+  .bg-modal {
+    /* /* background: rgba(0,0,0,0.8); */
+    /* filter: blur(5px); */ */
+  }
+  .bg_modal {
+    filter: blur(10px);
+  }
 
 @media (max-width: 720px) {
   .gradient-text {
@@ -200,18 +219,17 @@ Template Name: What We Do
     <?php 
   $members = get_field('members');
   ?>
-    <div class="w-full h-[400px] lg:h-[640px] mt-10 lg:mt-32 mb-20 lg:mb-[6rem] relative" id="slide-member">
-      <div class="absolute left-0 bottom-[50%]">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask group (4).svg" class="w-full">
-      </div>
-      <div class="absolute -bottom-[60px] mix-blend-difference lg:-bottom-[50] right-0">
-        <!-- <img class="w-full mix-blend-luminosity opacity-[0.1]" src="<?php // echo get_template_directory_uri(); ?>/assets/svg/TOP MEMBER.svg ?>" alt="top member" > -->
-        <h1 class="gradient-text">top member</h1>
-      </div>
-      <div class="absolute top-0 right-0">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/Mask group.svg" alt="mask group"
-          class="w-full">
-      </div>
+  <div class="w-full h-[400px] lg:h-[640px] mt-10 lg:mt-32 mb-20 lg:mb-[6rem] relative" id="slide-member">
+    <div class="absolute left-0 bottom-[50%]">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask group (4).svg" class="w-full" >
+    </div>
+    <div class="absolute -bottom-[14px] mix-blend-difference lg:-bottom-[50] right-0">
+      <!-- <img class="w-full mix-blend-luminosity opacity-[0.1]" src="<?php // echo get_template_directory_uri(); ?>/assets/svg/TOP MEMBER.svg ?>" alt="top member" > -->
+      <h1 class="gradient-text">top member</h1>
+    </div>
+    <div class="absolute top-0 right-0">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/Mask group.svg" alt="mask group" class="w-full" >
+    </div>
       <div class="h-[1000px] relative z-10">
         <?php get_template_part('template-parts/members-slide'); ?>
       </div>
@@ -241,25 +259,7 @@ Template Name: What We Do
     </div>
 
 </section>
-<!-- MODAL -->
-<style>
-#modal_member {
-  transition: left 0.5s ease-in-out;
-}
 
-#modal_member.open {
-  left: 0;
-  transform: translateX(0);
-}
-
-#modal_member.close {
-  left: 100%;
-  transform: translateX(100%);
-}
-</style>
-
-<div id="modal_member" class="fixed left-[100%] right-0 bg-transparent bottom-0 top-0 z-50"></div>
-<?php  // get_template_part('template-parts/modal-member'); ?>
 
 <?php get_footer(); ?>
 

@@ -138,7 +138,7 @@ function checkScroll() {
       textEffect[0].classList.add('text--effect');
       setTimeout(() => {
         textFadeEl?.removeClass('opacity-0');
-      }, 2000)
+      }, 1000)
     }
 
 	} else {

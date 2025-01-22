@@ -282,12 +282,20 @@ $page_id = get_the_ID();
             style="fill: #ffd700;"
           >
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="2850" height="100%">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1850" height="100%">
                   <defs>
                       <text id="text-creator-first" x="0" y="150" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]" font-family="Arial" font-size="14" fill="black">system that MAKES PEOPLE</text>
                   </defs>
                   <use href="#text-creator-first"/>
               </svg>
+            </div>
+            <!-- <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="2850" height="100%">
+                  <defs>
+                      <text id="text-creator-first" x="0" y="150" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]" font-family="Arial" font-size="14" fill="black">system that MAKES PEOPLE</text>
+                  </defs>
+                  <use href="#text-creator-first"/>
+              </svg> -->
             </div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="2850" height="100%">
@@ -325,12 +333,12 @@ $page_id = get_the_ID();
           >
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="2700" height="100%">
-                <text x="0" y="150" style="fill: #5F5F5F;" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]">system that MAKES PEOPLE</text>
+                <text x="0" y="150" style="fill: #393939;" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]">system that MAKES PEOPLE</text>
               </svg>
             </div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="2700" height="100%">
-                <text x="0" y="150" style="fill: #5F5F5F;" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]">system that MAKES PEOPLE</text>
+                <text x="0" y="150" style="fill: #393939;" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]">system that MAKES PEOPLE</text>
               </svg>
             </div>
           </div>
@@ -339,12 +347,12 @@ $page_id = get_the_ID();
           >
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="100%">
-                <text x="0" y="150" style="fill: #5F5F5F;" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]">system that MAKES PEOPLE</text>
+                <text x="0" y="150" style="fill: #393939;" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]">system that MAKES PEOPLE</text>
               </svg>
             </div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="100%">
-                <text x="0" y="150" style="fill: #5F5F5F;" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]">system that MAKES PEOPLE</text>
+                <text x="0" y="150" style="fill: #393939;" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]">system that MAKES PEOPLE</text>
               </svg>
             </div>
           </div>

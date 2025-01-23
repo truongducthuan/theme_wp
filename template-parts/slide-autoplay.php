@@ -104,12 +104,12 @@ $the_query = new WP_Query(array(
                 $counter++;
            
                 ?>
-                <div class="swiper-slide <?php echo $even ? 'slide-item-even' : ""; ?>">
-                  <a href="<?php echo $post->guid ?>" class="w-full h-full flex flex-col bg-transparent relative">
+                <div class="swiper-slide rounded-[1rem] <?php echo $even ? 'slide-item-even' : ""; ?>">
+                  <a href="<?php echo esc_url(home_url('/achievements')); ?>" class="w-full h-full flex flex-col bg-transparent relative">
                     <div class="relative w-full h-full flex items-center justify-center">
                       <div class="w-2/3 mb-[30px]"><img src="<?php echo $get_photo_left; ?>" class="rounded-tl-[50px]"></div>
                       <div class="absolute top-0 right-0 left-0 bottom-0  z-index-negative">
-                        <img src="<?php echo $get_bg; ?>" class="" >
+                        <img src="<?php echo $get_bg; ?>" class="rounded-[1rem] blur" >
 
                         <?php if($post->taxonomy): ?>
                         <div class="absolute text-sm md:text-base right-0 bottom-[10px] bg-[#D70C18] z-20 py-0.5 px-4 text-white">

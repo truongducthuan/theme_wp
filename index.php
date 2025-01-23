@@ -26,7 +26,7 @@ $page_id = get_the_ID();
         <!-- End Banner -->
 
       <!-- Start slice --> 
-      <div class="flex flex-col mt-5 lg:mt-36 w-full h-[300px] lg:h-[450px] 2xl:h-[550px]" id="slide_phone">
+      <div class="flex flex-col mt-5 lg:mt-36 w-full h-[300px] lg:h-[450px] 2xl:h-[550px] relative z-10" id="slide_phone">
         <?php  include('template-parts/slide-autoplay.php'); ?>
       </div>
       <!-- End Slice -->
@@ -36,7 +36,7 @@ $page_id = get_the_ID();
         $we_do = get_field('what_to_do');
         ?>
       <div class="flex flex-col lg:flex-row justify-between pt-5 lg:pt-36" id="our_work">
-        <div class="mt-5 lg:mt-[100px] w-full lg:w-1/2 h-[300px] lg:h-[620px] overflow-visible lg:overflow-hidden relative">
+        <div class="mt-[4rem] lg:mt-[100px] w-full lg:w-1/2 h-[300px] md:h-[520px] lg:h-[620px] xl:h-[920px] overflow-visible lg:overflow-hidden relative">
           <div class="block lg:hidden absolute z-10 wd__top-20 right-0 left-0 bg-gradient-to-t from-black to-inherit">
             <div class="gradient-text wd__line-height">what we do</div>
           </div>
@@ -82,7 +82,7 @@ $page_id = get_the_ID();
         }
 		  </style>
         <div class="relative w-full lg:w-1/2 px-5 lg:px-0">
-          <div class="block lg:hidden absolute right-0 left-0 -top-[100%]">
+          <div class="block lg:hidden absolute right-0 left-0 -top-[30%]">
             <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/svg/bg-mobile-home.svg" alt="Union" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/bg-mobile-home.svg" >
           </div>
 
@@ -93,7 +93,7 @@ $page_id = get_the_ID();
             <div class="gradient-text wd__line-height">we do</div>
           </div>
 
-          <div class="flex flex-col justify-start gap-9 mt-[90px] lg:mt-[70px] relative">
+          <div class="flex flex-col justify-start gap-9 mt-[10rem] md:mt-[20rem] lg:mt-[70px] relative">
             <div
               class="flex relative z-10 flex-col self-start mr-36 max-w-full text-white whitespace-nowrap w-[615px] max-lg:mr-2.5"
             >
@@ -173,7 +173,7 @@ $page_id = get_the_ID();
                   <div class="self-stretch my-auto text-white">事業内容</div>
                   </div>
                   <div
-                    class="self-start mt-5 lg:mt-9 text-6xl lg:text-[7.25rem] font-black text-white uppercase leading-[60px] lg:leading-[110px] max-w-full"
+                    class="self-start mt-5 lg:mt-9 text-6xl lg:text-[7rem] font-black text-white uppercase leading-[60px] lg:leading-[110px] max-w-full"
                   >
                     OUR
                     <br />
@@ -195,7 +195,7 @@ $page_id = get_the_ID();
 <a href="<?php echo home_url('/our-business/#development'); ?>" 
    style="display: block; text-decoration: none; color: inherit; width: 100%; height: 100%; position: relative;">
     <div class="cursor-pointer business_title w-full pt-6 overflow-hidden relative news-link-bg-slice" 
-         data-set="/wp-content/uploads/2024/12/pixta_112204513-1.png">
+         data-set="<?php echo $businesses[0]['photo']['url']; ?>">
         <div class="flex justify-between w-full">
             <div>
                 アプリ/システム開発
@@ -211,7 +211,7 @@ $page_id = get_the_ID();
 <a href="<?php echo home_url('/our-business/#consulting'); ?>" 
    style="display: block; text-decoration: none; color: inherit; width: 100%; height: 100%; position: relative;">
     <div class="cursor-pointer business_title w-full pt-6 overflow-hidden relative news-link-bg-slice" 
-         data-set="/wp-content/uploads/2024/12/pixta_90783349-1.png">
+         data-set="<?php echo $businesses[1]['photo']['url']; ?>">
         <div class="flex justify-between w-full">
             <div>
                 AI/DXコンサルティング
@@ -227,7 +227,7 @@ $page_id = get_the_ID();
 				  <a href="<?php echo home_url('/our-business/#finance'); ?>" 
    style="display: block; text-decoration: none; color: inherit; width: 100%; height: 100%; position: relative;">
     <div class="cursor-pointer business_title w-full pt-6 overflow-hidden relative news-link-bg-slice" 
-         data-set="/wp-content/uploads/2024/12/pixta_116948407-1.png">
+         data-set="<?php echo $businesses[2]['photo']['url']; ?>">
         <div class="flex justify-between w-full">
             <div>
                 M&A/財務支援
@@ -266,7 +266,7 @@ $page_id = get_the_ID();
         <!-- End introduction -->
 
         <!-- Start Run Text -->
-        <div class="pt-0 lg:pt-48 relative">
+        <div class="pt-0 md:pt-52 lg:pt-48 relative">
           <div class="absolute left-0 -top-[20%]">
             <img
               loading="lazy"
@@ -278,24 +278,16 @@ $page_id = get_the_ID();
             <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/svg/Union.svg" alt="Union" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/Union.svg ?>" >
           </div>
           <div
-            class="hidden lg:flex decorative-text decorative-text--1"
+            class="hidden lg:flex decorative-text mix-blen-difference decorative-text--1"
             style="fill: #ffd700;"
           >
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="1850" height="100%">
+            <div class="mix-blen-difference">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2850" height="100%">
                   <defs>
-                      <text id="text-creator-first" x="0" y="150" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]" font-family="Arial" font-size="14" fill="black">system that MAKES PEOPLE</text>
+                      <text id="text-creator-first" x="0" y="150" class="mt-60 w-full font-bold text-center mix-blen-difference uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]" font-family="Arial" font-size="14" fill="#0F0F0F">system that MAKES PEOPLE</text>
                   </defs>
                   <use href="#text-creator-first"/>
               </svg>
-            </div>
-            <!-- <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="2850" height="100%">
-                  <defs>
-                      <text id="text-creator-first" x="0" y="150" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]" font-family="Arial" font-size="14" fill="black">system that MAKES PEOPLE</text>
-                  </defs>
-                  <use href="#text-creator-first"/>
-              </svg> -->
             </div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="2850" height="100%">
@@ -313,7 +305,7 @@ $page_id = get_the_ID();
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="1850" height="100%">
                   <defs>
-                      <text id="text-creator-first" x="0" y="150" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]" font-family="Arial" font-size="14" fill="black">system that MAKES PEOPLE</text>
+                      <text id="text-creator-first" x="0" y="150" class="mt-60 w-full font-bold text-center uppercase border border-solid border-zinc-600 text-[120px] lg:text-[183px]" font-family="Arial" font-size="14" fill="#0F0F0F">system that MAKES PEOPLE</text>
                   </defs>
                   <use href="#text-creator-first"/>
               </svg>
@@ -373,7 +365,7 @@ $page_id = get_the_ID();
          ?>
         <div class="w-full pt-0 lg:pt-14 z-10">
           <div class="flex flex-col lg:flex-row gap-5">
-            <div class="mt-[100px] w-full lg:w-1/2 h-[300px] lg:h-[600px] overflow-hidden">
+            <div class="mt-[100px] w-full lg:w-1/2 h-[500px] md:h-[800px] lg:h-[700px] xl:h-[900px] overflow-hidden">
               <div class="swiper mySwiperPhone">
                 <div class="swiper-wrapper">
                   <?php 
@@ -414,100 +406,28 @@ $page_id = get_the_ID();
                   <div>ments</div>
                 </div>
                 <div
-                  class="mt-5 lg:mt-24 text-sm lg:text-lg text-zinc-400 mr-0"
+                  class="mt-5 lg:mt-20 text-sm lg:text-lg text-zinc-400 mr-0"
                 >
                   お客様に満足していただける高品質なシステム作りをしています。
                   <br />
                   デジタルの領域の実績は１,０００以上で、幅広くお客様のニーズにお応えします。
+                </div>
+
+              </div>
+              <div
+                class="self-star flex gap-5 justify-between py-1.5 lg:py-3.5 pr-3.5 pl-5 lg:pl-10 mt-5 lg:mt-14 max-w-full text-base text-black bg-white border border-black border-solid rounded-[100px] w-52 lg:w-[295px] hover:cursor-pointer btn-arrow"
+              >
+                <div class="text-sm lg:text-base my-auto uppercase">view more</div>
+                <div
+                  class="flex shrink-0 bg-blue-900 rounded-full h-[35px] w-[35px] p-2"
+                >
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/arrow-white.svg" alt="arrow" />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- End Achievements -->
-
-        <!-- Start Our Project -->
-        <span
-            class="scroll-to"
-            data-label="Scroll to: #project"
-            data-bullet="false"
-            data-link="#project"
-            data-title="project"
-            ><a name="project"></a
-          ></span>
-        <div class="relative w-full mt-5 lg:mt-36" id="project">
-          <div class="absolute right-0 -top-[100%]">
-            <img class="hidden lg:block w-full mix-blend-luminosity" src="<?php echo get_template_directory_uri(); ?>/assets/svg/bg2.svg" alt="" srcset="<?php echo get_template_directory_uri(); ?>/assets/svg/bg2.svg" class="w-full" >
-          </div>
-            <div class="absolute -top-[30px] lg:-top-[100px] right-0 -left-[70px] lg:left-0">
-              <div class="gradient-text text-nowrap">our project</div>
-            </div>
-
-            <div class="flex flex-col lg:flex-row max-w-[1200px] mx-auto px-5 lg:px-0">
-				
-
-
-	<div class="w-full lg:w-1/2 mt-[100px]" id="news-container">		</div>	
-				
-
-              <?php 
-            $phones = get_field('our_project');
-        
-            ?>
-            <div id="project-slider" class="flex shrink-0 self-stretch mt-5 lg:-mt-[100px] w-full lg:w-1/2 h-[300px] lg:h-[650px]">
-              <div class="swiper mySwiperPhone">
-                <div class="swiper-wrapper">
-                  <?php 
-                  if(!empty($phones)):
-                    foreach($phones as $phone):
-                      $img = $phone['photo'];
-                      ?>
-                      <div class="swiper-slide">
-                        <div class="h-full shadow-image"><img
-                          loading="lazy"
-                          src="<?php echo $img; ?>"
-                          class="object-contain w-full h-full"
-                        /></div>
-                      </div>
-                      <?php 
-                    endforeach;
-                  endif;
-                  ?>
-                </div>
-                
-                  
-                <style>
-                 .shadow-image::after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 14%;
-                    transform: translateX(-50%);
-                    z-index: -1;
-                    background-image: url('<?php echo get_template_directory_uri() ?>/assets/svg/mock_shadow 1.svg');
-                    /* background: #222222; */
-                    width: 100%;
-                    height: 49%;
-                    background: linear-gradient(45deg, url('http://localhost:10034/wp-content/themes/age_lab/assets/svg/mock_shadow%201.svg'), transparent);
-                    opacity: 0.1;
-                    transform: rotate(100deg);
-                 }
-
-                 #project .gradient-text {
-                  font-size: 14rem;
-                 }
-
-                 @media (max-width: 768px) {
-                   #project .gradient-text {
-                    font-size: 9rem;
-                   }
-                 }
-                </style>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Our Project -->
           
         <!-- Start News -->
         <span
@@ -522,7 +442,7 @@ $page_id = get_the_ID();
          $categories = get_categories();
         ?>
         <div
-        class="flex flex-col py-20 lg:py-36 items-start w-full max-w-[1200px] mx-auto px-5 lg:px-0"
+        class="flex flex-col py-20 lg:py-36 items-start w-full max-w-[1200px] mx-auto px-5 lg:px-0 relative z-10"
         >
           
           <div class="flex gap-3 mt-1.5 text-base text-white whitespace-nowrap">

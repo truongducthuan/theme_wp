@@ -32,10 +32,10 @@ function handleEvent (data) {
         <div class="absolute top-0 bottom-0 opacity-0 right-0 w-5/6 lg:w-2/6 bg-white py-20 px-5 lg:p-24 overflow-y-auto z-50">
           <div class="absolute top-5 lg:top-[2.5rem] right-5 lg:right-[6.5rem] flex items-center cursor-pointer" onclick="closeModal()">
             <div class="cursor-pointer text-3xl p-3.5 close-nav">
-						  <span class="icon-menu top-0 menu-close__top"></span>
-              <span class="icon-menu top-2 menu-close__bottom"></span>
+						  <span class="icon-menu modal-close__top top-0 menu-close__top"></span>
+              <span class="icon-menu modal-close__button top-2 menu-close__bottom"></span>
 					  </div>
-            <span class="h-[14px]">Close</span>
+            <span class="h-[8px]">Close</span>
           </div>
           <div>
             <img src="${data.photo}" alt="${data.name_2}">

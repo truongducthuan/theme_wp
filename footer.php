@@ -36,20 +36,20 @@
               class="hidden lg:flex flex-col lg:flex-row gap-6 my-auto text-xs text-neutral-700 max-lg:max-w-full order-2 lg:order-1"
             >
               <div class="flex-auto">
-                Copyright © 2024 エイジラボ株式会社 | AGELAB.inc. All Rights
+                Copyright © 2025 エイジラボ株式会社 | AGELAB.inc. All Rights
                 Reserved.
               </div>
-              <div class="basis-auto">プライバシーポリシー</div>
+              <div class="basis-auto"><a href="<?php echo esc_url(home_url('/privacy-policy')) ?>">プライバシーポリシー</a></div>
             </div>
 
             <div
               class="flex lg:hidden flex-col lg:flex-row gap-2 my-auto text-xs text-neutral-700 max-lg:max-w-full order-2 lg:order-1"
             >
               <div class="flex-auto">
-                Copyright © 2024 エイジラボ株式会社 | AGELAB.inc.
+                Copyright © 2025 エイジラボ株式会社 | AGELAB.inc.
               </div>
               <div class="basis-auto">All Rights
-              Reserved. プライバシーポリシー</div>
+              Reserved. <a href="<?php echo esc_url(home_url('/privacy-policy')) ?>">プライバシーポリシー</a></div>
             </div>
 			  <?php
 			  $socials = get_field('social');

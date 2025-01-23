@@ -34,7 +34,7 @@
 
 <section>
 <div class="relative text-[#B2B2B2]">
-    <div class="flex absolute left-0 top-0 flex-col mt-[80px] mb-[80px] w-[50%] max-lg:ml-0 max-lg:w-full">
+    <div class="flex absolute left-0 top-0 flex-col mt-[80px] mb-[80px] w-[50%] md:w-[30%] lg:w-[40%] max-lg:ml-0">
     <img
       loading="lazy"
       src="<?php echo get_template_directory_uri() ?>/assets/svg/banner-left.svg"

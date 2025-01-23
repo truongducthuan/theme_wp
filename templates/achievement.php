@@ -121,7 +121,7 @@ endif;
 <ul class="max-w-[1200px] mx-auto pb-5 lg:pb-0 pt-5 lg:pt-10 px-5 lg:px-0 overflow-x-auto relative z-10 flex items-center gap-3" id="menu_list"></ul>
 <script>
   var taxonomies = <?php echo json_encode($terms); ?>;
-  taxonomies?.unshift({name: 'すべて'});
+  taxonomies?.sort((a, b) => a.term_id - b.term_id)?.unshift({name: 'すべて'})
 
   function showMenu (active='すべて') {
     document.getElementById('menu_list').innerHTML = '';

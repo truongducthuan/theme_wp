@@ -53,11 +53,20 @@ Template Name: What We Do
 }
 
 .clip-path--right {
-  clip-path: polygon(100% 0, 100% 36%, 57% 100%, 0 100%, 70% 0);
+  /* clip-path: polygon(100% 0, 100% 36%, 57% 100%, 0 100%, 70% 0); */
+  clip-path: polygon(100% 0, 100% 60%, 73% 100%, 0 100%, 70% 0);
 }
 
 .gradient-text {
   font-size: 16rem;
+}
+
+.modal-close__top {
+		  transform: translateY(10px) rotate(-40deg);
+	  }
+
+.modal-close__button {
+  transform: translateY(0px) rotate(40deg);
 }
 
 #modal_member {
@@ -79,6 +88,18 @@ Template Name: What We Do
   .bg_modal {
     filter: blur(10px);
   }
+
+@media (max-width: 1400px) {
+  .gradient-text {
+    font-size: 15rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .gradient-text {
+    font-size: 11rem;
+  }
+}
 
 @media (max-width: 720px) {
   .gradient-text {
@@ -172,7 +193,7 @@ Template Name: What We Do
     <div class="absolute lg:-top-[30rem] 2xl:-top-[500px] right-0 w-[65%]">
       <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask-bg-black.svg" class="w-full" >
     </div>
-    <div class="absolute -top-[55px] lg:top-[27rem] xl:-bottom-[215px] 2xl:-bottom-[200px] w-full z-10">
+    <div class="absolute -top-[55px] lg:top-[37rem] xl:-bottom-[215px] 2xl:-bottom-[200px] w-full z-10">
       <div class="gradient-text">Philosophy</div>
     </div>
     <div class="w-full lg:w-1/2 order-1 lg:order-1 relative z-20">
@@ -189,7 +210,7 @@ Template Name: What We Do
         </p>
       </div>
     </div>
-    <div class="mt-5 lg:mt-[100px] order-2 lg:order-2 w-full lg:w-1/2 lg:h-[500px] 2xl:h-[750px] overflow-hidden">
+    <div class="mt-5 lg:mt-[100px] order-2 lg:order-2 w-full lg:w-1/2 h-[500px] lg:h-[650px] 2xl:h-[750px] overflow-hidden">
       <?php 
         $we_do = get_field('what_to_do', 2);
         ?>
@@ -228,9 +249,9 @@ Template Name: What We Do
     <div class="absolute left-0 bottom-[50%]">
       <img src="<?php echo get_template_directory_uri() ?>/assets/svg/Mask group (4).svg" class="w-full" >
     </div>
-    <div class="absolute -bottom-[14px] mix-blend-difference lg:-bottom-[50] right-0">
+    <div class="absolute mix-blend-difference -bottom-[14px] md:-bottom-[7rem] lg:-bottom-[6rem] right-0 md:-right-[10rem] lg:-right-[15rem]">
       <!-- <img class="w-full mix-blend-luminosity opacity-[0.1]" src="<?php // echo get_template_directory_uri(); ?>/assets/svg/TOP MEMBER.svg ?>" alt="top member" > -->
-      <h1 class="gradient-text">top member</h1>
+      <h1 class="gradient-text text-nowrap">top member</h1>
     </div>
     <div class="absolute top-0 right-0">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/Mask group.svg" alt="mask group" class="w-full" >

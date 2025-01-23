@@ -6,6 +6,7 @@ html {
   --window-width: tan(atan2(var(--100vw), 1px));
   --px: calc(1px* max(1440, var(--window-width)) / 1440);
   --rem: calc(1rem* max(1440, var(--window-width)) / 1440);
+  --color-primary: "#1F3A8A";
 }
 
 .z-index-negative {

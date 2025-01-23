@@ -2,7 +2,7 @@
 .swiper-scrollbar {
   background-color: #f9f9f9;
   --swiper-scrollbar-bottom: 0;
-  --swiper-scrollbar-drag-bg-color: #dda3b6;
+  --swiper-scrollbar-drag-bg-color: #1F3A8A;
   --swiper-scrollbar-size: 8px;
 }
 

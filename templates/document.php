@@ -48,7 +48,7 @@ $form = get_the_content();
     </div>
     <div class="flex justify-between gap-4">
       <div class="flex flex-col items-start justify-start self-start gap-8 text-white py-1 rounded-xl">
-        <div class="font-bold text-4xl md:text-[7.2rem] text-white uppercase">Document Request</div>
+        <div class="font-bold text-4xl md:text-8xl lg:text-[7.2rem] text-white uppercase">Document Request</div>
       </div>
     </div>
   

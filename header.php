@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/tailwindcss/output.css'; ?>">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/style.css'; ?>">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/pagination.css'; ?>">
-  <?php  wp_head(); ?>
+  <?php // wp_head(); ?>
 
   <style>
     .hero-pattern {
@@ -249,31 +249,31 @@ $slug = basename(rtrim($path, '/')); // Get the last part of the path and remove
 
                         <div class="p-1 cursor-pointer hover:bg-secondary close-nav"><i class="fa-solid fa-xmark text-2xl"></i></div>
                       </li>
-                      <li class="hover:bg-[#f20c5d08] hover:translate-x-3 cursor-pointer transition-all duration-300">
+                      <li class="hover:bg-[#d3d9eb] hover:translate-x-3 cursor-pointer transition-all duration-300">
                         <a href="<?php echo esc_url(home_url('/our-business')) ?>" class="flex justify-between items-center py-4 w-full">
                           <p class="capitalize font-semibold">事業内容</p>
                           <i class="fa-solid fa-angle-right text-primary"></i>
                         </a>
                       </li>
-                      <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-class">
+                      <li class="flex justify-between items-center hover:bg-[#d3d9eb] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-class">
                         <a href="<?php echo esc_url(home_url('/achievements')); ?>" class="w-full">
                           <p class="capitalize font-semibold">実績</p>
                           <i class="fa-solid fa-angle-right text-primary"></i>
                         </a>
                       </li>
-                      <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-schedule">
+                      <li class="flex justify-between items-center hover:bg-[#d3d9eb] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-schedule">
                         <a href="<?php echo esc_url(home_url('/what-we-do')); ?>" class="w-full">
                           <p class="capitalize font-semibold">企業案内</p>
                             <i class="fa-solid fa-angle-right text-primary"></i>
                         </a>  
                       </li>
-                      <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-faq">
+                      <li class="flex justify-between items-center hover:bg-[#d3d9eb] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-faq">
                         <a href="<?php echo esc_url(home_url('/recruitment')); ?>" class="w-full">
                           <p class="capitalize font-semibold">採用情報</p>
                             <i class="fa-solid fa-angle-right text-primary"></i>
                         </a>  
                       </li>
-                      <li class="flex justify-between items-center hover:bg-[#f20c5d08] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-access">
+                      <li class="flex justify-between items-center hover:bg-[#d3d9eb] hover:translate-x-3 py-4 cursor-pointer transition-all duration-300" id="scroll-access">
                         <a href="<?php echo esc_url(home_url('/news')); ?>" class="w-full">
                           <p class="capitalize font-semibold">お知らせ</p>
                             <i class="fa-solid fa-angle-right text-primary"></i>

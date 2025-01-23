@@ -27,7 +27,6 @@ function showAchievementList (category = 'ALL') {
 
 function handleClick (name) {
   showAchievementList(name)
-  console.log({name})
 }
 
 function renderAchievement (item) {
@@ -35,7 +34,7 @@ function renderAchievement (item) {
   return `
     <li class="w-full flex flex-col bg-transparent relative">
       <a href="${item?.guid}">
-        <div class="relative w-full h-[400px] flex flex-col items-center justify-between">
+        <div class="relative w-full h-[450px] md:h-[800px] xl:h-[400px] flex flex-col items-center justify-between">
           <div class="w-2/3 mt-5"><img src="${item?.photo_left}" class="rounded-tl-[50px] w-full"></div>
           <div class="absolute top-0 right-0 left-0 bottom-0 z-index-negative">
             <img src="${item?.bg}" class="w-full h-full blur">

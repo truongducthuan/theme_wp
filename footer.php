@@ -44,3 +44,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // scroll top
+        $('#scroll_top').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        })
+    </script>
+</body>
+</html>

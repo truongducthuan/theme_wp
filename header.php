@@ -19,6 +19,22 @@
       }
     }
   </script>
+
+  <style>
+    html {
+        scroll-behavior: smooth;
+    }
+        .dropdown-menu {
+            display: none;
+            top: 100%;
+            left: 0;
+            z-index: 50;
+            min-width: 250px;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+  </style>
 </head>
 <body class="font-sans">
     <!-- Header -->
@@ -45,18 +61,130 @@
                 <img src="<?php echo get_field('logo'); ?>" alt="Logo" class="h-16 w-16 rounded-full">
             </div>
             
-            <nav class="hidden md:flex items-center space-x-12 text-white font-bold">
-                <?php 
-                $header_links = get_field('header_links');
-                foreach ($header_links as $link) {
-                    echo '<a href="' . $link['url'] . '" class="' . (esc_html($slug) == $link['slug'] ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') . '">' . $link['name'] . '</a>';
-                }
-                ?>
+            <nav class="hidden md:flex items-center justify-center space-x-12">
+                <a href="<?php echo esc_url(home_url('')); ?>" class="font-bold <?php echo (esc_html($slug) == '/' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">Home</a>
+                <div class="dropdown relative">
+                    <button class="text-white hover:text-gray-200 font-bold focus:outline-none">
+                        Services
+                    </button>
+                    <div class="absolute dropdown-menu bg-white rounded-lg shadow-lg overflow-hidden">
+                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
+                            Telecom
+                        </a>
+                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
+                            Human resources & support
+                        </a>
+                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
+                            Translation
+                        </a>
+                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
+                            Real estate
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Company -->
+                <a href="#" class="font-bold <?php echo (esc_html($slug) == 'our-company' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
+                    Company
+                </a>
+                
+                <!-- Products -->
+                <a href="#" class="font-bold <?php echo (esc_html($slug) == 'products' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
+                    Products
+                </a>
             </nav>
             
-            <button class="bg-white text-red-500 px-6 py-2 rounded-full hover:text-primary transition-colors">
+            <button class="hidden md:block bg-white text-red-500 px-6 py-2 rounded-full hover:text-primary transition-colors">
                 <i class="fa-solid fa-envelope"></i>
                 Contact Us
             </button>
+
+            <button id="menuToggle" class="block md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div id="mobileMenu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <!-- Menu Header -->
+            <div class="bg-sky-400 p-4 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="<?php echo get_field('logo'); ?>" alt="Logo" class="h-12 w-12">
+                </div>
+                <button id="closeMenu" class="text-white focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Menu Items -->
+            <nav class="divide-y divide-gray-200">
+                <a href="<?php echo esc_url(home_url('')); ?>" class="block p-4 hover:bg-gray-50">
+                    HOME
+                </a>
+
+                <!-- Services Dropdown -->
+                <div class="divide-y divide-gray-200">
+                    <button id="servicesDropdown" class="w-full flex items-center justify-between p-4 hover:bg-gray-50 focus:outline-none">
+                        <span>SERVICES</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+                    </button>
+                    
+                    <div id="servicesMenu" class="bg-blue-50 hidden">
+                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                            SERVICES
+                        </a>
+                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                            TELECOM
+                        </a>
+                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                            HUMAN RESOURCES & SUPPORT
+                        </a>
+                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                            TRANSLATION
+                        </a>
+                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                            REAL ESTATE
+                        </a>
+                    </div>
+                </div>
+
+                <a href="<?php echo esc_url(home_url('/our-company')); ?>" class="<?php echo (esc_html($slug) == 'our-company' ? 'text-sky-400' : '') ?> block p-4  hover:bg-gray-50">
+                    COMPANY
+                </a>
+                
+                <a href="#" class="block p-4 hover:bg-gray-50">
+                    CONTACT
+                </a>
+            </nav>
         </div>
     </header>
+
+    <script>
+        // Menu Toggle Functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const servicesDropdown = document.getElementById('servicesDropdown');
+        const servicesMenu = document.getElementById('servicesMenu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.classList.add('menu-open');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.classList.remove('menu-open');
+        });
+
+        servicesDropdown.addEventListener('click', () => {
+            servicesMenu.classList.toggle('hidden');
+            servicesDropdown.querySelector('i').classList.toggle('rotate-180');
+        });
+
+        // Initialize with Services dropdown open to match the image
+        window.addEventListener('DOMContentLoaded', () => {
+            servicesMenu.classList.remove('hidden');
+            servicesDropdown.querySelector('i').classList.add('rotate-180');
+        });
+    </script>

@@ -6,6 +6,7 @@
     <title>Our Company - Asia Soru</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/index.css">
     <script>
     tailwind.config = {
       theme: {
@@ -58,7 +59,7 @@
     <header class="bg-[#00a5e2] py-3 px-6 shadow-sm fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="flex items-center">
-                <img src="<?php echo get_field('logo'); ?>" alt="Logo" class="h-16 w-16 rounded-full">
+                <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/cropped-Logo-Thanh-Giang-1.png" alt="Logo" class="h-16 w-16 rounded-full">
             </div>
             
             <nav class="hidden md:flex items-center justify-center space-x-12">
@@ -68,36 +69,33 @@
                         Services
                     </button>
                     <div class="absolute dropdown-menu bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
+                        <a href="<?php echo esc_url(home_url('/telecom')); ?>" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
                             Telecom
                         </a>
-                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
+                        <a href="<?php echo esc_url(home_url('/human-resource')); ?>" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
                             Human resources & support
                         </a>
-                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
-                            Translation
-                        </a>
-                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
+                        <a href="<?php echo esc_url(home_url('/real-estate')); ?>" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
                             Real estate
                         </a>
                     </div>
                 </div>
                 
                 <!-- Company -->
-                <a href="#" class="font-bold <?php echo (esc_html($slug) == 'our-company' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
+<!--                 <a href="#" class="font-bold <?php echo (esc_html($slug) == 'our-company' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
                     Company
-                </a>
+                </a> -->
                 
                 <!-- Products -->
-                <a href="#" class="font-bold <?php echo (esc_html($slug) == 'products' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
+<!--                 <a href="#" class="font-bold <?php echo (esc_html($slug) == 'products' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
                     Products
-                </a>
+                </a> -->
             </nav>
             
-            <button class="hidden md:block bg-white text-red-500 px-6 py-2 rounded-full hover:text-primary transition-colors">
+<!--             <button class="hidden md:block bg-white text-red-500 px-6 py-2 rounded-full hover:text-primary transition-colors">
                 <i class="fa-solid fa-envelope"></i>
                 Contact Us
-            </button>
+            </button> -->
 
             <button id="menuToggle" class="block md:hidden text-white focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -133,16 +131,16 @@
                         <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             SERVICES
                         </a>
-                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                        <a href="<?php echo esc_url(home_url('/telecom')); ?>" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             TELECOM
                         </a>
-                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                        <a href="<?php echo esc_url(home_url('/human-resource')); ?>" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             HUMAN RESOURCES & SUPPORT
                         </a>
                         <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             TRANSLATION
                         </a>
-                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                        <a href="<?php echo esc_url(home_url('/real-estate')); ?>" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             REAL ESTATE
                         </a>
                     </div>

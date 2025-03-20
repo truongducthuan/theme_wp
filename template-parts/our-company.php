@@ -11,22 +11,25 @@
 <?php 
 $hero = get_field('hero_section');
 ?>
-    <section class="pt-24 bg-gradient-to-r from-blue-400 to-blue-600">
-        <div class="max-w-7xl mx-auto px-6 py-16">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section class="pt-0 bg-gradient-to-r from-blue-400 to-blue-600">
+		<div class="rounded-lg overflow-hidden shadow-xl">
+                    <img src="<?php echo $hero['banner']; ?>" alt="Office Environment" class="w-full">
+                </div>
+<!--         <div class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-1 gap-12 items-center">
                 <div class="text-white">
                     <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                        <?php echo $hero['title']; ?>
+                        <?php // echo $hero['title']; ?>
                     </h1>
                     <p class="text-lg mb-8 text-blue-50">
-                        <?php echo $hero['description']; ?>
+                        <?php // echo $hero['description']; ?>
                     </p>
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-xl">
-                    <img src="<?php echo $hero['banner']; ?>" alt="Office Environment" class="w-full">
+                    <img src="<?php // echo $hero['banner']; ?>" alt="Office Environment" class="w-full">
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- Navigation Tabs -->
@@ -62,13 +65,13 @@ $about = get_field('about_section');
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-2"><?php echo $about['title']; ?></h2>
-                <p class="text-red-500 font-medium"><?php echo $about['slogan']; ?></p>
+                <p class="text-secondary font-medium"><?php echo $about['slogan']; ?></p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center p-5 bg-[#1f2937] rounded-lg">
-                <div class="rounded-lg overflow-hidden shadow-xl bg-gray-900">
+            <div class="grid md:grid-cols-1 gap-12 items-center p-5 bg-primary rounded-lg">
+<!--                 <div class="rounded-lg overflow-hidden shadow-xl bg-gray-900">
                     <img src="<?php echo $about['image']; ?>" alt="About Us" class="w-full opacity-75">
-                </div>
+                </div> -->
                 <div>
                     <p class="text-lg text-gray-700 text-white leading-relaxed">
                         <?php echo $about['description']; ?>
@@ -95,12 +98,12 @@ $philosophy = get_field('philoshopy_section');
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-2"><?php echo $philosophy['title']; ?></h2>
-                <p class="text-red-500 font-medium"><?php echo $philosophy['slogan']; ?></p>
+                <p class="text-secondary font-medium"><?php echo $philosophy['slogan']; ?></p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <!-- Philosophy Points -->
-                <div class="space-y-8">
+                <a class="space-y-8" href="/">
                     <?php 
                     if(empty($philosophy)) return;
                     $index = 1;
@@ -115,7 +118,7 @@ $philosophy = get_field('philoshopy_section');
                         echo '</div>';
                     }
                     ?>
-                </div>
+                </a>
 
                 <!-- Philosophy Image -->
                 <div class="rounded-lg overflow-hidden shadow-lg">
@@ -128,6 +131,42 @@ $philosophy = get_field('philoshopy_section');
             </div>
         </div>
     </section>
+
+<!-- President Talk -->
+<?php 
+$president = get_field('president');
+?>
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2"><?php echo $president['title']; ?></h2>
+                <p class="text-secondary font-medium"><?php echo $president['slogan']; ?></p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Philosophy Points -->
+                <div class="space-y-8 order-2">
+                    <?php 
+                        echo '<div class="flex gap-4">';
+                        echo '<p class="text-gray-700">';
+                        echo $president['text'];
+                        echo '</p>';
+                        echo '</div>';
+                    ?>
+                </div>
+
+                <!-- Philosophy Image -->
+                <div class="rounded-lg overflow-hidden shadow-lg order-1">
+                    <img 
+                        src="<?php echo $president['image']; ?>" 
+                        alt="Philosophy Concept" 
+                        class="w-full h-auto"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
 
             <!-- Company Overview Section -->
             <span
@@ -146,7 +185,7 @@ $overview = get_field('overview_company');
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
                 <h1 class="text-3xl font-bold mb-2"><?php echo $overview['title']; ?></h1>
-                <p class="text-red-500 font-medium"><?php echo $overview['slogan']; ?></p>
+                <p class="text-secondary font-medium"><?php echo $overview['slogan']; ?></p>
             </div>
 
             <div class="border rounded-lg overflow-hidden">
@@ -183,7 +222,7 @@ $office = get_field('office_section');
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-2"><?php echo $office['title']; ?></h2>
-                <p class="text-red-500 font-medium"><?php echo $office['slogan']; ?></p>
+                <p class="text-white font-medium"><?php echo $office['slogan']; ?></p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 items-center">

@@ -1,41 +1,32 @@
-
 <?php 
-$services = get_field('services');
+$health_food = get_field('health_food');
 ?>
     <section class="pt-32 pb-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-2"><?php echo $services['title']; ?></h2>
-                <p class="text-red-500 font-medium"><?php echo $services['sub_title']; ?></p>
+                <h2 class="text-3xl font-bold text-gray-800 mb-2"><?php echo $health_food['header']; ?></h2>
+                <p class="text-secondary font-medium"><?php echo $health_food['sub_header']; ?></p>
             </div>
+			
+		<?php 
+		if(empty($health_food)) return;
+			$num = 0;
+			foreach($health_food['content'] as $item):
+			$num++;
+		?>
+			<div class="grid md:grid-cols-2 gap-8 items-center mb-24">
+				<!-- Left: Illustration -->
+				<div class="<?php echo $num % 2 == 0 ? "order-1 md:order-1" : "order-1 md:order-2" ?>">
+					<img src="<?php echo $item['image']; ?>" alt="People communicating" class="w-full max-w-md mx-auto">
+				</div>
 
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <!-- services Points -->
-                <div class="space-y-8">
-                    <?php 
-                    if(empty($services)) return;
-                    $index = 1;
-                    foreach ( $services['list'] as $points) {
-                        echo '<div class="flex gap-4">';
-                        echo '<div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">';
-                        echo $index++;
-                        echo '</div>';
-                        echo '<p class="text-gray-700">';
-                        echo $points['item'];
-                        echo '</p>';
-                        echo '</div>';
-                    }
-                    ?>
-                </div>
-
-                <!-- services Image -->
-                <div class="rounded-lg overflow-hidden shadow-lg">
-                    <img 
-                        src="<?php echo $services['image']; ?>" 
-                        alt="services Concept" 
-                        class="w-full h-auto"
-                    >
-                </div>
-            </div>
-        </div>
+				<!-- Right: Content -->
+				<div class="mx-auto xl:mx-[48px] <?php echo $num % 2 == 0 ? "order-2 md:order-2" : "order-2 md:order-1" ?>">
+					<p class="text-gray-700 leading-relaxed">
+						<?php echo $item['text']; ?>
+					</p>
+				</div>
+			</div>
+		<?php endforeach; ?>
+      </div>
     </section>

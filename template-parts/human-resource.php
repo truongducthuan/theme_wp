@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="md:w-5/6 pt-28 md:pt-6 <?php echo $num % 2 == 0 ? 'pr-6 md:pr-12 pb-6 pl-6' : 'pl-6 md:pl-12 pb-6 pr-6' ?>">
-                        <p class="text-gray-700 leading-relaxed textOverflowDots">
+                        <p class="text-gray-700 leading-relaxed">
                             <?php echo $service['content']; ?>
                         </p>
                     </div>

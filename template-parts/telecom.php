@@ -112,38 +112,6 @@
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-4 py-12 md:py-16">
-        <?php 
-        $mobiles = get_field('features_mobile');
-        ?>
-        <!-- Header -->
-        <h1 class="text-2xl md:text-3xl font-bold text-center mb-16"><?php echo $mobiles['header']; ?></h1>
-        
-        <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
-        <?php 
-        if(empty($mobiles['content'])) return;
-        $num = 0;
-        foreach($mobiles['content'] as $content) {
-            $num++;
-            // print_r($num);
-            echo '
-                 <div class="mb-5 md:mb-16 flex flex-col justify-center items-center text-center">
-                        <p class="max-w-[18rem] text-center text-lg md:text-xl text-center md:text-left my-4 '. ($num % 2 == 0 ? 'order-2' : 'order-2 md:order-1').'">
-                            '.  $content['title'].'
-                        </p>
-                        
-                        <!-- Second App Screenshot (visible only on desktop) -->
-                        <div class="flex justify-center '. ($num % 2 == 0 ? 'order-1' : 'order-1 md:order-2').'">
-                            <div class="relative max-w-xs">
-                                <img src="'.  $content['image'] .'" alt="料金明細画面" class="w-full rounded-3xl shadow-lg">
-                            </div>
-                        </div>
-                </div>
-            ';
-        }
-        ?>
-        </div>
-    </section>
 
     <section class="max-w-6xl mx-auto px-4 pt-6 md:pt-16 pb-16">
     <style>
@@ -170,7 +138,7 @@
         ?>
         <!-- Header -->
         <h1 class="text-2xl md:text-3xl font-bold text-center mb-4"><?php echo $internets['header']; ?></h1>
-        <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+        <p class="text-center text-secondary mb-12 max-w-3xl mx-auto">
             <?php echo $internets['sub_header']; ?>
         </p>
         

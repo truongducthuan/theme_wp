@@ -5,3 +5,30 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 }
+
+#formCustom .formGroup .inputForm {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #3b82f6;
+    border-radius: 0.5rem;
+    transition: all .3s;
+}
+
+#formCustom .btnForm {
+    width: 100%;
+    color: white;
+    background-color: #3b82f6;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#formCustom > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column-reverse;
+}

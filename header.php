@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Company - Asia Soru</title>
+    <title><?php echo get_the_title(); ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/index.css">
@@ -13,7 +13,7 @@
         extend: {
           colors: {
             primary: '#00a5e2',
-            secondary: '#e1ebf4',
+            secondary: '#3b82f6',
             thirdary: '#f94886'
           }
         }
@@ -36,6 +36,7 @@
             display: block;
         }
   </style>
+  <?php wp_head(); ?>
 </head>
 <body class="font-sans">
     <!-- Header -->
@@ -77,25 +78,17 @@
                         </a>
                         <a href="<?php echo esc_url(home_url('/real-estate')); ?>" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
                             Real estate
+                        </a><a href="<?php echo esc_url(home_url('/health-food')); ?>" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
+                            Health food
                         </a>
                     </div>
                 </div>
-                
-                <!-- Company -->
-<!--                 <a href="#" class="font-bold <?php echo (esc_html($slug) == 'our-company' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
-                    Company
-                </a> -->
-                
-                <!-- Products -->
-<!--                 <a href="#" class="font-bold <?php echo (esc_html($slug) == 'products' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
-                    Products
-                </a> -->
             </nav>
             
-<!--             <button class="hidden md:block bg-white text-red-500 px-6 py-2 rounded-full hover:text-primary transition-colors">
+            <a href="<?php echo esc_url(home_url('/contact-form')); ?>" class="hidden md:block bg-white text-red-500 px-6 py-2 rounded-full hover:text-primary transition-colors">
                 <i class="fa-solid fa-envelope"></i>
                 Contact Us
-            </button> -->
+            </a>
 
             <button id="menuToggle" class="block md:hidden text-white focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -107,7 +100,7 @@
             <!-- Menu Header -->
             <div class="bg-sky-400 p-4 flex items-center justify-between">
                 <div class="flex items-center">
-                    <img src="<?php echo get_field('logo'); ?>" alt="Logo" class="h-12 w-12">
+                    <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/cropped-Logo-Thanh-Giang-1.png" alt="Logo" class="h-12 w-12">
                 </div>
                 <button id="closeMenu" class="text-white focus:outline-none">
                     <i class="fas fa-times text-2xl"></i>
@@ -128,29 +121,22 @@
                     </button>
                     
                     <div id="servicesMenu" class="bg-blue-50 hidden">
-                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
-                            SERVICES
-                        </a>
-                        <a href="<?php echo esc_url(home_url('/telecom')); ?>" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                        <a href="<?php echo esc_url(home_url('/telecom')); ?>" class="<?php echo (esc_html($slug) == 'telecom' ? 'text-sky-400' : '') ?> block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             TELECOM
                         </a>
-                        <a href="<?php echo esc_url(home_url('/human-resource')); ?>" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                        <a href="<?php echo esc_url(home_url('/human-resource')); ?>" class="<?php echo (esc_html($slug) == 'human-resource' ? 'text-sky-400' : '') ?> block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             HUMAN RESOURCES & SUPPORT
                         </a>
-                        <a href="#" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
-                            TRANSLATION
-                        </a>
-                        <a href="<?php echo esc_url(home_url('/real-estate')); ?>" class="block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                        <a href="<?php echo esc_url(home_url('/real-estate')); ?>" class="<?php echo (esc_html($slug) == 'real-estate' ? 'text-sky-400' : '') ?> block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             REAL ESTATE
+                        </a>
+                        <a href="<?php echo esc_url(home_url('/health-food')); ?>" class="<?php echo (esc_html($slug) == 'health-food' ? 'text-sky-400' : '') ?> block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                            HEALTH FOOD
                         </a>
                     </div>
                 </div>
-
-                <a href="<?php echo esc_url(home_url('/our-company')); ?>" class="<?php echo (esc_html($slug) == 'our-company' ? 'text-sky-400' : '') ?> block p-4  hover:bg-gray-50">
-                    COMPANY
-                </a>
                 
-                <a href="#" class="block p-4 hover:bg-gray-50">
+                <a href="<?php echo esc_url(home_url('/contact-form')); ?>" class="block p-4 hover:bg-gray-50">
                     CONTACT
                 </a>
             </nav>

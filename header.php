@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+	
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo get_the_title(); ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -58,7 +63,7 @@
     echo '</pre>';
     ?>
     <header class="bg-[#00a5e2] py-3 px-6 shadow-sm fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="max-w-7xl mx-auto flex items-center justify-between relative">
             <div class="flex items-center">
                 <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/cropped-Logo-Thanh-Giang-1.png" alt="Logo" class="h-16 w-16 rounded-full">
             </div>
@@ -77,13 +82,25 @@
                             Human resources & support
                         </a>
                         <a href="<?php echo esc_url(home_url('/real-estate')); ?>" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
-                            Real estate
+                            Logistic service
                         </a><a href="<?php echo esc_url(home_url('/health-food')); ?>" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">
-                            Health food
+                            Health food / cosmetic
                         </a>
                     </div>
                 </div>
+                
+                <!-- Company profile -->
+                <a href="<?php echo esc_url(home_url('/company-profile')); ?>" class="font-bold <?php echo (esc_html($slug) == 'company-profile' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
+                    会社概要
+                </a>
+                
+                <!-- Products -->
+<!--                 <a href="#" class="font-bold <?php // echo (esc_html($slug) == 'products' ? ' bg-gray-100 px-4 py-2 rounded-lg text-gray-600' : 'text-white') ?>">
+                    Products
+                </a> -->
             </nav>
+
+            <?php echo do_shortcode('[gtranslate]'); ?>
             
             <a href="<?php echo esc_url(home_url('/contact-form')); ?>" class="hidden md:block bg-white text-red-500 px-6 py-2 rounded-full hover:text-primary transition-colors">
                 <i class="fa-solid fa-envelope"></i>
@@ -128,13 +145,20 @@
                             HUMAN RESOURCES & SUPPORT
                         </a>
                         <a href="<?php echo esc_url(home_url('/real-estate')); ?>" class="<?php echo (esc_html($slug) == 'real-estate' ? 'text-sky-400' : '') ?> block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
-                            REAL ESTATE
+                            LOGISTIC SERVICE
+                        </a>
+                        <a href="<?php echo esc_url(home_url('/health-food')); ?>" class="<?php echo (esc_html($slug) == 'health-food' ? 'text-sky-400' : '') ?> block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                            HEALTH FOOD / COSMETIC
                         </a>
                         <a href="<?php echo esc_url(home_url('/health-food')); ?>" class="<?php echo (esc_html($slug) == 'health-food' ? 'text-sky-400' : '') ?> block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
                             HEALTH FOOD
                         </a>
                     </div>
                 </div>
+
+                <a href="<?php echo esc_url(home_url('/company-profile')); ?>" class="font-bold <?php echo (esc_html($slug) == 'company-profile' ? 'text-sky-40' : '') ?> block p-4 pl-6 border-t border-gray-200 hover:bg-blue-100">
+                    会社概要
+                </a>
                 
                 <a href="<?php echo esc_url(home_url('/contact-form')); ?>" class="block p-4 hover:bg-gray-50">
                     CONTACT

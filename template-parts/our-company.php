@@ -81,7 +81,7 @@ $about = get_field('about_section');
         </div>
     </section>
 
-        <!-- Philosophy Section -->
+        <!-- PHISOLOPHY Section -->
         <span
             class="scroll-to"
             data-label="Scroll to: #philosophy"
@@ -100,71 +100,32 @@ $philosophy = get_field('philoshopy_section');
                 <h2 class="text-3xl font-bold text-gray-800 mb-2"><?php echo $philosophy['title']; ?></h2>
                 <p class="text-secondary font-medium"><?php echo $philosophy['slogan']; ?></p>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <!-- Philosophy Points -->
-                <a class="space-y-8" href="/">
+ 
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <?php 
                     if(empty($philosophy)) return;
                     $index = 1;
-                    foreach ( $philosophy['points'] as $points) {
-                        echo '<div class="flex gap-4">';
-                        echo '<div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">';
-                        echo $index++;
-                        echo '</div>';
-                        echo '<p class="text-gray-700">';
-                        echo $points['text'];
-                        echo '</p>';
-                        echo '</div>';
-                    }
+                    foreach ( $philosophy['content'] as $item):
                     ?>
-                </a>
-
-                <!-- Philosophy Image -->
-                <div class="rounded-lg overflow-hidden shadow-lg">
-                    <img 
-                        src="<?php echo $philosophy['image']; ?>" 
-                        alt="Philosophy Concept" 
-                        class="w-full h-auto"
-                    >
+						<a href="<?php echo $item['link'] ?>">
+							<div class="rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:shadow-xl hover:-translate-y-1">
+								<div class="relative">
+									<img 
+										src="<?php echo $item['image'] ?>" 
+										alt="<?php echo $item['text'] ?>" 
+										class="w-full h-64 object-cover"
+									>
+									<div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4">
+										<p class="text-white text-sm md:text-base">
+											<?php echo $item['text'] ?>
+										</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					<?php endforeach; ?>
                 </div>
             </div>
-        </div>
-    </section>
-
-<!-- President Talk -->
-<?php 
-$president = get_field('president');
-?>
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-2"><?php echo $president['title']; ?></h2>
-                <p class="text-secondary font-medium"><?php echo $president['slogan']; ?></p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <!-- Philosophy Points -->
-                <div class="space-y-8 order-2">
-                    <?php 
-                        echo '<div class="flex gap-4">';
-                        echo '<p class="text-gray-700">';
-                        echo $president['text'];
-                        echo '</p>';
-                        echo '</div>';
-                    ?>
-                </div>
-
-                <!-- Philosophy Image -->
-                <div class="rounded-lg overflow-hidden shadow-lg order-1">
-                    <img 
-                        src="<?php echo $president['image']; ?>" 
-                        alt="Philosophy Concept" 
-                        class="w-full h-auto"
-                    >
-                </div>
-            </div>
-        </div>
     </section>
 
 

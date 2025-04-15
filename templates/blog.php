@@ -35,14 +35,14 @@ get_header();
             $blogs = get_field('blogs');
             if($blogs) {
                 foreach($blogs as $blog) { ?>
-                    <div class="flex flex-col bg-white shadow-lg rounded-b-2xl">
+                    <a href="<?php echo $blog['url'] ?>" class="flex flex-col bg-white shadow-lg rounded-b-2xl">
                         <div class="rounded-t-2xl overflow-hidden mb-6">
                             <img src="<?php echo $blog['image']; ?>" alt="<?php echo $blog['description'] ?>" class="w-full h-80 object-cover hover:scale-105 ease-in-out hover:shadow-xl transition duration-300">
                         </div>
                         <div class="text-lg text-gray-800 leading-relaxed px-5 pb-5">
                             <?php echo $blog['description']; ?>
                         </div>
-                    </div>
+                    </a>
                     <?php
                 }
             }

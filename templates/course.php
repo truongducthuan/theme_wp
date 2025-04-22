@@ -6,6 +6,14 @@ get_header();
 ?>
 
 <?php 
+$args = array(
+  'post_type' => 'course',
+  'post_status' => 'publish',
+  'posts_per_page' => 10, // retrieve all posts
+);
+
+$posts = new WP_Query( $args );
+
 $image = get_field('image');
 $title = get_field('title');
 $description = get_field('description');
@@ -32,22 +40,35 @@ $courses = get_field('courses');
                 <?php echo $description; ?>
             </p>
             
-            <div class="space-y-6 mt-6 md:mt-12">
-                <!-- Basic Course -->
-                <?php 
-                if($courses) {
-                    foreach($courses as $course) {
-                        echo '
-                        <a href="'. $course['url'] .'" class="block border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                            <h3 class="text-2xl font-bold text-navy mb-3">'.$course['title'].'</h3>
-                            <p class="text-gray-700">
-                                '.$course['description'].'
-                            </p>
-                        </a>
-                        ';
-                    }
-                }
-                ?>
+            <div class="py-12 px-4">
+                <div class="container mx-auto max-w-6xl">
+                    <div class="flex flex-col gap-5 py-8 px-4 bg-white">
+                        <?php if (!empty($posts->posts)): ?>
+                            <?php while ($posts->have_posts()): $posts->the_post(); 
+                                $cards = get_field('card',$post->ID);
+                            ?>
+                                <div class="block">
+                                    <div class="flex flex-col md:flex-row items-center gap-8 pr-6">
+                                        <div class="w-full md:w-1/3 overflow-hidden rounded-lg">
+                                            <img src="<?php echo ($cards['image'] ? $cards['image'] : '') ?>" alt="<?php the_title(); ?>" class="w-full h-64 object-cover rounded-lg hover:scale-105 ease-in-out hover:shadow-xl transition duration-300">
+                                        </div>
+                                        <div class="w-full md:w-2/3">
+                                            <h2 class="text-2xl font-bold mb-4"><?php the_title(); ?></h2>
+                                            <p class="text-gray-700 mb-6">
+                                                <?php echo wp_trim_words(get_the_excerpt(), 40, '...'); ?>
+                                            </p>
+                                            <div class="flex justify-end">
+                                                <a href="<?php echo get_permalink(); ?>" class="bg-blue-button text-white font-medium py-3 px-8 rounded-md text-center bg-blue-600 hover:opacity-80 transition-opacity">
+                                                    Xem chi tiết
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endwhile; wp_reset_postdata();?>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

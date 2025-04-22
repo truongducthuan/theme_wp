@@ -18,11 +18,11 @@ get_header();
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row pt-20">
                 <div class="flex flex-col w-full md:w-1/2 container flex items-center">
-                    <div class="bg-brand-orange w-full py-8">
-                        <h1 class="bg-brand-orange text-white text-end mr-5 text-5xl md:text-6xl font-extrabold">ABOUT US</h1>
+                <div class="bg-blue-600 w-full py-8">
+<h1 class="text-white text-center mr-5 text-5xl md:text-6xl font-extrabold">Về chúng tôi</h1>
                     </div>
                     <div class="container mx-auto px-4 py-12">
-                        <h2 class="text-3xl md:text-4xl font-bold text-brand-orange mb-6">Our Philosophy</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">Tầm nhìn và sứ mệnh</h2>
                         <div class="flex flex-col md:flex-row">
                             <div class="w-full">
                                 <p class="text-gray-800 text-lg leading-relaxed">
@@ -48,7 +48,7 @@ get_header();
     $instructors = get_field('instructors');
     ?>
     <div class="container mx-auto px-4 py-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-brand-orange mb-10">Our Instructors</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-10">Đội ngũ giảng viên</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <?php 
@@ -83,8 +83,8 @@ get_header();
             <?php 
             if($facilities) {
                 echo '
-                    <div class="w-full lg:w-3/5">
-                        <h2 class="text-3xl md:text-4xl font-bold text-brand-orange mb-6">Our Facilities</h2>
+                    <div class="w-full lg:w-4/6">
+<h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">Giá trị cốt lõi</h2>
                         <div class="mb-6">
                             <img src="'.$facilities['image'].'" alt="Robotics classroom" class="w-full h-80 object-cover rounded-lg">
                         </div>
@@ -98,12 +98,12 @@ get_header();
             
             
             <!-- History Timeline Section -->
-            <div class="w-full lg:w-2/5">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-orange mb-6">Our History</h2>
+            <div class="w-full lg:w-2/6">
+<h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">Lịch sử phát triển</h2>
                 
                 <div class="relative">
                     <!-- Timeline Line -->
-                    <div class="absolute left-6 top-0 bottom-0 w-1 bg-brand-orange"></div>
+<div class="absolute left-6 top-0 bottom-0 w-1 bg-blue-600"></div>
                     
                     <!-- Timeline Items -->
                     <div class="ml-16 space-y-12">
@@ -113,7 +113,7 @@ get_header();
                                 echo '
                                     <div class="relative">
                                         <div class="absolute -left-16 mt-1.5">
-                                            <div class="w-6 h-6 bg-brand-orange rounded-full"></div>
+<div class="w-6 h-6 bg-blue-600 rounded-full"></div>
                                         </div>
                                         <h3 class="text-2xl font-bold">'.$history['year'].'</h3>
                                         <p class="text-gray-700">'.$history['info'].'</p>

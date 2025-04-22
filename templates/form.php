@@ -19,7 +19,7 @@ $form = get_the_content();
     }
 
     .form_btn {
-        background-color: #FFA500;
+        background-color: var(--primary-color);
         color: white;
         padding: 12px 16rem;
         border: none;
@@ -44,7 +44,10 @@ $form = get_the_content();
         <div class="text-center mb-10">
             <h1 class="text-5xl md:text-6xl font-bold text-brand-orange mb-6">LIÊN HỆ</h1>
             <p class="text-lg md:text-xl text-gray-800">
-                Có thắc mắc hay muốn biết thêm thông tin? Liên hệ với chúng tôi!
+                Bạn có thắc mắc hay muốn biết thêm thông tin? 
+            </p>
+			 <p class="text-lg md:text-xl text-gray-800">
+				Liên hệ với chúng tôi!
             </p>
         </div>
         

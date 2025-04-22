@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robot - Learn Robotics with Arduino</title>
+    <title><?php echo get_the_title(); ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
+						'primary': '#2563eb',
                         'robot-yellow': '#FFD600',
                         'robot-blue': '#29B6D8',
                         'robot-coral': '#FF6B5B',
@@ -27,6 +34,12 @@
     </script>
 
     <style>
+        .btn:hover {
+            /* color: #ffffff; */
+            -webkit-box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
+            -moz-box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
+            box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
+        }
         /* Transition for the mobile menu */
         .mobile-menu {
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -65,7 +78,7 @@
         /* Scroll to top button styles */
         .scroll-to-top {
             position: fixed;
-            bottom: 30px;
+            bottom: 100px;
             right: 30px;
             z-index: 99;
             opacity: 0;
@@ -82,6 +95,13 @@
     </style>
     <?php wp_head(); ?>
 </head>
+<?php 
+// Get the current post's URL
+$current_url = get_permalink();
+
+$path = parse_url($current_url, PHP_URL_PATH); // Get the path from the URL
+$slug = basename(rtrim($path, '/')); // Get the last part of the path and remove trailing slash
+?>
 <body class="font-roboto">
     <!-- Navigation -->
     <div id="menu-backdrop" class="menu-backdrop"></div>
@@ -89,27 +109,48 @@
         <div class="w-full bg-white px-4 sm:px-6 lg:px-8 fixed right-0 left-0 z-50 bg-white">
             <div class="flex container mx-auto justify-between h-20">
                 <div class="flex items-center">
-                    <a href="<?php echo home_url(); ?>" class="flex-shrink-0 flex items-center">
-                        <div class="h-12 w-12 bg-robot-yellow rounded-full flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="11" width="18" height="10" rx="2" />
-                                <circle cx="12" cy="5" r="2" />
-                                <path d="M12 7v4" />
-                                <line x1="8" y1="16" x2="8" y2="16" />
-                                <line x1="16" y1="16" x2="16" y2="16" />
-                            </svg>
-                        </div>
-                        <span class="ml-3 text-xl font-bold">Robot</span>
-                    </a>
+					<a href="<?php echo home_url(); ?>" class="flex-shrink-0 flex items-center">
+    <img src="https://demo2.ichidemo.info/wp-content/uploads/2025/04/Logo-1.webp"
+         alt="SOLA logo"
+         class="h-20 w-20"
+         style="clip-path: inset(5%); object-fit: cover;" />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+<span class="font-bold text-4xl" style="font-family: 'Orbitron', sans-serif; font-size: 3rem;">SOLA</span>
+
+<style>
+    /* Màu sắc hiện tại của chữ */
+    .font-bold {
+        background: linear-gradient(90deg, #29B6D8, #FF6B5B, #FFD600);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    /* Animation cho việc thay đổi màu */
+    @keyframes colorChange {
+        0% {
+            background: linear-gradient(90deg, #29B6D8, #FF6B5B, #FFD600);
+        }
+        50% {
+            background: linear-gradient(90deg, #10B981, #fccd4f, #29B6D8);
+        }
+        100% {
+            background: linear-gradient(90deg, #FF6B5B, #FFD600, #29B6D8);
+        }
+    }
+</style>
+</a>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="<?php echo home_url('/about'); ?>" class="font-medium hover:text-robot-blue">GIỚI THIỆU</a>
-                    <a href="<?php echo home_url('/courses') ?>" class="font-medium hover:text-robot-blue">KHÓA HỌC</a>
-                    <a href="<?php echo home_url('/projects') ?>" class="font-medium hover:text-robot-blue">DỰ ÁN</a>
-                    <a href="<?php echo home_url('/blog') ?>" class="font-medium hover:text-robot-blue">BLOG</a>
-                    <a href="<?php echo home_url('/form') ?>" class="font-medium hover:text-robot-blue">LIÊN HỆ</a>
+                    <a href="<?php echo home_url('/'); ?>" class="<?php echo (esc_html($slug) == '' ? 'text-primary' : ''); ?> font-medium hover:text-primary capitalize">TRANG CHỦ</a>
+                    <a href="<?php echo home_url('/about'); ?>" class="<?php echo (esc_html($slug) == 'about' ? 'text-primary' : ''); ?> font-medium hover:text-primary">GIỚI THIỆU</a>
+                    <a href="<?php echo home_url('/courses') ?>" class="<?php echo (esc_html($slug) == 'courses' ? 'text-primary' : ''); ?> font-medium hover:text-primary">KHÓA HỌC</a>
+                    <a href="<?php echo home_url('/projects') ?>" class="<?php echo (esc_html($slug) == 'projects' ? 'text-primary' : ''); ?> font-medium hover:text-primary">DỰ ÁN</a>
+                    <a href="<?php echo home_url('/blog') ?>" class="<?php echo (esc_html($slug) == 'blog' ? 'text-primary' : ''); ?> font-medium hover:text-primary">BLOG</a>
+                    <a href="<?php echo home_url('/form') ?>" class="<?php echo (esc_html($slug) == 'form' ? 'text-primary' : ''); ?> font-medium hover:text-primary">LIÊN HỆ</a>
                 </div>
 
                 <!-- Mobile Menu Button -->

@@ -3,19 +3,21 @@ get_header();
 ?>
         <div class="slide-wrap">
             <div class="slide">
+                <?php 
+                $banners = get_field('banners');
+                ?>
                 <ul class="slideshow">
-                    <li class="item_slider">
-                        <span style='background-image: url("<?php echo get_site_url(); ?>/wp-content/uploads/2025/04/slide3.jpg")'></span>
-                    </li>
-                    <li class="item_slider">
-                        <span style='background-image: url("<?php echo get_site_url(); ?>/wp-content/uploads/2025/04/duongdandenthanhcong.jpg")'></span>
-                    </li>
-                    <li class="item_slider">
-                        <span style='background-image: url("<?php echo get_site_url(); ?>/wp-content/uploads/2025/04/Pink-White-Illustrated-Travel-To-Japan-Banner-Landscape.png")'></span>
-                    </li>
-                    <li class="item_slider">
-                        <span style='background-image: url("<?php echo get_site_url(); ?>/wp-content/uploads/2025/04/Pink-White-Illustrated-Travel-To-Japan-Banner-Landscape-2.png")'></span>
-                    </li>
+                    <?php 
+                    if(!empty($banners)):
+                        foreach($banners as $banner):
+                    ?>
+                        <li class="item_slider">
+                        <span style='background-image: url("<?php echo $banner['image']; ?>)'></span>
+                        </li>
+                    <?php 
+                        endforeach;
+                    endif;
+                    ?>
                 </ul>
             </div>
         </div>
@@ -23,36 +25,51 @@ get_header();
             <section class="section">
                 <div class="outer">
                     <div class="wrap" id="a1">
-                        <h2 class="midashi">
-                            <span class="font-medium tt_midashi">Thanh Giang Seikouでは</span>
-                            <br class="sp-none">
-                            <span class="font-black describe">
-	                        日本とベトナムのかけ橋となる役割を 	                      </span>
-                            <span class="font-medium subdescribe"><br class="tablet-on-only">目指しています。</span>
-                        </h2>
+                        <?php 
+                        $title = get_field('title');
+                        if(!empty($title)){
+                            echo $title;
+                        }
 
-                        <section class="wrap mb-5-2 pb-3-2 pt-3-2">
-                            <div class="columns is-variable is-5-desktop is-3-tablet is-mobile reverse-row-order is-multiline">
+                        $boxes = get_field('boxes');
+                        $index = 0;
+                        if(!empty($boxes)):
+                            foreach($boxes as $box):
+                                $index++;
+                        ?>
+                        <section class="wrap mb-5-2 pb-3-2 <?php echo $index % 2 == 0 ? '' : 'pt-3-2' ?>">
+                            <div class="columns is-variable is-5-desktop is-3-tablet is-mobile is-multiline <?php echo $index % 2 == 0 ? '' : 'reverse-row-order' ?>">
                                 <div class="column is-12-mobile is-6-tablet is-5-desktop">
                                     <figure class="radius">
-                                        <a href="https://job-visa.jp/">
-					  <img class="fade-in" src="<?php echo get_site_url() ?>/wp-content/uploads/2025/04/slide2.jpg" alt="レジアウトソーシングとは">
-					</a>
+                                        <a href="<?php echo $box['link']; ?>">
+					                        <img class="fade-in" src="<?php echo $box['image']; ?>" alt="<?php echo $box['title']; ?>">
+					                    </a>
                                     </figure>
                                 </div>
                                 <div class="column is-12-mobile is-6-tablet is-6-desktop">
-                                    <p class="midashi-sss tt_b1">人材紹介事業</p>
-                                    <h3 class="midashi-s left-center">各企業に適切な人材を <br></h3>
-                                    <h3 class="midashi-s left-center">日本会社に適切な人材 <br></h3>
-                                    <p>・アルバイト<br> ・特定技能
-                                        <br> ・正社員
-                                        <br> をご紹介いたします。
-                                        <br></p>
-                                    人材紹介許可番号：13―ユー313391 <br> 支援機関許可番号：23登―008314 <a href="https://job-visa.jp/" style="margin-top: 25px;" class="arrow-btn2 thin radius shadow fade-in" id="top_service">サイトへ</a>
+                                    <p class="midashi-sss tt_b1"><?php echo $box['title']; ?></p>
+                                    <?php 
+                                    if(is_array($box['subtitle'])) {
+                                        foreach($box['subtitle'] as $sub) {
+                                            echo '<h3 class="midashi-s left-center">'.$sub['text'].'<br></h3>';
+                                        }
+                                    }
+                                    if(is_array($box['topics'])) {
+                                        foreach($box['topics'] as $topic) {
+                                            echo '<p>'.$topic['text'].'</p>';
+                                        }
+                                    }
+                                    ?>
+                                    <?php echo $box['description']; ?>
+                                    <a href="<?php echo $box['link']; ?>" style="margin-top: 25px;" class="arrow-btn2 thin radius shadow fade-in" id="top_service">サイトへ</a>
                                     </p>
                                 </div>
                             </div>
                         </section>
+                        <?php
+                            endforeach;
+                        endif;
+                        ?>
                         <section class="wrap mb-5-2 pb-3-2 ">
                             <div class="columns is-variable is-5-desktop is-3-tablet is-mobile  is-multiline">
                                 <div class="column is-12-mobile is-6-tablet is-5-desktop">
@@ -240,71 +257,45 @@ get_header();
             <section class="section second">
                 <div class="outer">
                     <div class="wrap">
-                        <h2 class="midashi">私たちの事業</h2>
+                        <?php 
+                        $title_business = get_field('title_business');
+                        if(!empty($title)){
+                            echo '<h2 class="midashi">'.$title_business.'</h2>';
+                        }
+                        ?>
+                        
                         <div class="columns is-variable is-5-desktop is-3-tablet is-mobile is-multiline column-pd-3">
+                            <?php 
+                            $business = get_field('business');
+                            if(!empty($business)):
+                                foreach($business as $bus):
+                            ?>
                             <div class="column is-4-desktop is-9-mobile sp-m-auto">
                                 <div class="blog-card radius shadow">
                                     <div class="blog-card-image hover-zoom__image">
-                                        <a href="https://simvangjp.com/">
+                                        <a href="<?php echo $bus['link']; ?>">
                                             <figure class="image is-12by7">
-                                                <img width="150" height="100" src="<?php echo get_site_url() ?>/wp-content/uploads/2025/04/LOGO-SIMVANG-scaled-1.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
+                                                <img width="150" height="100" src="<?php echo $bus['image']; ?>" class="attachment-thumbnail size-thumbnail wp-post-image" alt="<?php echo $bus['title']; ?>" />
                                             </figure>
                                         </a>
                                     </div>
                                     <div class="blog-card-content">
                                         <ul class="post-categories">
                                             <li>
-                                                <a href="https://simvangjp.com/" rel="category tag">通信事業</a>
+                                                <a href="<?php echo $bus['link']; ?>" rel="category tag"><?php echo $bus['title']; ?></a>
                                             </li>
                                         </ul>
-                                        <a href="https://simvangjp.com/">
-                                            <p class="blog-card-text">SIMカード販売、通信サービス</p>
+                                        <a href="<?php echo $bus['link']; ?>">
+                                            <p class="blog-card-text"><?php echo $bus['description']; ?></p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="column is-4-desktop is-9-mobile sp-m-auto">
-                                <div class="blog-card radius shadow">
-                                    <div class="blog-card-image hover-zoom__image">
-                                        <a href="/">
-                                            <figure class="image is-12by7">
-                                                <img width="150" height="100" src="<?php echo get_site_url() ?>/wp-content/uploads/2025/04/Logo-Thanh-Giang.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="blog-card-content">
-                                        <ul class="post-categories">
-                                            <li>
-                                                <a href="/" rel="category tag">美容・健康分野</a>
-                                            </li>
-                                        </ul>
-                                        <a href="/">
-                                            <p class="blog-card-text">サプリメント・化粧品の提供、販売、製造</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column is-4-desktop is-9-mobile sp-m-auto">
-                                <div class="blog-card radius shadow">
-                                    <div class="blog-card-image hover-zoom__image">
-                                        <a href="http://duhocthanhgiang.com.vn/">
-                                            <figure class="image is-12by7">
-                                                <img width="150" height="100" src="<?php echo get_site_url() ?>/wp-content/uploads/2025/04/Logo-Thanh-Giang.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="blog-card-content">
-                                        <ul class="post-categories">
-                                            <li>
-                                                <a href="http://duhocthanhgiang.com.vn/" rel="category tag">ベトナム現地日本語教育運営</a>
-                                            </li>
-                                        </ul>
-                                        <a href="http://duhocthanhgiang.com.vn/">
-                                            <p class="blog-card-text">留学ビジネス、ビザ取得代行サービス</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                                endforeach;
+                            endif;
+                            ?>    
+                            
                         </div>
                     </div>
                 </div>

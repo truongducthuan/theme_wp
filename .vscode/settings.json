@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // hoặc formatter bạn dùng
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[php]": {
+    "editor.formatOnSave": true
+  },
+  "prettier.requireConfig": true // chỉ format nếu có file cấu hình Prettier
+}

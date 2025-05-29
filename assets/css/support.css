@@ -1,0 +1,124 @@
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="3" fill="white" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/></circle><circle cx="800" cy="150" r="2" fill="white" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/></circle><circle cx="600" cy="300" r="2.5" fill="white" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/></circle><circle cx="300" cy="400" r="2" fill="white" opacity="0.7"><animate attributeName="opacity" values="0.7;1;0.7" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="900" cy="350" r="3" fill="white" opacity="0.3"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.2s" repeatCount="indefinite"/></circle></svg>');
+    opacity: 0.3;
+}
+.search-bar {
+    background: rgba(219, 234, 254, 0.9);
+    backdrop-filter: blur(10px);
+}
+.nav-item {
+    transition: all 0.3s ease;
+}
+.nav-item:hover {
+    transform: translateY(-2px);
+}
+
+.service-card {
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.partner-logo {
+    transition: all 0.3s ease;
+}
+.partner-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* AWARDS */
+.awards-bg::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 1;
+}
+.trophy-glow {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+}
+.award-item {
+    position: relative;
+}
+.award-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+}
+.award-item::after {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: calc(50% + 15px);
+    bottom: -15px;
+    width: 2px;
+    background-color: #93c5fd;
+}
+.award-item:last-child::after {
+    display: none;
+}
+
+/* Customer ConTact */
+.testimonial-image {
+    transition: all 0.3s ease;
+}
+.testimonial-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.carousel-container {
+    transition: transform 0.5s ease-in-out;
+}
+.contact-bg {
+    background-image: linear-gradient(to right, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f0f9ff"/><rect x="0" y="400" width="1200" height="200" fill="%23e0f2fe"/><rect x="100" y="300" width="80" height="200" fill="%23bae6fd"/><rect x="200" y="250" width="80" height="250" fill="%237dd3fc"/><rect x="300" y="200" width="80" height="300" fill="%2338bdf8"/><rect x="400" y="150" width="80" height="350" fill="%230ea5e9"/><rect x="500" y="100" width="80" height="400" fill="%230284c7"/><rect x="600" y="120" width="80" height="380" fill="%230369a1"/><rect x="700" y="180" width="80" height="320" fill="%23075985"/><rect x="800" y="220" width="80" height="280" fill="%230c4a6e"/><rect x="900" y="280" width="80" height="220" fill="%23164e63"/><rect x="1000" y="320" width="80" height="180" fill="%23155e75"/></svg>');
+    background-size: cover;
+    background-position: center;
+}
+.form-input {
+    width: 100%;
+  padding-left: 1rem;   /* px-4 */
+  padding-right: 1rem;
+  padding-top: 0.75rem; /* py-3 */
+  padding-bottom: 0.75rem;
+  background-color: white;
+  border: 1px solid #D1D5DB; /* border-gray-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  outline: none;
+    transition: all 0.3s ease;
+}
+.form-input:focus {
+    box-shadow: 0 0 0 2px #3B82F6; /* ring-2 with blue-500 */
+    border-color: transparent;
+    transform: translateY(-2px);
+    /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
+}
+.nav-arrow {
+    transition: all 0.3s ease;
+}
+.nav-arrow:hover {
+    /* transform: scale(1.1); */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+/* .nav-arrow:active {
+    transform: scale(0.95);
+} */
+

@@ -1,7 +1,7 @@
 <?php 
  /**
-  * Template Name: Support Page
-  * Description: A page template for the support section of the website.
+  * Template Name: Home Page
+  * Description: A page template for the home section of the website.
   */
 ?>
 
@@ -10,10 +10,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ActiveLabo - 夢のスタート、となりで応援します！</title>
+    <title><?php echo get_the_title(); ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/index.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/support.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/home.css">
+
+    <?php wp_head(); ?>
 </head>
 <body class="bg-white">
     <!-- Header -->
@@ -98,29 +100,30 @@
     </nav>
 
     <!-- Hero Section -->
-    <?php get_template_part('template-part/support/hero'); ?>
+    <?php get_template_part('template-part/home/hero'); ?>
 
     <!-- Solutions Section -->
-    <?php get_template_part('template-part/support/solution'); ?>
+    <?php get_template_part('template-part/home/solution'); ?>
     
     <!-- Services Section -->
-    <?php get_template_part('template-part/support/services'); ?>
+    <?php get_template_part('template-part/home/services'); ?>
     
     <!-- Partners Section -->
-   <?php get_template_part('template-part/support/partners'); ?>
+   <?php get_template_part('template-part/home/partners'); ?>
 
-    <!-- Support, Client Trust, and Partners Section -->
-    <?php get_template_part('template-part/support/network-client-partner'); ?>
+    <!-- home, Client Trust, and Partners Section -->
+    <?php get_template_part('template-part/home/network-client-partner'); ?>
 
     <!-- Awards, Devop section -->
-    <?php get_template_part('template-part/support/award-devop'); ?>
+    <?php get_template_part('template-part/home/award-devop'); ?>
 
     <!-- Customer, Contact section -->
-    <?php get_template_part('template-part/support/customer-contact'); ?>
+    <?php get_template_part('template-part/home/customer-contact'); ?>
 
     <!-- Footer -->
     <?php get_footer(); ?>
 
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/index.js ?>"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/carousel.js ?>"></script>
     <script>
         // Mobile menu toggle

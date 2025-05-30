@@ -1,7 +1,7 @@
 <?php 
  /**
-  * Template Name: Support Page
-  * Description: A page template for the support section of the website.
+  * Template Name: Activelabo Page
+  * Description: A page template for the activelabo section of the website.
   */
   get_header();
 ?>
@@ -55,7 +55,7 @@ $hero = get_field('hero_section');
                   <div class="relative">
                       <!-- Main dashboard image -->
                       <div class="bg-gray-800 rounded-lg overflow-hidden shadow-2xl">
-                          <img src="<?php echo esc_html($content['image']); ?>" alt="Analytics Dashboard" class="w-full h-auto">
+                        <img src="<?php echo esc_html($content['image']); ?>" alt="Analytics Dashboard" class="w-full h-auto">
                       </div>
                       
                       <!-- Floating UI elements -->

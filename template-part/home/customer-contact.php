@@ -110,6 +110,10 @@ if (!empty($testimonials)):
 <?php endif; ?>
     
     <!-- Contact Section -->
+    <?php 
+    $contact = get_field('contact_section');
+    if (!empty($contact)):
+    ?>
     <section class="contact-bg py-16 lg:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -118,15 +122,16 @@ if (!empty($testimonials)):
                     <div class="space-y-8">
                         <!-- Logo -->
                         <div>
-                            <h2 class="text-3xl lg:text-4xl font-bold mb-4">
-                                <span class="bg-white text-blue-600 px-4 py-2 rounded-lg">Logo</span>
-                            </h2>
+                            <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                                <img src="<?php echo esc_html($contact['logo']); ?>" alt="Logo" class="w-full h-full object-cover" />
+                            </div>
                             <p class="text-blue-100 text-lg">
-                                革新的なソリューションで、お客様のビジネスを成功に導きます
+                                <?php echo esc_html($contact['slogan']); ?>
                             </p>
                         </div>
                         
                         <!-- Address -->
+                        <?php if (!empty($contact['location'])): ?>
                         <div class="flex items-start space-x-4">
                             <div class="bg-white bg-opacity-20 rounded-lg p-3">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,14 +142,15 @@ if (!empty($testimonials)):
                             <div>
                                 <h3 class="text-xl font-semibold mb-2">Add</h3>
                                 <p class="text-blue-100">
-                                    〒100-0001<br>
-                                    東京都千代田区千代田1-1-1<br>
-                                    千代田ビル10F
+                                    <?php echo esc_html($contact['location']['address']); ?><br>
+                                    <?php echo esc_html($contact['location']['description']); ?>
                                 </p>
                             </div>
                         </div>
+                        <?php endif; ?>
                         
                         <!-- Hotline -->
+                        <?php if (!empty($contact['hotline'])): ?>
                         <div class="flex items-start space-x-4">
                             <div class="bg-white bg-opacity-20 rounded-lg p-3">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,15 +160,17 @@ if (!empty($testimonials)):
                             <div>
                                 <h3 class="text-xl font-semibold mb-2">Hotline</h3>
                                 <p class="text-blue-100 text-lg font-medium">
-                                    03-1234-5678
+                                   <?php echo esc_html($contact['hotline']['phone']); ?>
                                 </p>
                                 <p class="text-blue-200 text-sm">
-                                    平日 9:00-18:00
+                                    <?php echo esc_html($contact['hotline']['description']); ?>
                                 </p>
                             </div>
                         </div>
+                        <?php endif; ?>
                         
                         <!-- Email -->
+                        <?php if (!empty($contact['email'])): ?>
                         <div class="flex items-start space-x-4">
                             <div class="bg-white bg-opacity-20 rounded-lg p-3">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,13 +180,14 @@ if (!empty($testimonials)):
                             <div>
                                 <h3 class="text-xl font-semibold mb-2">Email</h3>
                                 <p class="text-blue-100 text-lg">
-                                    info@company.co.jp
+                                    <?php echo esc_html($contact['email']['email']); ?>
                                 </p>
                                 <p class="text-blue-200 text-sm">
-                                    24時間受付
+                                    <?php echo esc_html($contact['email']['description']); ?>
                                 </p>
                             </div>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 
@@ -193,6 +202,7 @@ if (!empty($testimonials)):
             </div>
         </div>
     </section>
+    <?php endif; ?>
     
     <!-- Testimonial Details Modal -->
     <div id="testimonialModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
@@ -352,6 +362,4 @@ if (!empty($testimonials)):
             }
         });
 
-        // Initialize carousel
-        updateTestimonialCarousel();
     </script>

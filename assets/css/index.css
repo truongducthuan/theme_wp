@@ -35,3 +35,14 @@ body {
     background-color: #3b82f6;
     transform: scale(1.2);
 }
+
+/* Custom style form contact 7 */
+.wpcf7-not-valid-tip,
+.wpcf7-response-output {
+    color: #fca5a5;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+.screen-reader-response {
+    display: none;
+}

@@ -1,5 +1,12 @@
 <!-- Main Content Section -->
 <?php 
+$screen = get_screen_size();
+$SCREEN_MOBILE = 768; // Define mobile screen size threshold
+$chunkSize = 3; // Number of items per chunk for carousel
+if ($screen['width'] < $SCREEN_MOBILE) {
+    $chunkSize = 1; // Adjust chunk size for mobile
+}
+
 $content = get_field('main_content');
 if(!empty($content)):
 ?>
@@ -107,8 +114,7 @@ if(!empty($solutions)):
                                 $result = [];
                                 $copy = $solutions['items'];
                                 $length = count($copy);
-                                $dots = ceil($length / 3); // Calculate number of dots based on items
-                                $chunkSize = 3;
+                                $dots = ceil($length / $chunkSize); // Calculate number of dots based on items
                                 if ($length > $chunkSize) {
                                     $result = array_chunk($copy, $chunkSize);
                                 } else {

@@ -111,6 +111,27 @@
     transform: translateY(-2px);
     /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
 }
+.form-submit {
+    width: 100%;
+    background: #3b82f6;
+    color: white;
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+    border: none;
+    border-radius: 0.5rem; /* rounded-lg */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.form-submit:hover {
+    background: #2563eb; /* hover:bg-blue-600 */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.wpcf7-spinner {
+    display: flex !important;
+    margin: 2px auto !important;
+    background-color: aqua !important;
+}
+
 .nav-arrow {
     transition: all 0.3s ease;
 }

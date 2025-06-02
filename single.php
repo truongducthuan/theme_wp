@@ -121,56 +121,5 @@
         </svg>
     </button>
 
-    <!-- JavaScript -->
-    <script>
-        // DOM elements
-        const elements = {
-            readingProgress: document.getElementById('reading-progress'),
-            scrollTopBtn: document.getElementById('scroll-top-btn'),
-          };
-
-        // Reading progress tracking
-        function updateReadingProgress() {
-            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = (window.scrollY / totalHeight) * 100;
-            elements.readingProgress.style.width = `${Math.min(progress, 100)}%`;
-            
-            // Show/hide scroll to top button
-            if (window.scrollY > 300) {
-                elements.scrollTopBtn.classList.remove('opacity-0', 'invisible');
-                elements.scrollTopBtn.classList.add('opacity-100', 'visible');
-            } else {
-                elements.scrollTopBtn.classList.add('opacity-0', 'invisible');
-                elements.scrollTopBtn.classList.remove('opacity-100', 'visible');
-            }
-        }
-
-        // Scroll to top
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Event listeners
-        elements.scrollTopBtn.addEventListener('click', scrollToTop);
-        window.addEventListener('scroll', updateReadingProgress);
-
-        // Enter key for comment posting
-        elements.newComment.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' && e.ctrlKey) {
-                addComment();
-            }
-        });
-
-        // Enter key for newsletter subscription
-        elements.newsletterEmail.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                handleSubscribe();
-            }
-        });
-
-        // Initialize
-        updateReadingProgress();
-    </script>
-
 <!-- Footer -->
 <?php get_footer(); ?>

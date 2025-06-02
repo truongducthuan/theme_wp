@@ -1,0 +1,1 @@
+const screenWidth = window.innerWidth;

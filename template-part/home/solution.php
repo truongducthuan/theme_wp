@@ -1,13 +1,5 @@
 <!-- Main Content Section -->
-<?php 
-$screen_width = get_screen_size_cookie();
-$SCREEN_MOBILE = 768; // Define mobile screen size threshold
-$chunkSize = 3; // Number of items per chunk for carousel
-if ($screen_width < $SCREEN_MOBILE) {
-    $chunkSize = 1; // Adjust chunk size for mobile
-}
-
-
+<?php
 $content = get_field('main_content');
 if(!empty($content)):
 ?>
@@ -113,6 +105,7 @@ if(!empty($solutions)):
                         <div class="carousel-container flex" id="carouselContainer">
                             <?php if (!empty($solutions['items']) && is_array($solutions['items'])): 
                                 $result = [];
+                                $chunkSize = 3;
                                 $copy = $solutions['items'];
                                 $length = count($copy);
                                 $dots = ceil($length / $chunkSize); // Calculate number of dots based on items
@@ -124,7 +117,7 @@ if(!empty($solutions)):
 
                                 foreach ($result as $child): 
                             ?>
-                            <div class="w-full flex-shrink-0 px-4">
+                            <div class="hidden md:block w-full flex-shrink-0 px-4">
                                 <div class="grid md:grid-cols-3 gap-6">
                                     <?php foreach ($child as $item): ?>
                                     <div class="bg-blue-50 rounded-2xl p-6 border-2 border-blue-200 text-center">
@@ -142,7 +135,7 @@ if(!empty($solutions)):
                     </div>
                     
                     <!-- Carousel Dots -->
-                    <div class="flex justify-center mt-8 space-x-2">
+                    <div class="flex justify-center mt-8 space-x-2" id="carouselDots">
                         <?php for ($i = 0; $i < $dots; $i++) {
                             echo '<button class="carousel-dot carousel-dot-solution w-3 h-3 rounded-full bg-gray-300" data-index="' . $i . '"></button>';
                         } ?>
@@ -152,3 +145,61 @@ if(!empty($solutions)):
         </div>
     </section>
 <?php endif; ?>
+
+<script>
+    const listSolutions = <?php echo json_encode($solutions['items']); ?>;
+
+    const carouselContainer = document.getElementById('carouselContainer');
+    const carouselDots = document.getElementById('carouselDots');
+    
+    const handleShowSolutions = () => {
+        carouselContainer.innerHTML = '';
+        let html = '';
+        listSolutions.map(item => 
+            html += `
+                <div class="w-full flex-shrink-0 px-4">
+                    <div class="grid gap-6">
+                        <div class="bg-blue-50 rounded-2xl p-6 border-2 border-blue-200 text-center">
+                            <div class="w-24 h-24 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                                ${item.icon}
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">${item.title}</h3>
+                            <p class="text-gray-600 text-sm">${item.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+        carouselContainer.innerHTML = html;
+
+        carouselDots.innerHTML = '';
+        const dotsCount = Math.ceil(listSolutions.length / (screenWidth > 768 ? 3 : 1));
+        for (let i = 0; i < dotsCount; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot carousel-dot-solution w-3 h-3 rounded-full bg-gray-300';
+            dot.setAttribute('data-index', i);
+            carouselDots.appendChild(dot);
+        }
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+        if(screenWidth < 768) {
+            handleShowSolutions();
+            const carousel1 = new Carousel({
+                containerId: 'carouselContainer',
+                dotSelector: '.carousel-dot-solution',
+                prevBtn: "#prevBtn",
+                nextBtn: "#nextBtn",
+                totalSlides: listSolutions.length
+            });
+        } else {
+            const carousel1 = new Carousel({
+                containerId: 'carouselContainer',
+                dotSelector: '.carousel-dot-solution',
+                prevBtn: "#prevBtn",
+                nextBtn: "#nextBtn",
+                totalSlides: Math.ceil(listSolutions.length / 3)
+            });
+        }
+    });
+
+</script>

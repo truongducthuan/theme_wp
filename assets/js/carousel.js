@@ -76,32 +76,5 @@ function Carousel(options) {
 
     // Init
     this.updateCarousel();
-    // this.startAutoPlay();
+    this.startAutoPlay();
 }
-
-// Solution for the carousel functionality
-const carousel1 = new Carousel({
-    containerId: 'carouselContainer',
-    dotSelector: '.carousel-dot-solution',
-    prevBtn: "#prevBtn",
-    nextBtn: "#nextBtn",
-    totalSlides: 2
-});
-
-// Solution for the partner carousel functionality
-const carousel2 = new Carousel({
-    containerId: 'carouselParntner',
-    dotSelector: '.carousel-dot-partner',
-    prevBtn: "#prevBtnParnter",
-    nextBtn: "#nextBtnParntner",
-    totalSlides: 3
-});
-
-// Custom solution for the carousel functionality
-const carousel3 = new Carousel({
-    containerId: 'testimonialContainer',
-    dotSelector: '.carousel-dot-testimonial',
-    prevBtn: "#prevBtnTestimonial",
-    nextBtn: "#nextBtnTestimonial",
-    totalSlides: 2
-});

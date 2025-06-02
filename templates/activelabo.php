@@ -18,6 +18,11 @@ $hero = get_field('hero_section');
       background-repeat: no-repeat;
   }
 </style>
+ <!-- Reading Progress Bar -->
+<div class="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+    <div id="reading-progress" class="h-full bg-blue-600 transition-all duration-150" style="width: 0%"></div>
+</div>
+
   <?php if ($hero): ?>
   <section class="hero-bg min-h-[500px] lg:min-h-[600px] flex items-center">
       <div class="max-w-7xl mx-auto px-4 w-full">
@@ -588,6 +593,14 @@ $features = get_field('feature_section');
     </section>
     <?php endif; ?>
     <!-- End Main Comparison Section -->
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top-btn" 
+            class="fixed bottom-6 right-6 bg-blue-600 text-white rounded-full w-12 h-12 shadow-lg z-50 opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
+        <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
 
 <?php 
   get_footer();

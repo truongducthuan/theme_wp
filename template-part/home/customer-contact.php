@@ -51,7 +51,7 @@ if (!empty($testimonials)):
                                 }
                             foreach ($result as $testimonial):
                         ?>
-                        <div class="w-full flex-shrink-0">
+                        <div class="hidden md:block w-full flex-shrink-0">
                             <div class="grid md:grid-cols-3 gap-8">
                             <?php foreach ($testimonial as $item): ?>
                                 <div class="testimonial-card bg-blue-100 rounded-2xl pb-8 cursor-pointer" onclick="showTestimonialDetails(<?php echo esc_attr($item['id']); ?>)">
@@ -99,7 +99,7 @@ if (!empty($testimonials)):
                 </div>
                 
                 <!-- Carousel Dots -->
-                <div class="flex justify-center mt-8 space-x-2">
+                <div class="flex justify-center mt-8 space-x-2" id="carouselDotsTestimonial">
                     <?php for ($i = 0; $i < $dots; $i++) { 
                         echo '<button class="carousel-dot carousel-dot-testimonial w-3 h-3 rounded-full bg-gray-300" data-index="' . $i . '"></button>'; 
                     } ?>
@@ -233,6 +233,83 @@ if (!empty($testimonials)):
 
     <script>
         const testimonials = <?php echo json_encode($testimonials['items']); ?>;
+
+        // show mobile testimonial
+        const testimonialContainer = document.getElementById('testimonialContainer');
+        const carouselDotsTestimonial = document.getElementById('carouselDotsTestimonial');
+        
+        const handleShowTestimonials = () => {
+            testimonialContainer.innerHTML = '';
+            let html = '';
+            testimonials.map(item => 
+                html += `
+                    <div class="w-full flex-shrink-0">
+                        <div class="grid gap-8">
+                            <div class="testimonial-card bg-blue-100 rounded-2xl pb-8 cursor-pointer" onclick="showTestimonialDetails(<?php echo esc_attr($item['id']); ?>)">
+                                    <div class="text-center">
+                                        <div class="h-[300px] overflow-hidden w-full mx-auto mb-4 flex items-center justify-center">
+                                            <image src="${item.image}" alt="${item.name}" class="w-full h-full object-cover testimonial-image" />
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-800 mb-2">${item.name}</h3>
+                                        <p class="text-sm text-gray-600 mb-4">${item.role}</p>
+                                        <p class="text-gray-700 text-sm leading-relaxed">
+                                            ${item.testimonial}
+                                        </p>
+                                        <div class="flex justify-center mt-4">
+                                            <div class="flex text-yellow-400">
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                                </svg>
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                                </svg>
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                                </svg>
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                                </svg>
+                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                `).join('');
+
+            testimonialContainer.innerHTML = html;
+
+            carouselDotsTestimonial.innerHTML = '';
+            for (let i = 0; i < testimonials.length; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'carousel-dot carousel-dot-testimonial w-3 h-3 rounded-full bg-gray-300';
+                dot.setAttribute('data-index', i);
+                carouselDotsTestimonial.appendChild(dot);
+            }
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            if(screenWidth < 768) {
+                handleShowTestimonials();
+                const carousel3 = new Carousel({
+                    containerId: 'testimonialContainer',
+                    dotSelector: '.carousel-dot-testimonial',
+                    prevBtn: "#prevBtnTestimonial",
+                    nextBtn: "#nextBtnTestimonial",
+                    totalSlides: testimonials.length
+                });
+            } else {
+                const carousel3 = new Carousel({
+                    containerId: 'testimonialContainer',
+                    dotSelector: '.carousel-dot-testimonial',
+                    prevBtn: "#prevBtnTestimonial",
+                    nextBtn: "#nextBtnTestimonial",
+                    totalSlides: Math.ceil(testimonials.length / 3)
+                });
+            }
+        });
 
         function showTestimonialDetails(id) {
             const modal = document.getElementById('testimonialModal');

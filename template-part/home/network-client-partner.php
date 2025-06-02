@@ -13,6 +13,12 @@
             justify-content: center;
             flex-direction: column; */
         }
+        @media (max-width: 768px) {
+            .network-circle {
+                width: 300px;
+                height: 300px;
+            }
+        }
         .network-quadrant {
             position: absolute;
             width: 50%;
@@ -219,7 +225,7 @@
                 </div>
                 
                 <!-- Carousel Dots -->
-                <div class="flex justify-center mt-8 space-x-2">
+                <div class="flex justify-center mt-8 space-x-2" id="carouselDotsParntner">
                     <?php 
                     for ($i = 0; $i < count($carousels); $i++):
                         echo '<button class="carousel-dot carousel-dot-partner w-3 h-3 rounded-full bg-gray-300" data-index="' . $i . '"></button>';
@@ -230,4 +236,20 @@
         </div>
     </section>
     <?php endif; ?>
+
+    <script>
+        const listCarouselsPartner = <?php echo json_encode($carousels); ?>;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Solution for the partner carousel functionality
+            const carousel2 = new Carousel({
+                containerId: 'carouselParntner',
+                dotSelector: '.carousel-dot-partner',
+                prevBtn: "#prevBtnParnter",
+                nextBtn: "#nextBtnParntner",
+                totalSlides: listCarouselsPartner.length
+            });
+        });
+
+    </script>
     

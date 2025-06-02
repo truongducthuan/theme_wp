@@ -13,7 +13,11 @@
           colors: {
             primary: '#1E40AF',
             secondary: '#D8E7F7'          
-          }
+          },
+          animation: {
+                'fade-in': 'fadeIn 0.5s ease-in-out',
+                'slide-up': 'slideUp 0.3s ease-out'
+            }
         }
       }
     }  
@@ -76,7 +80,7 @@
         }
   </style>
 
-  <?php // wp_head(); ?>
+  <?php wp_head(); ?>
 </head>
 <body class="bg-white">
    <!-- Header -->

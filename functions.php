@@ -21,6 +21,11 @@ function inject_screen_resize_listener() {
 add_action('wp_footer', 'inject_screen_resize_listener');
 
 function get_screen_size() {
+    $window_width = "<script type='text/javascript'>document.write(window.innerWidth);</script>";
+    return intval($window_width);
+}
+
+function get_screen_size_cookie() {
     print_r('get_screen_size', isset($_COOKIE['screen_size'])); // Debugging line to check function call
 
     if (isset($_COOKIE['screen_size'])) {

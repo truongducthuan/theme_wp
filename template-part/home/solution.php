@@ -1,11 +1,12 @@
 <!-- Main Content Section -->
 <?php 
-$screen = get_screen_size();
+$screen_width = get_screen_size_cookie();
 $SCREEN_MOBILE = 768; // Define mobile screen size threshold
 $chunkSize = 3; // Number of items per chunk for carousel
-if ($screen['width'] < $SCREEN_MOBILE) {
+if ($screen_width < $SCREEN_MOBILE) {
     $chunkSize = 1; // Adjust chunk size for mobile
 }
+
 
 $content = get_field('main_content');
 if(!empty($content)):

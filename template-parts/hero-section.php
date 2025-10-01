@@ -1,4 +1,6 @@
 <section class="relative z-10">
+  <!-- Network Animation Canvas -->
+  <canvas id="networkCanvas" class="network-canvas"></canvas>
   <div class="mx-auto">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
@@ -17,8 +19,8 @@
           At techin, we deliver innovative and reliable IT solutions tailored to meet your unique business needs.
         </p>
 
-        <button class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-          Get Start Now
+        <button data-text="Get Start Now" class="techin-btn relative bg-blue-600 px-8 py-4 rounded font-semibold text-lg transition-all duration-300 transform">
+          <span>Get Start Now</span>
         </button>
       </div>
 

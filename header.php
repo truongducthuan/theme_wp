@@ -6,15 +6,17 @@
   <title><?php echo get_the_title(); ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/tailwindcss/output.css'; ?>">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/animation.css'; ?>">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/common.css'; ?>">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/index.css'; ?>">
 
-  <?php // wp_head(); 
+  <script type="module" src="<?php echo get_template_directory_uri() . '/assets/js/home.js'; ?>"></script>
+
+  <?php wp_head();
   ?>
 </head>
 
 <body class="text-white overflow-x-hidden">
-  <!-- Network Animation Canvas -->
-  <canvas id="networkCanvas" class="network-canvas"></canvas>
 
   <!-- Scroll to Top Button -->
   <button id="scrollTop" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg opacity-0 transition-all duration-300 z-50">
@@ -96,7 +98,7 @@
           </div>
         </div>
 
-        <a href="#" class="hover:text-blue-400 transition-colors">Contact Us</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact Us</a>
 
         <!-- Search Bar & Mobile Menu -->
         <div class="flex items-center pl-8 space-x-4">

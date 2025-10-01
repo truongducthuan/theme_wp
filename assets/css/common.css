@@ -1,0 +1,37 @@
+.techin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.techin-btn::after {
+  content: attr(data-text);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  line-height: 12.5px;
+  transform: translateY(100%);
+  transition: opacity .2s, transform .2s;
+  transition-timing-function: cubic-bezier(.455, .03, .515, .955);
+  white-space: nowrap;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.techin-btn span {
+  /* animation: fadeDown 0.2s ease forwards; */
+  transform: translateY(10%);
+  opacity: 1;
+  transition: opacity .2s, transform .2s;
+  transition-timing-function: cubic-bezier(.455, .03, .515, .955);
+}
+.techin-btn:hover > span {
+  /* animation: fadeUpHide 0.2s ease forwards; */
+  transform: translateY(-150%);
+  opacity: 0;
+}
+.techin-btn:hover::after {
+  opacity: 1;
+  transform: translateY(-50%);
+}

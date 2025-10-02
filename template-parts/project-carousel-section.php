@@ -106,7 +106,7 @@ $projects = [
 ?>
 
 <section class="py-16 px-4 md:px-8 lg:px-16" id="project-carousel">
-  <div class="max-w-7xl mx-auto py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto py-2 lg:py-24">
 
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2 lg:mb-24 gap-6">

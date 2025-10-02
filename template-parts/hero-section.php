@@ -1,4 +1,4 @@
-<section class="relative z-10">
+<section class="relative z-10 mt-24 lg:mt-0" id="home-hero">
   <!-- Network Animation Canvas -->
   <canvas id="networkCanvas" class="network-canvas"></canvas>
   <div class="mx-auto">

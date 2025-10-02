@@ -8,12 +8,21 @@ mobileMenuBtn.addEventListener('click', () => {
 
 // Scroll to Top Button
 const scrollTopBtn = document.getElementById('scrollTop');
+const header = document.getElementById('header');
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 300) {
     scrollTopBtn.style.opacity = '1';
+    if(header.classList.contains('lg:top-10')) {
+      header.classList.remove('lg:top-10');
+    }
+    header.classList.add('lg:top-0');
   } else {
     scrollTopBtn.style.opacity = '0';
+    if(header.classList.contains('lg:top-0')) {
+      header.classList.remove('lg:top-0');
+    }
+    header.classList.add('lg:top-10');
   }
 });
 

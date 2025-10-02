@@ -58,53 +58,63 @@
   $logos = [
     (object) [
       'id' => 1,
-      'name' => 'mention',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo4.svg'
+      'name' => 'D2Cモデルによる直販比率の向上
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 2,
-      'name' => 'refresh',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo3.svg'
+      'name' => 'パーソナライズによる顧客体験の革新 
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 3,
-      'name' => 'mention',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo4.svg'
+      'name' => 'D2Cモデルによる直販比率の向上
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 4,
-      'name' => 'refresh',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo3.svg'
+      'name' => 'パーソナライズによる顧客体験の革新 
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 5,
-      'name' => 'mention',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo4.svg'
+      'name' => 'D2Cモデルによる直販比率の向上
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 6,
-      'name' => 'refresh',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo3.svg'
+      'name' => 'パーソナライズによる顧客体験の革新 
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 7,
-      'name' => 'mention',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo4.svg'
+      'name' => 'D2Cモデルによる直販比率の向上
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 8,
-      'name' => 'refresh',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo3.svg'
+      'name' => 'パーソナライズによる顧客体験の革新 
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 9,
-      'name' => 'mention',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo4.svg'
+      'name' => 'D2Cモデルによる直販比率の向上
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
     (object) [
       'id' => 10,
-      'name' => 'refresh',
-      'image' => 'https://techin-reactjs.vercel.app/assets/images/v1/logo3.svg'
+      'name' => 'パーソナライズによる顧客体験の革新 
+',
+      'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
     ],
   ];
   ?>
@@ -136,19 +146,25 @@
           <div id="carousel" class="flex items-center justify-center gap-4 md:gap-6 transition-transform duration-500 ease-in-out">
             <?php
             foreach ($logos as $logo) {
-              echo '<div class="logo-card flex-shrink-0 w-48 md:w-64 h-32 md:h-40 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl flex items-center justify-center p-6 shadow-md">';
+              echo '<div class="logo-card flex-shrink-0 w-48 md:w-64 h-52 md:h-64 bg-third rounded-2xl flex items-center justify-center p-6 shadow-md">';
               echo '<div class="text-center">';
-              echo '<div class="flex items-center justify-center gap-2 text-gray-600">';
+              echo '<div class="flex flex-col items-center justify-center gap-4 text-gray-600">';
+              echo '<div class="p-4 bg-primary rounded-full">';
               echo '<img src="' . $logo->image . '" alt="' . $logo->name . '" class="max-w-full object-contain">';
+              echo '</div>';
+              echo '<div>' . $logo->name . '</div>';
               echo '</div>';
               echo '</div>';
               echo '</div>';
             }
             foreach ($logos as $logo) {
-              echo '<div class="logo-card flex-shrink-0 w-48 md:w-64 h-32 md:h-40 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl flex items-center justify-center p-6 shadow-md">';
+              echo '<div class="logo-card flex-shrink-0 w-48 md:w-64 h-52 md:h-64 bg-third rounded-2xl flex items-center justify-center p-6 shadow-md">';
               echo '<div class="text-center">';
-              echo '<div class="flex items-center justify-center gap-2 text-gray-600">';
+              echo '<div class="flex flex-col items-center justify-center gap-4 text-gray-600">';
+              echo '<div class="p-4 bg-primary rounded-full">';
               echo '<img src="' . $logo->image . '" alt="' . $logo->name . '" class="max-w-full object-contain">';
+              echo '</div>';
+              echo '<div>' . $logo->name . '</div>';
               echo '</div>';
               echo '</div>';
               echo '</div>';
@@ -237,7 +253,7 @@
     }
 
     function startAutoPlay() {
-      autoPlayInterval = setInterval(nextSlide, 5000);
+      autoPlayInterval = setInterval(nextSlide, 50000);
     }
 
     function stopAutoPlay() {

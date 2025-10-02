@@ -154,7 +154,7 @@
       </div>
 
       <!-- Right Column - Image -->
-      <div class="relative">
+      <div class="relative mt-10 lg:mt-0">
         <div class="process-flow-image--animated">
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-01%20at%2016.48.36-2jYQWmykEErO5GW7i9I5Tgn1o5d9uR.png"

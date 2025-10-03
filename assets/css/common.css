@@ -191,6 +191,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transform: all 0.2s ease;
 }
 .techin-btn::after {
   content: attr(data-text);
@@ -222,4 +223,74 @@ body {
 .techin-btn:hover::after {
   opacity: 1;
   transform: translateY(-50%);
+}
+
+.pagination {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  color: white;
+  position: relative;
+}
+
+.pagination .page-nav .page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.pagination .page-nav .page-numbers a.page-numbers,
+.pagination .page-nav span {
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 10px;
+  color: #000;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: background .3s ease, color .3s ease;
+}
+
+.pagination .page-nav .page-numbers a.page-numbers:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transition: background .3s ease, color .3s ease;
+}
+
+.pagination .page-nav .prev:hover,
+.pagination .page-nav .next:hover {
+  opacity: 0.7;
+}
+
+.pagination .page-nav .page-numbers.current {
+  background: var(--primary-color);
+  color: #fff;
+  cursor: default;
+}
+
+.pagination .page-nav .prev {
+  /* position: absolute; */
+  left: 0;
+}
+.pagination .page-nav .next {
+  /* position: absolute; */
+  right: 0;
+}
+
+/* Overwrite wp-admin styles */
+.wpcf7 form.sent .wpcf7-response-output {
+  color: #46b450 !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+  color: #dc3232 !important;
+}
+
+.wpcf7-spinner {
+  display: none !important;
 }

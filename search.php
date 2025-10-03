@@ -1,19 +1,25 @@
 <?php
-// Template Name: Blogs
-get_header();
-?>
+// Template Name: Search
 
-<?php
+get_header();
+
+$keyword = get_search_query();
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 $the_query = new WP_Query([
   'post_type' => 'post',
   'posts_per_page' => 10,
   'paged' => $paged,
+  's' => $keyword,
   'orderby' => 'date',
   'order' => 'DESC',
   'post_status' => 'publish',
 ]);
+
+// echo '<prev class="text-black">';
+// print_r($blogs->posts);
+// echo '</prev>';
 
 $data = [
   'the_query' => $the_query,
@@ -21,12 +27,9 @@ $data = [
 ];
 
 // Hero Section
-get_template_part('template-parts/blogs/hero-section', null, ['title' => 'Lastest Blogs', 'subtitle' => 'Lastest Blogs']);
+get_template_part('template-parts/blogs/hero-section', null, ['title' => 'Search Blogs', 'subtitle' => 'Search Blogs']);
 
 // Blogs Section
 get_template_part('template-parts/blogs/blog-listing', null, $data);
-?>
 
-<?php
 get_footer();
-?>

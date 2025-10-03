@@ -1,11 +1,19 @@
 <?php
-$blogs = new WP_Query([
+get_header();
+
+$keyword = get_search_query();
+$blog_page_id  = get_option('page_for_posts');
+$blog_page_url = get_permalink($blog_page_id);
+
+$args = [
   'post_type' => 'post',
-  'posts_per_page' => 3,
-  'orderby' => 'date',
-  'order' => 'DESC',
-  'post_status' => 'publish',
-]);
+  'posts_per_page' => 5,
+  'orderby'        => 'date',
+  'order'          => 'DESC',
+  'post_status'    => 'publish',
+];
+
+$blogs = new WP_Query($args);
 
 $categories = get_the_category();
 
@@ -15,7 +23,7 @@ $all_categories = get_terms(array(
 ));
 
 // echo '<prev class="text-black">';
-// print_r($categories);
+// print_r($keyword);
 // echo '</prev>';
 ?>
 
@@ -26,15 +34,20 @@ $all_categories = get_terms(array(
       Search Here...
       <div class="w-12 h-1 bg-blue-600 mt-2"></div>
     </h3>
-    <div class="flex gap-2">
+    <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="flex gap-2">
       <input
-        type="text"
+        type="search"
+        name="s"
+        value="<?php echo get_search_query(); ?>"
         placeholder="Search Here..."
-        class="flex-1 px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300" />
-      <button class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
+        class="flex-1 px-4 py-3 rounded-lg border text-black border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300" />
+      <button
+        type="submit"
+        class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
         Search
       </button>
-    </div>
+    </form>
+
   </div>
 
   <!-- Latest News Widget -->
@@ -60,9 +73,9 @@ $all_categories = get_terms(array(
                 </svg>
                 <?php echo get_the_date(); ?>
               </div>
-              <h4 class="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+              <a href="<?php the_permalink(); ?>" class="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
                 <?php the_title(); ?>
-              </h4>
+              </a>
             </div>
           </div>
       <?php
@@ -81,7 +94,7 @@ $all_categories = get_terms(array(
     <div class="space-y-3">
       <?php
       if ($all_categories): foreach ($all_categories as $category): ?>
-          <a href="#" class="flex items-center justify-between p-3 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition-all duration-300 group">
+          <a href="<?php echo get_category_link($category->term_id); ?>" class="flex items-center justify-between p-3 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition-all duration-300 group">
             <span class="font-semibold"><?php echo $category->name; ?></span>
             <div class="flex items-center gap-2">
               <span class="w-6 h-6 flex items-center justify-center bg-white text-cyan-400 rounded text-xs font-bold"><?php echo $category->count; ?></span>
@@ -95,22 +108,4 @@ $all_categories = get_terms(array(
       ?>
     </div>
   </div>
-
-  <!-- Newsletter Widget -->
-  <div class="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-2xl p-6 text-white blog-listing-fade-in" style="animation-delay: 0.8s;">
-    <h3 class="text-xl font-bold mb-3">Get Updates</h3>
-    <p class="text-sm text-purple-200 mb-4 leading-relaxed">
-      Subscribe email and get recent news and updates or offers.
-    </p>
-    <div class="flex gap-2">
-      <input
-        type="email"
-        placeholder="Email address..."
-        class="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all duration-300" />
-      <button class="px-6 py-3 bg-white text-purple-900 font-semibold rounded-lg hover:bg-purple-100 transition-all duration-300 shadow-lg hover:shadow-xl">
-        Search
-      </button>
-    </div>
-  </div>
-
 </aside>

@@ -54,13 +54,12 @@ $data = [
             Synoraの開発支援で、できること!
           </h2>
           <button class="cta-button bg-secondary hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-lg text-lg">
-            Get A Quote
-          </button>
+			  サービスの詳細</button>
         </div>
       </div>
 
       <!-- Stats Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 lg:mt-24 mb-16">
+<!--       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 lg:mt-24 mb-16">
         <?php
         foreach ($data as $stat) {
           echo '<div class="stat-card bg-white rounded-3xl p-8 text-center shadow-xl fade-in-up">
@@ -74,7 +73,7 @@ $data = [
           </div>';
         }
         ?>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>

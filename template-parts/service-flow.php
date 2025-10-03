@@ -70,8 +70,8 @@
             onclick="toggleAccordion(this)"
             aria-expanded="false">
             <span class="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
-              無料相談（課題の共有
-            </span>
+				無料相談（課題の共有）
+            </span>
             <div class="flex-shrink-0 w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors duration-300">
               <svg class="w-6 h-6 text-white process-flow-accordion__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -154,7 +154,7 @@
       </div>
 
       <!-- Right Column - Image -->
-      <div class="relative">
+      <div class="relative mt-10 lg:mt-0">
         <div class="process-flow-image--animated">
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-01%20at%2016.48.36-2jYQWmykEErO5GW7i9I5Tgn1o5d9uR.png"

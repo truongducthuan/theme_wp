@@ -107,29 +107,29 @@
   $services = [
     (object) [
       'id' => 1,
-      'name' => 'Web Development',
-      'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.',
+      'name' => '増え続ける技術的複雑性',
+      'description' => '',
       'icon' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg',
       'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-blue.svg'
     ],
     (object) [
       'id' => 2,
-      'name' => 'IT Management',
-      'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.',
+      'name' => '求められる高度なドメイン知識',
+      'description' => '',
       'icon' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg',
       'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-blue.svg'
     ],
     (object) [
       'id' => 1,
-      'name' => 'Web Development',
-      'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.',
+      'name' => '恒常的なリソースの制約',
+      'description' => '',
       'icon' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg',
       'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-blue.svg'
     ],
     (object) [
       'id' => 2,
-      'name' => 'IT Management',
-      'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.',
+      'name' => '内製チーム強化の必要性',
+      'description' => '',
       'icon' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg',
       'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-blue.svg'
     ],
@@ -144,13 +144,13 @@
          <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
            <path d="M12 2L4 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-8-4z" />
          </svg>
-         <span class="text-blue-600 font-semibold text-lg mx-3">Our Service</span>
+         <span class="text-4xl md:text-5xl text-blue-600 font-semibold mx-3">こんなお悩みありませんか？</span>
          <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
            <path d="M12 2L4 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-8-4z" />
          </svg>
        </div>
-       <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-         Our Unique And Awesome<br>Services
+       <h2 class="text-lg font-bold text-gray-900 leading-tight">
+         高い理想と、現場の開発リソースとのギャップに悩んでいませんか？
        </h2>
      </div>
 

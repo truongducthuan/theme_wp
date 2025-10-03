@@ -13,11 +13,14 @@ get_template_part('template-parts/hero-section');
 // Abount Section
 get_template_part('template-parts/about-section');
 
-// Logo Carousel Section
-get_template_part('template-parts/logo-carousel');
-
 // Services Section
 get_template_part('template-parts/services-section');
+
+// Purpose Section
+get_template_part('template-parts/purpose-section');
+
+// Logo Carousel Section
+get_template_part('template-parts/logo-carousel');
 
 // Statistics Section 
 get_template_part('template-parts/statistics-section');

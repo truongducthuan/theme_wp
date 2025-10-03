@@ -1,4 +1,4 @@
-<section class="relative z-10">
+<section class="relative z-10 mt-24 lg:mt-0">
   <!-- Network Animation Canvas -->
   <canvas id="networkCanvas" class="network-canvas"></canvas>
   <div class="mx-auto">
@@ -7,16 +7,16 @@
       <div class="space-y-6 ml-0 xl:ml-32 2xl:ml-44 pl-5 md:pl-8 lg:pl-16">
         <div class="inline-block">
           <span class="bg-blue-600 px-6 py-2 rounded text-sm font-medium">
-            Get Best IT Solution Business
+            観光DXに特化したITソリューション
           </span>
         </div>
 
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          Unlocking the Power of Technology
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight whitespace-nowrap">
+			観光産業の収益・生産性向上を<br/>デジタルの力で実現！
         </h1>
 
         <p class="text-gray-300 text-lg leading-relaxed max-w-xl">
-          At techin, we deliver innovative and reliable IT solutions tailored to meet your unique business needs.
+          私たちは観光業界のニーズに合わせた、革新的で<br/>信頼性の高いソフトウェアを提供します。<br/>テクノロジーの力で、あなたのビジネスを次のステージへ。
         </p>
 
         <button data-text="Get Start Now" class="techin-btn relative bg-blue-600 px-8 py-4 rounded font-semibold text-lg transition-all duration-300 transform">
@@ -32,7 +32,7 @@
         <!-- Businessman Image Placeholder -->
         <div class="relative hero-image">
           <img
-            src="https://techin-reactjs.vercel.app/assets/images/hero/1.png"
+            src="http://code-com.xyz/synora/wp-content/uploads/2025/10/bannerQA.png?height=900&width=900"
             alt="Professional Businessman"
             class="relative z-10 w-full h-auto rounded-lg" />
         </div>

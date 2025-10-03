@@ -124,12 +124,12 @@
             <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10 2L12 8L18 8L13 12L15 18L10 14L5 18L7 12L2 8L8 8L10 2Z" />
             </svg>
-            <h3 class="text-blue-600 font-semibold text-lg">Appointment</h3>
+			  <h3 class="text-blue-600 font-semibold text-lg">お問い合わせ</h3>
             <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10 2L12 8L18 8L13 12L15 18L10 14L5 18L7 12L2 8L8 8L10 2Z" />
             </svg>
           </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Make An Appointment</h2>
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900">CONTACT</h2>
         </div>
 
         <!-- Form -->
@@ -146,14 +146,14 @@
             <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10 2L12 8L18 8L13 12L15 18L10 14L5 18L7 12L2 8L8 8L10 2Z" />
             </svg>
-            <h3 class="text-blue-600 font-semibold text-lg">Contact Us</h3>
+			  <h3 class="text-blue-600 font-semibold text-lg">連絡先</h3>
             <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10 2L12 8L18 8L13 12L15 18L10 14L5 18L7 12L2 8L8 8L10 2Z" />
             </svg>
           </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">To Make Request For Contact Us</h2>
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">お問い合わせのお願い</h2>
           <p class="text-gray-600 leading-relaxed">
-            At TechIn, we are dedicated to delivering innovative IT solutions and services that empower businesses to thrive in the digital age.
+			  Synoraでは、企業がデジタル時代において成長し続けられるよう、革新的なITソリューションとサービスを提供することに尽力しています。
           </p>
         </div>
 

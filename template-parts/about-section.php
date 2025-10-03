@@ -104,9 +104,9 @@
           <!-- Top Image -->
           <div class="relative z-0">
             <img
-              src="https://techin-reactjs.vercel.app/assets/images/v1/about-thumb1.png"
+              src="http://code-com.xyz/synora/wp-content/uploads/2025/10/about1.png"
               alt="Professional with holographic interface"
-              class="w-full max-w-md rounded-3xl shadow-2xl" />
+              class="w-full max-w-md rounded-3xl" />
 
             <!-- Experience Badge -->
             <!-- <div class="absolute -right-4 top-8 md:-right-8 md:top-12 bg-blue-600 text-white rounded-full p-6 shadow-xl z-20 animate-float">
@@ -122,7 +122,7 @@
           <!-- Bottom Image -->
           <div class="absolute -bottom-12 right-8 md:-bottom-12 md:right-16 z-10 image-hover">
             <img
-              src="https://techin-reactjs.vercel.app/assets/images/v1/about-thumb2.png"
+              src="http://code-com.xyz/synora/wp-content/uploads/2025/10/banner2.png"
               alt="Developer working on code"
               class="w-64 md:w-80 lg:w-96 rounded-3xl shadow-2xl border-8 border-white" />
           </div>
@@ -144,17 +144,12 @@
 
         <!-- Main Heading -->
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-          Empowering Your Business<br />
-          With <span class="text-blue-600">techin</span> IT Solutions
+			<span class="text-blue-600">観光DXで</span>未来を創る
         </h2>
 
         <!-- Description -->
         <p class="text-gray-600 text-base md:text-lg leading-relaxed">
-          At techin, we are dedicated to delivering innovative IT solutions and services that empower
-          businesses to thrive in the digital age. With a team of experienced professionals, we provide
-          customized technology strategies, robust support, and cutting-edge solutions tailored to your
-          unique needs. Our mission is to help you achieve your goals by making technology work for you
-          efficiently, securely, and reliably.
+			日本の観光業をテクノロジーで次の時代へ。  デジタルだけでなく、人と資産の力も合わせて、共に成長を実現します。
         </p>
 
         <!-- Features Grid -->
@@ -167,7 +162,7 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-1">Providing Skillful Services</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">私たちについて</h3>
             </div>
           </div>
 
@@ -179,7 +174,7 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-1">24/7 Support For Clients</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">サービスを見る</h3>
             </div>
           </div>
         </div>
@@ -200,7 +195,7 @@
             </div>
             <div>
               <div class="text-sm text-gray-600 font-medium">Call Us Any Time</div>
-              <div class="text-lg font-bold text-gray-900">+(009) 1888 000 2222</div>
+				<div class="text-lg font-bold text-gray-900">+(xxxx) yyyy zzzz</div>
             </div>
           </div>
         </div>

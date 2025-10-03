@@ -31,7 +31,7 @@
       <!-- Laptop Navigation -->
       <div class="hidden lg:flex w-full items-center justify-between gap-5">
         <!-- Logo -->
-        <div class="flex w-1/3 h-20 items-center justify-end pr-16 rounded-r-full space-x-2 border-r-8 border-r-secondary bg-dark">
+        <a href="<?php echo home_url(); ?>" class="flex w-1/3 h-20 items-center justify-end pr-16 rounded-r-full space-x-2 border-r-8 border-r-secondary bg-dark">
           <div class="relative">
             <img
               src="http://code-com.xyz/synora/wp-content/uploads/2025/10/logo1.png?height=40&width=40"
@@ -39,7 +39,7 @@
               class="w-full h-full object-contain" />
           </div>
                    <span class="text-3xl font-bold">S<span class="text-blue-400">ynora</span></span>
-        </div>
+        </a>
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex w-2/3 h-20 items-center space-x-8 pl-16 rounded-l-full border-l-8 border-l-secondary bg-dark">
@@ -61,7 +61,7 @@
             <a href="/" class="hover:text-blue-400 transition-colors">企業情報</a>
           </div>
           <div class="relative dropdown group">
-            <a href="/" class="hover:text-blue-400 transition-colors">ニュース</a>
+            <a href="<?php echo home_url() . '/blogs'; ?>" class="hover:text-blue-400 transition-colors">ニュース</a>
           </div>
 
           <!--           <div class="relative dropdown group">
@@ -139,7 +139,7 @@
       <a href="#" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Demo</a>
       <a href="#" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Pages</a>
       <a href="#" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Service</a>
-      <a href="#" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Blog</a>
+      <a href="<?php echo home_url() . '/blogs'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">ニュース</a>
       <a href="#contact" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Contact Us</a>
     </div>
   </header>

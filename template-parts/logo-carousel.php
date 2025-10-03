@@ -253,7 +253,7 @@
     }
 
     function startAutoPlay() {
-      autoPlayInterval = setInterval(nextSlide, 50000);
+      autoPlayInterval = setInterval(nextSlide, 5000);
     }
 
     function stopAutoPlay() {

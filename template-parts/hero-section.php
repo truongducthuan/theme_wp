@@ -1,4 +1,4 @@
-<section class="relative z-10 mt-24 lg:mt-0">
+<section class="relative z-10 mt-0 lg:mt-0 pt-20 lg:pt-52" id="home-hero">
   <!-- Network Animation Canvas -->
   <canvas id="networkCanvas" class="network-canvas"></canvas>
   <div class="mx-auto">
@@ -25,12 +25,12 @@
       </div>
 
       <!-- Right Content - Hero Image -->
-      <div class="relative">
+      <div class="relative overflow-hidden">
         <!-- Purple Geometric Shape -->
         <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full transform rotate-12 scale-110 opacity-80 blur-3xl"></div>
 
         <!-- Businessman Image Placeholder -->
-        <div class="relative hero-image">
+        <div class="relative hero-image -mb-3">
           <img
             src="http://code-com.xyz/synora/wp-content/uploads/2025/10/bannerQA.png?height=900&width=900"
             alt="Professional Businessman"

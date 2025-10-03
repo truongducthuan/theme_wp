@@ -31,7 +31,7 @@
     }
   </style>
 
-  <section class="news-hero__background news-hero__parallax relative min-h-[360px] md:min-h-[360px] lg:min-h-[360px] flex items-center">
+  <section class="news-hero__background news-hero__parallax relative min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center">
 
     <!-- Dark Overlay -->
     <div class="absolute inset-0 bg-black/60"></div>

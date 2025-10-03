@@ -4375,6 +4375,10 @@ video {
     min-height: 360px;
   }
 
+  .md\:min-h-\[500px\] {
+    min-height: 500px;
+  }
+
   .md\:w-14 {
     width: 3.5rem;
   }
@@ -4555,6 +4559,10 @@ video {
 
   .lg\:min-h-\[360px\] {
     min-height: 360px;
+  }
+
+  .lg\:min-h-\[600px\] {
+    min-height: 600px;
   }
 
   .lg\:w-16 {

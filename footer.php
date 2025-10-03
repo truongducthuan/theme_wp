@@ -7,16 +7,16 @@
       <!-- Left Column - Logo & Description -->
       <div class="space-y-6 col-span-3">
         <!-- Logo -->
-        <div class="bg-white w-32 h-32 rounded-lg flex items-center justify-center p-4 shadow-lg">
+        <div class="h-30 rounded-lg flex items-center justify-center p-4">
           <img
-            src="/placeholder.svg?height=120&width=120"
+            src="http://code-com.xyz/synora/wp-content/uploads/2025/10/logo2.png"
             alt="Synora Logo"
             class="w-full h-full object-contain" />
         </div>
 
         <!-- Description -->
         <p class="text-white text-sm leading-relaxed opacity-90">
-          At Techin, we deliver innovative IT solutions to help businesses thrive, offering customized strategies, robust support, and cutting-edge technology for efficiency, security, and reliability.
+          日本の観光業をテクノロジーで次の時代へ。  デジタルだけでなく、人と資産の力も合わせて、共に成長を実現します。
         </p>
       </div>
 
@@ -32,42 +32,21 @@
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span>About Us</span>
+            <span>会社上場</span>
           </a>
 
           <a href="#services" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span>Our Services</span>
+            <span>ニュース</span>
           </a>
 
           <a href="#project" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span>Our Project</span>
-          </a>
-
-          <a href="#team" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
-            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span>Team</span>
-          </a>
-
-          <a href="#blog" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
-            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span>Blog Us</span>
-          </a>
-
-          <a href="#contact" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
-            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span>Contact</span>
+            <span>問い合わせ</span>
           </a>
         </nav>
       </div>
@@ -84,30 +63,15 @@
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span>What We Customize</span>
+            <span>New1</span>
           </a>
 
           <a href="#offer" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span>Offer</span>
+            <span>New2</span>
           </a>
-
-          <a href="#latest" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
-            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span>Latest Pack</span>
-          </a>
-
-          <a href="#help" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
-            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span>Help & Support</span>
-          </a>
-
           <a href="#terms" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -122,8 +86,8 @@
     <!-- Copyright Section -->
     <div class="pt-8 border-t border-white/20">
       <p class="text-white text-sm text-center">
-        Copyright © <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">techin</a>.
-        All rights reserved by <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">favdevs</a>.
+              Copyright © <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">Synora</a>.
+        All rights reserved by <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">Synora</a>.
       </p>
     </div>
 

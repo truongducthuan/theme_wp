@@ -70,8 +70,8 @@
             onclick="toggleAccordion(this)"
             aria-expanded="false">
             <span class="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
-              無料相談（課題の共有
-            </span>
+				無料相談（課題の共有）
+            </span>
             <div class="flex-shrink-0 w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors duration-300">
               <svg class="w-6 h-6 text-white process-flow-accordion__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 #home-hero {
   background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
 }
 
+=======
+>>>>>>> 35301e76545a6616c73bf360fd99de4e731558c2
 .float-animation {
   animation: float 3s ease-in-out infinite;
 }

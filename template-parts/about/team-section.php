@@ -126,13 +126,13 @@ $members = [
       <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
         <path d="M10 3.5L13 6.5L10 9.5L7 6.5L10 3.5Z M10 10.5L13 13.5L10 16.5L7 13.5L10 10.5Z" />
       </svg>
-      <h3 class="text-blue-600 font-bold text-xl">Team Members</h3>
+      <h3 class="text-blue-600 font-bold text-xl">最新プロジェクト</h3>
       <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
         <path d="M10 3.5L13 6.5L10 9.5L7 6.5L10 3.5Z M10 10.5L13 13.5L10 16.5L7 13.5L10 10.5Z" />
       </svg>
     </div>
     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-      Our Expert And Skilled<br>Team Members
+      私たちの成功事例とケーススタディ
     </h2>
   </div>
 
@@ -207,6 +207,18 @@ $members = [
 </section>
 
 <script>
+  let observerOptionsTeam = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  const observerTeam = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, observerOptionsTeam);
+
   // Toggle share menu
   function toggleShareMenu(event, menuId) {
     event.stopPropagation();
@@ -236,6 +248,6 @@ $members = [
   document.querySelectorAll('#team .fade-in-up').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
-    observer.observe(el);
+    observerTeam.observe(el);
   });
 </script>

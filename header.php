@@ -19,7 +19,7 @@
 <body class="text-white overflow-x-hidden">
 
   <!-- Scroll to Top Button -->
-  <button id="scrollTop" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg opacity-0 transition-all duration-300 z-50">
+  <button id="scrollTop" class="fixed bottom-8 animate-bounce right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg opacity-0 transition-all duration-300 z-50">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
@@ -58,7 +58,7 @@
             </div> -->
           </div>
           <div class="relative dropdown group">
-            <a href="/" class="hover:text-blue-400 transition-colors">企業情報</a>
+            <a href="<?php echo home_url() . '/about'; ?>" class="hover:text-blue-400 transition-colors">企業情報</a>
           </div>
           <div class="relative dropdown group">
             <a href="<?php echo home_url() . '/blogs'; ?>" class="hover:text-blue-400 transition-colors">ニュース</a>
@@ -137,7 +137,7 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu lg:hidden mt-4 bg-slate-800 rounded-lg overflow-hidden">
       <a href="#" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Demo</a>
-      <a href="#" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Pages</a>
+      <a href="<?php echo home_url() . '/about'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">About</a>
       <a href="#" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Service</a>
       <a href="<?php echo home_url() . '/blogs'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">ニュース</a>
       <a href="#contact" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Contact Us</a>

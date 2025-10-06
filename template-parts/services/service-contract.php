@@ -47,7 +47,7 @@
   <!-- right -->
   <div class="w-full flex  flex-1 items-center gap-6 px-3 pb-16">
     <img
-      src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/ef6c4dd98615d6be4dbfae7f79e5af47d82ecf21.jpg' ?>"
+      src="<?php echo get_template_directory_uri() . '/assets/imgs/services/contract-hand.jpg'; ?>"
       alt="Icon"
       class="w-full h-auto object-cover rounded-[30px]" />
   </div>

@@ -26,9 +26,9 @@
     </div>
     <div class="min-h-36 flex items-center justify-center">
       <img
-        src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/meeting-zoom.png' ?>"
+        src="<?php echo get_template_directory_uri() . '/assets/imgs/services/image-services-out.jpg'; ?>"
         alt="Icon"
-        class="w-[376px] h-auto object-cover" />
+        class="w-[376px] h-auto object-cover rounded-[30px]" />
     </div>
     <div class="min-h-36 flex flex-col gap-y-6 px-3">
       <div class="rounded-[20px] py-10 pl-8 pr-4 bg-[#F5F4FF] relative">

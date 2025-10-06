@@ -1,7 +1,7 @@
 <style>
   .news-hero__background {
     position: relative;
-    background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2025/10/image-team-work.png');
+    background-image: url('<?php echo get_template_directory_uri() . '/assets/imgs/services/bg-support.png'; ?>');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

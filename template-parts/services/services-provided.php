@@ -1,7 +1,7 @@
 <style>
   .provided__background_1 {
     position: relative;
-    background-image: url('<?php echo get_site_url() . '/wp-content/uploads/2025/10/c82bb5b0193ed034cccc1429a463626bc535f83c.jpg' ?>');
+    background-image: url('<?php echo get_template_directory_uri() . '/assets/imgs/services/provided_1.jpg'; ?>');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 
   .provided__background_2 {
     position: relative;
-    background-image: url('<?php echo get_site_url() . '/wp-content/uploads/2025/10/444c9ca4e802310540b8e0aaf1676b38365e0931.jpg' ?>');
+    background-image: url('<?php echo get_template_directory_uri() . '/assets/imgs/services/provided_2.jpg'; ?>');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 
   .provided__background_center {
     position: relative;
-    background-image: url('<?php echo get_site_url() . '/wp-content/uploads/2025/10/89612bcbe56a3cfe5337ede706b1e36e11385ce7.jpg' ?>');
+    background-image: url('<?php echo get_template_directory_uri() . '/assets/imgs/services/provided_center.jpg'; ?>');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@
 
   .provided__background_3 {
     position: relative;
-    background-image: url('<?php echo get_site_url() . '/wp-content/uploads/2025/10/a606a36fbbdde7005e4d2f50c8b1637d2d92f269.jpg' ?>');
+    background-image: url('<?php echo get_template_directory_uri() . '/assets/imgs/services/provided_3.jpg'; ?>');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
   .provided__background_4 {
     position: relative;
-    background-image: url('<?php echo get_site_url() . '/wp-content/uploads/2025/10/29dd2f7e8ec7cd750943bbacbca15b28fe7d7755.jpg' ?>');
+    background-image: url('<?php echo get_template_directory_uri() . '/assets/imgs/services/provided_4.jpg'; ?>');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

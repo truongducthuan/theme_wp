@@ -5,7 +5,7 @@
     <!-- Left-->
     <div class="flex justify-center">
       <img
-        src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/services-handle.jpg' ?>"
+        src="<?php echo get_template_directory_uri() . '/assets/imgs/services/example-support.jpg'; ?>"
         alt="Handshake"
         class="w-full max-w-sm rounded-[2rem] shadow-lg object-cover" />
     </div>
@@ -24,7 +24,7 @@
         </span>
 
         <div class="flex-1 flex flex-col gap-4 text-black bg-[#F5F4FF] px-10 py-4 mt-3 rounded-[10px] relative">
-          <img class="w-52 h-auto absolute top-0 right-0" alt="icon" src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/4602d3c51847cfc31f0cb4b2934f1efc247e9f08.png' ?>" />
+          <img class="w-52 h-auto absolute top-0 right-0" alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/services/image-star.png'; ?>" />
           <div class="w-full flex gap-3">
             <img class="w-4 h-auto" alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-check.svg'; ?>" />
             <p>弊社の支援内容</p>

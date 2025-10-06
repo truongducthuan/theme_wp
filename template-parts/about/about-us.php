@@ -1,4 +1,4 @@
-<section class="bg-gray-50 min-h-screen flex items-center justify-center p-4 md:p-8">
+<section class="bg-gray-50 py-8 lg:py-20 flex items-center justify-center p-4 md:p-8">
 
   <div class="about-section-container max-w-7xl w-full">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16 items-center">

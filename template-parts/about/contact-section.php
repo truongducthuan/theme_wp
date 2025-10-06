@@ -23,7 +23,6 @@
    .contact-card {
      background: #3b49df;
      border-radius: 1rem;
-     padding: 2rem;
      display: flex;
      align-items: center;
      gap: 1.5rem;
@@ -50,7 +49,6 @@
    }
 
    .contact-icon-wrapper {
-     background: white;
      border-radius: 1rem;
      padding: 1.5rem;
      display: flex;
@@ -112,9 +110,7 @@
        <!-- Phone Card -->
        <div class="contact-card">
          <div class="contact-icon-wrapper">
-           <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-           </svg>
+           <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/phone-white.svg'; ?>" />
          </div>
          <div class="contact-text">01234567899</div>
        </div>
@@ -122,9 +118,7 @@
        <!-- Email Card -->
        <div class="contact-card">
          <div class="contact-icon-wrapper">
-           <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
-           </svg>
+           <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/mail-white.svg'; ?>" />
          </div>
          <div class="contact-text">Email</div>
        </div>
@@ -132,10 +126,7 @@
        <!-- Location Card -->
        <div class="contact-card">
          <div class="contact-icon-wrapper">
-           <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-           </svg>
+           <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/map-white.svg'; ?>" />
          </div>
          <div class="contact-text">Hà Nội</div>
        </div>

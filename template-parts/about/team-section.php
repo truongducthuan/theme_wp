@@ -8,7 +8,7 @@
     transition: all 0.3s ease;
   }
 
-  #team .team-card::after {
+  /* #team .team-card::after {
     content: '';
     position: absolute;
     top: -30px;
@@ -20,7 +20,7 @@
     border: 1.5px solid #2BC8EB;
     border-radius: 1.5rem;
     transition: background 0.3s ease;
-  }
+  } */
 
   #team .team-card:hover::after {
     background: #302CEB;
@@ -117,6 +117,17 @@ $members = [
       'instagram' => '#'
     ],
   ],
+  (object) [
+    'id' => 5,
+    'name' => 'Alice Williams',
+    'position' => 'CMO',
+    'image' => get_site_url() . '/wp-content/uploads/2025/10/t2.png',
+    'social' => [
+      'facebook' => '#',
+      'twitter' => '#',
+      'instagram' => '#'
+    ],
+  ],
 ]
 ?>
 <section class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 lg:py-24" id='team'>
@@ -137,117 +148,276 @@ $members = [
   </div>
 
   <!-- Team Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+  <div class="">
+    <div class="relative fade-in">
+      <!-- Navigation Buttons -->
+      <button
+        id="prevBtn"
+        class="nav-button absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-primary bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white shadow-lg"
+        aria-label="Previous logos">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
 
-    <?php
-    foreach ($members as $member) {
-    ?>
-      <div class="team-card fade-in-up bg-white rounded-3xl shadow-lg" style="animation-delay: 0.1s">
-        <div class="relative overflow-hidden rounded-2xl w-full h-full">
-          <img src="<?php echo $member->image; ?>"
-            alt="<?php echo $member->name; ?>"
-            class="team-image w-full h-full object-cover">
+      <button
+        id="nextBtn"
+        class="nav-button absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-primary bg-white flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white shadow-lg"
+        aria-label="Next logos">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
 
-          <!-- Info Overlay -->
-          <div class="bg-secondary absolute bottom-[6%] left-0 right-[16%] p-4 rounded-r-2xl text-white">
-            <h4 class="text-2xl font-bold mb-1"><?php echo $member->name; ?></h4>
-            <p class="text-sm opacity-90"><?php echo $member->position; ?></p>
-          </div>
+      <div class="overflow-x-hidden">
+        <div id="carousel" class="flex items-center justify-center gap-4 md:gap-6 transition-transform duration-500 ease-in-out">
+          <?php
+          foreach ($members as $member) {
+          ?>
+            <div class="team-card min-w-48 md:min-w-64 h-52 md:h-64 fade-in-up bg-white rounded-3xl shadow-lg" style="animation-delay: 0.1s">
+              <div class="relative overflow-hidden rounded-2xl w-full h-full">
+                <img src="<?php echo $member->image; ?>"
+                  alt="<?php echo $member->name; ?>"
+                  class="team-image w-full h-full object-cover">
 
-          <div class="dropdown group share-btn absolute top-4 right-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
-            <button class="flex items-center space-x-1 hover:text-blue-400 transition-colors">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-              </svg>
-            </button>
-            <div class="dropdown-content flex flex-col items-center justify-center gap-5 absolute top-full left-0 right-0 mt-1 bg-primary rounded-full shadow-xl h-26 max-w-[100px]">
-              <?php
-              foreach ($member->social as $key => $url) {
-                switch ($key) {
-                  case 'facebook':
-                    echo '
-        <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full mt-2 flex items-center justify-center text-white">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-          </svg>
-        </a>
-      ';
-                    break;
+                <!-- Info Overlay -->
+                <div class="bg-secondary absolute bottom-[6%] left-0 right-[16%] p-4 rounded-r-2xl text-white">
+                  <h4 class="text-2xl font-bold mb-1"><?php echo $member->name; ?></h4>
+                  <p class="text-sm opacity-90"><?php echo $member->position; ?></p>
+                </div>
 
-                  case 'twitter':
-                    echo '
-        <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full flex items-center justify-center text-white">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-          </svg>
-        </a>
-      ';
-                    break;
+                <div class="dropdown group share-btn absolute top-4 right-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                  <button class="flex items-center space-x-1 hover:text-blue-400 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                    </svg>
+                  </button>
+                  <div class="dropdown-content flex flex-col items-center justify-center gap-5 absolute top-full left-0 right-0 mt-1 bg-primary rounded-full shadow-xl h-26 max-w-[100px]">
+                    <?php
+                    foreach ($member->social as $key => $url) {
+                      switch ($key) {
+                        case 'facebook':
+                          echo '
+                          <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full mt-2 flex items-center justify-center text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                          </a>
+                        ';
+                          break;
 
-                  case 'instagram':
-                    echo '
-        <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full mb-2 flex items-center justify-center text-white">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-        </a>
-      ';
-                    break;
-                }
-              }
-              ?>
+                        case 'twitter':
+                          echo '
+                          <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full flex items-center justify-center text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                          </a>
+                        ';
+                          break;
+
+                        case 'instagram':
+                          echo '
+                          <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full mb-2 flex items-center justify-center text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                          </a>
+                        ';
+                          break;
+                      }
+                    }
+                    ?>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          <?php
+          }
+          ?>
+          <?php
+          foreach ($members as $member) {
+          ?>
+            <div class="team-card fade-in-up min-w-48 md:min-w-64 h-52 md:h-64 bg-white rounded-3xl shadow-lg" style="animation-delay: 0.1s">
+              <div class="relative overflow-hidden rounded-2xl w-full h-full">
+                <img src="<?php echo $member->image; ?>"
+                  alt="<?php echo $member->name; ?>"
+                  class="team-image w-full h-full object-cover">
+
+                <!-- Info Overlay -->
+                <div class="bg-secondary absolute bottom-[6%] left-0 right-[16%] p-4 rounded-r-2xl text-white">
+                  <h4 class="text-2xl font-bold mb-1"><?php echo $member->name; ?></h4>
+                  <p class="text-sm opacity-90"><?php echo $member->position; ?></p>
+                </div>
+
+                <div class="dropdown group share-btn absolute top-4 right-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                  <button class="flex items-center space-x-1 hover:text-blue-400 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                    </svg>
+                  </button>
+                  <div class="dropdown-content flex flex-col items-center justify-center gap-5 absolute top-full left-0 right-0 mt-1 bg-primary rounded-full shadow-xl h-26 max-w-[100px]">
+                    <?php
+                    foreach ($member->social as $key => $url) {
+                      switch ($key) {
+                        case 'facebook':
+                          echo '
+                          <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full mt-2 flex items-center justify-center text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                          </a>
+                        ';
+                          break;
+
+                        case 'twitter':
+                          echo '
+                          <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full flex items-center justify-center text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                          </a>
+                        ';
+                          break;
+
+                        case 'instagram':
+                          echo '
+                          <a href="' . $url . '" class="social-icon w-6 h-6 bg-inherit rounded-full mb-2 flex items-center justify-center text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                          </a>
+                        ';
+                          break;
+                      }
+                    }
+                    ?>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php
+          }
+          ?>
         </div>
       </div>
-    <?php
-    }
-    ?>
+    </div>
   </div>
 </section>
 
 <script>
-  let observerOptionsTeam = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-  const observerTeam = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, observerOptionsTeam);
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const carousel = document.getElementById('carousel');
+  const cards = document.querySelectorAll('.team-card');
 
-  // Toggle share menu
-  function toggleShareMenu(event, menuId) {
-    event.stopPropagation();
-    const menu = document.getElementById(menuId);
-    const allMenus = document.querySelectorAll('.share-menu');
+  let currentIndex = 0;
+  let autoPlayInterval;
+  const cardWidth = 256 + 24; // card width + gap
+  const mobileCardWidth = 192 + 16; // mobile card width + gap
+  const totalCards = cards.length;
+  const halfCards = totalCards / 2; // since duplicated list
 
-    // Close all other menus
-    allMenus.forEach(m => {
-      if (m.id !== menuId) {
-        m.classList.remove('active');
-      }
-    });
-
-    // Toggle current menu
-    menu.classList.toggle('active');
-  }
-
-  // Close share menus when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!event.target.closest('.share-btn') && !event.target.closest('.share-menu')) {
-      document.querySelectorAll('.share-menu').forEach(menu => {
-        menu.classList.remove('active');
+  // Intersection animation
+  const observerTeam = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
       });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     }
-  });
+  );
 
-  document.querySelectorAll('#team .fade-in-up').forEach(el => {
+  document.querySelectorAll('#team .fade-in-up').forEach((el) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     observerTeam.observe(el);
   });
+
+  function getCardWidth() {
+    return window.innerWidth >= 768 ? cardWidth : mobileCardWidth;
+  }
+
+  function updateCarousel(transition = true) {
+    const width = getCardWidth();
+    carousel.style.transition = transition ? 'transform 0.45s ease-in-out' : 'none';
+    carousel.style.transform = `translateX(-${currentIndex * width}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    updateCarousel();
+
+    // Khi trượt đến cuối nửa đầu danh sách, quay lại đầu
+    if (currentIndex >= halfCards - 2) {
+      setTimeout(() => {
+        currentIndex = 0;
+        updateCarousel(false);
+      }, 450);
+    }
+  }
+
+  function prevSlide() {
+    if (currentIndex <= 0) {
+      setTimeout(() => {
+        currentIndex = halfCards - 2;
+        updateCarousel(false);
+      }, 0);
+    } else {
+      currentIndex--;
+      updateCarousel();
+    }
+  }
+
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(nextSlide, 5000);
+  }
+
+  function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+  }
+
+  // Navigation buttons
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    stopAutoPlay();
+    startAutoPlay();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    stopAutoPlay();
+    startAutoPlay();
+  });
+
+  // Swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoPlay();
+  });
+
+  carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    startAutoPlay();
+  });
+
+  function handleSwipe() {
+    if (touchStartX - touchEndX > 50) nextSlide();
+    if (touchEndX - touchStartX > 50) prevSlide();
+  }
+
+  carousel.addEventListener('mouseenter', stopAutoPlay);
+  carousel.addEventListener('mouseleave', startAutoPlay);
+
+  window.addEventListener('resize', () => updateCarousel(false));
+
+  // Khởi tạo
+  updateCarousel(false);
+  startAutoPlay();
 </script>

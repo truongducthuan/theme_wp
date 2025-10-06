@@ -105,7 +105,7 @@
   }
 </style>
 
-<section class="hero-section-bg min-h-screen pt-16 lg:pt-26">
+<section class="hero-section-bg pt-16 lg:pt-26">
   <canvas id="networkCanvas" class="network-canvas"></canvas>
 
   <!-- Floating Particles Background -->
@@ -118,7 +118,7 @@
   </div>
 
   <!-- Hero Section -->
-  <section class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+  <section class="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
     <h1 class="hero-title-text text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 max-w-6xl leading-relaxed">
       観光DXで未来を創る、私たちは観光業界の真のパートナーです。
     </h1>

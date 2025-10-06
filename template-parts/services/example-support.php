@@ -1,4 +1,4 @@
-<section class="pb-16">
+<section class="pb-5 md:pb-16">
   <?php get_template_part('template-parts/services/common/header-title', null, ['title' => '協業による「支援」事例', 'sub-title' => '']); ?>
 
   <div class="grid md:grid-cols-2 gap-8 items-center">

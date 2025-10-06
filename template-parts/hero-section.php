@@ -32,7 +32,7 @@
         <!-- Businessman Image Placeholder -->
         <div class="relative hero-image -mb-3">
           <img
-            src="http://code-com.xyz/synora/wp-content/uploads/2025/10/bannerQA.png?height=900&width=900"
+            src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/Frame-17.png' ?>"
             alt="Professional Businessman"
             class="relative z-10 w-full h-auto rounded-lg" />
         </div>

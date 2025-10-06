@@ -1,12 +1,11 @@
 <section class="w-full bg-white">
-  <div class="mx-auto w-full pt-24 bg-white max-w-7xl text-[#222627]">
-    <div class="w-full">
-      <img
-        src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/services-background.jpg' ?>"
-        alt="Digital transformation process visualization"
-        class="w-full h-auto shadow-2xl object-cover" />
-    </div>
-
+  <div class="w-full">
+    <img
+      src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/services-background.jpg' ?>"
+      alt="Digital transformation process visualization"
+      class="w-full h-auto shadow-2xl object-cover" />
+  </div>
+  <div class="mx-auto w-full bg-white max-w-7xl text-[#222627]">
     <!-- blog 1 -->
     <?php get_template_part('template-parts/services/out-service'); ?>
 

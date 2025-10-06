@@ -172,12 +172,9 @@
       <!-- Mission Section -->
       <div class="space-y-6">
         <!-- Mission Icon and Title -->
-        <div class="flex items-center gap-4 mb-8">
+        <div class="flex items-center justify-center gap-4 mb-8">
           <div class="mv-icon-circle">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 2L4 6v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V6l-8-4z" />
-              <polyline points="9 12 11 14 15 10" />
-            </svg>
+            <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-protect.svg'; ?>" />
           </div>
           <h2 class="mv-heading">ミッション</h2>
         </div>
@@ -196,14 +193,9 @@
       <!-- Vision Section -->
       <div class="space-y-6">
         <!-- Vision Icon and Title -->
-        <div class="flex items-center gap-4 mb-8">
+        <div class="flex items-center justify-center gap-4 mb-8">
           <div class="mv-icon-circle">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M12 14c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z" />
-              <circle cx="18" cy="8" r="2" />
-              <path d="M20 14c2 0 4 1 4 3v1h-4" />
-            </svg>
+            <img class="" alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-hand.svg'; ?>" />
           </div>
           <h2 class="mv-heading">ビジョン</h2>
         </div>

@@ -4864,6 +4864,8 @@ video {
 
   .lg\:mt-28 {
     margin-top: 7rem;
+  .lg\:mt-20 {
+    margin-top: 5rem;
   }
 
   .lg\:flex {

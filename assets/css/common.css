@@ -402,6 +402,10 @@ body {
   right: 0;
 }
 
+.line-height-2 {
+  line-height: 1.3 !important;
+}
+
 /* Overwrite wp-admin styles */
 .wpcf7 form.sent .wpcf7-response-output {
   color: #46b450 !important;

@@ -128,13 +128,13 @@
 
         <!-- CEO Name and Title -->
         <div class="mb-8">
-          <div class="flex items-center gap-3 mb-4">
+          <div class="flex items-center justify-center lg:justify-start gap-3 mb-4">
             <span class="member-diamond"></span>
             <h2 class="text-lg font-semibold text-blue-600">Ngo Van Dung — CEO</h2>
             <span class="member-diamond"></span>
           </div>
 
-          <h3 class="member-heading-main text-gray-900 mb-6">
+          <h3 class="member-heading-main text-gray-900 mb-6 text-center lg:text-start">
             Không có việc gì khó,<br>
             chỉ sợ có nhiều việc
           </h3>

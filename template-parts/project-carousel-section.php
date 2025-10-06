@@ -127,7 +127,7 @@ $projects = [
         </div>
 
         <!-- Main Heading -->
-        <h2 class="text-4xl md:text-5xl text-center font-bold text-gray-900 leading-tight">
+        <h2 class="text-3xl md:text-5xl text-center font-bold text-gray-900 leading-tight">
           最新のお知らせ・更新情報
         </h2>
       </div>

@@ -34,9 +34,9 @@
         <a href="<?php echo home_url(); ?>" class="flex w-1/3 h-20 items-center justify-end pr-16 rounded-r-full space-x-2 border-r-8 border-r-secondary bg-dark">
           <div class="relative">
             <img
-              src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/logo1.png' ?>"
+              src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/logo4.png' ?>"
               alt="Synora Logo"
-              class="w-full h-full object-contain" />
+              class="w-20 h-20 object-contain" />
           </div>
                    <span class="text-3xl font-bold">S<span class="text-blue-400">ynora</span></span>
         </a>
@@ -44,7 +44,7 @@
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex w-2/3 h-20 items-center space-x-8 pl-16 rounded-l-full border-l-8 border-l-secondary bg-dark">
           <div class="relative dropdown group">
-             <a href="<?php echo home_url(); ?>" class="hover:text-blue-400 transition-colors">ホーム</a>
+             <a href="<?php echo home_url() . '/service'; ?>" class="hover:text-blue-400 transition-colors">ホーム</a>
             <!--             <button class="flex items-center space-x-1 hover:text-blue-400 transition-colors">
               <span>Demo</span>
               <svg class="w-4 h-4 group-hover:rotate-180 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -144,30 +144,30 @@
 
         <!-- Main Heading -->
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-			<span class="text-blue-600">観光DXで</span>未来を創る
+          <span class="text-blue-600">観光DXで</span>未来を創る
         </h2>
 
         <!-- Description -->
         <p class="text-gray-600 text-base md:text-lg leading-relaxed">
-			日本の観光業をテクノロジーで次の時代へ。  デジタルだけでなく、人と資産の力も合わせて、共に成長を実現します。
+          日本の観光業をテクノロジーで次の時代へ。  デジタルだけでなく、人と資産の力も合わせて、共に成長を実現します。
         </p>
 
         <!-- Features Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
           <!-- Feature 1 -->
-          <div class="flex items-start gap-4 group">
+          <div class="flex items-center gap-4 group">
             <div class="flex-shrink-0 w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center icon-hover">
               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-1">私たちについて</h3>
+              <h3 class="text-xl text-center font-bold text-gray-900 mb-1">私たちについて</h3>
             </div>
           </div>
 
           <!-- Feature 2 -->
-          <div class="flex items-start gap-4 group">
+          <div class="flex items-center gap-4 group">
             <div class="flex-shrink-0 w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center icon-hover">
               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -182,12 +182,12 @@
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 pt-6">
           <!-- More Information Button -->
-          <a href="#" data-text="More Information" class="techin-btn relative bg-blue-600 text-white px-8 py-2 rounded-lg font-semibold text-lg btn-hover">
-            <span>More Information</span>
+          <a href="/contact/" data-text="問い合わせ" class="techin-btn relative bg-blue-600 text-white px-8 py-2 rounded-lg font-semibold text-lg btn-hover">
+            <span>問い合わせ</span>
           </a>
 
           <!-- Call Us Button -->
-          <div class="flex items-center gap-4 bg-white border-2 border-gray-200 px-6 py-2 rounded-lg btn-hover cursor-pointer">
+          <!--           <div class="flex items-center gap-4 bg-white border-2 border-gray-200 px-6 py-2 rounded-lg btn-hover cursor-pointer">
             <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -197,7 +197,7 @@
               <div class="text-sm text-gray-600 font-medium">Call Us Any Time</div>
 				<div class="text-lg font-bold text-gray-900">+(xxxx) yyyy zzzz</div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

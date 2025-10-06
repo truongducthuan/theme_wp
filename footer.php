@@ -9,9 +9,9 @@
         <!-- Logo -->
         <div class="h-30 rounded-lg flex items-center justify-center p-4">
           <img
-            src="http://code-com.xyz/synora/wp-content/uploads/2025/10/logo2.png"
+            src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/logo-ngang2.png' ?>"
             alt="Synora Logo"
-            class="w-full h-full object-contain" />
+            class="w-200 h-200 object-contain" />
         </div>
 
         <!-- Description -->
@@ -28,21 +28,21 @@
         </div>
 
         <nav class="space-y-3">
-          <a href="#about" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
+          <a href="/about" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span>会社上場</span>
+            <span>会社情報</span>
           </a>
 
-          <a href="#services" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
+          <a href="/blogs/" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
             <span>ニュース</span>
           </a>
 
-          <a href="#project" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
+          <a href="/contact/" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>

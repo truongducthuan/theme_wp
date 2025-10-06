@@ -41,6 +41,11 @@
     border-radius: 1.5rem;
   }
 
+  #blogDetail h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+
   #blogDetail .wp-container-core-columns-is-layout-9d6595d7 {
     margin-top: 20px;
     border-top: 0.5px solid var(--secondary-color);
@@ -67,6 +72,19 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    #blogDetail h2 {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+
+    #blogDetail .wp-block-embed iframe {
+      width: 100%;
+      min-height: 350px;
+      border-radius: 1.5rem;
+    }
   }
 </style>
 

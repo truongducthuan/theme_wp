@@ -93,7 +93,7 @@
       <div class="lg:col-span-4 relative purpose-section-fade-in" style="transition-delay: 0.3s;">
         <div class="relative flex items-center justify-center">
           <img
-            src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/Screenshot-at-Sep-30-12-09-05-1.png' ?>"
+            src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/image_s1.png' ?>"
             alt="AI Handshake"
             class="w-full lg:w-5/6 h-auto rounded-3xl shadow-2xl purpose-section-float" />
 

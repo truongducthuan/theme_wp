@@ -183,7 +183,7 @@
 
           <!-- Quotation Mark -->
           <div class="flex justify-end pr-8 -mt-4">
-            <span class="member-quote-mark">"</span>
+            <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-quote.svg'; ?>" class="member-quote-mark">
           </div>
         </div>
 
@@ -211,7 +211,7 @@
 
           <!-- Quotation Mark -->
           <div class="flex justify-end pr-8 -mt-4">
-            <span class="member-quote-mark">"</span>
+            <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-quote.svg'; ?>" class="member-quote-mark">
           </div>
         </div>
 

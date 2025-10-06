@@ -34,7 +34,7 @@
         <a href="<?php echo home_url(); ?>" class="flex w-1/3 h-20 items-center justify-end pr-16 rounded-r-full space-x-2 border-r-8 border-r-secondary bg-dark">
           <div class="relative">
             <img
-              src="http://code-com.xyz/synora/wp-content/uploads/2025/10/logo1.png?height=40&width=40"
+              src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/logo1.png' ?>"
               alt="Synora Logo"
               class="w-full h-full object-contain" />
           </div>

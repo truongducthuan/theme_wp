@@ -87,6 +87,16 @@ body {
   }
 }
 
+@keyframes hideFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* Slide in from right for breadcrumb */
 @keyframes slide-right {
   from {
@@ -121,6 +131,20 @@ body {
 
   50% {
     opacity: 1;
+  }
+}
+
+@keyframes rotatePulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: rotate(45deg) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.2);
   }
 }
 

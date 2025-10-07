@@ -416,7 +416,10 @@ body {
 }
 
 .wpcf7-spinner {
-  display: none !important;
+  position: absolute;
+  top: -50%;
+  transform: translateX(-130%);
+  left: 50%;
 }
 
 .wpcf7-form-control-wrap {

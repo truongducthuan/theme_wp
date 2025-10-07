@@ -163,20 +163,19 @@
         <div class="member-card">
           <div class="member-card-inner">
             <div class="flex items-start gap-6">
-              <!-- Profile Image -->
-              <div class="bg-white flex-shrink-0 member-profile-img">
-                <img
-                  src="<?php echo get_template_directory_uri() . '/assets/imgs/ngovandung.png'; ?>"
-                  alt="Ngo Van Dung"
-                  class="w-full h-full object-cover" />
-              </div>
-
               <!-- Profile Info -->
               <div class="flex-1 pt-2">
                 <h4 class="member-name">Ngo Van Dung</h4>
                 <p class="member-role">CEO</p>
                 <p class="member-university">静岡大学電気電子学科</p>
                 <p class="member-quote">"Không có việc gì khó, chỉ sợ có nhiều việc"</p>
+              </div>
+              <!-- Profile Image -->
+              <div class="bg-white w-24 flex-shrink-0 member-profile-img">
+                <img
+                  src="<?php echo get_template_directory_uri() . '/assets/imgs/about/ngo-van-dung.png'; ?>"
+                  alt="Ngo Van Dung"
+                  class="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -191,20 +190,19 @@
         <div class="member-card">
           <div class="member-card-inner">
             <div class="flex items-start gap-6">
-              <!-- Profile Image -->
-              <div class="bg-white flex-shrink-0 member-profile-img">
-                <img
-                  src="<?php echo get_template_directory_uri() . '/assets/imgs/ledinhduc.png'; ?>"
-                  alt="LE DINH DUC"
-                  class="w-full h-full object-cover" />
-              </div>
-
               <!-- Profile Info -->
               <div class="flex-1 pt-2">
                 <h4 class="member-name">LE DINH DUC</h4>
                 <p class="member-role">OOO</p>
                 <p class="member-university">静岡大学電気電子学科</p>
                 <p class="member-quote">"Nhiều việc thì không khó, chỉ sợ việc ít mà khó"</p>
+              </div>
+              <!-- Profile Image -->
+              <div class="bg-white w-24 flex-shrink-0 member-profile-img">
+                <img
+                  src="<?php echo get_template_directory_uri() . '/assets/imgs/about/le-dinh-duc.png'; ?>"
+                  alt="LE DINH DUC"
+                  class="w-full h-full object-cover" />
               </div>
             </div>
           </div>

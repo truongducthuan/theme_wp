@@ -1,5 +1,6 @@
 <section class="w-full bg-white">
   <div class="w-full">
+    <canvas id="networkCanvas" class="network-canvas"></canvas>
     <img
       src="<?php echo get_template_directory_uri() . '/assets/imgs/services/bander.jpg'; ?>"
       alt="Digital transformation process visualization"

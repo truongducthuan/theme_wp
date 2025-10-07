@@ -130,7 +130,7 @@
       </div>
 
       <!-- Right Side - Content -->
-      <div class="space-y-6 fade-in-section">
+      <div class="space-y-6 fade-in-section mt-10 lg:mt-0">
         <!-- About Us Badge -->
         <div class="flex items-center gap-2 text-blue-600 font-semibold">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

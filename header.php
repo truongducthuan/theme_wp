@@ -44,6 +44,9 @@
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex w-2/3 h-20 items-center space-x-8 pl-16 rounded-l-full border-l-8 border-l-secondary bg-dark">
           <div class="relative dropdown group">
+            <a href="<?php echo home_url(); ?>" class="hover:text-blue-400 transition-colors">ホーム</a>
+          </div>
+          <div class="relative dropdown group">
              <a href="<?php echo home_url() . '/service'; ?>" class="hover:text-blue-400 transition-colors">サービス</a>
             <!--             <button class="flex items-center space-x-1 hover:text-blue-400 transition-colors">
               <span>Demo</span>
@@ -106,7 +109,7 @@
             </div>
           </div> -->
 
-          <a href="<?php echo home_url() . '/contact'; ?>" class="hover:text-blue-400 transition-colors">Contact</a>
+          <a href="<?php echo home_url() . '/contact'; ?>" class="hover:text-blue-400 transition-colors">お問合せ</a>
         </div>
       </div>
 
@@ -136,10 +139,10 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu lg:hidden mt-4 bg-slate-800 rounded-lg overflow-hidden">
-      <a href="<?php echo home_url(); ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Home</a>
+      <a href="<?php echo home_url(); ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">ホーム</a>
       <a href="<?php echo home_url() . '/service'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">サービス</a>
       <a href="<?php echo home_url() . '/about'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">企業情報</a>
       <a href="<?php echo home_url() . '/blogs'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">ニュース</a>
-      <a href="<?php echo home_url() . '/contact'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">Contact</a>
+      <a href="<?php echo home_url() . '/contact'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">お問合せ</a>
     </div>
   </header>

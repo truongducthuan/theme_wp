@@ -1,3 +1,21 @@
+<style>
+  .icon-bounce {
+    animation: iconBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes iconBounce {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+</style>
+
 <section class="grid grid-cols-1 mt-5 p-5 bg-[#F5F4FF] lg:mt-16 lg:py-16 lg:grid-cols-2 lg:px-20 ">
   <!-- left -->
   <div class="col-span-1 lg:col-span-1">
@@ -15,7 +33,7 @@
     </div>
     <div class="flex flex-col gap-4">
       <div class="w-full py-2 flex gap-5">
-        <div class="w-12 h-12 flex items-center justify-center bg-[#2F2BEB] rounded-[10px] lg:w-16 lg:h-16">
+        <div class="w-12 h-12 icon-bounce flex items-center justify-center bg-[#2F2BEB] rounded-[10px] lg:w-16 lg:h-16">
           <img class="w-6 h-auto lg:w-8" alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/phone-white.svg'; ?>" />
         </div>
         <span class="h-full flex-1 flex justify-center flex-col">
@@ -24,7 +42,7 @@
         </span>
       </div>
       <div class="w-full py-2 flex gap-5">
-        <div class="w-12 h-12 flex items-center justify-center bg-[#2F2BEB] rounded-[10px] lg:w-16 lg:h-16">
+        <div style="animation-delay: 0.5s" class="w-12 h-12 icon-bounce flex items-center justify-center bg-[#2F2BEB] rounded-[10px] lg:w-16 lg:h-16">
           <img class="w-6 h-auto lg:w-8" alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/mail-white.svg'; ?>" />
         </div>
         <span class="h-full flex-1 flex justify-center flex-col">
@@ -33,7 +51,7 @@
         </span>
       </div>
       <div class="w-full py-2 flex gap-5">
-        <div class="w-12 h-12 flex items-center justify-center bg-[#2F2BEB] rounded-[10px] lg:w-16 lg:h-16">
+        <div style="animation-delay: 1s" class="w-12 h-12 icon-bounce flex items-center justify-center bg-[#2F2BEB] rounded-[10px] lg:w-16 lg:h-16">
           <img class="w-6 h-auto lg:w-8" alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/map-white.svg'; ?>" />
         </div>
         <span class="h-full flex-1 flex justify-center flex-col">

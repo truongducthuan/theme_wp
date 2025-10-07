@@ -95,7 +95,7 @@
           <img
             src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/image_s1.png' ?>"
             alt="AI Handshake"
-            class="w-full lg:w-5/6 h-auto rounded-3xl shadow-2xl purpose-section-float" />
+            class="w-full lg:w-11/12 h-auto rounded-3xl shadow-2xl purpose-section-float" />
 
           <!-- Overlapping Card 03 -->
           <div class="purpose-section-card absolute -bottom-48 lg:-bottom-56 left-1/2 transform -translate-x-1/2 w-full bg-white rounded-3xl p-6 shadow-2xl">
@@ -119,28 +119,9 @@
       </div>
 
       <!-- Right Column -->
-      <div class="lg:col-span-4 space-y-6 mt-[12rem] lg:mt-0">
-
-        <!-- Card 04 -->
-        <div class="purpose-section-card purpose-section-fade-in bg-white rounded-3xl p-6 shadow-lg relative" style="transition-delay: 0.4s;">
-          <div class="absolute top-2 right-2 w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
-            04
-          </div>
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 purpose-section-icon-pulse">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-tight">チーム全体の技術力向上</h3>
-          </div>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            共同開発やレビューを通じて、弊社の持つノウハウや技術が自然と貴社チームに共有され、チーム全体のスキルアップに貢献します。
-          </p>
-        </div>
-
+      <div class="flex flex-col gap-6 lg:col-span-4 space-y-6 mt-[10.5rem] lg:mt-0">
         <!-- Card 05 -->
-        <div class="purpose-section-card purpose-section-fade-in bg-white rounded-3xl p-6 shadow-lg relative" style="transition-delay: 0.5s;">
+        <div class="order-2 lg:order-1 purpose-section-card purpose-section-fade-in bg-white rounded-3xl p-6 shadow-lg relative" style="transition-delay: 0.5s;">
           <div class="absolute top-2 right-2 w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
             05
           </div>
@@ -154,6 +135,24 @@
           </div>
           <p class="text-gray-600 text-sm leading-relaxed">
             「正社員採用」という重い決断の前に、まずは弊社のリソースで開発を加速。事業の成長に合わせて、柔軟に開発体制をスケールできます。
+          </p>
+        </div>
+
+        <!-- Card 04 -->
+        <div class="order-1 lg:order-2 purpose-section-card purpose-section-fade-in bg-white rounded-3xl p-6 shadow-lg relative" style="transition-delay: 0.4s;">
+          <div class="absolute top-2 right-2 w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+            04
+          </div>
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 purpose-section-icon-pulse">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-tight">チーム全体の技術力向上</h3>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            共同開発やレビューを通じて、弊社の持つノウハウや技術が自然と貴社チームに共有され、チーム全体のスキルアップに貢献します。
           </p>
         </div>
       </div>

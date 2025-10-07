@@ -3,7 +3,7 @@
 
   <div class="grid md:grid-cols-2 gap-8 items-center">
     <!-- Left-->
-    <div class="flex justify-center">
+    <div class="flex justify-center hero-image">
       <img
         src="<?php echo get_template_directory_uri() . '/assets/imgs/services/example-support.jpg'; ?>"
         alt="Handshake"
@@ -51,8 +51,9 @@
       <div class="mt-8 text-center">
         <a
           href="#"
-          class=" w-full inline-block bg-gradient-to-r from-[#3B82F6] to-[#2563EB] text-white font-semibold px-8 py-3 shadow hover:opacity-90 transition">
-          無料相談を予約する
+          data-text="無料相談を予約する"
+          class="techin-btn relative w-full inline-block bg-gradient-to-r from-[#3B82F6] to-[#2563EB] text-white font-semibold px-8 py-3 shadow hover:opacity-90 transition">
+          <span>無料相談を予約する</span>
         </a>
       </div>
     </div>

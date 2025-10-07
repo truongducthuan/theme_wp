@@ -32,7 +32,7 @@ $data = [
 ];
 
 // Hero Section
-get_template_part('template-parts/blogs/hero-section', null, ['title' => 'Lastest Blogs', 'subtitle' => 'Lastest Blogs']);
+get_template_part('template-parts/blogs/hero-section', null, ['title' => $category->name, 'subtitle' => $category->name]);
 
 // Blogs Section
 get_template_part('template-parts/blogs/blog-listing', null, $data);

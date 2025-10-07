@@ -1,10 +1,10 @@
-<section class="relative z-10 mt-0 lg:mt-0 pt-20 lg:pt-48" id="home-hero">
+<section class="relative z-10 mt-0 lg:mt-0 pt-20 lg:pt-20" id="home-hero">
   <!-- Network Animation Canvas -->
   <canvas id="networkCanvas" class="network-canvas"></canvas>
   <div class="mx-auto">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
-      <div class="space-y-6 ml-0 xl:ml-32 2xl:ml-44 pl-5 md:pl-8 lg:pl-16">
+      <div class="hero-group_text space-y-6 ml-0 xl:ml-32 2xl:ml-44 pl-5 md:pl-8 lg:pl-16">
         <div class="inline-block">
           <span class="bg-blue-600 px-6 py-2 rounded text-sm font-medium">
             観光DXに特化したITソリューション

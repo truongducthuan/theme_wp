@@ -39,6 +39,42 @@
     opacity: 0;
   }
 
+  .wpcf7-list-item {
+    margin-left: 0;
+  }
+
+  .wpcf7-list-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .wpcf7-list-item input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--dark-color);
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .wpcf7-list-item input[type="checkbox"]:checked {
+    /* background-color: #2563eb; */
+    /* blue-600 */
+    border-color: #2563eb;
+  }
+
+  .wpcf7-list-item input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+  }
+
   @keyframes fadeIn {
     to {
       opacity: 1;

@@ -2,6 +2,10 @@
   background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
 }
 
+.hero-group_text {
+  animation: slide-right 0.8s ease-out forwards;
+}
+
 .float-animation {
   animation: float 3s ease-in-out infinite;
 }

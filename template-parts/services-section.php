@@ -11,18 +11,6 @@
      }
    }
 
-   @keyframes float {
-
-     0%,
-     100% {
-       transform: translateY(0);
-     }
-
-     50% {
-       transform: translateY(-10px);
-     }
-   }
-
    .fade-in-up {
      animation: fadeInUp 0.6s ease-out forwards;
    }
@@ -161,7 +149,7 @@
         ?>
          <div class="service-card rounded-2xl relative group">
            <!-- <div class="curved-accent"></div> -->
-           <div class="flex justify-between items-center min-h-[330px] shadow-lg group-hover:shadow-2xl group-hover:bg-primary transition-all duration-300 rounded-2xl flex-col py-8 px-6">
+           <div class="flex justify-between items-center min-h-[300px] lg:min-h-[330px] shadow-lg group-hover:shadow-2xl group-hover:bg-primary transition-all duration-300 rounded-2xl flex-col py-8 px-6">
              <div class="service-icon bg-blue-700 group-hover:bg-white rounded-2xl w-20 h-20 flex items-center justify-center mb-6 relative z-10">
                <img src="<?php echo $service->icon; ?>" alt="Service Icon" class="flip-vertical-right group-hover:hidden">
                <img src="<?php echo $service->iconHover; ?>" alt="Service Icon Hover" class="flip-vertical-right hidden group-hover:block">

@@ -94,7 +94,7 @@ $the_query = new WP_Query([
             <path d="M3.5 10L6.5 7L9.5 10L6.5 13L3.5 10Z" />
             <path d="M10.5 10L13.5 7L16.5 10L13.5 13L10.5 10Z" />
           </svg>
-          <h3 class="text-blue-600 font-semibold text-lg">ニュース</h3>
+          <h3 class="text-2xl sm:text-3xl text-blue-600 font-semibold">ニュース</h3>
           <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 3.5L13 6.5L10 9.5L7 6.5L10 3.5Z" />
             <path d="M3.5 10L6.5 7L9.5 10L6.5 13L3.5 10Z" />

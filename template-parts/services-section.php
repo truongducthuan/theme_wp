@@ -125,7 +125,7 @@
   ?>
 
  <section class="bg-gradient-to-br from-fourth to-fourth">
-   <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 lg:py-24">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 lg:py-20">
      <!-- Section Header -->
      <div class="text-center mb-16 fade-in-up ">
        <div class="flex items-center justify-center mb-4">

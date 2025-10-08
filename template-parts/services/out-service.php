@@ -12,7 +12,7 @@
   }
 </style>
 
-<section id="out-service" class="max-w-7xl pt-5 lg:pt-10 mx-auto">
+<section id="out-service" class="max-w-7xl pt-12 lg:pt-20 mx-auto">
   <?php get_template_part('template-parts/services/common/header-title', null, ['title' => '私たちのサービス - 観光DX開発支援', 'sub-title' => '私たちは単なるソフトウェア会社ではなく、観光業界に特化した伴走型の技術パートナーです。']); ?>
 
   <div class="w-full grid grid-cols-1 gap-1 px-3 pb-10 md:pb-16 md:grid-cols-3">

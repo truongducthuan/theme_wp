@@ -1,7 +1,7 @@
 <section class="pb-5 md:pb-16 max-w-7xl mx-auto">
   <?php get_template_part('template-parts/services/common/header-title', null, ['title' => '協業による「支援」事例', 'sub-title' => '']); ?>
 
-  <div class="grid md:grid-cols-2 gap-8 items-center">
+  <div class="grid md:grid-cols-2 px-5 lg:px-0  gap-8 items-center">
     <!-- Left-->
     <div class="flex justify-center hero-image">
       <img

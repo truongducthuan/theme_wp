@@ -94,7 +94,7 @@
 <section class="bg-gray-50 font-sans antialiased">
 
   <!-- About Us Section -->
-  <section class="py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+  <section class="py-16 lg:pt-36 2xl:pt-52 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
       <!-- Left Side - Images -->

@@ -38,7 +38,7 @@
   }
 </style>
 
-<section id="service-flow" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
+<section id="service-flow" class="py-6 lg:py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
   <div class="max-w-7xl mx-auto">
 
     <!-- Header -->

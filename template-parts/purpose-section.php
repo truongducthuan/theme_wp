@@ -27,7 +27,7 @@
   }
 </style>
 
-<section class="py-4 px-4 md:py-24">
+<section class="py-4 px-4 lg:pt-16">
   <div class="max-w-7xl mx-auto">
 
     <!-- Section Header -->
@@ -44,7 +44,7 @@
     </div>
 
     <!-- Main Grid Layout -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-5 lg:mb-16">
 
       <!-- Left Column -->
       <div class="lg:col-span-4 space-y-6">
@@ -61,7 +61,7 @@
                 <circle cx="12" cy="12" r="2" />
               </svg>
             </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-tight">コアチームの開発速度が向上</h3>
+            <h3 class="text-lg md:text-xl w-2/3 lg:w-full font-bold text-gray-900 leading-tight">コアチームの開発速度が向上</h3>
           </div>
           <p class="text-gray-600 text-sm leading-relaxed">
             周辺業務や専門領域を弊社がサポートすることで、貴社のコアチームは最も重要な開発タスクに集中でき、生産性が飛躍的に向上します。
@@ -80,7 +80,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-tight">専門領域の補完と負担軽減</h3>
+            <h3 class="text-lg md:text-xl w-2/3 lg:w-full font-bold text-gray-900 leading-tight">専門領域の補完と負担軽減</h3>
           </div>
           <p class="text-gray-600 text-sm leading-relaxed">
             API連携、AI、クラウド基盤など、採用が難しい専門領域を弊社が補完。貴社チームが不得意な分野で起こる時間をなくします。
@@ -109,7 +109,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 class="text-base md:text-lg font-bold text-gray-900 leading-tight">エース人材のコア業務への集中</h3>
+              <h3 class="text-base w-2/3 lg:w-full md:text-lg font-bold text-gray-900 leading-tight">エース人材のコア業務への集中</h3>
             </div>
             <p class="text-gray-600 text-sm leading-relaxed">
               貴社の最も貴重な資産である エース級エンジニアを、調査や管理業務から解放し、事業の未来を創る革新的な開発に集中させることができます。
@@ -131,7 +131,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-tight">柔軟なリソース戦略の実現</h3>
+            <h3 class="text-lg w-2/3 lg:w-full md:text-xl font-bold text-gray-900 leading-tight">柔軟なリソース戦略の実現</h3>
           </div>
           <p class="text-gray-600 text-sm leading-relaxed">
             「正社員採用」という重い決断の前に、まずは弊社のリソースで開発を加速。事業の成長に合わせて、柔軟に開発体制をスケールできます。
@@ -149,7 +149,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
-            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-tight">チーム全体の技術力向上</h3>
+            <h3 class="text-lg w-2/3 lg:w-full md:text-xl font-bold text-gray-900 leading-tight">チーム全体の技術力向上</h3>
           </div>
           <p class="text-gray-600 text-sm leading-relaxed">
             共同開発やレビューを通じて、弊社の持つノウハウや技術が自然と貴社チームに共有され、チーム全体のスキルアップに貢献します。
@@ -161,7 +161,7 @@
 </section>
 
 <!-- Mission & Vision Section -->
-<div class="mt-0 lg:mt-16 2xl:mt-32 bg-fourth">
+<div class="mt-0 lg:mt-36 bg-fourth">
   <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 lg:gap-24">
     <!-- Mission -->
     <div class="purpose-section-fade-in flex items-center gap-2 lg:gap-6 rounded-3xl p-2 lg:p-8 purpose-section-card" style="transition-delay: 0.6s;">

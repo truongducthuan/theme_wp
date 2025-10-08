@@ -122,7 +122,7 @@
   }
 </style>
 
-<section class="hero-section-bg pt-16 lg:pt-26">
+<section class="hero-section-bg pt-16 lg:pt-28">
   <canvas id="networkCanvas" class="network-canvas"></canvas>
 
   <!-- Floating Particles Background -->
@@ -135,10 +135,10 @@
   </div>
 
   <!-- Hero Section -->
-  <section class="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+  <section class="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-32">
     <!-- Hero Image Container -->
     <div class="hero-image-container w-full flex flex-col items-end justify-end">
-      <div class="w-full lg:w-3/4 text-center">
+      <div class="w-full text-center">
         <h1 class="text-third line-height-2 text-3xl md:text-5xl lg:text-6xl font-bold">
           観光産業の収益生産性向上を <br /> デジタルの力で実現！
         </h1>

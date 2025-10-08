@@ -32,7 +32,7 @@ $all_categories = get_terms(array(
   <div class="bg-purple-50 rounded-2xl p-6 blog-listing-fade-in" style="animation-delay: 0.5s;">
     <h3 class="text-xl font-bold text-gray-900 mb-4">
       Search Here...
-      <div class="w-12 h-1 bg-blue-600 mt-2"></div>
+      <div class="w-12 h-1 bg-secondary mt-2"></div>
     </h3>
     <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="flex gap-2">
       <input
@@ -43,7 +43,7 @@ $all_categories = get_terms(array(
         class="flex-1 px-4 py-3 rounded-lg border text-black border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300" />
       <button
         type="submit"
-        class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
+        class="px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
         Search
       </button>
     </form>
@@ -73,7 +73,7 @@ $all_categories = get_terms(array(
                 </svg>
                 <?php echo get_the_date(); ?>
               </div>
-              <a href="<?php the_permalink(); ?>" class="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+              <a href="<?php the_permalink(); ?>" class="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-secondary transition-colors duration-300">
                 <?php the_title(); ?>
               </a>
             </div>

@@ -1,4 +1,4 @@
-<section class="pb-5 md:pb-16">
+<section class="pb-5 md:pb-16 max-w-7xl mx-auto">
   <?php get_template_part('template-parts/services/common/header-title', null, ['title' => '協業による「支援」事例', 'sub-title' => '']); ?>
 
   <div class="grid md:grid-cols-2 gap-8 items-center">
@@ -52,7 +52,7 @@
         <a
           href="#"
           data-text="無料相談を予約する"
-          class="techin-btn relative w-full inline-block bg-gradient-to-r from-[#3B82F6] to-[#2563EB] text-white font-semibold px-8 py-3 shadow hover:opacity-90 transition">
+          class="techin-btn relative w-full rounded-2xl inline-block bg-gradient-to-r from-secondary to-primary text-white font-semibold px-8 py-3 shadow hover:opacity-90 transition">
           <span>無料相談を予約する</span>
         </a>
       </div>

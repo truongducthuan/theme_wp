@@ -6,10 +6,10 @@ get_header();
 get_template_part('template-parts/contact/hero-contact');
 
 // Info section
-get_template_part('template-parts/contact/info-company');
+// get_template_part('template-parts/contact/info-company');
 
 // Contact form
-get_template_part('template-parts/contact-section');
+get_template_part('template-parts/contact/contact-section');
 
 // Map section
 get_template_part('template-parts/contact/map-section');

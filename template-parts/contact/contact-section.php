@@ -1,6 +1,6 @@
 <style>
   #contact {
-    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/home/bg-form.jpg'; ?>);
+    /* background: url(<?php echo get_template_directory_uri() . '/assets/imgs/home/bg-form.jpg'; ?>); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@
   }
 </style>
 
-<section id="contact" class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen py-12 px-4">
+<section id="contact" class="bg-white min-h-screen py-12 px-4">
   <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 lg:py-24">
     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 

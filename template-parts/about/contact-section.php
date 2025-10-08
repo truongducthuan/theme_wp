@@ -14,14 +14,14 @@
      display: inline-block;
      width: 12px;
      height: 12px;
-     background: #3b49df;
+     background: var(--secondary-color);
      transform: rotate(45deg);
      margin: 0 1rem;
      animation: rotatePulse 2s ease-in-out infinite;
    }
 
    .contact-card {
-     background: #3b49df;
+     background: var(--secondary-color);
      border-radius: 1rem;
      display: flex;
      align-items: center;
@@ -98,7 +98,7 @@
    <div class="max-w-7xl mx-auto">
      <!-- Title Section -->
      <div class="text-center">
-       <h1 class="text-4xl md:text-5xl font-bold text-blue-900 inline-flex items-center gap-4">
+       <h1 class="text-4xl md:text-5xl font-bold text-third inline-flex items-center gap-4">
          <span class="ci-title-decoration">◇</span>
          <span>お問合せ</span>
          <span class="ci-title-decoration">◇</span>

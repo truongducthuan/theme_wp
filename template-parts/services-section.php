@@ -124,16 +124,16 @@
   ];
   ?>
 
- <section class="bg-gradient-to-br from-purple-50 to-blue-50">
+ <section class="bg-gradient-to-br from-fourth to-fourth">
    <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 lg:py-24">
      <!-- Section Header -->
      <div class="text-center mb-16 fade-in-up ">
        <div class="flex items-center justify-center mb-4">
-         <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+         <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 24 24">
            <path d="M12 2L4 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-8-4z" />
          </svg>
-         <span class="text-2xl md:text-5xl text-blue-600 font-semibold mx-3">こんなお悩みありませんか？</span>
-         <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+         <span class="text-2xl md:text-5xl text-secondary font-semibold mx-3">こんなお悩みありませんか？</span>
+         <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 24 24">
            <path d="M12 2L4 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-8-4z" />
          </svg>
        </div>
@@ -147,10 +147,10 @@
        <?php
         foreach ($services as $service) {
         ?>
-         <div class="service-card rounded-2xl relative group">
+         <div class="service-card bg-white rounded-2xl relative group">
            <!-- <div class="curved-accent"></div> -->
            <div class="flex justify-between items-center min-h-[300px] lg:min-h-[330px] shadow-lg group-hover:shadow-2xl group-hover:bg-primary transition-all duration-300 rounded-2xl flex-col py-8 px-6">
-             <div class="service-icon bg-blue-700 group-hover:bg-white rounded-2xl w-20 h-20 flex items-center justify-center mb-6 relative z-10">
+             <div class="service-icon bg-secondary group-hover:bg-white rounded-2xl w-20 h-20 flex items-center justify-center mb-6 relative z-10">
                <img src="<?php echo $service->icon; ?>" alt="Service Icon" class="flip-vertical-right group-hover:hidden">
                <img src="<?php echo $service->iconHover; ?>" alt="Service Icon Hover" class="flip-vertical-right hidden group-hover:block">
              </div>

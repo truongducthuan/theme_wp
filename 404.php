@@ -148,7 +148,7 @@ $blogs = new WP_Query($args);
           </div>
           <button
             type="submit"
-            class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 active:scale-95">
+            class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-secondary text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 active:scale-95">
             Search
           </button>
         </form>

@@ -1,7 +1,7 @@
 <style>
   /* Mission Vision Section Styles */
   .mv-section-bg {
-    background: linear-gradient(135deg, #d4dce5 0%, #c5d0dd 100%);
+    /* background: linear-gradient(135deg, #d4dce5 0%, #c5d0dd 100%); */
     position: relative;
     overflow: hidden;
   }
@@ -13,10 +13,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2025/10/44c92a3617ecfbcad56aead033d9769a760ae03f.jpg');
+    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/imgs/about/13f72cd4f8bd35736d7686ef6221700f16ee341f (1).jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.15;
+    opacity: 0.7;
     z-index: 0;
   }
 
@@ -83,7 +83,6 @@
 
   /* Text Styles */
   .mv-text-content {
-    color: #2563eb;
     line-height: 1.8;
     font-size: 18px;
     font-weight: 500;
@@ -92,7 +91,6 @@
   .mv-heading {
     font-size: 20px;
     font-weight: 600;
-    color: #1e3a5f;
     letter-spacing: 0.05em;
   }
 
@@ -143,7 +141,7 @@
   }
 </style>
 
-<section class="mv-section-bg min-h-screen py-12 px-4 md:py-20 md:px-8">
+<section class="mv-section-bg py-12 px-4 md:py-20 md:px-8">
   <!-- Container Label -->
   <div class="mv-section-content max-w-7xl mx-auto">
     <!-- Decorative Path Container -->
@@ -161,9 +159,9 @@
       <div class="mv-glow-dot" style="top: 12%; left: 18%;"></div>
       <div class="mv-glow-dot" style="top: 20%; left: 25%;"></div>
       <div class="mv-glow-dot" style="top: 15%; left: 50%;"></div>
-      <div class="mv-glow-dot" style="top: 20%; left: 75%;"></div>
+      <div class="mv-glow-dot" style="top: 95%; left: 75%;"></div>
       <div class="mv-glow-dot" style="top: 12%; left: 82%;"></div>
-      <div class="mv-glow-dot" style="top: 30%; left: 35%;"></div>
+      <div class="mv-glow-dot" style="top: 90%; left: 35%;"></div>
     </div>
 
     <!-- Main Content Grid -->
@@ -176,11 +174,11 @@
           <div class="mv-icon-circle">
             <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-protect.svg'; ?>" />
           </div>
-          <h2 class="mv-heading">ミッション</h2>
+          <h2 class="mv-heading text-third">ミッション</h2>
         </div>
 
         <!-- Mission Text -->
-        <div class="mv-text-content space-y-4">
+        <div class="mv-text-content text-slate-600 space-y-4">
           <p>
             日本の観光業界に寄り添うDXパートナーとして、テクノロジーと人の力で観光の未来を共創する。
           </p>
@@ -197,11 +195,11 @@
           <div class="mv-icon-circle">
             <img class="" alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-hand.svg'; ?>" />
           </div>
-          <h2 class="mv-heading">ビジョン</h2>
+          <h2 class="mv-heading text-third">ビジョン</h2>
         </div>
 
         <!-- Vision Text -->
-        <div class="mv-text-content space-y-4">
+        <div class="mv-text-content text-slate-600 space-y-4">
           <p>
             日本の観光DX革命をリードし、AI技術を中核的な原動力として、あらゆる観光事業者の飛躍を支援。世界中の旅行者に、ユニークでパーソナライズされた体験を創出する。
           </p>

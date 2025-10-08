@@ -47,7 +47,7 @@ $author_name = $args['author_name'] ?? '';
   <!-- Card Title -->
   <div class="p-4">
     <a href="<?php the_permalink(); ?>">
-      <h3 class="text-lg font-bold text-gray-900 leading-tight hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+      <h3 class="text-lg font-bold text-gray-900 leading-tight hover:text-secondary transition-colors duration-300 cursor-pointer">
         <?php the_title(); ?>
       </h3>
     </a>

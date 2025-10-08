@@ -134,11 +134,11 @@ $members = [
   <!-- Section Header -->
   <div class="text-center mb-16 fade-in-up">
     <div class="flex items-center justify-center gap-3 mb-4">
-      <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+      <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
         <path d="M10 3.5L13 6.5L10 9.5L7 6.5L10 3.5Z M10 10.5L13 13.5L10 16.5L7 13.5L10 10.5Z" />
       </svg>
-      <h3 class="text-blue-600 font-bold text-xl">最新プロジェクト</h3>
-      <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+      <h3 class="text-secondary font-bold text-xl">最新プロジェクト</h3>
+      <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
         <path d="M10 3.5L13 6.5L10 9.5L7 6.5L10 3.5Z M10 10.5L13 13.5L10 16.5L7 13.5L10 10.5Z" />
       </svg>
     </div>
@@ -186,7 +186,7 @@ $members = [
                   <p class="text-sm opacity-90"><?php echo $member->position; ?></p>
                 </div>
 
-                <div class="dropdown group share-btn absolute top-4 right-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                <div class="dropdown group share-btn absolute top-4 right-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg">
                   <button class="flex items-center space-x-1 hover:text-blue-400 transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -250,7 +250,7 @@ $members = [
                   <p class="text-sm opacity-90"><?php echo $member->position; ?></p>
                 </div>
 
-                <div class="dropdown group share-btn absolute top-4 right-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                <div class="dropdown group share-btn absolute top-4 right-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg">
                   <button class="flex items-center space-x-1 hover:text-blue-400 transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />

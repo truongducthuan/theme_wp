@@ -9,10 +9,10 @@ body {
 }
 
 :root {
-  --primary-color: #302CEB;
-  --secondary-color: #2BC8EB;
-  --dark-color: #113866;
-  --third-color: #E5EEFF;
+  --primary-color: #B5E5FC;
+  --secondary-color: #00C0E8;
+  --third-color: #2F2BEB;
+  --fourth-color: #EEF9FF;
 }
 
 @keyframes pulse-dot {

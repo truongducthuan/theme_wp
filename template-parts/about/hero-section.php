@@ -1,7 +1,24 @@
 <style>
+  .hero-section-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    filter: blur(2px);
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/bg-synora.png'; ?>);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   /* Hero Section Specific Styles */
   .hero-section-bg {
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1229 100%);
+    /* background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1229 100%); */
+    background: var(--fourth-color);
     position: relative;
     overflow: hidden;
   }
@@ -119,19 +136,21 @@
 
   <!-- Hero Section -->
   <section class="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-    <h1 class="hero-title-text text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 max-w-6xl leading-relaxed">
-      観光DXで未来を創る、私たちは観光業界の真のパートナーです。
-    </h1>
-
     <!-- Hero Image Container -->
-    <div class="hero-image-container w-full max-w-7xl px-4 sm:px-6">
-      <div class="hero-image-glow rounded-3xl sm:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden">
+    <div class="hero-image-container w-full flex flex-col items-end justify-end">
+      <div class="w-full lg:w-3/4 text-center">
+        <h1 class="text-third line-height-2 text-3xl md:text-5xl lg:text-6xl font-bold">
+          観光産業の収益生産性向上を <br /> デジタルの力で実現！
+        </h1>
+        <div class="text-slate-700 mt-5 text-lg lg:text-2xl">日本の観光業をテクノロジーで次の時代へ。デジタルだけでなく、人と資産の力も合わ</div>
+      </div>
+      <!-- <div class="hero-image-glow rounded-3xl sm:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden">
         <img
           src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/Union.png'; ?>"
           alt="観光DX - デジタルトランスフォーメーション会議室"
           class="w-full h-auto object-cover"
           loading="eager" />
-      </div>
+      </div> -->
     </div>
   </section>
 </section>

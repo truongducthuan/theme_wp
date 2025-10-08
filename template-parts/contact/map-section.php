@@ -72,7 +72,7 @@
   }
 </style>
 
-<section class="bg-gray-50 flex items-center justify-center p-4 md:p-8">
+<section class="bg-fourth flex items-center justify-center py-5 lg:py-16 p-4 md:p-8">
 
   <div class="access-container w-full max-w-7xl px-4 md:px-8 lg:px-16">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
@@ -80,7 +80,7 @@
       <!-- Left Column: Text Content -->
       <div class="access-text-content space-y-4">
         <h2 class="text-xl md:text-2xl mb-6">
-          <span class="text-primary font-medium">アクセス・お問い合わせ</span>
+          <span class="text-secondary font-medium">アクセス・お問い合わせ</span>
         </h2>
 
         <div class="space-y-3 text-gray-700 leading-relaxed">

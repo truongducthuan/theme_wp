@@ -88,7 +88,7 @@
                  <!-- Card Title -->
                  <div class="p-4">
                    <a href="<?php the_permalink(); ?>">
-                     <h3 class="text-lg font-bold text-gray-900 leading-tight hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+                     <h3 class="text-lg font-bold text-gray-900 leading-tight hover:text-secondary transition-colors duration-300 cursor-pointer">
                        <?php the_title(); ?>
                      </h3>
                    </a>
@@ -134,12 +134,12 @@
                   'type'      => 'list',
                   'current'   => $current_page,
                   'total'     => $total_pages,
-                  'prev_text' => '<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300">
+                  'prev_text' => '<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-600 hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300">
            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
            </svg>
          </button>',
-                  'next_text' => '<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300">
+                  'next_text' => '<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-600 hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300">
            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
            </svg>
@@ -184,14 +184,14 @@
      button.addEventListener('click', function() {
        // Remove active state from all buttons
        paginationButtons.forEach(btn => {
-         btn.classList.remove('bg-blue-600', 'text-white');
+         btn.classList.remove('bg-secondary', 'text-white');
          btn.classList.add('border', 'border-gray-300', 'bg-white', 'text-gray-600');
        });
 
        // Add active state to clicked button (if it's a number button)
        if (this.textContent.match(/^\d+$/)) {
          this.classList.remove('border', 'border-gray-300', 'bg-white', 'text-gray-600');
-         this.classList.add('bg-blue-600', 'text-white');
+         this.classList.add('bg-secondary', 'text-white');
        }
      });
    });

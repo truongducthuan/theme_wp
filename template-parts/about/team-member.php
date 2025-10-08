@@ -72,7 +72,22 @@
     padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 26px;
   }
+
+  /* .member-card-inner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    clip-path: polygon(0 25%, 91% 37%, 100% 93%, 0 100%);
+    border-radius: 16px;
+  } */
 
   .member-card:hover .member-card-inner {
     transform: translateY(-5px);
@@ -115,7 +130,7 @@
     <div class="text-center mb-16">
       <div class="flex items-center justify-center gap-4 mb-2">
         <span class="member-diamond"></span>
-        <h1 class="text-4xl md:text-5xl font-bold text-blue-700">メンバー紹介</h1>
+        <h1 class="text-4xl md:text-5xl font-bold text-third">メンバー紹介</h1>
         <span class="member-diamond"></span>
       </div>
     </div>
@@ -130,7 +145,7 @@
         <div class="mb-8">
           <div class="flex items-center justify-center lg:justify-start gap-3 mb-4">
             <span class="member-diamond"></span>
-            <h2 class="text-lg font-semibold text-blue-600">Ngo Van Dung — CEO</h2>
+            <h2 class="text-lg font-semibold text-secondary">Ngo Van Dung — CEO</h2>
             <span class="member-diamond"></span>
           </div>
 
@@ -156,64 +171,70 @@
         </div>
       </div>
 
-      <!-- Right Column - Member Cards -->
+      <!-- Right Column - Image CEO -->
       <div class="space-y-8">
-
-        <!-- Member Card 1 - Ngo Van Dung -->
         <div class="member-card">
-          <div class="member-card-inner">
-            <div class="flex items-start gap-6">
-              <!-- Profile Info -->
-              <div class="flex-1 pt-2">
-                <h4 class="member-name">Ngo Van Dung</h4>
-                <p class="member-role">CEO</p>
-                <p class="member-university">静岡大学電気電子学科</p>
-                <p class="member-quote">"Không có việc gì khó, chỉ sợ có nhiều việc"</p>
-              </div>
-              <!-- Profile Image -->
-              <div class="bg-white w-24 flex-shrink-0 member-profile-img">
-                <img
-                  src="<?php echo get_template_directory_uri() . '/assets/imgs/about/ngo-van-dung.png'; ?>"
-                  alt="Ngo Van Dung"
-                  class="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Quotation Mark -->
-          <div class="flex justify-end pr-8 -mt-4">
-            <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-quote.svg'; ?>" class="member-quote-mark">
-          </div>
+          <img alt="CEO" src="<?php echo get_template_directory_uri() . '/assets/imgs/about/levandung.png'; ?>" />
         </div>
-
-        <!-- Member Card 2 - LE DINH DUC -->
-        <div class="member-card">
-          <div class="member-card-inner">
-            <div class="flex items-start gap-6">
-              <!-- Profile Info -->
-              <div class="flex-1 pt-2">
-                <h4 class="member-name">LE DINH DUC</h4>
-                <p class="member-role">OOO</p>
-                <p class="member-university">静岡大学電気電子学科</p>
-                <p class="member-quote">"Nhiều việc thì không khó, chỉ sợ việc ít mà khó"</p>
-              </div>
-              <!-- Profile Image -->
-              <div class="bg-white w-24 flex-shrink-0 member-profile-img">
-                <img
-                  src="<?php echo get_template_directory_uri() . '/assets/imgs/about/le-dinh-duc.png'; ?>"
-                  alt="LE DINH DUC"
-                  class="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Quotation Mark -->
-          <div class="flex justify-end pr-8 -mt-4">
-            <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-quote.svg'; ?>" class="member-quote-mark">
-          </div>
-        </div>
-
       </div>
+    </div>
+
+    <!-- Button Column - Member Cards -->
+    <div class="flex flex-col lg:flex-row gap-5 lg:gap-24 mt-8 lg:mt-20 items-center justify-center">
+      <!-- Member Card 1 - Ngo Van Dung -->
+      <div class="member-card">
+        <div class="member-card-inner">
+          <div class="flex items-start gap-6">
+            <!-- Profile Info -->
+            <div class="flex-1 pt-2">
+              <h4 class="member-name">Ngo Van Dung</h4>
+              <p class="member-role">CEO</p>
+              <p class="member-university">静岡大学電気電子学科</p>
+              <p class="member-quote">"Không có việc gì khó, chỉ sợ có nhiều việc"</p>
+            </div>
+            <!-- Profile Image -->
+            <div class="w-24 flex-shrink-0 member-profile-img">
+              <img
+                src="<?php echo get_template_directory_uri() . '/assets/imgs/about/Container (2).png'; ?>"
+                alt="Ngo Van Dung"
+                class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Quotation Mark -->
+        <div class="flex justify-end pr-8 -mt-4">
+          <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-quote.svg'; ?>" class="member-quote-mark">
+        </div>
+      </div>
+
+      <!-- Member Card 2 - LE DINH DUC -->
+      <div class="member-card">
+        <div class="member-card-inner">
+          <div class="flex items-start gap-6">
+            <!-- Profile Info -->
+            <div class="flex-1 pt-2">
+              <h4 class="member-name">Ngo Van Dung</h4>
+              <p class="member-role">CEO</p>
+              <p class="member-university">静岡大学電気電子学科</p>
+              <p class="member-quote">"Không có việc gì khó, chỉ sợ có nhiều việc"</p>
+            </div>
+            <!-- Profile Image -->
+            <div class="w-24 flex-shrink-0 member-profile-img">
+              <img
+                src="<?php echo get_template_directory_uri() . '/assets/imgs/about/Container (2).png'; ?>"
+                alt="Ngo Van Dung"
+                class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Quotation Mark -->
+        <div class="flex justify-end pr-8 -mt-4">
+          <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/icon-quote.svg'; ?>" class="member-quote-mark">
+        </div>
+      </div>
+
     </div>
 
   </div>

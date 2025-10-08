@@ -44,11 +44,11 @@
     <!-- Header -->
     <div class="text-center mb-12">
       <div class="flex items-center justify-center gap-3 mb-6">
-        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
-        <h2 class="text-2xl sm:text-3xl font-bold text-blue-600">サービス展開の流れ</h2>
-        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-secondary">サービス展開の流れ</h2>
+        <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
       </div>
@@ -69,7 +69,7 @@
             class="w-full px-6 py-5 flex items-center justify-between text-left group"
             onclick="toggleAccordion(this)"
             aria-expanded="false">
-            <span class="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+            <span class="text-lg font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">
               無料相談（課題の共有）
                          </span>
             <div class="flex-shrink-0 w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors duration-300">
@@ -91,7 +91,7 @@
             class="w-full px-6 py-5 flex items-center justify-between text-left group"
             onclick="toggleAccordion(this)"
             aria-expanded="false">
-            <span class="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+            <span class="text-lg font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">
               ご提案（支援体制の設計）
             </span>
             <div class="flex-shrink-0 w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors duration-300">
@@ -113,7 +113,7 @@
             class="w-full px-6 py-5 flex items-center justify-between text-left group"
             onclick="toggleAccordion(this)"
             aria-expanded="false">
-            <span class="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+            <span class="text-lg font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">
               契約・チーム組成
             </span>
             <div class="flex-shrink-0 w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors duration-300">
@@ -135,7 +135,7 @@
             class="w-full px-6 py-5 flex items-center justify-between text-left group"
             onclick="toggleAccordion(this)"
             aria-expanded="false">
-            <span class="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+            <span class="text-lg font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">
               支援開始
             </span>
             <div class="flex-shrink-0 w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors duration-300">
@@ -157,9 +157,9 @@
       <div class="relative mt-10 lg:mt-20">
         <div class="process-flow-image--animated">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-01%20at%2016.48.36-2jYQWmykEErO5GW7i9I5Tgn1o5d9uR.png"
+            src="<?php echo get_template_directory_uri() . '/assets/imgs/home/check-screen.png'; ?>"
             alt="Digital transformation process visualization"
-            class="w-full h-auto rounded-3xl shadow-2xl object-cover" />
+            class="w-full h-auto rounded-[4rem] shadow-2xl object-cover" />
         </div>
       </div>
 

@@ -1,9 +1,12 @@
 <style>
   /* Company Info Dark Section Styles */
   .ci-dark-bg {
-    background: linear-gradient(135deg, #0a1628 0%, #1a1f3a 50%, #2d1b3d 100%);
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/about/3907dab201f1956ce90fb0026c6b2c8b2b9f7063.jpg'; ?>);
     position: relative;
     overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .ci-dark-network-canvas {
@@ -21,14 +24,14 @@
   }
 
   .ci-dark-panel {
-    background: linear-gradient(135deg, rgba(88, 28, 135, 0.4) 0%, rgba(67, 56, 202, 0.3) 100%);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    /* background: linear-gradient(135deg, rgba(88, 28, 135, 0.4) 0%, rgba(67, 56, 202, 0.3) 100%); */
+    background: var(--primary-color);
+    /* backdrop-filter: blur(10px); */
     box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
   }
 
   .ci-dark-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
   }
 
@@ -155,54 +158,61 @@
   <canvas id="networkCanvasInfo" class="ci-dark-network-canvas"></canvas>
 
   <!-- Content -->
-  <div class="ci-dark-content flex flex-col items-center justify-center px-4 py-12 md:py-20">
+  <div class="ci-dark-content max-w-7xl mx-auto flex flex-col items-center justify-center px-4 py-12 md:py-20">
     <!-- Title -->
     <div class="text-center mb-12 md:mb-16">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white flex items-center justify-center gap-4">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-third flex items-center justify-center gap-4">
         <span class="ci-dark-diamond"></span>
         <span>会社情報</span>
         <span class="ci-dark-diamond"></span>
       </h1>
     </div>
 
-    <!-- Information Panel -->
-    <div class="ci-dark-panel rounded-2xl p-8 md:p-12 w-full max-w-3xl">
-      <div class="space-y-0">
-        <div class="ci-dark-item py-5 md:py-6">
-          <p class="text-white text-base md:text-lg">
-            <span class="font-semibold">会社名：</span>Cong ty co phan Synora
-          </p>
-        </div>
+    <div class="flex flex-col lg:flex-row items-center gap-12 ">
+      <!-- Information Panel -->
+      <div class="ci-dark-panel rounded-2xl p-8 md:p-12 w-full max-w-3xl">
+        <div class="space-y-0">
+          <div class="ci-dark-item py-5 md:py-6">
+            <p class="text-white text-base md:text-lg">
+              <span class="font-semibold">会社名：</span>Cong ty co phan Synora
+            </p>
+          </div>
 
-        <div class="ci-dark-item py-5 md:py-6">
-          <p class="text-white text-base md:text-lg">
-            <span class="font-semibold">設立日：</span>2025年10月11日
-          </p>
-        </div>
+          <div class="ci-dark-item py-5 md:py-6">
+            <p class="text-white text-base md:text-lg">
+              <span class="font-semibold">設立日：</span>2025年10月11日
+            </p>
+          </div>
 
-        <div class="ci-dark-item py-5 md:py-6">
-          <p class="text-white text-base md:text-lg">
-            <span class="font-semibold">本社：</span>ハノイ
-          </p>
-        </div>
+          <div class="ci-dark-item py-5 md:py-6">
+            <p class="text-white text-base md:text-lg">
+              <span class="font-semibold">本社：</span>ハノイ
+            </p>
+          </div>
 
-        <div class="ci-dark-item py-5 md:py-6">
-          <p class="text-white text-base md:text-lg">
-            <span class="font-semibold">支社：</span>Thanh Hoa
-          </p>
-        </div>
+          <div class="ci-dark-item py-5 md:py-6">
+            <p class="text-white text-base md:text-lg">
+              <span class="font-semibold">支社：</span>Thanh Hoa
+            </p>
+          </div>
 
-        <div class="ci-dark-item py-5 md:py-6">
-          <p class="text-white text-base md:text-lg">
-            <span class="font-semibold">代表者：</span>Ngo Van Dung
-          </p>
-        </div>
+          <div class="ci-dark-item py-5 md:py-6">
+            <p class="text-white text-base md:text-lg">
+              <span class="font-semibold">代表者：</span>Ngo Van Dung
+            </p>
+          </div>
 
-        <div class="ci-dark-item py-5 md:py-6">
-          <p class="text-white text-base md:text-lg">
-            <span class="font-semibold">会社名：</span>Cong ty co phan Synora
-          </p>
+          <div class="ci-dark-item py-5 md:py-6">
+            <p class="text-white text-base md:text-lg">
+              <span class="font-semibold">会社名：</span>Cong ty co phan Synora
+            </p>
+          </div>
         </div>
+      </div>
+
+      <!-- Right Logo -->
+      <div>
+        <img alt="logo" src="<?php echo get_template_directory_uri() . '/assets/imgs/logo.png' ?>" />
       </div>
     </div>
   </div>

@@ -49,7 +49,7 @@
   }
 </style>
 
-<section class="mt-5 px-5 py-0 lg:mt-16 lg:px-20 bg-[#F5F4FF]">
+<section class="mt-5 px-5 py-2 lg:py-5 lg:mt-16 lg:px-20 bg-[#F5F4FF]">
   <?php get_template_part('template-parts/services/common/header-title', null, ['title' => '提供サービス', 'sub-title' => 'テクノロジーと人材の力で、観光DXを加速させるサービスをご提供します。']); ?>
 
   <div class="w-full grid grid-cols-1 gap-1 px-3 pt-6 pb-16 lg:grid-cols-3">

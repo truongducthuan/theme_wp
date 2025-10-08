@@ -19,7 +19,7 @@
 <body class="text-white overflow-x-hidden">
 
   <!-- Scroll to Top Button -->
-  <button id="scrollTop" class="fixed bottom-8 animate-bounce right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg opacity-0 transition-all duration-300 z-50">
+  <button id="scrollTop" class="fixed bottom-8 animate-bounce right-8 bg-secondary hover:bg-secondary/70 text-white p-3 rounded-full shadow-lg opacity-0 transition-all duration-300 z-50">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
@@ -31,18 +31,18 @@
       <!-- Laptop Navigation -->
       <div class="hidden lg:flex w-full items-center justify-between gap-5">
         <!-- Logo -->
-        <a href="<?php echo home_url(); ?>" class="flex w-1/3 h-20 items-center justify-end pr-16 rounded-r-full space-x-2 border-r-8 border-r-secondary bg-dark">
+        <a href="<?php echo home_url(); ?>" class="flex w-1/4 h-20 items-center justify-center pr-16 rounded-r-full space-x-2 border-r-8 border-r-secondary bg-[#2965AE]">
           <div class="relative">
             <img
-              src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/logo4.png' ?>"
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/Logo-Synora.png' ?>"
               alt="Synora Logo"
               class="w-20 h-20 object-contain" />
           </div>
-                   <span class="text-3xl font-bold">S<span class="text-blue-400">ynora</span></span>
+          <!-- <span class="text-3xl font-bold">S<span class="text-blue-400">ynora</span></span> -->
         </a>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex w-2/3 h-20 items-center space-x-8 pl-16 rounded-l-full border-l-8 border-l-secondary bg-dark">
+        <div class="hidden lg:flex w-3/4 h-20 items-center space-x-8 pl-16 rounded-l-full border-l-8 border-l-secondary bg-[#2965AE]">
           <div class="relative dropdown group">
             <a href="<?php echo home_url(); ?>" class="hover:text-blue-400 transition-colors">ホーム</a>
           </div>
@@ -114,22 +114,20 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div class="flex lg:hidden items-center justify-between w-full h-20 space-x-8 px-5 bg-dark">
+      <div class="flex lg:hidden items-center justify-between w-full h-20 space-x-8 px-5 bg-primary">
         <!-- Logo -->
-        <div class="flex w-1/3 h-20 items-center justify-start space-x-2 bg-dark">
-          <div class="relative">
-            <svg class="w-20 h-20" viewBox="0 0 40 40" fill="none">
-              <path d="M10 15L20 10L30 15L20 20L10 15Z" fill="#00d4ff" opacity="0.8" />
-              <path d="M10 20L20 15L30 20L20 25L10 20Z" fill="#0099ff" opacity="0.6" />
-              <path d="M10 25L20 20L30 25L20 30L10 25Z" fill="#0066ff" opacity="0.4" />
-            </svg>
-          </div>
-                   <span class="text-3xl font-bold">S<span class="text-blue-400">ynora</span></span>
+        <div class="flex w-1/3 items-center justify-start bg-primary">
+          <a href="<?php echo home_url(); ?>" class="items-center justify-center">
+            <img
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/Logo-Synora.png' ?>"
+              alt="Synora Logo"
+              class="w-20 h-20 object-contain" />
+          </a>
         </div>
         <!-- Search Bar & Mobile Menu -->
-        <div class="flex items-center pl-8 space-x-4">
+        <div class="flex w-2/3 items-center justify-end">
           <!-- Mobile Menu Button -->
-          <button id="mobileMenuBtn" class="lg:hidden bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition-colors">
+          <button id="mobileMenuBtn" class="lg:hidden bg-secondary hover:bg-third p-3 rounded-full transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>

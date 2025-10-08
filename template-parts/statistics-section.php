@@ -1,3 +1,12 @@
+<style>
+  #statistics {
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/home/13f72cd4f8bd35736d7686ef6221700f16ee341f.jpg'; ?>);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+
 <?php
 $data = [
   (object) [
@@ -39,7 +48,7 @@ $data = [
   <div class="relative py-20 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
       <!-- CTA Banner -->
-      <div class="network-bg rounded-3xl p-12 lg:p-16 text-center relative overflow-hidden shadow-2xl fade-in-up">
+      <div class="bg-secondary/50 rounded-3xl p-12 lg:p-16 text-center relative overflow-hidden shadow-2xl fade-in-up">
         <!-- Network Dots -->
         <div class="network-dots">
           <div class="network-dot" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
@@ -54,16 +63,16 @@ $data = [
             Synoraの開発支援で、できること!
           </h2>
           <button class="cta-button bg-secondary hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-lg text-lg">
-			  サービスの詳細</button>
+            サービスの詳細</button>
         </div>
       </div>
 
       <!-- Stats Grid -->
-<!--       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 lg:mt-24 mb-16">
+      <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 lg:mt-24 mb-16">
         <?php
         foreach ($data as $stat) {
           echo '<div class="stat-card bg-white rounded-3xl p-8 text-center shadow-xl fade-in-up">
-            <div class="icon-circle w-24 h-24 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
+            <div class="icon-circle w-24 h-24 mx-auto mb-6 bg-secondary rounded-full flex items-center justify-center">
               <img class="w-12 h-12 text-white" src="' . $stat->icon . '" alt="Icon">
             </div>
             <div class="text-5xl font-bold text-gray-900 mb-2">
@@ -73,7 +82,7 @@ $data = [
           </div>';
         }
         ?>
-      </div> -->
+      </div>
     </div>
   </div>
 </section>

@@ -104,12 +104,12 @@
           <!-- Top Image -->
           <div class="relative z-0">
             <img
-              src="http://code-com.xyz/synora/wp-content/uploads/2025/10/about1.png"
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/ff9952250900a121425bf46dfd61ee8035265f1d.png'; ?>"
               alt="Professional with holographic interface"
               class="w-full max-w-md rounded-3xl" />
 
             <!-- Experience Badge -->
-            <!-- <div class="absolute -right-4 top-8 md:-right-8 md:top-12 bg-blue-600 text-white rounded-full p-6 shadow-xl z-20 animate-float">
+            <!-- <div class="absolute -right-4 top-8 md:-right-8 md:top-12 bg-secondary text-white rounded-full p-6 shadow-xl z-20 animate-float">
               <div class="flex flex-col justify-between text-center relative pulse-ring">
                 <div class="text-sm font-semibold mb-1 writing-mode-vertical transform -rotate-90 h-32 md:writing-mode-horizontal">
                   Years of<br class="md:hidden" /> Experience
@@ -120,11 +120,11 @@
           </div>
 
           <!-- Bottom Image -->
-          <div class="absolute -bottom-12 right-8 md:-bottom-12 md:right-16 z-10 image-hover">
+          <div class="absolute -bottom-12 right-8 md:-bottom-12 md:right-16 z-10">
             <img
-              src="http://code-com.xyz/synora/wp-content/uploads/2025/10/banner2.png"
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/Container (1).png'; ?>"
               alt="Developer working on code"
-              class="w-64 md:w-80 lg:w-96 rounded-3xl shadow-2xl border-8 border-white" />
+              class="rounded-3xl" />
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@
       <!-- Right Side - Content -->
       <div class="space-y-6 fade-in-section mt-10 lg:mt-0">
         <!-- About Us Badge -->
-        <div class="flex items-center gap-2 text-blue-600 font-semibold">
+        <div class="flex items-center gap-2 text-secondary font-semibold">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="18" height="18" rx="2" transform="rotate(45 12 12)" />
           </svg>
@@ -144,7 +144,7 @@
 
         <!-- Main Heading -->
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-          <span class="text-blue-600">観光DXで</span>未来を創る
+          <span class="text-secondary">観光DXで</span>未来を創る
         </h2>
 
         <!-- Description -->
@@ -182,13 +182,13 @@
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 pt-6">
           <!-- More Information Button -->
-          <a href="/contact/" data-text="問い合わせ" class="techin-btn relative bg-blue-600 text-white px-8 py-2 rounded-lg font-semibold text-lg btn-hover">
+          <a href="/contact/" data-text="問い合わせ" class="techin-btn relative bg-secondary text-white px-8 py-2 rounded-lg font-semibold text-lg btn-hover">
             <span>問い合わせ</span>
           </a>
 
           <!-- Call Us Button -->
           <!--           <div class="flex items-center gap-4 bg-white border-2 border-gray-200 px-6 py-2 rounded-lg btn-hover cursor-pointer">
-            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>

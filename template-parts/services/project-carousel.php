@@ -69,12 +69,38 @@
 </style>
 
 <?php
-$the_query = new WP_Query([
-  'post_type' => 'post',
-  'orderby' => 'date',
-  'order' => 'DESC',
-  'post_status' => 'publish',
-]);
+$projects = [
+  [
+    'id' => 1,
+    'title' => 'Project 1',
+    'url' => '/#',
+    'image' => get_template_directory_uri() . '/assets/imgs/services/provided_4.jpg',
+  ],
+  [
+    'id' => 2,
+    'title' => 'Project 2',
+    'url' => '/#',
+    'image' => get_template_directory_uri() . '/assets/imgs/services/provided_3.jpg',
+  ],
+  [
+    'id' => 3,
+    'title' => 'Project 3',
+    'url' => '/#',
+    'image' => get_template_directory_uri() . '/assets/imgs/services/provided_center.jpg',
+  ],
+  [
+    'id' => 4,
+    'title' => 'Project 4',
+    'url' => '/#',
+    'image' => get_template_directory_uri() . '/assets/imgs/services/provided_3.jpg',
+  ],
+  [
+    'id' => 5,
+    'title' => 'Project 5',
+    'url' => '/#',
+    'image' => get_template_directory_uri() . '/assets/imgs/services/provided_center.jpg',
+  ],
+]
 
 // echo '<pre class="text-black">';
 // print_r($projects);
@@ -131,35 +157,23 @@ $the_query = new WP_Query([
 
       <div id="carouselProjects" class="carousel-container flex gap-6 overflow-x-auto pb-4">
         <?php
-        if ($the_query->have_posts()):
-          while ($the_query->have_posts()) {
-            $the_query->the_post();
-            $image = get_field('image', get_the_ID());
-            $author_id = $post->post_author; // Get author ID
-            $author_name = get_the_author_meta('display_name', $author_id);
+        if (!empty($projects)):
+          foreach ($projects as $project) {
         ?>
             <div class="project-card group flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] min-w-[300px]">
-              <a href="<?php the_permalink(); ?>" class="relative block h-[450px] rounded-3xl overflow-hidden shadow-lg bg-gray-900">
+              <a href="<?php $project['url']; ?>" class="relative block h-[450px] rounded-3xl overflow-hidden shadow-lg bg-gray-900">
                 <!-- Project Image -->
                 <img
-                  src="<?php echo $image; ?>"
-                  alt="<?php the_title(); ?>"
+                  src="<?php echo $project['image']; ?>"
+                  alt="<?php $project['title']; ?>"
                   class="project-image w-full h-full object-cover">
 
                 <!-- Gradient Overlay -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
                 <!-- Info Card -->
-                <div class="absolute bottom-0 left-6 right-6 bg-white group-hover:bg-primary rounded-t-2xl p-6 shadow-xl">
-                  <span class="text-cyan-500 group-hover:text-white transition-all duration-200 font-semibold text-sm mb-2 block capitalize"><?php echo $author_name; ?></span>
-                  <h3 class="text-xl font-bold text-gray-900 group-hover:text-white leading-tight transition-all duration-200">
-                    <?php the_title(); ?>
-                  </h3>
-                  <button class="view-details-btn absolute -top-6 right-5 w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white shadow-lg" aria-label="View project details">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </button>
+                <div class="absolute bottom-0 left-8 right-8 bg-secondary/80 group-hover:bg-third rounded-t-2xl p-6 shadow-xl">
+                  <span class="text-white text-xl text-center group-hover:text-white transition-all duration-200 font-semibold mb-2 block capitalize"><?php echo $project['title']; ?></span>
                 </div>
               </a>
             </div>

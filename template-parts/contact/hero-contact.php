@@ -1,10 +1,41 @@
 <style>
-  /* Hero Banner Specific Styles */
-  .hero-background {
-    background: url(<?php echo get_site_url() . '/wp-content/uploads/2025/10/96dac56b2e5aab20b96e70de7d848c5fc16bb7a5.jpg'; ?>);
-    position: relative;
-    overflow: hidden;
+  .hero-background::after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    filter: blur(2px);
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/bg-synora.png'; ?>);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
+
+  .hero-background::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    /* z-index: 5; */
+    left: 45%;
+    width: 100%;
+    height: 18%;
+    background: linear-gradient(135deg, var(--fourth-color) 50%, var(--fourth-color) 100%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-background::before {
+      display: none;
+    }
+  }
+
+  /* Hero Banner Specific Styles */
+  .hero-background {}
 
   /* Animated grid pattern */
   .hero-grid {
@@ -33,7 +64,7 @@
   /* Circuit lines animation */
   .hero-circuit-line {
     position: absolute;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, .050), transparent);
     height: 2px;
     animation: hero-circuit-flow 3s ease-in-out infinite;
   }
@@ -78,6 +109,7 @@
     position: absolute;
     width: 4px;
     height: 4px;
+    bottom: 0;
     background: rgba(59, 130, 246, 0.6);
     border-radius: 50%;
     animation: hero-particle-float 8s ease-in-out infinite;
@@ -213,7 +245,7 @@
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    /* background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); */
     pointer-events: none;
     animation: hero-glow-pulse 3s ease-in-out infinite;
   }
@@ -246,9 +278,9 @@
 </style>
 
 <section class="m-0 p-0">
-  <section class="hero-background flex items-center justify-center px-4 py-12 md:py-20">
+  <section class="hero-background relative bg-fourth flex items-center justify-center px-4 py-12 md:py-20">
     <!-- Animated grid background -->
-    <div class="hero-grid"></div>
+    <!-- <div class="hero-grid"></div> -->
 
     <!-- Circuit lines -->
     <div class="hero-circuit-line"></div>
@@ -272,16 +304,18 @@
     <div class="hero-image-container mt-5 lg:mt-16 relative z-10 w-full max-w-5xl mx-auto">
       <div class="hero-image-frame relative">
         <!-- Corner brackets -->
-        <div class="hero-corner-bracket top-left"></div>
+        <!-- <div class="hero-corner-bracket top-left"></div>
         <div class="hero-corner-bracket top-right"></div>
         <div class="hero-corner-bracket bottom-left"></div>
-        <div class="hero-corner-bracket bottom-right"></div>
+        <div class="hero-corner-bracket bottom-right"></div> -->
 
         <!-- Main image -->
-        <img
-          src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/Mastering-Digital-Skills_-From-Email-Campaigns-to-E-Commerce-and-Future-Tech-Innovations_-1.png' ?>"
-          alt="AI Technology and Innovation"
-          class="w-full h-auto" />
+        <div>
+          <h1 class="text-third line-height-2 text-4xl md:text-5xl lg:text-6xl font-bold">
+            一緒に観光の未来を <br />作りましょう
+          </h1>
+          <div class="text-slate-700 mt-5 text-xl lg:text-2xl">Synoraでは、企業がデジタル時代において成長し続けられるよう、革新的なITソリューションとサービスを提供することに尽力しています。</div>
+        </div>
       </div>
     </div>
   </section>

@@ -5097,6 +5097,11 @@ video {
   .\32xl\:pt-52 {
     padding-top: 13rem;
   }
+
+  .\32xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

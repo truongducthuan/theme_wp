@@ -160,9 +160,8 @@
                <?php echo $service->description; ?>
              </p>
 
-             <button class="bg-primary group-hover:bg-white text-white group-hover:text-primary text-center font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg">
-				 <a href="/service/" >Read More</a> 
-             </button>
+             <button class="bg-primary group-hover:bg-white text-white group-hover:text-primary text-center font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg">
+               <a href="/service/"  >Read More</a> </button>
            </div>
          </div>
        <?php

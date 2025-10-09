@@ -151,12 +151,12 @@
   }
 </style>
 
-<section id="contact" class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen py-6 lg:py-12 px-4">
-  <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+<section id="contact" class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen py-6 lg:py-12">
+  <div class="max-w-7xl mx-auto px-5">
     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
       <!-- Appointment Form Section -->
-      <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 slide-in-left">
+      <div class="bg-white rounded-3xl shadow-xl p-4 lg:p-12 slide-in-left">
         <!-- Header -->
         <div class="text-center mb-8">
           <div class="flex items-center justify-center gap-2 mb-4">

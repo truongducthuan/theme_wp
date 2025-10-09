@@ -72,9 +72,9 @@
   }
 </style>
 
-<section class="bg-fourth flex items-center justify-center py-5 lg:py-16 p-4 md:p-8">
+<section class="bg-fourth flex items-center justify-center py-5 lg:py-16">
 
-  <div class="access-container w-full max-w-7xl px-4 md:px-8 lg:px-16">
+  <div class="access-container w-full max-w-7xl px-5">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
       <!-- Left Column: Text Content -->

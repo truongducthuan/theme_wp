@@ -1,4 +1,4 @@
-<section class="w-full flex flex-col items-center justify-center mt-8 mb-6 px-5 lg:px-0 lg:mt-28 lg:pb-16">
+<section class="w-full flex flex-col items-center justify-center mt-8 mb-6 px-5 lg:px-0 lg:mt-16 lg:pb-16">
   <div class="h-12 flex flex-row justify-between items-center gap-1 mb-2 lg:gap-2.5 lg:mb-7">
     <div class="w-6">
       <img alt="icon" src="<?php echo get_template_directory_uri() . '/assets/imgs/svgs/service-icon-header.svg'; ?>" />

@@ -1,156 +1,65 @@
 <style>
-  .hero-section-bg::after {
+  #home-hero::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -50%;
     z-index: 10;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-    filter: blur(2px);
     background: url(<?php echo get_template_directory_uri() . '/assets/imgs/bg-synora.png'; ?>);
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
 
-  /* Hero Section Specific Styles */
-  .hero-section-bg {
-    /* background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1229 100%); */
-    background: var(--fourth-color);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-section-bg::before {
-    content: '';
+  #home-hero::before {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-      radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .hero-title-text {
-    text-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
-    animation: fadeIn 1s ease-out;
-  }
-
-  .hero-image-container {
-    animation: scaleIn 1.2s ease-out;
-    position: relative;
-  }
-
-  .hero-image-glow {
-    box-shadow:
-      0 0 60px rgba(59, 130, 246, 0.2),
-      0 20px 80px rgba(0, 0, 0, 0.4);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-  }
-
-  .hero-image-glow:hover {
-    transform: scale(1.02);
-    box-shadow:
-      0 0 80px rgba(59, 130, 246, 0.3),
-      0 25px 100px rgba(0, 0, 0, 0.5);
-  }
-
-  .hero-floating-particles {
-    position: absolute;
+    top: 100%;
+    /* z-index: 5; */
+    left: 45%;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+    height: 18%;
+    background: linear-gradient(135deg, var(--fourth-color) 50%, var(--fourth-color) 100%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
-  .hero-particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(59, 130, 246, 0.6);
-    border-radius: 50%;
-    animation: heroFloat 6s infinite ease-in-out;
-  }
-
-  .hero-particle:nth-child(1) {
-    left: 10%;
-    top: 20%;
-    animation-delay: 0s;
-    animation-duration: 8s;
-  }
-
-  .hero-particle:nth-child(2) {
-    left: 85%;
-    top: 40%;
-    animation-delay: 2s;
-    animation-duration: 10s;
-  }
-
-  .hero-particle:nth-child(3) {
-    left: 50%;
-    top: 60%;
-    animation-delay: 4s;
-    animation-duration: 7s;
-  }
-
-  .hero-particle:nth-child(4) {
-    left: 25%;
-    top: 80%;
-    animation-delay: 1s;
-    animation-duration: 9s;
-  }
-
-  .hero-particle:nth-child(5) {
-    left: 70%;
-    top: 15%;
-    animation-delay: 3s;
-    animation-duration: 11s;
-  }
-
-  /* Responsive adjustments */
   @media (max-width: 768px) {
-    .hero-title-text {
-      font-size: 1.5rem;
-      line-height: 2rem;
+    #home-hero::before {
+      display: none;
     }
   }
 </style>
 
-<section class="hero-section-bg pt-16 lg:pt-26">
+<section class="relative z-10 mt-0 lg:mt-0 px-5 lg:px-20 pt-28 pb-8 lg:pt-44 lg:pb-20" id="home-hero">
+  <!-- Network Animation Canvas -->
   <canvas id="networkCanvas" class="network-canvas"></canvas>
 
-  <!-- Floating Particles Background -->
-  <div class="hero-floating-particles">
-    <div class="hero-particle"></div>
-    <div class="hero-particle"></div>
-    <div class="hero-particle"></div>
-    <div class="hero-particle"></div>
-    <div class="hero-particle"></div>
-  </div>
+  <!-- Bg logo -->
+  <div class="mx-auto">
+    <div class="items-center">
+      <div class="herro-text relative z-20 hero-group_text space-y-6 ml-0 xl:ml-26 2xl:ml-34 pl-0 md:pl-5 lg:pl-10">
+        <div class="inline-block">
+          <span class="bg-secondary px-6 py-2 rounded text-sm font-medium">
+            企業情報
+          </span>
+        </div>
 
-  <!-- Hero Section -->
-  <section class="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-    <!-- Hero Image Container -->
-    <div class="hero-image-container w-full flex flex-col items-end justify-end">
-      <div class="w-full lg:w-3/4 text-center">
-        <h1 class="text-third line-height-2 text-3xl md:text-5xl lg:text-6xl font-bold">
-          観光産業の収益生産性向上を <br /> デジタルの力で実現！
+        <h1 class="text-secondary line-height-2 text-4xl text-blue-500 md:text-6xl lg:text-7xl font-bold whitespace-nowrap">
+			観光産業の収益生産性向上を<br/>デジタルの力で実現！
         </h1>
-        <div class="text-slate-700 mt-5 text-lg lg:text-2xl">日本の観光業をテクノロジーで次の時代へ。デジタルだけでなく、人と資産の力も合わ</div>
+
+        <p class="text-slate-700 text-lg leading-relaxed w-full">
+          日本の観光業をテクノロジーで次の時代へ。デジタルだけでなく、人と資産の力も合わ
+        </p>
+
+        <!--         <button data-text="Get Start Now" class="techin-btn relative bg-secondary px-8 py-4 rounded font-semibold text-lg transition-all duration-300 transform">
+          <span>Get Start Now</span>
+        </button> -->
       </div>
-      <!-- <div class="hero-image-glow rounded-3xl sm:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden">
-        <img
-          src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/Union.png'; ?>"
-          alt="観光DX - デジタルトランスフォーメーション会議室"
-          class="w-full h-auto object-cover"
-          loading="eager" />
-      </div> -->
+
     </div>
-  </section>
+  </div>
 </section>

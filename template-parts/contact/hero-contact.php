@@ -109,7 +109,7 @@
     position: absolute;
     width: 4px;
     height: 4px;
-    bottom: 0;
+    bottom: 25%;
     background: rgba(59, 130, 246, 0.6);
     border-radius: 50%;
     animation: hero-particle-float 8s ease-in-out infinite;
@@ -278,7 +278,7 @@
 </style>
 
 <section class="m-0 p-0">
-  <section class="hero-background relative bg-fourth flex items-center justify-center px-4 py-12 md:py-20">
+  <section class="hero-background relative bg-fourth flex items-center justify-center px-4 py-20 md:py-20">
     <!-- Animated grid background -->
     <!-- <div class="hero-grid"></div> -->
 

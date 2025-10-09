@@ -5,7 +5,11 @@
 .hero-group_text {
   animation: slide-right 0.8s ease-out forwards;
 }
-
+.herro-text {
+	mix-blend-mode: difference;
+	color: white;
+	filter: invert(100%);
+}
 .float-animation {
   animation: float 3s ease-in-out infinite;
 }

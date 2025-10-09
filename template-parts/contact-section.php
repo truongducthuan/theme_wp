@@ -54,7 +54,7 @@
     appearance: none;
     width: 18px;
     height: 18px;
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--secondary-color);
     border-radius: 4px;
     display: inline-block;
     position: relative;
@@ -151,8 +151,8 @@
   }
 </style>
 
-<section id="contact" class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen py-12 px-4">
-  <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 lg:py-24">
+<section id="contact" class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen py-6 lg:py-12 px-4">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
       <!-- Appointment Form Section -->

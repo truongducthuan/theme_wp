@@ -141,7 +141,7 @@
   }
 </style>
 
-<section class="mv-section-bg py-12 px-4 md:py-20 md:px-8">
+<section id="mission" class="mv-section-bg py-12 px-4 md:py-20 md:px-8">
   <!-- Container Label -->
   <div class="mv-section-content max-w-7xl mx-auto">
     <!-- Decorative Path Container -->

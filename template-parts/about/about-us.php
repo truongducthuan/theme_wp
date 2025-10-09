@@ -1,7 +1,7 @@
 <section class="bg-white py-8 lg:py-20 flex items-center justify-center p-4 md:p-8">
 
   <div class="about-section-container max-w-7xl w-full">
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16 items-center z-10">
 
       <!-- Left side: Image collage -->
       <div class="col-span-3 about-images-wrapper relative">

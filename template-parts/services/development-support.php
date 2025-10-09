@@ -44,6 +44,7 @@
     border-radius: 50%;
     animation: hero-particle-float 8s ease-in-out infinite;
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+    bottom: 25%;
   }
 
   @keyframes hero-particle-float {

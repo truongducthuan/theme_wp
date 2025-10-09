@@ -94,7 +94,7 @@
 <section class="bg-gray-50 font-sans antialiased">
 
   <!-- About Us Section -->
-  <section class="py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+  <section class="py-16 lg:pt-36 2xl:pt-52 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
       <!-- Left Side - Images -->
@@ -144,7 +144,7 @@
 
         <!-- Main Heading -->
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-          <span class="text-secondary">観光DXで</span>未来を創る
+          <span class="text-secondary">観光DXで収益向上</span>
         </h2>
 
         <!-- Description -->
@@ -162,7 +162,11 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-xl text-center font-bold text-gray-900 mb-1">私たちについて</h3>
+              <h3 class="text-xl text-center font-bold text-gray-900 mb-1">
+				  <a href="/about/" data-text="私たちについて">
+					  <span>私たちについて</span>
+				  </a>
+				</h3>
             </div>
           </div>
 
@@ -174,7 +178,11 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-1">サービスを見る</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">
+				  <a href="/service/" data-text="私たちについて">
+					  <span>サービスを見る</span>
+				  </a>
+				</h3>
             </div>
           </div>
         </div>

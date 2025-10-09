@@ -119,7 +119,7 @@
   ];
   ?>
 
-  <section class="py-16 md:py-24">
+  <section class="py-6 md:py-16">
     <div class="px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
       <div class="relative fade-in">
         <!-- Navigation Buttons -->
@@ -298,7 +298,7 @@
     });
 
     function handleSwipe() {
-      if (touchStartX - touchEndX > 50) {
+      if (touchStartX - touchEndX > 48) {
         nextSlide();
       }
       if (touchEndX - touchStartX > 50) {

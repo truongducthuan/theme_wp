@@ -19,7 +19,8 @@
     top: 100%;
     /* z-index: 5; */
     left: 45%;
-    width: 100%;
+    /* width: 100%; */
+    right: 0;
     height: 18%;
     background: linear-gradient(135deg, var(--fourth-color) 50%, var(--fourth-color) 100%);
     border-bottom-left-radius: 20px;
@@ -30,6 +31,7 @@
     #home-hero::before {
       height: 8%;
       left: 43%;
+      /* width: 57%; */
     }
   }
 

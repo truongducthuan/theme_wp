@@ -25,7 +25,7 @@
 
   .ci-dark-panel {
     /* background: linear-gradient(135deg, rgba(88, 28, 135, 0.4) 0%, rgba(67, 56, 202, 0.3) 100%); */
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
     /* backdrop-filter: blur(10px); */
     box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
   }
@@ -170,7 +170,7 @@
 
     <div class="flex flex-col lg:flex-row items-center gap-12 ">
       <!-- Information Panel -->
-      <div class="ci-dark-panel rounded-2xl p-8 md:p-12 w-full max-w-3xl">
+      <div class="ci-dark-panel bg-[#2A70B8] rounded-2xl p-8 md:p-12 w-full max-w-3xl">
         <div class="space-y-0">
           <div class="ci-dark-item py-5 md:py-6">
             <p class="text-white text-base md:text-lg">

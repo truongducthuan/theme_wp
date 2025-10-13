@@ -80,6 +80,7 @@
      .contact-card {
        flex-direction: column;
        text-align: center;
+       gap: 0;
      }
 
      .contact-text {

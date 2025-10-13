@@ -102,7 +102,7 @@ $the_query = new WP_Query([
             <path d="M3.5 10L6.5 7L9.5 10L6.5 13L3.5 10Z" />
             <path d="M10.5 10L13.5 7L16.5 10L13.5 13L10.5 10Z" />
           </svg>
-          <h3 class="text-2xl sm:text-3xl text-secondary font-semibold">ニュース</h3>
+          <h3 class="text-2xl sm:text-3xl text-secondary font-semibold">実績</h3>
           <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 3.5L13 6.5L10 9.5L7 6.5L10 3.5Z" />
             <path d="M3.5 10L6.5 7L9.5 10L6.5 13L3.5 10Z" />
@@ -112,7 +112,7 @@ $the_query = new WP_Query([
 
         <!-- Main Heading -->
         <h2 class="text-3xl md:text-5xl text-center font-bold text-gray-900 leading-tight">
-          最新のお知らせ・更新情報
+          テクノロジーと人材の力で、<br/>観光DXを加速させるサービスをご提供します。
         </h2>
       </div>
     </div>

@@ -11,7 +11,7 @@ body {
 :root {
   --primary-color: #B5E5FC;
   --secondary-color: #00C0E8;
-  --third-color: #2F2BEB;
+  --third-color: #3b82f6;
   --fourth-color: #EEF9FF;
 }
 
@@ -428,4 +428,17 @@ body {
 
 .wpcf7-not-valid-tip {
   position: absolute !important;;
+}
+
+blockquote {
+  background: #f9f9f9; /* Màu nền hơi xám để làm nổi bật */
+  border-left: 10px solid #ccc; /* Đường kẻ dọc bên trái - đặc trưng của trích dẫn */
+  margin: 1.5em 10px; /* Khoảng cách bên ngoài (trên/dưới, trái/phải) */
+  padding: 1em 20px; /* Khoảng cách bên trong để chữ không dính vào lề */
+  font-style: italic; /* In nghiêng chữ */
+  color: #555; /* Màu chữ hơi tối đi một chút */
+}
+
+blockquote p {
+  margin: 0; /* Xóa margin mặc định của thẻ p bên trong */
 }

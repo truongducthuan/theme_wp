@@ -122,7 +122,7 @@
           <!-- Bottom Image -->
           <div class="absolute -bottom-12 right-8 md:-bottom-12 md:right-16 z-10">
             <img
-              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/Container (1).png'; ?>"
+              src="<?php echo get_template_directory_uri() . '/wp-content/uploads/2025/10/294444209_2233130616849817_8709397006779363321_n-20230103093924-n8ua7.jpeg'; ?>"
               alt="Developer working on code"
               class="rounded-3xl" />
           </div>
@@ -149,7 +149,7 @@
 
         <!-- Description -->
         <p class="text-gray-600 text-base md:text-lg leading-relaxed">
-          日本の観光業をテクノロジーで次の時代へ。  デジタルだけでなく、人と資産の力も合わせて、共に成長を実現します。
+			IT人材不足という採用課題を、観光業界に特化した技術チームで解決。プロダクトの市場投入と成長を加速させます。
         </p>
 
         <!-- Features Grid -->

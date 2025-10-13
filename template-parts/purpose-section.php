@@ -134,7 +134,7 @@
             <h3 class="text-lg w-2/3 lg:w-full md:text-xl font-bold text-gray-900 leading-tight">柔軟なリソース戦略の実現</h3>
           </div>
           <p class="text-gray-600 text-sm leading-relaxed">
-            「正社員採用」という重い決断の前に、まずは弊社のリソースで開発を加速。事業の成長に合わせて、柔軟に開発体制をスケールできます。
+			  新規プロジェクトの立ち上げやリソースが逼迫するフェーズに対し、必要なスキルを持つ専門家チームを迅速に提供。採用コストや固定費をかけずに、事業計画に合わせた開発体制を構築します。
           </p>
         </div>
 
@@ -152,7 +152,7 @@
             <h3 class="text-lg w-2/3 lg:w-full md:text-xl font-bold text-gray-900 leading-tight">チーム全体の技術力向上</h3>
           </div>
           <p class="text-gray-600 text-sm leading-relaxed">
-            共同開発やレビューを通じて、弊社の持つノウハウや技術が自然と貴社チームに共有され、チーム全体のスキルアップに貢献します。
+			  共同開発のプロセスを通じて、コードレビューや設計思想、最新の開発手法を共有。貴社チームの技術力を実践的に底上げし、組織の資産となる「開発文化」を共に醸成します。
           </p>
         </div>
       </div>

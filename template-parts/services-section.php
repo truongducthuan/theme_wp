@@ -104,22 +104,22 @@
       'id' => 2,
       'name' => '求められる高度なドメイン知識',
       'description' => '',
-      'icon' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg',
-      'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-blue.svg'
+      'icon' => get_template_directory_uri() . '/assets/imgs/svgs/screen-setting-icon-white.svg',
+      'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/screen-setting-icon-blue.svg'
     ],
     (object) [
       'id' => 1,
       'name' => '恒常的なリソースの制約',
       'description' => '',
-      'icon' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg',
-      'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-blue.svg'
+      'icon' => get_template_directory_uri() . '/assets/imgs/svgs/protect-icon-white.svg',
+      'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/protect-icon-blue.svg'
     ],
     (object) [
       'id' => 2,
       'name' => '内製チーム強化の必要性',
       'description' => '',
-      'icon' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg',
-      'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-blue.svg'
+      'icon' => get_template_directory_uri() . '/assets/imgs/svgs/robot-icon-white.svg',
+      'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/robot-icon-blue.svg'
     ],
   ];
   ?>

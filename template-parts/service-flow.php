@@ -159,7 +159,7 @@
           <img
             src="<?php echo get_template_directory_uri() . '/assets/imgs/home/check-screen.png'; ?>"
             alt="Digital transformation process visualization"
-            class="w-full h-auto rounded-[4rem] shadow-2xl object-cover" />
+            class="w-full h-auto rounded-[4rem] shadow-2xl object-cover text-slate-400" />
         </div>
       </div>
 

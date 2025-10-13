@@ -1,6 +1,6 @@
 <style>
   #contact {
-    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/home/bg-form.jpg'; ?>);
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/home/bg-contact.webp'; ?>);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -150,23 +150,26 @@
           </div>
 
           <h3 class="member-heading-main text-gray-900 mb-6 text-center lg:text-start">
-            Không có việc gì khó,<br>
-            chỉ sợ có nhiều việc
-          </h3>
+            旅は心のデータであり<br>DXはその記憶を次の時代へとつなぐ
+			</h3>
         </div>
-
         <!-- Description Paragraphs -->
         <div class="space-y-4">
           <p class="member-text-body">
-            At Techin, we are dedicated to delivering innovative IT solutions and services that empower businesses to thrive in the digital age. At Techin, we are dedicated to delivering innovative IT solutions and services that empower businesses to thrive in the digital age. At Techin, we are dedicated to delivering innovative IT solutions and services that empower businesses to thrive in the digital age. At Techin, we are dedicated to delivering innovative IT solutions and services that empower businesses to thrive in the digital age.
-          </p>
-
-          <p class="member-text-body">
-            At Techin, we are dedicated to delivering innovative IT solutions and services that empower businesses to thrive in the digital age.
-          </p>
-
-          <p class="member-text-body">
-            At Techin, we are dedicated to delivering innovative IT solutions and services that empower businesses to thrive in the digital age.
+観光産業は「人と人」「文化と文化」をつなぐ架け橋です。
+私たちはその架け橋を、デジタルの力でさらに強く、柔軟に、そして持続可能なものにしたいと考えています。
+<br/>
+近年、観光業界は大きな変革期を迎えています。
+お客様のニーズは多様化し、体験の価値が重視される時代。
+私たちのミッションは、DX（デジタルトランスフォーメーション）を通じて、観光事業者の「新しい価値創造」を支援することです。
+<br/>
+AI・クラウド・データ分析・モバイルソリューションなど、最新のテクノロジーを活用し、
+予約・顧客管理・マーケティング・運営のすべてをシームレスにつなぐ観光DXプラットフォームを提供しています。
+<br/>
+「人の温かさ × デジタルの力」
+この融合こそが、私たちが描く観光の未来です。
+私たちは、地域と企業、そして旅行者をテクノロジーでつなぎ、
+世界中の人々に“心に残る旅の体験”を届けていきます。
           </p>
         </div>
       </div>
@@ -217,7 +220,7 @@
               <h4 class="member-name">Ngo Van Dung</h4>
               <p class="member-role">CEO</p>
               <p class="member-university">静岡大学電気電子学科</p>
-              <p class="member-quote">"Không có việc gì khó, chỉ sợ có nhiều việc"</p>
+              <p class="member-quote">旅は心のデータであり、DXはその記憶を次の時代へとつなぐ。</p>
             </div>
             <!-- Profile Image -->
             <div class="w-24 flex-shrink-0 member-profile-img">

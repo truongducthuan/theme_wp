@@ -1,6 +1,6 @@
 <style>
   #statistics {
-    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/home/13f72cd4f8bd35736d7686ef6221700f16ee341f.jpg'; ?>);
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/home/Background_imgupscaler.ai_Sharpen_4K.webp'; ?>);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,16 +62,16 @@ $data = [
           <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
             Synoraの開発支援で、できること!
           </h2>
-          <button class="cta-button bg-secondary hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-lg text-lg">
-			  <a　href="<?php echo home_url() . '/service'; ?>" data-text="サービスの詳細"　>
-				  サービスの詳細
-			  </a>
-			</button>
+          <a href="<?php echo home_url() . '/service'; ?>" class="cta-button bg-secondary hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-lg text-lg">
+            <span data-text="サービスの詳細" 　>
+              サービスの詳細
+            </span>
+          </a>
         </div>
       </div>
 
       <!-- Stats Grid -->
-<!--       <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 lg:mt-24 mb-16">
+      <!--       <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 lg:mt-24 mb-16">
         <?php
         foreach ($data as $stat) {
           echo '<div class="stat-card bg-white rounded-3xl p-8 text-center shadow-xl fade-in-up">

@@ -47,12 +47,11 @@
           </span>
         </div>
 
-        <h1 class="line-height-2 text-3xl text-third md:text-6xl lg:text-7xl font-bold whitespace-nowrap">
+        <h1 class="line-height-2 text-wrap text-4xl text-third md:text-5xl lg:text-6xl xl:text-7xl font-bold whitespace-nowrap">
           観光産業の収益生産性向上を<br />デジタルの力で実現！
         </h1>
-
-               <p class="text-slate-700 text-lg leading-relaxed w-full">
-          日本の観光業をテクノロジーで次の時代へ。デジタルだけでなく、人と資産の力も合わ
+               <p class="text-slate-700 text-xl lg:text-2xl leading-relaxed w-full">
+          IT人材不足という採用課題を、観光業界に特化した技術チームで解決。プロダクトの市場投入と成長を加速させます。
         </p>
 
         <!--         <button data-text="Get Start Now" class="techin-btn relative bg-secondary px-8 py-4 rounded font-semibold text-lg transition-all duration-300 transform">

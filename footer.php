@@ -1,6 +1,6 @@
 <style>
   .footer-section__gradient {
-    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/bg-footer.jpg'; ?>);
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/bg-footer.webp'; ?>);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
         <!-- Logo -->
         <div class="h-30 rounded-lg flex items-center justify-center p-4">
           <img
-            src="<?php echo get_template_directory_uri() . '/assets/imgs/logo.png' ?>"
+            src="<?php echo get_template_directory_uri() . '/assets/imgs/logo.svg' ?>"
             alt="Synora Logo"
             class="w-200 h-200 object-contain" />
         </div>

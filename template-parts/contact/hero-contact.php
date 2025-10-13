@@ -311,7 +311,12 @@
 
         <!-- Main image -->
         <div>
-          <h1 class="text-third line-height-2 text-4xl md:text-5xl lg:text-6xl font-bold">
+          <div class="inline-block mb-5">
+            <span class="bg-secondary px-6 py-2 rounded text-sm font-medium">
+              観光DXに特化したITソリューション
+            </span>
+          </div>
+          <h1 class="text-third line-height-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
             一緒に観光の未来を <br />作りましょう
           </h1>
           <div class="text-slate-700 mt-5 text-xl lg:text-2xl">Synoraでは、企業がデジタル時代において成長し続けられるよう、革新的なITソリューションとサービスを提供することに尽力しています。</div>

@@ -47,11 +47,11 @@
           </span>
         </div>
 
-        <h1 class="text-third line-height-2 text-4xl md:text-6xl lg:text-7xl font-bold whitespace-nowrap">
+        <h1 class="text-third line-height-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold whitespace-nowrap">
           テクノロジーで、<br />旅の体験を革新する
         </h1>
 
-        <p class="text-slate-700 text-base lg:text-lg leading-relaxed w-full">
+        <p class="text-slate-700 text-xl lg:text-2xl leading-relaxed w-full">
           貴社の技術チームを拡張し、観光業界の深い知見と最先端の技術力でDXを加速させます。<br />
           複雑なシステム課題の解決から内製化支援まで、一貫したサポートでビジネスの成長を共に実現します。
         </p>

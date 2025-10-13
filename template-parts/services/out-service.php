@@ -25,7 +25,9 @@
           </div>
           <h4 class="flex-1 text-slate-700 text:lg md:text-xl font-bold">増え続ける技術的複雑性</h4>
         </div>
-        <p class="text-sm text-[#616669]">高い技術力を持つ専門家チームが、複雑なシステム設計や実装を担当します。最新技術の導入や技術的負債の解消を支援し、開発プロセスの属人化を防ぎます。</p>
+        <p class="text-sm text-[#616669]">
+			最新技術を用いた複雑なアーキテクチャ設計や実装を専門家チームがリードします。貴社チームはプロダクトのコアロジックに集中でき、開発速度を加速させます。
+		  </p>
       </div>
       <div class="service-box rounded-[20px] py-10 pl-8 pr-4 bg-fourth/70 relative">
         <div class="w-10 h-10 absolute right-2.5 top-2.5 rounded-full bg-[#2BC8EB] text-black text-xl font-bold flex items-center justify-center">02</div>
@@ -55,7 +57,7 @@
           </div>
           <h4 class="flex-1 text-slate-700 text-xl font-bold">内製チーム強化の必要性</h4>
         </div>
-        <p class="text-sm text-[#616669]">観光業界特有の複雑な商慣習や業務フローへの深い知見を活かし、的確な要件定義をサポートします。ドメイン知識の不足による手戻りをなくし、新規メンバーの迅速なキャッチアップを可能にします。</p>
+        <p class="text-sm text-[#616669]">貴社チームの一員として伴走するラボ型開発で、チームを柔軟に拡張します。共同開発を通じて実践的なノウハウを共有し、貴社の内製開発力を体系的に強化します。</p>
       </div>
       <div class="service-box rounded-[20px] py-10 pl-8 pr-4 bg-fourth/70 relative">
         <div class="w-10 h-10 absolute right-2.5 top-2.5 rounded-full bg-[#2BC8EB] text-black text-xl font-bold flex items-center justify-center">04</div>
@@ -65,7 +67,7 @@
           </div>
           <h4 class="flex-1 text-slate-700 text-lg font-bold">恒常的なリソースの制約</h4>
         </div>
-        <p class="text-sm text-[#616669]">必要な開発リソースを柔軟に提供し、貴社の戦略的タスクを推進します。貴社チームは日々の運用保守に集中でき、私たちは次世代プロダクト開発などを担当することで、事業全体の成長を加速させます。</p>
+        <p class="text-sm text-[#616669]">次世代プロダクト開発や大規模リファクタリング等、重要かつリソースを要するタスクを弊社が担当。貴社の貴重なリソースを日々の運用保守から解放し、事業のイノベーションを加速させます。</p>
       </div>
     </div>
   </div>

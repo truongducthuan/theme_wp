@@ -38,5 +38,4 @@ get_template_part('template-parts/project-carousel-section');
 get_template_part('template-parts/contact-section');
 ?>
 
-
 <?php get_footer(); ?>

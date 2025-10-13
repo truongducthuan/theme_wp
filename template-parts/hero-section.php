@@ -19,8 +19,12 @@
     top: 100%;
     /* z-index: 5; */
     left: 45%;
+    <<<<<<< HEAD
     /*     width: 100%; */
-    height: 18%;
+    =======
+    /* width: 100%; */
+    right: 0;
+    >>>>>>>b068189884232a1a759b028d21e8273f26b04329 height: 18%;
     right: 0;
     background: linear-gradient(135deg, var(--fourth-color) 50%, var(--fourth-color) 100%);
     border-bottom-left-radius: 20px;
@@ -31,6 +35,9 @@
     #home-hero::before {
       height: 8%;
       left: 43%;
+      <<<<<<< HEAD=======
+      /* width: 57%; */
+      >>>>>>>b068189884232a1a759b028d21e8273f26b04329
     }
   }
 
@@ -122,30 +129,35 @@
       </div>
 
       <!-- Right Content - Hero Image -->
-      <div class="relative hidden lg:flex justify-end">
-        <!-- Purple Geometric Shape -->
-        <!-- <div class="absolute inset-0 from-secondary to-purple-600 rounded-full transform rotate-12 scale-110 opacity-80 blur-3xl"></div> -->
+      <<<<<<< HEAD
+        <div class="relative hidden lg:flex justify-end">
+        =======
+        <div class="relative flex justify-end">
+          >>>>>>> b068189884232a1a759b028d21e8273f26b04329
+          <!-- Purple Geometric Shape -->
+          <!-- <div class="absolute inset-0 from-secondary to-purple-600 rounded-full transform rotate-12 scale-110 opacity-80 blur-3xl"></div> -->
 
-        <!-- Businessman Image Placeholder -->
-        <div id="hero-slideshow" class="hero-image -mb-3 slideshow-container">
-          <img
-            src="<?php echo get_template_directory_uri() . '/assets/imgs/home/banner-image1.webp' ?>"
-            alt="Professional Businessman"
-            class="z-0 w-full h-auto rounded-lg slide active-slide" />
-          <img
-            src="<?php echo get_template_directory_uri() . '/assets/imgs/home/Container (1).png'; ?>"
+          <!-- Businessman Image Placeholder -->
+          <div id="hero-slideshow" class="hero-image -mb-3 slideshow-container">
+            <img
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/banner-image1.webp' ?>"
+              alt="Professional Businessman"
+              class="z-0 w-full h-auto rounded-lg slide active-slide" />
+            <img
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/Container (1).png'; ?>"
+              alt="Professional Businessman"
+              class="z-0 w-full h-auto rounded-lg slide" />
+            <img
+              <<<<<<< HEAD
+              src="<?php echo get_site_url() . '/assets/imgs/home/banner-img-2.webp'; ?>"=======src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/TU-VAN-KHOI-NGHIEP-LAM-GIAU-NHANH-BEN-VUNG-1.png'; ?>">>>>>>> b068189884232a1a759b028d21e8273f26b04329
             alt="Professional Businessman"
             class="z-0 w-full h-auto rounded-lg slide" />
-          <img
-            src="<?php echo get_site_url() . '/assets/imgs/home/banner-img-2.webp'; ?>"
-            alt="Professional Businessman"
-            class="z-0 w-full h-auto rounded-lg slide" />
+          </div>
+
+          <!-- Decorative Elements -->
+          <!-- <div class="absolute top-10 right-10 w-20 h-20 border-4 border-blue-400 rounded-full opacity-50 float-animation"></div> -->
+          <!-- <div class="absolute bottom-10 left-10 w-16 h-16 border-4 border-purple-400 rounded-full opacity-50 float-animation" style="animation-delay: 1s;"></div> -->
         </div>
-
-        <!-- Decorative Elements -->
-        <!-- <div class="absolute top-10 right-10 w-20 h-20 border-4 border-blue-400 rounded-full opacity-50 float-animation"></div> -->
-        <!-- <div class="absolute bottom-10 left-10 w-16 h-16 border-4 border-purple-400 rounded-full opacity-50 float-animation" style="animation-delay: 1s;"></div> -->
-      </div>
     </div>
   </div>
 </section>

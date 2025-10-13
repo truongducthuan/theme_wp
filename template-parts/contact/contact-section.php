@@ -54,7 +54,7 @@
     appearance: none;
     width: 18px;
     height: 18px;
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--third-color);
     border-radius: 4px;
     display: inline-block;
     position: relative;

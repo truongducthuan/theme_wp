@@ -19,12 +19,10 @@
     top: 100%;
     /* z-index: 5; */
     left: 45%;
-    <<<<<<< HEAD
-    /*     width: 100%; */
-    =======
+
     /* width: 100%; */
     right: 0;
-    >>>>>>>b068189884232a1a759b028d21e8273f26b04329 height: 18%;
+    height: 18%;
     right: 0;
     background: linear-gradient(135deg, var(--fourth-color) 50%, var(--fourth-color) 100%);
     border-bottom-left-radius: 20px;
@@ -35,9 +33,7 @@
     #home-hero::before {
       height: 8%;
       left: 43%;
-      <<<<<<< HEAD=======
       /* width: 57%; */
-      >>>>>>>b068189884232a1a759b028d21e8273f26b04329
     }
   }
 
@@ -119,8 +115,8 @@
           <span class="text-secondary ">観光DXで</span><span class="">未来を創る</span>
         </h1>
 
-        <p class="text-slate-700 text-lg lg:text-xl leading-relaxed max-w-xl">
-          私たちは観光業界のニーズに合わせた、革新的で<br />信頼性の高いソフトウェアを提供します。<br />テクノロジーの力で、あなたのビジネスを次のステージへ。
+        <p class="text-slate-700 text-lg xl:text-lg 2xl:text-2xl leading-relaxed">
+          私たちは観光業界のニーズに合わせた、革新的で<br />信頼性の高いソフトウェアを提供します。<br />テクノロジーの力であなたのビジネスを次のステージへ。
         </p>
 
         <!--         <button data-text="Get Start Now" class="techin-btn relative bg-secondary px-8 py-4 rounded font-semibold text-lg transition-all duration-300 transform">

@@ -118,8 +118,8 @@
       'id' => 2,
       'name' => '内製チーム強化の必要性',
       'description' => '',
-      'icon' => get_template_directory_uri() . '/assets/imgs/svgs/robot-icon-white.svg',
-      'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/robot-icon-blue.svg'
+      'icon' => get_template_directory_uri() . '/assets/imgs/svgs/icon-user-call.svg',
+      'iconHover' => get_template_directory_uri() . '/assets/imgs/svgs/icon-user-call-blue.svg'
     ],
   ];
   ?>

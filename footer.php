@@ -5,10 +5,18 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  .blur-layer {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 </style>
 
-<footer class="footer-section__gradient py-16 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-7xl mx-auto">
+<footer class="footer-section__gradient relative py-16 px-4 sm:px-6 lg:px-8">
+  <div class="blur-layer"></div>
+  <div class="max-w-7xl mx-auto relative">
 
     <!-- Main Footer Content - Three Columns -->
     <div class="grid grid-cols-1 lg:grid-cols-7 gap-12 lg:gap-16 mb-12">
@@ -24,7 +32,7 @@
         </div>
 
         <!-- Description -->
-        <p class="text-white text-sm leading-relaxed opacity-90">
+        <p class="text-white font-semibold text-sm leading-relaxed opacity-90">
           日本の観光業をテクノロジーで次の時代へ。  デジタルだけでなく、人と資産の力も合わせて、共に成長を実現します。
         </p>
       </div>
@@ -36,7 +44,7 @@
           <div class="w-16 h-1 bg-cyan-400 rounded"></div>
         </div>
 
-        <nav class="space-y-3">
+        <nav class="space-y-3 font-semibold">
           <a href="/about" class="footer-section__link flex items-center gap-2 text-white hover:text-cyan-300 group">
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -94,9 +102,9 @@
 
     <!-- Copyright Section -->
     <div class="pt-8 border-t border-white/20">
-      <p class="text-white text-sm text-center">
-              Copyright © <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">Synora</a>.
-        All rights reserved by <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">Synora</a>.
+      <p class="text-white text-sm font-medium text-center">
+        Copyright © <a href="#" class="text-secondary hover:text-cyan-300 transition-colors duration-200">Synora</a>.
+        All rights reserved by <a href="#" class="text-secondary hover:text-cyan-300 transition-colors duration-200">Synora</a>.
       </p>
     </div>
 

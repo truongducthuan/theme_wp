@@ -26,13 +26,13 @@
   </button>
 
   <!-- Header -->
-  <header id="header" class="w-full z-40 fixed top-0  transition-all duration-300">
-    <nav class="flex w-full items-center justify-between gap-5">
+  <header id="header" class="w-full z-40 fixed top-10  transition-all duration-300">
+    <nav class="flex items-center justify-between gap-5">
       <!-- Laptop Navigation -->
-      <div class="hidden bg-fourth lg:flex w-full items-center justify-between gap-5">
+      <div class="hidden bg-fourth w-full lg:flex items-center justify-between gap-5">
         <!-- Logo -->
         <a href="<?php echo home_url(); ?>" class="flex w-1/4 h-20 items-center justify-center space-x-2 bg-[#EEF9FF]">
-          <div class="relative w-40">
+          <div class="relative w-44">
             <img
               src="<?php echo get_template_directory_uri() . '/assets/imgs/logo.svg' ?>"
               alt="Synora Logo"
@@ -42,7 +42,7 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex w-3/4 h-20 items-center space-x-8 pl-16  bg-[#EEF9FF]">
+        <div class="hidden lg:flex w-3/4 h-20 font-semibold items-center justify-end space-x-8 pl-16 mr-20  bg-[#EEF9FF]">
           <div class="relative dropdown group">
             <a href="<?php echo home_url(); ?>" class="text-blue-400 hover:text-blue-600 transition-colors">ホーム</a>
           </div>

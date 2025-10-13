@@ -50,7 +50,7 @@
         <h1 class="line-height-2 text-wrap text-4xl text-third md:text-5xl lg:text-6xl xl:text-7xl font-bold whitespace-nowrap">
           観光産業の収益生産性向上を<br />デジタルの力で実現！
         </h1>
-               <p class="text-slate-700 text-xl lg:text-2xl leading-relaxed w-full">
+               <p class="text-slate-700 text-lg lg:text-xl leading-relaxed w-full">
           IT人材不足という採用課題を、観光業界に特化した技術チームで解決。プロダクトの市場投入と成長を加速させます。
         </p>
 

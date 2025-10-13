@@ -59,17 +59,17 @@ $logos = [
   (object) [
     'id' => 1,
     'name' => '観光業特化とした・WEBシステム／アプリ開発・SaaS開発支援',
-    'image' => get_template_directory_uri() . '/assets/imgs/svgs/starer-icon.svg'
+    'image' => get_template_directory_uri() . '/assets/imgs/svgs/icon-setting-pc.svg'
   ],
   (object) [
     'id' => 2,
     'name' => 'ベトナムオフショア開発（ラボ型・受託開発型）',
-    'image' => get_template_directory_uri() . '/assets/imgs/svgs/achivement-white.svg'
+    'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
   ],
   (object) [
     'id' => 3,
     'name' => 'クラウド移行',
-    'image' => get_template_directory_uri() . '/assets/imgs/svgs/media.white.svg'
+    'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
   ],
 ];
 ?>
@@ -107,7 +107,7 @@ $logos = [
             echo '<div class="p-2 lg:p-4 w-20 h-20 bg-secondary rounded-full">';
             echo '<img src="' . $logo->image . '" alt="' . $logo->name . '" class="w-full h-full object-contain">';
             echo '</div>';
-            echo '<div>' . $logo->name . '</div>';
+            echo '<div class="font-bold">' . $logo->name . '</div>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
@@ -116,10 +116,10 @@ $logos = [
             echo '<div class="logo-card flex-shrink-0 w-44 md:w-64 h-52 md:h-64 bg-fourth rounded-2xl flex items-center justify-center p-6 shadow-md">';
             echo '<div class="text-center">';
             echo '<div class="flex flex-col items-center justify-center gap-4 text-gray-600">';
-            echo '<div class="p-2 lg:p-4 bg-secondary rounded-full">';
-            echo '<img src="' . $logo->image . '" alt="' . $logo->name . '" class="max-w-full object-contain">';
+            echo '<div class="p-2 lg:p-4 w-20 h-20 bg-secondary rounded-full">';
+            echo '<img src="' . $logo->image . '" alt="' . $logo->name . '" class="w-full h-full object-contain">';
             echo '</div>';
-            echo '<div>' . $logo->name . '</div>';
+            echo '<div class="font-bold">' . $logo->name . '</div>';
             echo '</div>';
             echo '</div>';
             echo '</div>';

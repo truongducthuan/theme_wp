@@ -108,7 +108,7 @@
   <div class="mx-auto">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
-      <div class="herro-text h-full relative z-20 hero-group_text space-y-6 ml-0 xl:ml-26 2xl:ml-34 pl-0 md:pl-5 lg:pl-10">
+      <div class="herro-text h-full relative z-20 hero-group_text space-y-6 ml-0 xl:ml-16 2xl:ml-34 pl-0 md:pl-5 lg:pl-10">
         <div class="inline-block">
           <span class="bg-secondary px-6 py-2 rounded text-sm font-medium">
             観光DXに特化したITソリューション
@@ -119,7 +119,7 @@
           <span class="text-secondary ">観光DXで</span><span class="">未来を創る</span>
         </h1>
 
-        <p class="text-slate-700 text-xl lg:text-2xl leading-relaxed max-w-xl">
+        <p class="text-slate-700 text-lg lg:text-xl leading-relaxed max-w-xl">
           私たちは観光業界のニーズに合わせた、革新的で<br />信頼性の高いソフトウェアを提供します。<br />テクノロジーの力で、あなたのビジネスを次のステージへ。
         </p>
 
@@ -129,35 +129,30 @@
       </div>
 
       <!-- Right Content - Hero Image -->
-      <<<<<<< HEAD
-        <div class="relative hidden lg:flex justify-end">
-        =======
-        <div class="relative flex justify-end">
-          >>>>>>> b068189884232a1a759b028d21e8273f26b04329
-          <!-- Purple Geometric Shape -->
-          <!-- <div class="absolute inset-0 from-secondary to-purple-600 rounded-full transform rotate-12 scale-110 opacity-80 blur-3xl"></div> -->
+      <div class="relative hidden lg:flex justify-end">
+        <!-- Purple Geometric Shape -->
+        <!-- <div class="absolute inset-0 from-secondary to-purple-600 rounded-full transform rotate-12 scale-110 opacity-80 blur-3xl"></div> -->
 
-          <!-- Businessman Image Placeholder -->
-          <div id="hero-slideshow" class="hero-image -mb-3 slideshow-container">
-            <img
-              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/banner-image1.webp' ?>"
-              alt="Professional Businessman"
-              class="z-0 w-full h-auto rounded-lg slide active-slide" />
-            <img
-              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/Container (1).png'; ?>"
-              alt="Professional Businessman"
-              class="z-0 w-full h-auto rounded-lg slide" />
-            <img
-              <<<<<<< HEAD
-              src="<?php echo get_site_url() . '/assets/imgs/home/banner-img-2.webp'; ?>"=======src="<?php echo get_site_url() . '/wp-content/uploads/2025/10/TU-VAN-KHOI-NGHIEP-LAM-GIAU-NHANH-BEN-VUNG-1.png'; ?>">>>>>>> b068189884232a1a759b028d21e8273f26b04329
+        <!-- Businessman Image Placeholder -->
+        <div id="hero-slideshow" class="hero-image -mb-3 slideshow-container">
+          <img
+            src="<?php echo get_template_directory_uri() . '/assets/imgs/home/banner-image1.webp' ?>"
+            alt="Professional Businessman"
+            class="z-0 w-full h-auto rounded-lg slide active-slide" />
+          <img
+            src="<?php echo get_template_directory_uri() . '/assets/imgs/home/Container (1).png'; ?>"
             alt="Professional Businessman"
             class="z-0 w-full h-auto rounded-lg slide" />
-          </div>
-
-          <!-- Decorative Elements -->
-          <!-- <div class="absolute top-10 right-10 w-20 h-20 border-4 border-blue-400 rounded-full opacity-50 float-animation"></div> -->
-          <!-- <div class="absolute bottom-10 left-10 w-16 h-16 border-4 border-purple-400 rounded-full opacity-50 float-animation" style="animation-delay: 1s;"></div> -->
+          <img
+            src="<?php echo get_template_directory_uri() . '/assets/imgs/home/banner-img-2.webp'; ?>"
+            alt="Professional Businessman"
+            class="z-0 w-full h-auto rounded-lg slide" />
         </div>
+
+        <!-- Decorative Elements -->
+        <!-- <div class="absolute top-10 right-10 w-20 h-20 border-4 border-blue-400 rounded-full opacity-50 float-animation"></div> -->
+        <!-- <div class="absolute bottom-10 left-10 w-16 h-16 border-4 border-purple-400 rounded-full opacity-50 float-animation" style="animation-delay: 1s;"></div> -->
+      </div>
     </div>
   </div>
 </section>

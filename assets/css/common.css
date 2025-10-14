@@ -2,10 +2,15 @@
 
 html {
   scroll-behavior: smooth;
+      overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   /* background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%); */
+  /* overflow-x: hidden; */
+    overflow-x: hidden;
+  width: 100%;
 }
 
 :root {

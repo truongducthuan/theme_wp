@@ -101,10 +101,10 @@
       <div class="relative fade-in-section">
         <!-- Main Image Container -->
         <div class="relative">
-          <!-- Top Image -->
+          <!-- Top Image Gemini_Generated_Image_ds4dvlds4dvlds4d 1.png -->
           <div class="relative z-0">
             <img
-              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/ff9952250900a121425bf46dfd61ee8035265f1d.png'; ?>"
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/home/Gemini_Generated_Image_ds4dvlds4dvlds4d 1.png'; ?>"
               alt="Professional with holographic interface"
               class="w-full max-w-md rounded-3xl" />
 
@@ -120,17 +120,19 @@
           </div>
 
           <!-- Bottom Image -->
-          <div class="absolute -bottom-12 right-8 md:-bottom-12 md:right-16 z-10">
-            <img
-              src="<?php echo get_template_directory_uri() . '/wp-content/uploads/2025/10/294444209_2233130616849817_8709397006779363321_n-20230103093924-n8ua7.jpeg'; ?>"
-              alt="Developer working on code"
-              class="rounded-3xl" />
+          <div class="absolute flex justify-end -bottom-28 right-0 lg:-bottom-26 md:right-16 z-10">
+            <div class="w-2/3 h-2/3">
+              <img
+                src="<?php echo get_template_directory_uri() . '/assets/imgs/home/about-thumb2.png.png'; ?>"
+                alt="Developer working on code"
+                class="rounded-3xl" />
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Right Side - Content -->
-      <div class="space-y-6 fade-in-section mt-10 lg:mt-0">
+      <div class="space-y-6 fade-in-section mt-20 lg:mt-0">
         <!-- About Us Badge -->
         <div class="flex items-center gap-2 text-secondary font-semibold">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -149,7 +151,7 @@
 
         <!-- Description -->
         <p class="text-gray-600 text-base md:text-lg leading-relaxed">
-			IT人材不足という採用課題を、観光業界に特化した技術チームで解決。プロダクトの市場投入と成長を加速させます。
+          IT人材不足という採用課題を、観光業界に特化した技術チームで解決。プロダクトの市場投入と成長を加速させます。
         </p>
 
         <!-- Features Grid -->
@@ -163,10 +165,10 @@
             </div>
             <div>
               <h3 class="text-xl text-center font-bold text-gray-900 mb-1">
-				  <a href="/about/" data-text="私たちについて">
-					  <span>私たちについて</span>
-				  </a>
-				</h3>
+                <a href="/about/" data-text="私たちについて">
+                  <span>私たちについて</span>
+                </a>
+              </h3>
             </div>
           </div>
 
@@ -179,10 +181,10 @@
             </div>
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-1">
-				  <a href="/service/" data-text="私たちについて">
-					  <span>サービスを見る</span>
-				  </a>
-				</h3>
+                <a href="/service/" data-text="私たちについて">
+                  <span>サービスを見る</span>
+                </a>
+              </h3>
             </div>
           </div>
         </div>

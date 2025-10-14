@@ -21,7 +21,7 @@ $data = [
 ];
 
 // Hero Section
-get_template_part('template-parts/blogs/hero-section', null, ['title' => 'Lastest Blogs', 'subtitle' => 'Lastest Blogs']);
+get_template_part('template-parts/blogs/hero-section', null, ['title' => '最新情報', 'subtitle' => '最新情報']);
 
 // Blogs Section
 get_template_part('template-parts/blogs/blog-listing', null, $data);

@@ -6,6 +6,12 @@ mobileMenuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
 });
 
+window.addEventListener('click', (event) => {
+  if (!event.target.closest('#mobileMenuBtn') && !event.target.closest('#mobileMenu')) {
+    mobileMenu.classList.remove('active');
+  }
+});
+
 // Scroll to Top Button
 const scrollTopBtn = document.getElementById('scrollTop');
 const header = document.getElementById('header');

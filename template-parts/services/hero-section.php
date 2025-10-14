@@ -7,10 +7,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/bg-synora.png'; ?>);
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/LOGO-synora.webp'; ?>);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0.2;
   }
 
   #home-hero::before {
@@ -18,7 +19,7 @@
     position: absolute;
     top: 100%;
     /* z-index: 5; */
-    left: 45%;
+    left: 40%;
     width: 100%;
     height: 18%;
     background: linear-gradient(135deg, var(--fourth-color) 50%, var(--fourth-color) 100%);
@@ -29,6 +30,21 @@
   @media (max-width: 768px) {
     #home-hero::before {
       display: none;
+    }
+
+    #home-hero::after {
+      content: "";
+      position: absolute;
+      bottom: -50%;
+      z-index: 10;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background: url(<?php echo get_template_directory_uri() . '/assets/imgs/LOGO.webp'; ?>);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.2;
     }
   }
 </style>
@@ -43,7 +59,7 @@
       <div class="herro-text relative z-20 hero-group_text space-y-6 ml-0 xl:ml-26 2xl:ml-34 pl-0 md:pl-5 lg:pl-10">
         <div class="inline-block">
           <span class="bg-secondary px-6 py-2 rounded text-sm font-medium">
-            サービス
+            事業内容
           </span>
         </div>
 

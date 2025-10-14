@@ -59,7 +59,7 @@ $data = [
         </div>
 
         <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between">
-          <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
+          <h2 class="text-[2.15rem] lg:text-5xl font-bold text-white mb-8">
             Synoraの開発支援で、できること!
           </h2>
           <a href="<?php echo home_url() . '/service'; ?>" class="cta-button bg-secondary hover:bg-cyan-600 text-white font-semibold px-10 py-4 rounded-lg text-lg">

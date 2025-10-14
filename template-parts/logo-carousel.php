@@ -69,7 +69,7 @@ $logos = [
   (object) [
     'id' => 3,
     'name' => 'クラウド移行',
-    'image' => get_template_directory_uri() . '/assets/imgs/svgs/cloud-icon-white.svg'
+    'image' => get_template_directory_uri() . '/assets/imgs/svgs/icon-protect-pc.svg'
   ],
 ];
 ?>
@@ -101,25 +101,25 @@ $logos = [
         <div id="carousel" class="flex items-center justify-center gap-4 md:gap-6 transition-transform duration-500 ease-in-out">
           <?php
           foreach ($logos as $logo) {
-            echo '<div class="logo-card flex-shrink-0 w-44 md:w-64 h-52 md:h-64 bg-fourth rounded-2xl flex items-center justify-center p-6 shadow-md">';
+            echo '<div class="logo-card flex-shrink-0 w-40 md:w-64 h-52 md:h-64 bg-fourth rounded-2xl flex items-center justify-center p-6 shadow-md">';
             echo '<div class="text-center">';
             echo '<div class="flex flex-col items-center justify-center gap-4 text-gray-600">';
-            echo '<div class="p-2 lg:p-4 w-20 h-20 bg-secondary rounded-full">';
+            echo '<div class="p-2 lg:p-4 h-16 lg:w-20 h-16 lg:h-20 bg-secondary rounded-full">';
             echo '<img src="' . $logo->image . '" alt="' . $logo->name . '" class="w-full h-full object-contain">';
             echo '</div>';
-            echo '<div class="font-bold">' . $logo->name . '</div>';
+            echo '<div class="text-sm lg:text-base font-bold">' . $logo->name . '</div>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
           }
           foreach ($logos as $logo) {
-            echo '<div class="logo-card flex-shrink-0 w-44 md:w-64 h-52 md:h-64 bg-fourth rounded-2xl flex items-center justify-center p-6 shadow-md">';
+            echo '<div class="logo-card flex-shrink-0 w-40 md:w-64 h-52 md:h-64 bg-fourth rounded-2xl flex items-center justify-center p-6 shadow-md">';
             echo '<div class="text-center">';
             echo '<div class="flex flex-col items-center justify-center gap-4 text-gray-600">';
-            echo '<div class="p-2 lg:p-4 w-20 h-20 bg-secondary rounded-full">';
+            echo '<div class="p-2 lg:p-4 h-16 lg:w-20 lg:h-20 bg-secondary rounded-full">';
             echo '<img src="' . $logo->image . '" alt="' . $logo->name . '" class="w-full h-full object-contain">';
             echo '</div>';
-            echo '<div class="font-bold">' . $logo->name . '</div>';
+            echo '<div class="text-sm lg:text-base font-bold">' . $logo->name . '</div>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
@@ -148,7 +148,7 @@ $logos = [
   let currentIndex = 0;
   let autoPlayInterval;
   const cardWidth = 256 + 24; // card width + gap
-  const mobileCardWidth = 176 + 16; // mobile card width + gap
+  const mobileCardWidth = 166 + 8; // mobile card width + gap
   const totalCards = cards.length;
   const halfCards = totalCards / 2;
 

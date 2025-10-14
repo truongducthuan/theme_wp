@@ -5,12 +5,14 @@
     bottom: -50%;
     z-index: 10;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/bg-synora.png'; ?>);
+    transform: translateX(5%);
+    width: 90%;
+    height: 90%;
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/LOGO-synora.webp'; ?>);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0.2;
   }
 
   #home-hero::before {
@@ -18,13 +20,11 @@
     position: absolute;
     top: 100%;
     /* z-index: 5; */
-    left: 45%;
-    <<<<<<< HEAD
+    left: 38%;
     /*     width: 100%; */
-    =======
     /* width: 100%; */
     right: 0;
-    >>>>>>>b068189884232a1a759b028d21e8273f26b04329 height: 18%;
+    height: 18%;
     right: 0;
     background: linear-gradient(135deg, var(--fourth-color) 50%, var(--fourth-color) 100%);
     border-bottom-left-radius: 20px;
@@ -35,9 +35,23 @@
     #home-hero::before {
       height: 8%;
       left: 43%;
-      <<<<<<< HEAD=======
       /* width: 57%; */
-      >>>>>>>b068189884232a1a759b028d21e8273f26b04329
+    }
+
+    #home-hero::after {
+      content: "";
+      position: absolute;
+      bottom: -50%;
+      z-index: 10;
+      left: 0;
+      width: 100%;
+      height: 130%;
+      transform: translateX(0%);
+      background: url(<?php echo get_template_directory_uri() . '/assets/imgs/LOGO.webp'; ?>);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.2;
     }
   }
 
@@ -108,7 +122,7 @@
   <div class="mx-auto">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
-      <div class="herro-text h-full relative z-20 hero-group_text space-y-6 ml-0 xl:ml-16 2xl:ml-34 pl-0 md:pl-5 lg:pl-10">
+      <div class="herro-text h-full relative z-20 hero-group_text space-y-6 ml-0 xl:ml-0 2xl:ml-0 pl-0 md:pl-5 lg:pl-0">
         <div class="inline-block">
           <span class="bg-secondary px-6 py-2 rounded text-sm font-medium">
             観光DXに特化したITソリューション
@@ -119,8 +133,8 @@
           <span class="text-secondary ">観光DXで</span><span class="">未来を創る</span>
         </h1>
 
-        <p class="text-slate-700 text-lg lg:text-xl leading-relaxed max-w-xl">
-          私たちは観光業界のニーズに合わせた、革新的で<br />信頼性の高いソフトウェアを提供します。<br />テクノロジーの力で、あなたのビジネスを次のステージへ。
+        <p class="text-slate-700 text-lg xl:text-lg 2xl:text-2xl leading-relaxed">
+          私たちは観光業界のニーズに合わせた、革新的で<br />信頼性の高いソフトウェアを提供します。<br />テクノロジーの力であなたのビジネスを次のステージへ。
         </p>
 
         <!--         <button data-text="Get Start Now" class="techin-btn relative bg-secondary px-8 py-4 rounded font-semibold text-lg transition-all duration-300 transform">

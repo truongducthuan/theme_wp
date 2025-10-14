@@ -26,15 +26,15 @@
   </button>
 
   <!-- Header -->
-  <header id="header" class="w-full z-40 fixed top-10  transition-all duration-300">
+  <header id="header" class="w-full z-40 fixed top-0 lg:top-10  transition-all duration-300">
     <nav class="flex items-center justify-between gap-5">
       <!-- Laptop Navigation -->
       <div class="hidden bg-fourth w-full lg:flex items-center justify-between gap-5">
         <!-- Logo -->
         <a href="<?php echo home_url(); ?>" class="flex w-1/4 h-20 items-center justify-center space-x-2 bg-[#EEF9FF]">
-          <div class="relative w-44">
+          <div class="relative w-36">
             <img
-              src="<?php echo get_template_directory_uri() . '/assets/imgs/logo.svg' ?>"
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/LOGO-synora.webp'; ?>"
               alt="Synora Logo"
               class="w-full h-full object-contain" />
           </div>
@@ -47,10 +47,12 @@
             <a href="<?php echo home_url(); ?>" class="text-blue-400 hover:text-blue-600 transition-colors">ホーム</a>
           </div>
           <div class="relative dropdown group">
-             <a href="<?php echo home_url() . '/service'; ?>" class="text-blue-400 hover:text-blue-600 transition-colors">サービス</a>
-
+            <a href="<?php echo home_url() . '/about'; ?>" class="text-blue-400 hover:text-blue-600 transition-colors">企業情報</a>
+          </div>
+          <div class="relative dropdown group">
+            <a href="<?php echo home_url() . '/service'; ?>" class="text-blue-400 hover:text-blue-600 transition-colors">事業内容</a>
             <!-- 			  <button class="flex items-center space-x-1 hover:text-blue-400 transition-colors">
-              <span><a href="<?php echo home_url() . '/service'; ?>" class="text-blue-400 hover:text-blue-600 transition-colors">サービス</a></span>
+              <span><a href="<?php echo home_url() . '/service'; ?>" class="text-blue-400 hover:text-blue-600 transition-colors">事業内容</a></span>
               <svg class="w-4 h-4 group-hover:rotate-180 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -60,9 +62,6 @@
               <a href="#" class="block px-4 py-3 hover:bg-slate-700 transition-colors">観光業特化とした・WEBシステム／アプリ開発・SaaS開発支援</a>
               <a href="#" class="block px-4 py-3 hover:bg-slate-700 transition-colors">クラウド移行</a>
             </div> -->
-          </div>
-          <div class="relative dropdown group">
-            <a href="<?php echo home_url() . '/about'; ?>" class="text-blue-400 hover:text-blue-600 transition-colors">企業情報</a>
           </div>
           <div class="relative dropdown group">
             <a href="<?php echo home_url() . '/blogs'; ?>" class="text-blue-400 hover:text-blue-600 transition-colors">ニュース</a>
@@ -120,15 +119,15 @@
         <div class="flex w-1/3 items-center justify-start bg-primary">
           <a href="<?php echo home_url(); ?>" class="items-center justify-center">
             <img
-              src="<?php echo get_template_directory_uri() . '/assets/imgs/Logo-Synora.png' ?>"
+              src="<?php echo get_template_directory_uri() . '/assets/imgs/LOGO-synora.webp' ?>"
               alt="Synora Logo"
-              class="w-20 h-20 object-contain" />
+              class="w-28 h-20 object-contain" />
           </a>
         </div>
         <!-- Search Bar & Mobile Menu -->
         <div class="flex w-2/3 items-center justify-end">
           <!-- Mobile Menu Button -->
-          <button id="mobileMenuBtn" class="lg:hidden bg-secondary hover:bg-third p-3 rounded-full transition-colors">
+          <button id="mobileMenuBtn" class="lg:hidden bg-forth hover:bg-secondary p-3 rounded-full transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -137,11 +136,11 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu lg:hidden mt-4 bg-slate-800 rounded-lg overflow-hidden">
-      <a href="<?php echo home_url(); ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">ホーム</a>
-      <a href="<?php echo home_url() . '/service'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">サービス</a>
-      <a href="<?php echo home_url() . '/about'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">企業情報</a>
-      <a href="<?php echo home_url() . '/blogs'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">ニュース</a>
-      <a href="<?php echo home_url() . '/contact'; ?>" class="block px-6 py-3 hover:bg-slate-700 transition-colors">お問合せ</a>
+    <div id="mobileMenu" class="mobile-menu lg:hidden mt-4 bg-primary rounded-lg overflow-hidden">
+      <a href="<?php echo home_url(); ?>" class="block px-6 py-3 hover:bg-secondary transition-colors">ホーム</a>
+      <a href="<?php echo home_url() . '/service'; ?>" class="block px-6 py-3 hover:bg-secondary transition-colors">サービス</a>
+      <a href="<?php echo home_url() . '/about'; ?>" class="block px-6 py-3 hover:bg-secondary transition-colors">企業情報</a>
+      <a href="<?php echo home_url() . '/blogs'; ?>" class="block px-6 py-3 hover:bg-secondary transition-colors">ニュース</a>
+      <a href="<?php echo home_url() . '/contact'; ?>" class="block px-6 py-3 hover:bg-secondary transition-colors">お問合せ</a>
     </div>
   </header>

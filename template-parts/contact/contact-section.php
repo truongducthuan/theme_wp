@@ -54,7 +54,7 @@
     appearance: none;
     width: 18px;
     height: 18px;
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--third-color);
     border-radius: 4px;
     display: inline-block;
     position: relative;
@@ -151,8 +151,8 @@
   }
 </style>
 
-<section id="contact" class="bg-white min-h-screen py-12 px-5">
-  <div class="max-w-7xl mx-auto py-16 lg:py-24">
+<section id="contact" class="bg-white min-h-screen px-5">
+  <div class="max-w-7xl mx-auto py-10 lg:py-24">
     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
       <!-- Appointment Form Section -->

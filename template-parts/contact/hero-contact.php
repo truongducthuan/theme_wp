@@ -8,11 +8,12 @@
     width: 100%;
     height: 100%;
     opacity: 0.5;
-    filter: blur(2px);
-    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/bg-synora.png'; ?>);
+    /* filter: blur(2px); */
+    background: url(<?php echo get_template_directory_uri() . '/assets/imgs/LOGO-synora.webp'; ?>);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0.2;
   }
 
   .hero-background::before {
@@ -20,7 +21,7 @@
     position: absolute;
     top: 100%;
     /* z-index: 5; */
-    left: 45%;
+    left: 40%;
     width: 100%;
     height: 18%;
     background: linear-gradient(135deg, var(--fourth-color) 50%, var(--fourth-color) 100%);
@@ -31,6 +32,21 @@
   @media (max-width: 768px) {
     .hero-background::before {
       display: none;
+    }
+
+    .hero-background::after {
+      content: "";
+      position: absolute;
+      bottom: -50%;
+      z-index: 10;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background: url(<?php echo get_template_directory_uri() . '/assets/imgs/LOGO.webp'; ?>);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.2;
     }
   }
 
@@ -313,7 +329,7 @@
         <div>
           <div class="inline-block mb-5">
             <span class="bg-secondary px-6 py-2 rounded text-sm font-medium">
-              観光DXに特化したITソリューション
+              お問い合わせ
             </span>
           </div>
           <h1 class="text-third line-height-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
